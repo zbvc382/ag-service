@@ -1,0 +1,127 @@
+@import "variables";
+
+%header-info {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-family: $font-primary;
+}
+
+.container {
+  display: grid;
+  grid-template-columns:
+    [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+    [center-end] minmax(6rem, 1fr) [full-end];
+  grid-template-rows: 5rem 50vh repeat(6, minmax(5rem, 10rem));
+}
+
+.intro {
+  background: #9da0a5;
+  background-image: url("../../../assets/images/intro-image.jpg");
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+
+  grid-column: full-start / full-end;
+
+  &__text-box {
+    width: 70%;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+}
+
+.header {
+  background-color: #252f41;
+  padding-top: 0.5rem;
+
+  display: grid;
+  grid-column: full-start / full-end;
+  grid-template-columns:
+    minmax(6rem, 1fr) repeat(2, [email-col-start] 14rem [email-col-end])
+    minmax(min-content, 20rem) [logo-start] min-content [logo-end] minmax(min-content, 20rem)
+    repeat(2, [call-col-start] 14rem [call-col-end]) minmax(6rem, 1fr) [full-end];
+  grid-auto-flow: column;
+
+  &__logo-wrapper {
+    display: block;
+    width: 15rem;
+
+    grid-column: logo-start / logo-end;
+    place-self: center;
+
+    &--image {
+      max-width: 15rem;
+    }
+  }
+
+  &__email a,
+  &__phone a,
+  &__mobile a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  &__email {
+    @extend %header-info;
+
+    grid-column: email-col-start 1 / email-col-end 2;
+  }
+
+  &__phone {
+    @extend %header-info;
+
+    grid-column: call-col-start 1 / call-col-end 1;
+  }
+
+  &__mobile {
+    @extend %header-info;
+
+    grid-column: call-col-start 2 / call-col-end 2;
+  }
+}
+
+.booking {
+  background-color: red;
+  grid-column: col-start 1 / col-end 8;
+  margin-top: 5rem;
+}
+
+.company {
+  background-color: red;
+
+  grid-column: col-start 1 / col-end 8;
+  margin-top: 5rem;
+}
+
+.appliances {
+  background-color: red;
+
+  grid-column: col-start 1 / col-end 8;
+  margin-top: 5rem;
+}
+
+.reviews {
+  background-color: red;
+
+  grid-column: col-start 1 / col-end 8;
+  margin-top: 5rem;
+}
+
+.coverage {
+  background-color: red;
+
+  grid-column: col-start 1 / col-end 8;
+  margin-top: 5rem;
+}
+
+.brands {
+  background-color: red;
+
+  grid-column: col-start 1 / col-end 8;
+  margin-top: 5rem;
+}

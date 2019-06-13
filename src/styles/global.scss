@@ -1,0 +1,45 @@
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import "animations.scss";
+@import "buttons.scss";
+@import "typography.scss";
+@import "utilities.scss";
+@import "variables.scss";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.mat-menu-panel.custom {
+  border-radius: 0px;
+  position: absolute;
+  top: 0.6rem;
+  width: 20rem;
+  border-top: 2px solid $color-primary;
+
+  & a {
+    text-decoration: none;
+  }
+}
+
+.mat-menu-item {
+  color: $color-secondary;
+  font-family: $font-primary;
+}
+
+.mat-menu-item:hover {
+  color: $color-primary;
+}

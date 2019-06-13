@@ -1,0 +1,59 @@
+<mat-toolbar role="navigation" class="nav" ngStickyNav stickyClass="nav--sticky">
+  <button class="btn-sidebar" fxHide.gt-xs type="button" aria-label="Toggle sidenav" (click)="onToggleSidenav()">
+    <i class="material-icons" aria-label="Side nav toggle icon">
+      menu
+    </i>
+  </button>
+  <a class="nav__logo" [routerLink]="['/']">
+    <img src="../../../assets/images/final_logo2.svg" alt="">
+  </a>
+  <a class="nav__menu-items" [matMenuTriggerFor]="menu">
+    Appliance Repairs
+    <i class="material-icons">keyboard_arrow_down</i>
+  </a>
+  <a class="nav__menu-items" [routerLink]="['/']">
+    Areas Covered
+  </a>
+  <a class="nav__menu-items" [routerLink]="['/']">
+    About Us
+  </a>
+  <a class="nav__menu-items" [routerLink]="['/']">
+    Estate Agents & Landlors
+  </a>
+  <div class="nav__phone">
+    <i class="material-icons material-icons--red">phone</i>
+    <a href="tel:0207 476 8725">0207 476 8725</a>
+  </div>
+  <mat-menu #menu="matMenu" class="custom">
+    <ng-template matMenuContent>
+      <a [routerLink]="['/']">
+        <button mat-menu-item>Washing Machine Repairs</button>
+      </a>
+      <a [routerLink]="['/']">
+        <button mat-menu-item routerLink="['/']">
+          Dishwasher Repairs
+        </button>
+      </a>
+      <a [routerLink]="['/']">
+        <button mat-menu-item routerLink="['/']">
+          Tumble Dryer Repairs
+        </button>
+      </a>
+      <a [routerLink]="['/']">
+        <button mat-menu-item routerLink="['/']">
+          Electric Oven Repairs
+        </button>
+      </a>
+      <a [routerLink]="['/']">
+        <button mat-menu-item routerLink="['/']">
+          Microwave Repairs
+        </button>
+      </a>
+      <a [routerLink]="['/']">
+        <button mat-menu-item routerLink="['/']">
+          Extractor Hood Repairs
+        </button>
+      </a>
+    </ng-template>
+  </mat-menu>
+</mat-toolbar>
