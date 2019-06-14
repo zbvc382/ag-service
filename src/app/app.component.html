@@ -4,9 +4,9 @@
     </mat-sidenav>
     <mat-sidenav-content>
             <app-nav (sidenavToggle)="sidenav.open()"></app-nav>
-            <main>
+           
               <router-outlet></router-outlet>
-            </main>
+              <app-footer></app-footer>
+           
           </mat-sidenav-content>
 </mat-sidenav-container>
-<app-footer></app-footer>

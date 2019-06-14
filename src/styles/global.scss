@@ -23,6 +23,10 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.mat-toolbar {
+  background: red;
+}
+
 .mat-menu-panel.custom {
   border-radius: 0px;
   position: absolute;
@@ -33,6 +37,10 @@ body {
   & a {
     text-decoration: none;
   }
+}
+
+.mat-drawer-content {
+  overflow: hidden !important;
 }
 
 .mat-menu-item {
