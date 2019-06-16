@@ -1,144 +1,145 @@
 @import "variables";
 
 %fonts {
-  font-family: $font-primary;
-  font-weight: 400;
+    font-family: $font-primary;
+    font-weight: 400;
 }
 
 .heading-1 {
-  @extend %fonts;
-  font-size: 2.5rem;
-  color: #fff;
-  line-height: 1;
+    @extend %fonts;
+    font-size: 2.5rem;
+    color: #fff;
+    line-height: 1;
 
-  &--grey {
-    color: $color-grey;
-  }
+    &--grey {
+        color: $color-grey;
+    }
 
-  &--primary {
-    color: $color-primary;
-  }
+    &--primary {
+        color: $color-primary;
+    }
 
-  &--secondary {
-    color: $color-secondary;
-  }
+    &--secondary {
+        color: $color-secondary;
+    }
 }
 
 .heading-2 {
-  @extend %fonts;
-  font-size: 1.5rem;
-  line-height: 1;
-  color: #fff;
+    @extend %fonts;
+    font-size: 1.5rem;
+    line-height: 1;
+    color: #fff;
 
-  &--grey {
-    color: $color-grey;
-  }
+    &--grey {
+        color: $color-grey;
+    }
 
-  &--primary {
-    color: $color-primary;
-  }
+    &--primary {
+        color: $color-primary;
+    }
 
-  &--secondary {
-    color: $color-secondary;
-  }
+    &--secondary {
+        color: $color-secondary;
+    }
 }
 
 .heading-3 {
-  @extend %fonts;
-  font-size: 1.25rem;
-  color: $color-secondary;
-  line-height: 1;
-
-  &--grey {
-    color: $color-grey;
-  }
-
-  &--primary {
-    color: $color-primary;
-  }
-
-  &--secondary {
+    @extend %fonts;
+    font-size: 1.25rem;
     color: $color-secondary;
-  }
+    line-height: 1;
+
+    &--grey {
+        color: $color-grey;
+    }
+
+    &--primary {
+        color: $color-primary;
+    }
+
+    &--secondary {
+        color: $color-secondary;
+    }
 }
+
 .intro-primary {
-  backface-visibility: hidden;
-  margin-bottom: 6rem;
+    backface-visibility: hidden;
+    margin-bottom: 6rem;
 
-  &--main {
-    font-family: "Poppins", sans-serif;
-    color: #fff;
-    display: block;
-    font-size: 3rem;
-    font-weight: 600;
-    animation: moveInLeft 1s ease-out;
-    animation-delay: 0.1s;
-  }
+    &--main {
+        font-family: "Poppins", sans-serif;
+        color: #fff;
+        display: block;
+        font-size: 3rem;
+        font-weight: 600;
+        animation: moveInLeft 1s ease-out;
+        animation-delay: 0.1s;
+    }
 
-  &--sub {
-    font-family: "Poppins", sans-serif;
-    display: block;
-    font-weight: 300;
-    animation: moveInRight 1s ease-out;
-    animation-delay: 0.1s;
-  }
+    &--sub {
+        font-family: "Poppins", sans-serif;
+        display: block;
+        font-weight: 300;
+        animation: moveInRight 1s ease-out;
+        animation-delay: 0.1s;
+    }
 
-  &--sub p {
-    font-size: 1.75rem;
-    margin-top: 4rem;
-    display: inline-block;
-    transform: translateY(-0.85rem);
-    color: #fff;
-  }
+    &--sub p {
+        font-size: 1.75rem;
+        margin-top: 4rem;
+        display: inline-block;
+        transform: translateY(-0.85rem);
+        color: #fff;
+    }
 
-  &--sub p:not(:last-child) {
-    margin-right: 4rem;
-  }
+    &--sub p:not(:last-child) {
+        margin-right: 4rem;
+    }
 
-  &--sub i {
-    font-size: 3rem;
-    margin-right: 1.5rem;
-  }
+    &--sub i {
+        font-size: 3rem;
+        margin-right: 1.5rem;
+    }
 }
 
 .material-icons {
-  width: 2.4rem;
-  height: 2.4rem;
-  margin-right: 0.5rem;
+    width: 2.4rem;
+    height: 2.4rem;
+    margin-right: 0.5rem;
 
-  &--md-18 {
-    font-size: 1.8rem;
-  }
+    &--md-18 {
+        font-size: 1.8rem;
+    }
 
-  &--md-24 {
-    font-size: 2.4rem;
-  }
+    &--md-24 {
+        font-size: 2.4rem;
+    }
 
-  &--md-36 {
-    font-size: 3.6rem;
-  }
+    &--md-36 {
+        font-size: 3.6rem;
+    }
 
-  &--md-48 {
-    font-size: 4.8rem;
-  }
+    &--md-48 {
+        font-size: 4.8rem;
+    }
 
-  &--md-56 {
-    font-size: 5.8rem;
-  }
+    &--md-56 {
+        font-size: 5.8rem;
+    }
 
-  &--white {
-    color: #fff;
-  }
+    &--white {
+        color: #fff;
+    }
 
-  &--grey {
-    color: $color-grey;
-  }
+    &--grey {
+        color: $color-grey;
+    }
 
-  &--primary {
-    color: $color-primary;
-  }
+    &--primary {
+        color: $color-primary;
+    }
 
-  &--secondary {
-    color: $color-secondary;
-  }
+    &--secondary {
+        color: $color-secondary;
+    }
 }

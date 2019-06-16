@@ -1,12 +1,10 @@
 <mat-sidenav-container>
-    <mat-sidenav #sidenav role="navigation" fixedInViewport="true" [mode]="push" [opened]="false">
-          <app-sidenav ></app-sidenav>
-    </mat-sidenav>
-    <mat-sidenav-content>
-            <app-nav (sidenavToggle)="sidenav.open()"></app-nav>
-           
-              <router-outlet></router-outlet>
-              <app-footer></app-footer>
-           
-          </mat-sidenav-content>
+  <mat-sidenav role="navigation" #sidenav fixedInViewport="true" [opened]="false">
+    <app-sidenav></app-sidenav>
+  </mat-sidenav>
+  <mat-sidenav-content role="main">
+    <app-nav (sidenavToggle)="sidenav.open()"></app-nav>
+    <router-outlet></router-outlet>
+    <app-footer></app-footer>
+  </mat-sidenav-content>
 </mat-sidenav-container>

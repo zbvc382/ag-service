@@ -8,46 +8,89 @@
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
 }
 
 html {
-  box-sizing: border-box;
-  font-size: 62.5%;
-  height: 100%;
+    box-sizing: border-box;
+    // font-size: 62.5%; // 10px
+    font-size: 68.75%; // 11px
+
+    // @media only screen and (max-width: 1200px) {
+    //     font-size: 50%;
+    // }
+    height: 100%;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
+.container {
+    display: grid;
+    grid-template-columns:
+        [full-start] minmax(3rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end];
+    grid-template-rows: 5rem 50vh repeat(6, minmax(min-content, 1fr));
+}
+
+// TODO: Move mat elements elsewhere
+
 .mat-toolbar {
-  background: red;
+    background: red;
 }
 
 .mat-menu-panel.custom {
-  border-radius: 0px;
-  position: absolute;
-  top: 0.6rem;
-  width: 20rem;
-  border-top: 2px solid $color-primary;
+    border-radius: 0;
+    position: absolute;
+    top: 0.6rem;
+    width: 20rem;
+    border-top: 0.2rem solid $color-primary;
 
-  & a {
-    text-decoration: none;
-  }
+    & a {
+        text-decoration: none;
+    }
 }
 
 .mat-drawer-content {
-  overflow: hidden !important;
+    overflow: hidden !important;
 }
 
 .mat-menu-item {
-  color: $color-secondary;
-  font-family: $font-primary;
+    color: $color-secondary;
+    font-family: $font-primary;
 }
 
 .mat-menu-item:hover {
-  color: $color-primary;
+    color: $color-primary;
+}
+
+.mat-tab-label {
+    color: $color-grey;
+    opacity: 100 !important;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.mat-tab-group {
+    &.mat-primary {
+        .mat-ink-bar {
+            background-color: $color-primary;
+            height: 0.5rem;
+        }
+    }
+}
+
+.mat-tab-body {
+    background-color: $color-secondary;
+}
+
+.mat-tab-header {
+    border: none;
+    backface-visibility: hidden;
+}
+
+.mat-tab-header-pagination-controls-enabled .mat-tab-header-pagination {
+    display: block;
 }

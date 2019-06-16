@@ -17,7 +17,7 @@
     </div>
   </div>
   <div class="intro">
-    <div class="intro__text-box">
+    <!-- <div class="intro__text-box">
       <h1 class="intro-primary">
         <span class="intro-primary--main">The UK's number 1 domestic appliance repair service</span>
         <span class="intro-primary--sub">
@@ -30,7 +30,7 @@
         </span>
       </h1>
       <a [routerLink]="['/']" class="btn-round btn--white btn--animated">get an instant quote</a>
-    </div>
+    </div> -->
   </div>
   <section class="reasons">
     <header>
@@ -70,10 +70,24 @@
     </div>
   </section>
   <section class="request">
-    <div class="request__qoute">
-      QOUTE
-    </div>
-    <div class="request__booking">
-      HELLO2</div>
+    <mat-tab-group mat-align-tabs="center">
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <i class="material-icons material-icons--secondary">
+            build
+          </i>
+          Instant Qoute
+        </ng-template>
+        Content 1
+      </mat-tab>
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <i class="material-icons material-icons--secondary">
+            date_range
+          </i>
+          Book Repair
+        </ng-template>
+        Content 2
+      </mat-tab>
+    </mat-tab-group>
   </section>
-</div>

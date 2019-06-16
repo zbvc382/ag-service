@@ -6,6 +6,7 @@ import { MatSidenavModule, MatToolbarModule, MatListModule } from '@angular/mate
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatTabsModule } from '@angular/material/tabs';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -30,7 +31,8 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
     MatToolbarModule,
     MatListModule,
     FlexLayoutModule,
-    MatMenuModule
+    MatMenuModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

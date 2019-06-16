@@ -1,67 +1,67 @@
 @import "variables";
 
 .nav {
-  padding: 0;
-  height: 5rem;
-  background-color: rgba(255, 255, 255, 0.9);
-  z-index: 9999;
-
-  display: grid;
-  grid-gap: 2rem;
-  grid-template-columns:
-    [full-start] minmax(6rem, 1fr) minmax(min-content, 27rem) [center-start]
-    repeat(4, [col-start] max-content [col-end]) [center-end] minmax(min-content, 27rem) minmax(6rem, 1fr) [full-end];
-
-  &__logo {
-    grid-column: 2 / col-start 1;
-
-    & img {
-      transform: translateY(0.25rem);
-      max-width: 14rem;
-      opacity: 0;
-      transition: all 0.3s ease;
-    }
-  }
-
-  &__menu-items {
-    display: flex;
-    cursor: pointer;
-    align-items: center;
-    transform: translateY(0.15rem);
-    font-size: 1.5rem;
-    color: $color-secondary;
-    text-decoration: none;
-
-    &:hover {
-      color: $color-primary;
-    }
-  }
-
-  &__phone {
-    display: flex;
-    align-items: center;
-    justify-self: end;
-    transform: translateY(0.25rem);
-    font-size: 1.5rem;
-    font-weight: 700;
-    font-family: $font-primary;
-    opacity: 0;
-    transition: all 0.3s ease;
-
-    & a {
-      text-decoration: none;
-      color: $color-grey;
-    }
-  }
-
-  &--sticky {
-    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.25);
-    border-bottom: none;
+    position: sticky;
     padding: 0;
-  }
+    height: 5rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 9999;
 
-  &--sticky img,
-  &--sticky .nav__phone {
-    opacity: 100;
-  }
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns:
+        [full-start] minmax(6rem, 1fr) minmax(min-content, 27rem) [center-start] repeat(4, [col-start] max-content [col-end]) [center-end] minmax(min-content, 27rem) minmax(6rem, 1fr) [full-end];
+
+    &__logo {
+        grid-column: 2 / col-start 1;
+
+        & img {
+            transform: translateY(0.25rem);
+            max-width: 14rem;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+    }
+
+    &__menu-items {
+        display: flex;
+        cursor: pointer;
+        align-items: center;
+        transform: translateY(0.15rem);
+        font-size: 1.5rem;
+        color: $color-secondary;
+        text-decoration: none;
+
+        &:hover {
+            color: $color-primary;
+        }
+    }
+
+    &__phone {
+        display: flex;
+        align-items: center;
+        justify-self: end;
+        transform: translateY(0.25rem);
+        font-size: 1.5rem;
+        font-weight: 700;
+        font-family: $font-primary;
+        opacity: 0;
+        transition: all 0.3s ease;
+
+        & a {
+            text-decoration: none;
+            color: $color-grey;
+        }
+    }
+
+    &--sticky {
+        box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.25);
+        border-bottom: none;
+        padding: 0;
+    }
+
+    &--sticky img,
+    &--sticky .nav__phone {
+        opacity: 100;
+    }
 }

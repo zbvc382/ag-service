@@ -1,5 +1,5 @@
 <mat-toolbar role="navigation" class="nav" ngStickyNav stickyClass="nav--sticky">
-  <button class="btn-sidebar" fxHide.gt-xs type="button" aria-label="Toggle sidenav" (click)="onToggleSidenav()">
+  <button class="btn-sidebar" type="button" aria-label="Toggle sidenav" (click)="onToggleSidenav()" fxHide.gt-xs>
     <i class="material-icons" aria-label="Side nav toggle icon">
       menu
     </i>
@@ -7,7 +7,8 @@
   <a class="nav__logo" [routerLink]="['/']">
     <img src="../../../assets/images/final_logo2.svg" alt="">
   </a>
-  <a class="nav__menu-items" [matMenuTriggerFor]="menu" #menuTrigger="matMenuTrigger" (mouseover)="menuTrigger.openMenu()">
+  <a class="nav__menu-items" [matMenuTriggerFor]="menu" #menuTrigger="matMenuTrigger"
+    (mouseover)="menuTrigger.openMenu()">
     Appliance Repairs
     <i class="material-icons">keyboard_arrow_down</i>
   </a>
@@ -27,34 +28,34 @@
   <mat-menu #menu="matMenu" class="custom" [overlapTrigger]="false">
     <ng-template matMenuContent>
       <span (mouseleave)="menuTrigger.closeMenu()">
-          <a [routerLink]="['/']">
-            <button mat-menu-item>Washing Machine Repairs</button>
-          </a>
-          <a [routerLink]="['/']">
-            <button mat-menu-item routerLink="['/']">
-              Dishwasher Repairs
-            </button>
-          </a>
-          <a [routerLink]="['/']">
-            <button mat-menu-item routerLink="['/']">
-              Tumble Dryer Repairs
-            </button>
-          </a>
-          <a [routerLink]="['/']">
-            <button mat-menu-item routerLink="['/']">
-              Electric Oven Repairs
-            </button>
-          </a>
-          <a [routerLink]="['/']">
-            <button mat-menu-item routerLink="['/']">
-              Microwave Repairs
-            </button>
-          </a>
-          <a [routerLink]="['/']">
-            <button mat-menu-item routerLink="['/']">
-              Extractor Hood Repairs
-            </button>
-          </a>
+        <a [routerLink]="['/']">
+          <button mat-menu-item>Washing Machine Repairs</button>
+        </a>
+        <a [routerLink]="['/']">
+          <button mat-menu-item routerLink="['/']">
+            Dishwasher Repairs
+          </button>
+        </a>
+        <a [routerLink]="['/']">
+          <button mat-menu-item routerLink="['/']">
+            Tumble Dryer Repairs
+          </button>
+        </a>
+        <a [routerLink]="['/']">
+          <button mat-menu-item routerLink="['/']">
+            Electric Oven Repairs
+          </button>
+        </a>
+        <a [routerLink]="['/']">
+          <button mat-menu-item routerLink="['/']">
+            Microwave Repairs
+          </button>
+        </a>
+        <a [routerLink]="['/']">
+          <button mat-menu-item routerLink="['/']">
+            Extractor Hood Repairs
+          </button>
+        </a>
       </span>
     </ng-template>
   </mat-menu>
