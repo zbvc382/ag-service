@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-// import { StickyNavModule } from 'ng2-sticky-nav';
 import { AppRoutingModule } from './app-routing.module';
 import { MatSidenavModule, MatToolbarModule, MatListModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -25,7 +24,6 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    // StickyNavModule,
     MatSidenavModule,
     BrowserAnimationsModule,
     MatToolbarModule,

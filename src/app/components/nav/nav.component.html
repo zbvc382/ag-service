@@ -1,31 +1,30 @@
-<div role="navigation" class="nav mat-toolbar" [class.sticky] = "sticky" #stickyMenu>
-    <!-- ngStickyNav stickyClass="nav--sticky" -->
+<mat-toolbar role="navigation" class="nav" #stickyMenu>
   <button class="btn-sidebar" type="button" aria-label="Toggle sidenav" (click)="onToggleSidenav()" fxHide.gt-xs>
     <i class="material-icons" aria-label="Side nav toggle icon">
       menu
     </i>
   </button>
-  <a class="nav__logo" [routerLink]="['/']">
+  <!-- <a class="nav__logo" [routerLink]="['/']">
     <img src="../../../assets/images/final_logo2.svg" alt="">
-  </a>
-  <a class="nav__menu-items" [matMenuTriggerFor]="menu" #menuTrigger="matMenuTrigger"
+  </a> -->
+  <a class="nav__menu-items nav__menu-items--1" [matMenuTriggerFor]="menu" #menuTrigger="matMenuTrigger"
     (mouseover)="menuTrigger.openMenu()">
     Appliance Repairs
     <i class="material-icons">keyboard_arrow_down</i>
   </a>
-  <a class="nav__menu-items" [routerLink]="['/']">
+  <a class="nav__menu-items nav__menu-items--2" [routerLink]="['/']">
     Areas Covered
   </a>
-  <a class="nav__menu-items" [routerLink]="['/']">
+  <a class="nav__menu-items nav__menu-items--3" [routerLink]="['/']">
     About Us
   </a>
-  <a class="nav__menu-items" [routerLink]="['/']">
+  <a class="nav__menu-items nav__menu-items--4" [routerLink]="['/']">
     Estate Agents & Landlors
   </a>
-  <div class="nav__phone">
+  <!-- <div class="nav__phone">
     <i class="material-icons material-icons--primary">phone</i>
     <a href="tel:0207 476 8725">0207 476 8725</a>
-  </div>
+  </div> -->
   <mat-menu #menu="matMenu" class="custom" [overlapTrigger]="false">
     <ng-template matMenuContent>
       <span (mouseleave)="menuTrigger.closeMenu()">
@@ -33,31 +32,31 @@
           <button mat-menu-item>Washing Machine Repairs</button>
         </a>
         <a [routerLink]="['/']">
-          <button mat-menu-item routerLink="['/']">
+          <button mat-menu-item>
             Dishwasher Repairs
           </button>
         </a>
         <a [routerLink]="['/']">
-          <button mat-menu-item routerLink="['/']">
+          <button mat-menu-item>
             Tumble Dryer Repairs
           </button>
         </a>
         <a [routerLink]="['/']">
-          <button mat-menu-item routerLink="['/']">
+          <button mat-menu-item>
             Electric Oven Repairs
           </button>
         </a>
         <a [routerLink]="['/']">
-          <button mat-menu-item routerLink="['/']">
+          <button mat-menu-item>
             Microwave Repairs
           </button>
         </a>
         <a [routerLink]="['/']">
-          <button mat-menu-item routerLink="['/']">
+          <button mat-menu-item>
             Extractor Hood Repairs
           </button>
         </a>
       </span>
     </ng-template>
   </mat-menu>
-</div>
+</mat-toolbar>

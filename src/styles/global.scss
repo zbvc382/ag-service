@@ -32,22 +32,15 @@ body {
     display: grid;
     grid-template-columns:
         [full-start] minmax(3rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end];
-    grid-template-rows: 5rem 50vh repeat(6, minmax(min-content, 1fr));
+    grid-template-rows: 4rem 5rem 50vh repeat(6, minmax(min-content, 1fr));
 }
 
 // TODO: Move mat elements elsewhere
 
-// .mat-toolbar {
-//     height: 64px;
-//     position: fixed;
-//     z-index: 100;
-//     width: 100%  !important;
-// }
-
 .mat-menu-panel.custom {
     border-radius: 0;
     position: absolute;
-    top: 0.6rem;
+    top: 0.4rem;
     width: 20rem;
     border-top: 0.2rem solid $color-primary;
 
@@ -96,4 +89,15 @@ body {
 
 .mat-tab-header-pagination-controls-enabled .mat-tab-header-pagination {
     display: block;
+}
+
+.mat-menu-item-highlighted:not([disabled]),
+.mat-menu-item.cdk-keyboard-focused:not([disabled]),
+.mat-menu-item.cdk-program-focused:not([disabled]),
+.mat-menu-item:hover:not([disabled]) {
+    background: none;
+}
+
+.mat-menu-item:hover {
+    background: rgba(0, 0, 0, .04) !important;
 }

@@ -8,29 +8,15 @@
     font-family: $font-primary;
 }
 
-.intro {
-    background: #9da0a5;
-    background-image: url("../../../assets/images/intro-image.jpg");
-    background-size: cover;
-    background-position: center;
-    background-blend-mode: multiply;
-
+.header-backfill {
+    background-color: $color-secondary;
+    background-color: #fff;
     grid-column: full-start / full-end;
-
-    &__text-box {
-        width: 70%;
-        position: absolute;
-        top: 17%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-    }
 }
 
 .header {
     background-color: #252f41;
     padding-top: 0.5rem;
-
     display: grid;
     grid-column: full-start / full-end;
     grid-template-columns:
@@ -75,11 +61,30 @@
     }
 }
 
+.intro {
+    background: #9da0a5;
+    background-image: url("../../../assets/images/intro-image.jpg");
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+
+    grid-column: full-start / full-end;
+
+    &__text-box {
+        width: 70%;
+        position: absolute;
+        top: 17%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+}
+
 .reasons {
     margin-top: 6.5rem;
 
     grid-column: col-start 1 / col-end 8;
-    grid-row: 3 / 4;
+    grid-row: 4 / 5;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(26.5rem, 1fr));
     grid-row-gap: 4rem;
