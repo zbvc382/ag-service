@@ -37,9 +37,12 @@ body {
 
 // TODO: Move mat elements elsewhere
 
-.mat-toolbar {
-    background: red;
-}
+// .mat-toolbar {
+//     height: 64px;
+//     position: fixed;
+//     z-index: 100;
+//     width: 100%  !important;
+// }
 
 .mat-menu-panel.custom {
     border-radius: 0;

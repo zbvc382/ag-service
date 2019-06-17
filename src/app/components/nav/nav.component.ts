@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, Renderer2, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-nav',
@@ -7,8 +7,10 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 })
 export class NavComponent implements OnInit {
   @Output() public sidenavToggle = new EventEmitter();
+  @ViewChild('stickyMenu')
+  sticky = false;
 
-  constructor() { }
+  constructor(private renderer: Renderer2) { }
 
   ngOnInit() {
   }

@@ -1,4 +1,5 @@
-<mat-toolbar role="navigation" class="nav" ngStickyNav stickyClass="nav--sticky">
+<div role="navigation" class="nav mat-toolbar" [class.sticky] = "sticky" #stickyMenu>
+    <!-- ngStickyNav stickyClass="nav--sticky" -->
   <button class="btn-sidebar" type="button" aria-label="Toggle sidenav" (click)="onToggleSidenav()" fxHide.gt-xs>
     <i class="material-icons" aria-label="Side nav toggle icon">
       menu
@@ -59,4 +60,4 @@
       </span>
     </ng-template>
   </mat-menu>
-</mat-toolbar>
+</div>
