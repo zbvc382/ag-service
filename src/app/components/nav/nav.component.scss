@@ -13,18 +13,19 @@
     display: grid;
     grid-gap: 2rem;
     grid-template-columns:
-        [full-start] minmax(6rem, 1fr) 27rem [center-start] repeat(4, [col-start] max-content [col-end]) [center-end] 27rem minmax(6rem, 1fr) [full-end];
+        [full-start] minmax(6rem, 1fr) minmax(min-content, 27rem)[center-start] repeat(4, [col-start] max-content [col-end]) [center-end] minmax(min-content, 27rem) minmax(6rem, 1fr) [full-end];
 
-    // &__logo {
-    //     grid-column: 2 / col-start 1;
+    &__logo {
+        grid-column: 2 / col-start 1;
+        width: 12rem;
+        align-self: center;
 
-    //     & img {
-    //         transform: translateY(0.25rem);
-    //         max-width: 11rem;
-    //         opacity: 0;
-    //         transition: all 0.3s ease;
-    //     }
-    // }
+        img {
+            width: 12rem;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+    }
 
     &__menu-items {
         display: flex;
@@ -57,38 +58,32 @@
     }
 
     mat-menu {
-        outline-style:none;
-box-shadow:none;
-border-color:transparent;
+        outline-style: none;
+        box-shadow: none;
+        border-color: transparent;
     }
-    // &__phone {
-    //     display: flex;
-    //     align-items: center;
-    //     justify-self: end;
-    //     transform: translateY(0.25rem);
-    //     font-size: 1.5rem;
-    //     font-weight: 700;
-    //     font-family: $font-primary;
-    //     opacity: 0;
-    //     transition: all 0.3s ease;
 
-    //     & a {
-    //         text-decoration: none;
-    //         color: $color-grey;
-    //     }
-    // }
+    &__phone {
+        display: flex;
+        align-items: center;
+        justify-self: end;
+        transform: translateY(0.25rem);
+        font-size: 1.5rem;
+        font-weight: 700;
+        font-family: $font-primary;
+        opacity: 0;
+        transition: all 0.3s ease;
 
-    // &--sticky {
-    //     box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.25);
-    //     border-bottom: none;
-    //     padding: 0;
-    //     z-index: 9999;
-    //     position: fixed;
-    //     width: 100%;
-    // }
+        a {
+            text-decoration: none;
+            color: $color-grey;
+        }
+    }
 
-    // &--sticky img,
-    // &--sticky .nav__phone {
-    //     opacity: 100;
-    // }
+    &--sticky {
+        & img,
+        & .nav__phone {
+            opacity: 100;
+        }
+    }
 }

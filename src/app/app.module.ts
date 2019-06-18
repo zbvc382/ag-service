@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { MatSidenavModule, MatToolbarModule, MatListModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatTabsModule } from '@angular/material/tabs';
 
@@ -28,7 +27,6 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatListModule,
-    FlexLayoutModule,
     MatMenuModule,
     MatTabsModule
   ],

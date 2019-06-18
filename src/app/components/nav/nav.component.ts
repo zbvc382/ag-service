@@ -1,27 +1,51 @@
-import { Component, OnInit, EventEmitter, Output, Renderer2, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import {
+  Component,
+  OnInit,
+  EventEmitter,
+  Output,
+  Renderer2,
+  ElementRef,
+  AfterViewInit,
+  Inject,
+  PLATFORM_ID,
+  ViewChild
+} from '@angular/core';
 
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss']
 })
-export class NavComponent implements OnInit {
+export class NavComponent implements OnInit, AfterViewInit {
   @Output() public sidenavToggle = new EventEmitter();
-  // @ViewChild('stickyMenu', { read: true, static: false }) menuElement: ElementRef;
-  // sticky = false;
+  @ViewChild('nav', { static: false }) nav: ElementRef;
+  isSticky = false;
+  isBrowser = false;
+  navPosition: any;
 
-  constructor(private renderer: Renderer2) { }
+  constructor(private renderer: Renderer2, @Inject(PLATFORM_ID) private platformId: any) { }
 
   ngOnInit() {
+    this.isBrowser = isPlatformBrowser(this.platformId);
   }
 
-  // ngAfterViewInit(): void {
-  //   this.renderer.listen('window', 'scroll', (event) => {
-  //     if (event) {
-  //       this.sticky = true;
-  //     }
-  //   });
-  // }
+  ngAfterViewInit() {
+    if (this.isBrowser) {
+      this.navPosition = this.nav.nativeElement.offsetTop;
+
+      this.renderer.listen('window', 'scroll', (event) => {
+        if (event) {
+          const windowScroll = window.pageYOffset;
+          if (windowScroll > this.navPosition) {
+            this.isSticky = true;
+          } else {
+            this.isSticky = false;
+          }
+        }
+      });
+    }
+  }
 
   public onToggleSidenav = () => {
     this.sidenavToggle.emit();

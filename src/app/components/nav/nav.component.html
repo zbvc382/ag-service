@@ -1,12 +1,14 @@
-<mat-toolbar role="navigation" class="nav" #stickyMenu>
-  <button class="btn-sidebar" type="button" aria-label="Toggle sidenav" (click)="onToggleSidenav()" fxHide.gt-xs>
-    <i class="material-icons" aria-label="Side nav toggle icon">
-      menu
-    </i>
-  </button>
-  <!-- <a class="nav__logo" [routerLink]="['/']">
-    <img src="../../../assets/images/final_logo2.svg" alt="">
-  </a> -->
+<div role="navigation" class="nav" #nav [ngClass]="{'nav--sticky': isSticky}">
+  <!-- <button class="btn-sidebar" type="button" aria-label="Toggle sidenav" (click)="onToggleSidenav()" >
+      <i class="material-icons" aria-label="Side nav toggle icon">
+        menu
+      </i>
+    </button> -->
+  <div *ngIf="isBrowser" class="nav__logo">
+    <a [routerLink]="['/']">
+      <img src="../../../assets/images/final_logo2.svg" alt="">
+    </a>
+  </div>
   <a class="nav__menu-items nav__menu-items--1" [matMenuTriggerFor]="menu" #menuTrigger="matMenuTrigger"
     (mouseover)="menuTrigger.openMenu()">
     Appliance Repairs
@@ -21,10 +23,10 @@
   <a class="nav__menu-items nav__menu-items--4" [routerLink]="['/']">
     Estate Agents & Landlors
   </a>
-  <!-- <div class="nav__phone">
+  <div *ngIf="isBrowser" class="nav__phone">
     <i class="material-icons material-icons--primary">phone</i>
     <a href="tel:0207 476 8725">0207 476 8725</a>
-  </div> -->
+  </div>
   <mat-menu #menu="matMenu" class="custom" [overlapTrigger]="false">
     <ng-template matMenuContent>
       <span (mouseleave)="menuTrigger.closeMenu()">
@@ -59,4 +61,4 @@
       </span>
     </ng-template>
   </mat-menu>
-</mat-toolbar>
+</div>
