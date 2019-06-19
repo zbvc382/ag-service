@@ -1,0 +1,29 @@
+<form [formGroup]="qouteForm" (ngSubmit)="onSubmit(qouteForm)">
+  <div class="container">
+    <div class="row">
+      <div class="form-group col">
+        <label for="applianceType">Appliance Type</label>
+        <select class="form-control" formControlName="applianceType">
+          <option *ngFor="let type of types">{{type}}</option>
+        </select>
+      </div>
+      <div class="form-group col">
+        <label for="applianceMake">Appliance Make</label>
+        <select class="form-control" formControlName="applianceMake">
+          <option *ngFor="let make of makes">{{make}}</option>
+        </select>
+      </div>
+      <div class="form-group col">
+        <label for="jobType">Job type</label>
+        <select class="form-control" formControlName="jobType">
+          <option *ngFor="let job of jobs">{{job}}</option>
+        </select>
+      </div>
+      <div class="form-group col">
+        <label for="postcode">Post Code</label>
+        <input type="text" class="form-control" formControlName="postcode">
+      </div>
+
+    </div>
+  </div>
+</form>

@@ -120,6 +120,73 @@
 }
 
 .request {
-    margin-top: 5rem;
+    margin-top: 6rem;
     grid-column: full-start / full-end;
+
+    &__qoute {
+        margin-top: 2.5rem;
+        color: #fff;
+        display: grid;
+        // grid-row-gap: 2.5rem;
+        grid-template-columns: 3rem minmax(min-content, 1fr) 3rem;
+
+        h3 {
+            justify-self: center;
+            grid-column: 2 / 3;
+            color: $color-primary;
+            margin-bottom: 2.5rem;
+        }
+
+    }
+
+    &__form {
+        grid-column: 2 / 3;
+        // font-size: 15px;
+        // color: #fff;
+    }
+
+    &__terms {
+        // justify-self: center;
+        grid-column: 2 / 3;
+        display: block;
+        justify-self: center;
+
+        p {
+            display: inline-block;
+        }
+        // grid-template-columns: repeat(auto-fit, min-content);
+        // grid-auto-flow: column;
+
+        // .testas {
+        //     display: block;
+        // }
+    }
+
+    &__result {
+        justify-self: center;
+        grid-column: 2 / 3;
+        font-size: 15px;
+        color: #fff;
+
+        p {
+            font-size: 5rem;
+
+            span {
+                font-size: 2.5rem;
+            }
+        }
+    }
+
+    // &__price {
+    //     font-size: 10rem;
+    // }
+
+    // &__vat {
+
+    // }
+
+    &__booking {
+        color: #fff;
+
+    }
 }

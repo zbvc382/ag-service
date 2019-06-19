@@ -1,0 +1,22 @@
+// .form-group {
+//     max-width: 100rem;
+// }
+
+select.form-control:not([size]):not([multiple]) {
+    height: 4rem;
+}
+
+label {
+    margin-left: 0.1rem;
+    font-size: 1.2rem;
+}
+
+.form-control {
+    height: 4rem;
+    font-size: 1.5rem;
+}
+
+.form-group {
+    min-width: 18rem;
+    max-width: 25rem;
+}
