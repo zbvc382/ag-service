@@ -62,8 +62,7 @@
 }
 
 .intro {
-    background: #9da0a5;
-    background-image: url("../../../assets/images/intro-image.jpg");
+    background-image: url("../../../assets/images/intro.jpg");
     background-size: cover;
     background-position: center;
     background-blend-mode: multiply;
@@ -73,7 +72,7 @@
     &__text-box {
         width: 70%;
         position: absolute;
-        top: 17%;
+        top: 12%;
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
@@ -124,42 +123,39 @@
     grid-column: full-start / full-end;
 
     &__qoute {
-        margin-top: 2.5rem;
+        margin: 4rem 0;
         color: #fff;
         display: grid;
-        // grid-row-gap: 2.5rem;
         grid-template-columns: 3rem minmax(min-content, 1fr) 3rem;
+        grid-row-gap: 2.5rem;
 
-        h3 {
+        &--heading {
             justify-self: center;
             grid-column: 2 / 3;
-            color: $color-primary;
-            margin-bottom: 2.5rem;
+            display: block;
+            background: $color-primary;
+            padding: 0.5rem;
         }
-
     }
 
     &__form {
         grid-column: 2 / 3;
-        // font-size: 15px;
-        // color: #fff;
     }
 
     &__terms {
-        // justify-self: center;
         grid-column: 2 / 3;
-        display: block;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(min-content, max-content));
         justify-self: center;
+
+        @media only screen and (max-width: 850px) {
+            grid-template-columns: repeat(2, minmax(min-content, max-content));
+        }
 
         p {
             display: inline-block;
+            transform: translateY(-0.70rem);
         }
-        // grid-template-columns: repeat(auto-fit, min-content);
-        // grid-auto-flow: column;
-
-        // .testas {
-        //     display: block;
-        // }
     }
 
     &__result {
@@ -167,26 +163,9 @@
         grid-column: 2 / 3;
         font-size: 15px;
         color: #fff;
-
-        p {
-            font-size: 5rem;
-
-            span {
-                font-size: 2.5rem;
-            }
-        }
     }
-
-    // &__price {
-    //     font-size: 10rem;
-    // }
-
-    // &__vat {
-
-    // }
 
     &__booking {
         color: #fff;
-
     }
 }

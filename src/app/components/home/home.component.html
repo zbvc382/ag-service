@@ -2,7 +2,7 @@
   <div class="header-backfill"></div>
   <div class="header">
     <div class="header__logo-wrapper">
-      <img class="header__logo-wrapper--image" src="../../../assets/images/logo_red-white.svg" alt="" />
+      <img class="header__logo-wrapper--image" src="../../../assets/images/logo-header.svg" alt="" />
     </div>
     <div class="header__email">
       <i class="material-icons material-icons--white">email</i>
@@ -83,30 +83,44 @@
 
 
         <div class="request__qoute">
-          <h3>Simply complete our three step repair booking form or give us a call to get an instant quote.</h3>
+          <h1 class="request__qoute--heading heading-2">Simply complete our three step repair booking form or give us a
+            call to get an instant quote.</h1>
           <app-qoute-form class="request__form"></app-qoute-form>
+
+
+
           <div class="request__terms">
-                  <i class="material-icons material-icons--primary">check_circle</i>
-                  <p>Fast, reliable service</p>
-                  <i class="material-icons material-icons--primary">check_circle</i>
-                  <p>Largest UK coverage</p>
-                  <i class="material-icons material-icons--primary">check_circle</i>
-                  <p>Same/next day appointments</p>
-            <!-- <div class="request_terms--item">
-              <i class="material-icons material-icons--primary">check_circle</i>
-              <p>Fast, reliable service</p>
+            <div class="col">
+              <span> <i class="material-icons material-icons--primary">assignment_turned_in</i>
+                <p>Fast, reliable service</p>
+              </span>
             </div>
-            <div class="request_terms--item">
-              <i class="material-icons material-icons--primary">check_circle</i>
-              <p>Largest UK coverage</p>
+            <div class="col">
+              <span>
+                <i class="material-icons material-icons--primary">assignment_turned_in</i>
+                <p>Largest UK coverage</p>
+              </span>
             </div>
-            <div class="request_terms--item">
-              <i class="material-icons material-icons--primary">check_circle</i>
-              <p>Same/next day appointments</p>
-            </div> -->
+            <div class="col">
+              <span>
+                <i class="material-icons material-icons--primary">assignment_turned_in</i>
+                <p>Same/next day appointments</p>
+              </span>
+            </div>
+            <div class="col">
+              <span>
+                <i class="material-icons material-icons--primary">assignment_turned_in</i>
+                <p>Same/next day appointments</p>
+              </span>
+            </div>
+
           </div>
+
+
+
+
           <div class="request__result">
-            <p>£69<span> +VAT</span></p>
+              <a [routerLink]="['/']" class="btn-square btn--white">submit</a>
           </div>
         </div>
 

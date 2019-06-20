@@ -16,7 +16,14 @@ export class QouteFormComponent implements OnInit {
 
   ngOnInit() {
     this.qouteForm = new FormGroup({
-      applianceType: new FormControl('')
+      applianceType: new FormControl(''),
+      applianceMake: new FormControl(''),
+      jobType: new FormControl(''),
+      postcode: new FormControl('')
     });
+  }
+
+  onSubmit(qouteForm: FormGroup) {
+    
   }
 }

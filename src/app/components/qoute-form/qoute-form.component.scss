@@ -1,6 +1,4 @@
-// .form-group {
-//     max-width: 100rem;
-// }
+@import 'variables';
 
 select.form-control:not([size]):not([multiple]) {
     height: 4rem;
@@ -9,6 +7,8 @@ select.form-control:not([size]):not([multiple]) {
 label {
     margin-left: 0.1rem;
     font-size: 1.2rem;
+    color: #fff;
+    border-bottom: 0.15rem solid $color-primary;
 }
 
 .form-control {
@@ -18,5 +18,11 @@ label {
 
 .form-group {
     min-width: 18rem;
-    max-width: 25rem;
+    max-width: 35rem;
+}
+
+.col {
+    @media only screen and (max-width: 479px) {
+        padding: 0;
+    }
 }

@@ -5,6 +5,7 @@
     &,
     &:link,
     &:visited {
+        font-size: 1rem;
         font-family: $font-primary;
         text-transform: uppercase;
         text-decoration: none;
@@ -19,6 +20,31 @@
 
     &:hover {
         box-shadow: 0 1rem 2rem rgba(black, 0.25);
+        transform: translateY(-0.5rem);
+    }
+}
+
+.btn-square {
+
+    &,
+    &:link,
+    &:visited {
+        font-size: 1rem;
+        font-family: $font-primary;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        display: inline-block;
+        border-radius: 5rem;
+        transition: all 0.2s;
+        position: relative;
+        border: none;
+        cursor: pointer;
+    }
+
+    &:hover {
+        box-shadow: 0 1rem 2rem rgba(black, 0.25);
+        color: $color-primary;
     }
 }
 
@@ -26,6 +52,12 @@
     &--white {
         background-color: #fff;
         color: $color-secondary;
+        font-weight: 700;
+    }
+
+    &--primary {
+        background-color: $color-primary;
+        color: #fff;
         font-weight: 700;
     }
 

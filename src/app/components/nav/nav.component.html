@@ -1,4 +1,4 @@
-<div role="navigation" class="nav" #nav [ngClass]="{'nav--sticky': isSticky}">
+<nav role="navigation" class="nav" #nav [ngClass]="{'nav--sticky': isSticky}">
   <!-- <button class="btn-sidebar" type="button" aria-label="Toggle sidenav" (click)="onToggleSidenav()" >
       <i class="material-icons" aria-label="Side nav toggle icon">
         menu
@@ -6,7 +6,7 @@
     </button> -->
   <div *ngIf="isBrowser" class="nav__logo">
     <a [routerLink]="['/']">
-      <img src="../../../assets/images/final_logo2.svg" alt="">
+      <img src="../../../assets/images/logo-nav.svg" alt="">
     </a>
   </div>
   <a class="nav__menu-items nav__menu-items--1" [matMenuTriggerFor]="menu" #menuTrigger="matMenuTrigger"
@@ -61,4 +61,4 @@
       </span>
     </ng-template>
   </mat-menu>
-</div>
+</nav>

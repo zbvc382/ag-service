@@ -1,16 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
-import { MatSidenavModule, MatToolbarModule, MatListModule } from '@angular/material';
+import { MatSidenavModule, MatListModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatTabsModule } from '@angular/material/tabs';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavComponent } from './components/nav/nav.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { QouteFormComponent } from './components/qoute-form/qoute-form.component';
 
 @NgModule({
   declarations: [
@@ -18,17 +20,18 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
     HomeComponent,
     NavComponent,
     FooterComponent,
-    SidenavComponent
+    SidenavComponent,
+    QouteFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MatSidenavModule,
     BrowserAnimationsModule,
-    MatToolbarModule,
     MatListModule,
     MatMenuModule,
-    MatTabsModule
+    MatTabsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
