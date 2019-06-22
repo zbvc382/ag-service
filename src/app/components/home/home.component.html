@@ -79,54 +79,37 @@
           </i>
           Instant Qoute
         </ng-template>
-
-
-
         <div class="request__qoute">
           <h1 class="request__qoute--heading heading-2">Simply complete our three step repair booking form or give us a
             call to get an instant quote.</h1>
-          <app-qoute-form class="request__form"></app-qoute-form>
-
-
-
-          <div class="request__terms">
-            <div class="col">
-              <span> <i class="material-icons material-icons--primary">assignment_turned_in</i>
-                <p>Fast, reliable service</p>
-              </span>
+          <div class="request__qoute--subheading">
+            <div class="subheading-item">
+              <div class="icon-wrapper">
+                <i class="material-icons material-icons--primary material-icons--md-34">
+                  assignment_turned_in
+                </i>
+              </div>
+              <p>Simply complete our three step repair booking form or give us</p>
             </div>
-            <div class="col">
-              <span>
-                <i class="material-icons material-icons--primary">assignment_turned_in</i>
-                <p>Largest UK coverage</p>
-              </span>
+            <div class="subheading-item">
+              <div class="icon-wrapper">
+                <i class="material-icons material-icons--primary material-icons--md-24">
+                  assignment_turned_in
+                </i>
+              </div>
+              <p>Simply complete our three step repair booking form or give us</p>
             </div>
-            <div class="col">
-              <span>
-                <i class="material-icons material-icons--primary">assignment_turned_in</i>
-                <p>Same/next day appointments</p>
-              </span>
+            <div class="subheading-item">
+              <div class="icon-wrapper">
+                <i class="material-icons material-icons--primary material-icons--md-24">
+                  assignment_turned_in
+                </i>
+              </div>
+              <p>Simply complete our three step repair booking form or give us</p>
             </div>
-            <div class="col">
-              <span>
-                <i class="material-icons material-icons--primary">assignment_turned_in</i>
-                <p>Same/next day appointments</p>
-              </span>
-            </div>
-
           </div>
-
-
-
-
-          <div class="request__result">
-              <a [routerLink]="['/']" class="btn-square btn--white">submit</a>
-          </div>
+          <app-qoute-form (qouteSubmitted)="qouteRequest($event)" class="request__qoute--form"></app-qoute-form>
         </div>
-
-
-
-
       </mat-tab>
       <mat-tab>
         <ng-template mat-tab-label>

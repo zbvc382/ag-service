@@ -1,28 +1,53 @@
 @import 'variables';
 
+.form-groups-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 5rem;
+
+    @media only screen and (max-width: 1100px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media only screen and (max-width: 650px) {
+        grid-template-columns: 1fr;
+    }
+}
+
 select.form-control:not([size]):not([multiple]) {
     height: 4rem;
 }
 
-label {
-    margin-left: 0.1rem;
-    font-size: 1.2rem;
-    color: #fff;
-    border-bottom: 0.15rem solid $color-primary;
+.form-group {
+    label {
+        margin-left: 0.1rem;
+        font-size: 1.2rem;
+        color: #fff;
+        border-bottom: 0.15rem solid $color-primary;
+
+        &::after {
+            content: "*";
+            color: #fff;
+            margin-left: 0.5rem;
+        }
+    }
+}
+
+::placeholder {
+    color: $color-grey;
 }
 
 .form-control {
     height: 4rem;
     font-size: 1.5rem;
-}
 
-.form-group {
-    min-width: 18rem;
-    max-width: 35rem;
-}
-
-.col {
-    @media only screen and (max-width: 479px) {
-        padding: 0;
+    &:disabled {
+        background-color: rgba(255, 255, 255, .65);
+        border-color: rgba(255, 255, 255, .65);
     }
+}
+
+.error-message {
+    color: $color-primary;
+    font-size: 1.25rem;
 }
