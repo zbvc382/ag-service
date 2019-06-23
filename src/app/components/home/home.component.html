@@ -18,7 +18,7 @@
     </div>
   </div>
   <div class="intro">
-    <!-- <div class="intro__text-box">
+    <div class="intro__text-box">
       <h1 class="intro-primary">
         <span class="intro-primary--main">The UK's number 1 domestic appliance repair service</span>
         <span class="intro-primary--sub">
@@ -31,7 +31,7 @@
         </span>
       </h1>
       <a [routerLink]="['/']" class="btn-round btn--white btn--animated">get an instant quote</a>
-    </div> -->
+    </div>
   </div>
   <section class="reasons">
     <header>
@@ -79,14 +79,14 @@
           </i>
           Instant Qoute
         </ng-template>
-        <div class="request__qoute">
+        <div class="request__qoute" *ngIf="!isResult">
           <h1 class="request__qoute--heading heading-2">Simply complete our three step repair booking form or give us a
             call to get an instant quote.</h1>
           <div class="request__qoute--subheading">
             <div class="subheading-item">
               <div class="icon-wrapper">
-                <i class="material-icons material-icons--primary material-icons--md-34">
-                  assignment_turned_in
+                <i class="material-icons material-icons--primary material-icons--md-24">
+                  check
                 </i>
               </div>
               <p>Simply complete our three step repair booking form or give us</p>
@@ -94,7 +94,7 @@
             <div class="subheading-item">
               <div class="icon-wrapper">
                 <i class="material-icons material-icons--primary material-icons--md-24">
-                  assignment_turned_in
+                  check
                 </i>
               </div>
               <p>Simply complete our three step repair booking form or give us</p>
@@ -102,7 +102,7 @@
             <div class="subheading-item">
               <div class="icon-wrapper">
                 <i class="material-icons material-icons--primary material-icons--md-24">
-                  assignment_turned_in
+                  check
                 </i>
               </div>
               <p>Simply complete our three step repair booking form or give us</p>
@@ -110,13 +110,79 @@
           </div>
           <app-qoute-form (qouteSubmitted)="qouteRequest($event)" class="request__qoute--form"></app-qoute-form>
         </div>
+        <div *ngIf="isResult" class="request__result">
+          <div class="result__price-container">
+            <div class="header-text heading-2">
+              Price for {{qouteFitting}} {{qouteApplianceMake}} {{qouteApplianceType}} {{qouteJobType}}
+            </div>
+            <div class="price-info">
+              <p>{{price}}<span>+VAT</span></p>
+            </div>
+            <div class="call-info">
+              <p>Call <span><a href="tel:0207 476 8725">0207 476 8725</a></span> to book now.</p>
+            </div>
+          </div>
+          <div class="result__terms">
+            <div class="terms-container">
+              <div class="term-item">
+                <div class="icon-wrapper">
+                  <i class="material-icons material-icons--primary material-icons--md-24">
+                    arrow_right
+                  </i>
+                </div>
+                <p>Same and next day visits at.nd next day visi</p>
+              </div>
+              <div class="term-item">
+                <div class="icon-wrapper">
+                  <i class="material-icons material-icons--primary material-icons--md-24">
+                    arrow_right
+                  </i>
+                </div>
+                <p>Same and next day visits at no additional.nd next day visi</p>
+              </div>
+              <div class="term-item">
+                <div class="icon-wrapper">
+                  <i class="material-icons material-icons--primary material-icons--md-24">
+                    arrow_right
+                  </i>
+                </div>
+                <p>Same and next day visits at.nd next day visi</p>
+              </div>
+              <div class="term-item">
+                <div class="icon-wrapper">
+                  <i class="material-icons material-icons--primary material-icons--md-24">
+                    arrow_right
+                  </i>
+                </div>
+                <p>Same and next day visits at no.nd next day visind next day visi</p>
+              </div>
+              <div class="term-item">
+                <div class="icon-wrapper">
+                  <i class="material-icons material-icons--primary material-icons--md-24">
+                    arrow_right
+                  </i>
+                </div>
+                <p>Same and next day visits at no add.nd next day visind next day visind next day visi</p>
+              </div>
+              <div class="term-item">
+                <div class="icon-wrapper">
+                  <i class="material-icons material-icons--primary material-icons--md-24">
+                    arrow_right
+                  </i>
+                </div>
+                <p>Same and next day visits at no additional.</p>
+              </div>
+            </div>
+          </div>
+          <button class="qoute-reset btn-round btn--white" (click)="resetQoute()">new qoute</button>
+        </div>
       </mat-tab>
       <mat-tab>
         <ng-template mat-tab-label>
           <i class="material-icons material-icons--secondary">
             date_range
           </i>
-          Book Repair
+          Book Online
         </ng-template>
         <div class="request__booking">BOOK</div>
       </mat-tab>

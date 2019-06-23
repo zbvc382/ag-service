@@ -8,6 +8,18 @@
     font-family: $font-primary;
 }
 
+%qoute-tab-body {
+    margin: 4rem 0;
+    color: #fff;
+
+    grid-column: col-start 1 / col-end 8;
+    display: grid;
+    grid-template-columns: [full-start] minmax(3rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end];
+    grid-row-gap: 2.5rem;
+}
+
+
+
 .header-backfill {
     background-color: $color-secondary;
     background-color: #fff;
@@ -125,13 +137,7 @@
     grid-column: full-start / full-end;
 
     &__qoute {
-        margin: 4rem 0;
-        color: #fff;
-
-        grid-column: col-start 1 / col-end 8;
-        display: grid;
-        grid-template-columns: [full-start] minmax(3rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end];
-        grid-row-gap: 2.5rem;
+        @extend %qoute-tab-body;
 
         &--heading {
             justify-self: center;
@@ -139,7 +145,6 @@
             padding: 0.5rem;
 
             grid-column: col-start 1 / col-end 8;
-
         }
 
         &--subheading {
@@ -148,6 +153,7 @@
             grid-template-columns: repeat(3, minmax(min-content, max-content));
             justify-content: center;
             grid-column-gap: 2.5rem;
+            row-gap: 1rem;
 
             @media only screen and (max-width: 700px) {
                 grid-template-columns: repeat(2, minmax(min-content, max-content));
@@ -162,9 +168,10 @@
             .subheading-item {
                 display: grid;
                 grid-template-columns: min-content minmax(min-content, 1fr);
+                align-items: center;
 
-                & > p {
-                    transform: translateY(0.5rem);
+                p {
+                    margin-bottom: 0 !important;
                 }
             }
         }
@@ -175,10 +182,110 @@
     }
 
     &__result {
+        @extend %qoute-tab-body;
+    }
+
+    .qoute-reset {
+        grid-column: col-start 1 / col-end 8;
+        max-width: max-content;
         justify-self: center;
-        grid-column: 2 / 3;
-        font-size: 15px;
-        color: #fff;
+    }
+
+    .result__price-container {
+        grid-column: col-start 1 / col-end 4;
+        display: grid;
+        grid-template-columns: minmax(min-content, max-content);
+        justify-content: center;
+        grid-row-gap: 1.5rem;
+
+        @media only screen and (max-width: 650px) {
+            grid-column: col-start 1 / col-end 8;
+        }
+
+        @media only screen and (max-width: 850px) {
+            grid-column: col-start 1 / col-end 8;
+        }
+
+        .header-text {
+            justify-self: center;
+            background: $color-primary;
+            padding: 0.5rem;
+        }
+
+        .price-info {
+            justify-self: center;
+            align-self: center;
+            font-size: 5rem;
+
+            span {
+                font-size: 2.5rem;
+                margin-left: 1rem;
+            }
+
+            p {
+                margin-bottom: 0;
+            }
+        }
+
+        .call-info {
+            justify-self: center;
+            font-size: 1.75rem;
+
+            p {
+                margin-bottom: 0;
+            }
+
+            span {
+                font-weight: 700;
+                display: inline-block;
+                transform: translateY(0.1rem);
+
+                a {
+                    text-decoration: none;
+                    color: $color-primary;
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+
+    .result__terms {
+        grid-column: col-start 5 / col-end 8;
+
+        @media only screen and (max-width: 850px) {
+            grid-column: col-start 1 / col-end 8;
+        }
+
+        .terms-container {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(min-content, max-content));
+            grid-column-gap: 2rem;
+            grid-row-gap: 2rem;
+
+            @media only screen and (max-width: 450px) {
+                grid-template-columns: minmax(min-content, max-content);
+                justify-content: center;
+            }
+        }
+
+        .term-item {
+            display: grid;
+            grid-template-columns: min-content minmax(min-content, max-content);
+            align-content: center;
+            align-items: center;
+
+            p {
+                margin-bottom: 0 !important;
+            }
+        }
+
+        .icon-wrapper {
+            display: inline-block;
+        }
+
+        p {
+            display: inline-block;
+        }
     }
 
     &__booking {

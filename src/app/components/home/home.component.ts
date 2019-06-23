@@ -9,6 +9,8 @@ import { QouteFormModel } from 'src/app/Models/QouteFormModel';
 export class HomeComponent implements OnInit {
   bothTypes = false;
   price = '£';
+  isResult = false;
+  qoute: QouteFormModel;
 
   premium = [
     'Miele',
@@ -46,9 +48,12 @@ export class HomeComponent implements OnInit {
   }
 
   qouteRequest(qoute: QouteFormModel) {
-    this.resetPrice();
-    this.calculateQoute(qoute);
-    console.log(this.price);
+    if (qoute !== null) {
+      this.resetPrice();
+      this.calculateQoute(qoute);
+      this.qoute = qoute;
+      this.isResult = true;
+    }
   }
 
   calculateQoute(qoute: QouteFormModel) {
@@ -96,5 +101,30 @@ export class HomeComponent implements OnInit {
 
   resetPrice() {
     this.price = '£';
+  }
+
+  resetQoute() {
+    this.isResult = false;
+  }
+
+  get qouteFitting() {
+    if (this.qoute.fitting !== null) {
+      return this.qoute.fitting;
+
+    } else {
+      return 'FAFDASF';
+    }
+  }
+
+  get qouteApplianceType() {
+    return this.qoute.applianceType;
+  }
+
+  get qouteApplianceMake() {
+    return this.qoute.applianceMake;
+  }
+
+  get qouteJobType() {
+    return this.qoute.jobType;
   }
 }
