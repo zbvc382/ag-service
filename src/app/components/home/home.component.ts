@@ -16,8 +16,7 @@ export class HomeComponent implements OnInit {
     'Miele',
     'Gaggenau',
     'De Dietrich',
-    'Fisher',
-    'Paykel',
+    'Fisher & Paykel',
     'Kuppersbusch'
   ];
 

@@ -13,6 +13,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { QouteFormComponent } from './components/qoute-form/qoute-form.component';
+import { BookingFormComponent } from './components/booking-form/booking-form.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { QouteFormComponent } from './components/qoute-form/qoute-form.component
     NavComponent,
     FooterComponent,
     SidenavComponent,
-    QouteFormComponent
+    QouteFormComponent,
+    BookingFormComponent
   ],
   imports: [
     BrowserModule,

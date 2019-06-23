@@ -1,7 +1,7 @@
-<form [formGroup]="form" class="form" (ngSubmit)="onSubmit(form)">
+<form class="form" [formGroup]="form" (ngSubmit)="onSubmit(form)">
   <div class="form-groups-container">
     <div class="form-group">
-      <label for="applianceType">Appliance Type</label>
+      <label class="label label--required" for="applianceType">Appliance Type</label>
       <select class="form-control" formControlName="applianceType"
         [ngClass]="{'form-group--error': isError && !form.controls.applianceType.valid}">
         <option value="" disabled>Please select</option>
@@ -19,68 +19,37 @@
       </select>
     </div>
     <div class="form-group">
-      <label for="applianceMake">Appliance Make</label>
+      <label class="label label--required" for="applianceMake">Appliance Make</label>
       <select class="form-control" formControlName="applianceMake"
         [ngClass]="{'form-group--error': isError && !form.controls.applianceMake.valid}">
         <option value="" disabled>Please select</option>
-        <option value="AEG">AEG</option>
-        <option value="Amica">Amica</option>
-        <option value="Ariston">Ariston</option>
-        <option value="Bauchnecht">Bauchnecht</option>
-        <option value="Baumatic">Baumatic</option>
-        <option value="Bosch">Bosch</option>
-        <option value="Beko">Beko</option>
-        <option value="Belling">Belling</option>
-        <option value="Brandt">Brandt</option>
-        <option value="Britannia">Britannia</option>
-        <option value="Candy">Candy</option>
+        <option value='AEG'>AEG</option>
+        <option value='Baumatic'>Baumatic</option>
+        <option value='Bosch'>Bosch</option>
+        <option value='Beko'>Beko</option>
         <option value="CDA">CDA</option>
-        <option value="Caple">Caple</option>
-        <option value="Creda">Creda</option>
-        <option value="Cuisina">Cuisina</option>
-        <option value="Daewoo">Daewoo</option>
-        <option value="Delonghi">Delonghi</option>
-        <option value="De Dietrich">De Dietrich</option>
-        <option value="Diplomat">Diplomat</option>
+        <option value='DeDietrich'>DeDietrich</option>
         <option value="Electrolux">Electrolux</option>
-        <option value="Fagor">Fagor</option>
-        <option value="Gorenje">Gorenje</option>
-        <option value="Hoover">Hoover</option>
-        <option value="Hotpoint">Hotpoint</option>
-        <option value="Hygena">Hygena</option>
-        <option value="Ignis">Ignis</option>
-        <option value="Indesit">Indesit</option>
+        <option value='Hoover'>Hoover</option>
+        <option value='Hotpoint'>Hotpoint</option>
+        <option value='Indesit'>Indesit</option>
         <option value="Kenwood">Kenwood</option>
         <option value="Kuppersbusch">Kuppersbusch</option>
-        <option value="Lamona">Lamona</option>
-        <option value="Leisure">Leisure</option>
-        <option value="LG">LG</option>
-        <option value="Liebherr">Liebherr</option>
-        <option value="Maytag">Maytag</option>
-        <option value="Matsui">Matsui</option>
-        <option value="Miele">Miele</option>
-        <option value="Necht">Necht</option>
-        <option value="Neff">Neff</option>
-        <option value="Panasonic">Panasonic</option>
-        <option value="Proline">Proline</option>
-        <option value="Rangemaster">Rangemaster</option>
-        <option value="Rosieres">Rosieres</option>
-        <option value="Sharp">Sharp</option>
-        <option value="Samsung">Samsung</option>
-        <option value="Servis">Servis</option>
-        <option value="Siemens">Siemens</option>
-        <option value="Smeg">Smeg</option>
-        <option value="Stoves">Stoves</option>
-        <option value="Technik">Technik</option>
-        <option value="Teka">Teka</option>
-        <option value="Tricity Bendix">Tricity Bendix</option>
-        <option value="Whirlpool">Whirlpool</option>
-        <option value="Zanussi">Zanussi</option>
-        <option value="Other">Other</option>
+        <option value='LG'>LG</option>
+        <option value='Miele'>Miele</option>
+        <option value='Neff'>Neff</option>
+        <option value='Rangemaster'>Rangemaster</option>
+        <option value='Smeg'>Smeg</option>
+        <option value='Samsung'>Samsung</option>
+        <option value='Siemens'>Siemens</option>
+        <option value='Whirlpool'>Whirlpool</option>
+        <option value='Fisher &amp; Paykel'>Fisher &amp; Paykel</option>
+        <option value='Zanussi'>Zanussi</option>
+        <option value='Other'>Other</option>
       </select>
     </div>
     <div class="form-group">
-      <label for="jobType">Job type</label>
+      <label class="label label--required" for="jobType">Job type</label>
       <select class="form-control" formControlName="jobType"
         [ngClass]="{'form-group--error': isError && !form.controls.jobType.valid}">
         <option value="" disabled>Please select</option>
@@ -94,7 +63,7 @@
       </select>
     </div>
     <div class="form-group">
-      <label for="fitting">Freestanding or Intergrated</label>
+      <label class="label label--required" for="fitting">Freestanding or Intergrated</label>
       <select class="form-control" formControlName="fitting"
         [ngClass]="{'form-group--error': isError && !form.controls.fitting.valid}">
         <option value="" disabled>Please select</option>

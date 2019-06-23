@@ -8,7 +8,7 @@
     font-family: $font-primary;
 }
 
-%qoute-tab-body {
+%tab-body {
     margin: 4rem 0;
     color: #fff;
 
@@ -137,7 +137,7 @@
     grid-column: full-start / full-end;
 
     &__qoute {
-        @extend %qoute-tab-body;
+        @extend %tab-body;
 
         &--heading {
             justify-self: center;
@@ -181,7 +181,7 @@
     }
 
     &__result {
-        @extend %qoute-tab-body;
+        @extend %tab-body;
     }
 
     .qoute-reset {
@@ -290,6 +290,24 @@
     }
 
     &__booking {
+        margin: 4rem 0;
         color: #fff;
-    }
+
+        grid-column: full-start / full-end;
+        display: grid;
+        grid-template-columns: [full-start] minmax(3rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end];
+        grid-row-gap: 2.5rem;
+
+        .booking-header {
+            justify-self: center;
+            background: $color-primary;
+            padding: 0.5rem;
+
+            grid-column: col-start 1 / col-end 8;
+        }
+
+        .booking-form {
+            grid-column: col-start 1 / col-end 8;
+        }
+    }    
 }

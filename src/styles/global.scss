@@ -39,6 +39,19 @@ button:focus {
     outline: 0;
 }
 
+.label {
+    margin-left: 0.1rem;
+    font-size: 1.2rem;
+    color: #fff;
+    border-bottom: 0.15rem solid $color-primary;
+
+    &--required::after {
+        content: "*";
+        color: #fff;
+        margin-left: 0.5rem;
+    }
+}
+
 // TODO: Move mat elements elsewhere
 
 .mat-menu-panel.custom {

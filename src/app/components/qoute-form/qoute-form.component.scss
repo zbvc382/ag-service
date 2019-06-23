@@ -18,21 +18,6 @@ select.form-control:not([size]):not([multiple]) {
     height: 4rem;
 }
 
-.form-group {
-    label {
-        margin-left: 0.1rem;
-        font-size: 1.2rem;
-        color: #fff;
-        border-bottom: 0.15rem solid $color-primary;
-
-        &::after {
-            content: "*";
-            color: #fff;
-            margin-left: 0.5rem;
-        }
-    }
-}
-
 ::placeholder {
     color: $color-grey;
 }
