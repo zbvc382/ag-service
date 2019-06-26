@@ -15,9 +15,9 @@
 
 html {
     box-sizing: border-box;
-    // font-size: 62.5%; // 10px
-    font-size: 68.75%; // 11px
-    font-size: 75%; // 12px
+    font-size: 62.5%; // 10px
+    // font-size: 68.75%; // 11px
+    // font-size: 75%; // 12px
 
     // @media only screen and (max-width: 1200px) {
     //     font-size: 50%;
@@ -33,7 +33,7 @@ body {
     display: grid;
     grid-template-columns:
         [full-start] minmax(3rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end];
-    grid-template-rows: 4rem 5rem 50vh minmax(min-content, 1fr) repeat(2, min-content) repeat(3, minmax(min-content, 1fr))
+    grid-template-rows: 4rem 5rem 50vh minmax(min-content, 1fr) repeat(3, min-content) repeat(2, minmax(min-content, 1fr))
 }
 
 button:focus {

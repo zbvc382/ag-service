@@ -37,8 +37,6 @@
     }
 }
 
-
-
 .header-backfill {
     background-color: $color-secondary;
     background-color: #fff;
@@ -207,10 +205,6 @@
             grid-column: col-start 1 / col-end 8;
         }
 
-        // @media only screen and (max-width: 850px) {
-        //     grid-column: col-start 1 / col-end 8;
-        // }
-
         .header-text {
             justify-self: center;
             background: $color-primary;
@@ -328,13 +322,6 @@
         }
     }
 
-    // .suka {
-    //     grid-column: col-start 5 / col-end 8;
-    //     display: grid;
-    //     grid-template-columns: repeat(3, 1fr);
-    //     grid-template-rows: min-content;
-    // }
-
     &__booking {
         margin: 4rem 0;
         color: #fff;
@@ -414,7 +401,8 @@
 
         & img {
             width: 100%;
-            box-shadow: 0 2rem 5rem rgba(#000, .2);
+            box-shadow: 0 2rem 5rem rgba(#000, .15);
+            // border: 0.3rem solid $color-secondary;
         }
 
         & figure {
@@ -461,6 +449,131 @@
         @media only screen and (max-width: 650px) {
             grid-column: 1 / -1;
             grid-row: 2 / 3;
+        }
+    }
+}
+
+.services-container {
+    margin-top: 6.5rem;
+
+    grid-column: col-start 1 / col-end 8;
+    display: grid;
+
+    .section-header {
+        @extend %section-header;
+    }
+
+    .section-text {
+        margin-bottom: 0 !important;
+        font-size: 1.45rem;
+        color: $color-grey;
+        text-rendering: optimizeLegibility;
+        text-align: justify;
+
+    }
+
+    .services {
+        margin-top: 4rem;
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 2.5rem;
+        grid-row-gap: 5rem;
+
+        @media only screen and (max-width: 1100px) {
+            grid-template-columns: repeat(2, minmax(min-content, 30rem));
+            grid-column-gap: 10rem;
+            justify-content: center;
+        }
+
+        @media only screen and (max-width: 800px) {
+            grid-template-columns: repeat(2, minmax(min-content, 30rem));
+            grid-column-gap: 5rem;
+        }
+
+        @media only screen and (max-width: 600px) {
+            grid-template-columns: repeat(2, minmax(min-content, 30rem));
+            grid-column-gap: 2.5rem;
+        }
+
+        @media only screen and (max-width: 500px) {
+            grid-template-columns: 1fr;
+        }
+
+        .service__title {
+            margin-bottom: 0 !important;
+            background-color: $color-primary;
+            padding: 0 1rem;
+        }
+
+        &__service {
+            cursor: pointer;
+            padding-bottom: 2.5rem;
+            padding-top: 2.5rem;
+            display: grid;
+            background-color: $color-secondary;
+            color: #fff;
+            justify-items: center;
+            grid-row-gap: 2.5rem;
+            border-radius: 1rem;
+            font-size: 1.5rem;
+            transition: transform .3s;
+            box-shadow: 0 1.5rem 4rem rgba(#000, .15);
+
+            &:hover {
+                transform: translateY(-1.5rem) scale(1.03);
+            }
+
+            @media only screen and (max-width: 600px) {
+                font-size: 1.25rem;
+            }
+
+            @media only screen and (max-width: 500px) {
+                font-size: 1.75rem;
+            }
+        }
+
+        &__service-commercial {
+            cursor: pointer;
+            padding-bottom: 2.5rem;
+            padding-top: 2.5rem;
+            display: grid;
+            background-color: $color-secondary;
+            color: #fff;
+            justify-items: center;
+            grid-template-rows: repeat(2, min-content);
+            border-radius: 1rem;
+            font-size: 1.5rem;
+            transition: transform .3s;
+            box-shadow: 0 1.5rem 4rem rgba(#000, .15);
+
+            .service__icon-container {
+                padding-top: 6rem;
+
+                @media only screen and (max-width: 500px) {
+                    padding-top: 1rem;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+            }
+
+            .service__icon {
+                max-width: 6rem;
+                max-height: 6rem;
+            }
+
+            &:hover {
+                transform: translateY(-1.5rem) scale(1.03);
+            }
+
+            @media only screen and (max-width: 600px) {
+                font-size: 1.25rem;
+            }
+
+            @media only screen and (max-width: 500px) {
+                font-size: 1.75rem;
+            }
         }
     }
 }
