@@ -11,6 +11,7 @@ import {
   PLATFORM_ID,
   ViewChild
 } from '@angular/core';
+import { BreakpointObserver } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-nav',
@@ -24,7 +25,7 @@ export class NavComponent implements OnInit, AfterViewInit {
   isBrowser = false;
   navPosition: any;
 
-  constructor(private renderer: Renderer2, @Inject(PLATFORM_ID) private platformId: any) { }
+  constructor(private renderer: Renderer2, private breakpointObserver: BreakpointObserver, @Inject(PLATFORM_ID) private platformId: any) { }
 
   ngOnInit() {
     this.isBrowser = isPlatformBrowser(this.platformId);
@@ -49,5 +50,9 @@ export class NavComponent implements OnInit, AfterViewInit {
 
   public onToggleSidenav = () => {
     this.sidenavToggle.emit();
+  }
+
+  get isMobile(): boolean {
+    return this.breakpointObserver.isMatched('(max-width: 1048px)');
   }
 }

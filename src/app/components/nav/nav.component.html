@@ -1,9 +1,16 @@
-<nav role="navigation" class="nav" #nav [ngClass]="{'nav--sticky': isSticky}">
-  <!-- <button class="btn-sidebar" type="button" aria-label="Toggle sidenav" (click)="onToggleSidenav()" >
-      <i class="material-icons" aria-label="Side nav toggle icon">
-        menu
-      </i>
-    </button> -->
+<nav *ngIf="isMobile" role="navigation" class="nav" #nav [ngClass]="{'nav--sticky': isSticky}">
+  <button class="btn-sidebar" type="button" aria-label="Toggle sidenav" (click)="onToggleSidenav()">
+    <i class="material-icons" aria-label="Side nav toggle icon">
+      menu
+    </i>
+  </button>
+</nav>
+<nav *ngIf="!isMobile" role="navigation" class="nav" #nav [ngClass]="{'nav--sticky': isSticky}">
+  <button *ngIf="isMobile" class="btn-sidebar" type="button" aria-label="Toggle sidenav" (click)="onToggleSidenav()">
+    <i class="material-icons" aria-label="Side nav toggle icon">
+      menu
+    </i>
+  </button>
   <div *ngIf="isBrowser" class="nav__logo">
     <a [routerLink]="['/']">
       <img src="../../../assets/images/logo-nav.svg" alt="">
@@ -15,16 +22,19 @@
     <i class="material-icons">keyboard_arrow_down</i>
   </a>
   <a class="nav__menu-items nav__menu-items--2" [routerLink]="['/']">
-    Areas Covered
+    Price List
   </a>
   <a class="nav__menu-items nav__menu-items--3" [routerLink]="['/']">
-    About Us
+    Areas Covered
   </a>
   <a class="nav__menu-items nav__menu-items--4" [routerLink]="['/']">
+    About Us
+  </a>
+  <a class="nav__menu-items nav__menu-items--5" [routerLink]="['/']">
     Estate Agents & Landlors
   </a>
   <div *ngIf="isBrowser" class="nav__phone">
-    <i class="material-icons material-icons--primary">phone</i>
+    <i class="material-icons material-icons--primary material-icons--md-24">phone</i>
     <a href="tel:0207 476 8725">0207 476 8725</a>
   </div>
   <mat-menu #menu="matMenu" class="custom" [overlapTrigger]="false">
@@ -56,6 +66,26 @@
         <a [routerLink]="['/']">
           <button mat-menu-item>
             Extractor Hood Repairs
+          </button>
+        </a>
+        <a [routerLink]="['/']">
+          <button mat-menu-item>
+            Fridge Freezer Repairs
+          </button>
+        </a>
+        <a [routerLink]="['/']">
+          <button mat-menu-item>
+            Commercial Dishwasher Repairs
+          </button>
+        </a>
+        <a [routerLink]="['/']">
+          <button mat-menu-item>
+            Commercial Microwave Repairs
+          </button>
+        </a>
+        <a [routerLink]="['/']">
+          <button mat-menu-item>
+            Commercial Oven Repairs
           </button>
         </a>
       </span>

@@ -10,7 +10,7 @@
     background-color: $color-secondary;
 
     display: grid;
-    grid-template-columns: minmax(3rem, 1fr) repeat(4, [col-start] minmax(min-content, 1fr) [col-end]) minmax(3rem, 1fr);
+    grid-template-columns: minmax(3rem, 1fr) repeat(4, [col-start] minmax(min-content, 28rem) [col-end]) minmax(3rem, 1fr);
     grid-column-gap: 2rem;
     grid-row-gap: 2rem;
 
@@ -40,6 +40,15 @@
         align-content: start;
         grid-row-gap: 1rem;
 
+        @media only screen and (max-width: 1060px) {
+            grid-column: col-start 1 / col-end 2;
+        }
+
+        @media only screen and (max-width: 600px) {
+            grid-column: col-start 1 / col-end 4;
+            justify-content: center;
+        }
+
     }
 
     &__contacts {
@@ -47,6 +56,14 @@
         grid-column: col-start 2 / col-end 2;
         align-content: start;
         grid-row-gap: 1rem;
+
+        @media only screen and (max-width: 1060px) {
+            grid-column: col-start 3 / col-end 4;
+        }
+
+        @media only screen and (max-width: 600px) {
+            grid-column: col-start 1 / col-end 4;
+        }
     }
 
     &__contact {
@@ -67,7 +84,15 @@
         align-content: start;
         grid-row-gap: 1rem;
         text-transform: capitalize;
-        
+
+        @media only screen and (max-width: 1060px) {
+            grid-column: col-start 1 / col-end 2;
+        }
+
+        @media only screen and (max-width: 600px) {
+            grid-column: col-start 1 / col-end 4;
+        }
+
     }
 
     &__other-links {
@@ -76,6 +101,14 @@
         align-content: start;
         grid-row-gap: 1rem;
         text-transform: capitalize;
+
+        @media only screen and (max-width: 1060px) {
+            grid-column: col-start 3 / col-end 4;
+        }
+
+        @media only screen and (max-width: 600px) {
+            grid-column: col-start 1 / col-end 4;
+        }
     }
 
     &__copyright {

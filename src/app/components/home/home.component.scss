@@ -57,6 +57,7 @@
     background-color: $color-secondary;
     background-color: #fff;
     grid-column: full-start / full-end;
+    height: 8vh;
 }
 
 .header {
@@ -65,15 +66,16 @@
     display: grid;
     grid-column: full-start / full-end;
     grid-template-columns:
-        minmax(6rem, 1fr) repeat(2, [email-col-start] 14rem [email-col-end]) minmax(min-content, 20rem) [logo-start] min-content [logo-end] minmax(min-content, 20rem) repeat(2, [call-col-start] 14rem [call-col-end]) minmax(6rem, 1fr) [full-end];
+        minmax(6rem, 1fr) repeat(2, [email-col-start] 14.25rem [email-col-end]) minmax(min-content, 20rem) [logo-start] min-content [logo-end] minmax(min-content, 20rem) repeat(2, [call-col-start] 14.25rem [call-col-end]) minmax(6rem, 1fr) [full-end];
     grid-auto-flow: column;
 
     &__logo-wrapper {
-        display: block;
+        // display: block;
         width: 15rem;
 
         grid-column: logo-start / logo-end;
-        place-self: center;
+        // place-self: center;
+        align-self: center;
 
         &--image {
             max-width: 15rem;
@@ -85,6 +87,7 @@
     &__mobile a {
         text-decoration: none;
         color: #fff;
+        font-size: $font-size-primary;
     }
 
     &__email {
@@ -243,8 +246,8 @@
         }
 
         .call-info {
-            justify-self: center;
             font-size: 2rem;
+            justify-self: center;
 
             p {
                 margin-bottom: 0;
@@ -288,7 +291,7 @@
             grid-column: 1 / -1;
             justify-self: center;
             font-size: 1rem;
-            font-weight: 700;
+            font-weight: 400;
             border-bottom: 1px solid $color-primary;
             padding-bottom: 0.5rem;
 
@@ -524,9 +527,11 @@
 
             .service__icon {
                 max-width: 45%;
+                fill: #fff;
 
                 &--commercial {
                     max-width: 51%;
+                    fill: #fff;
                 }
 
                 @media only screen and (max-width: 800px) {

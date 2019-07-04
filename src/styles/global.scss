@@ -15,8 +15,8 @@
 
 html {
     box-sizing: border-box;
-    font-size: 62.5%; // 10px
-    // font-size: 68.75%; // 11px
+    // font-size: 62.5%; // 10px
+    font-size: 68.75%; // 11px
     // font-size: 75%; // 12px
 
     // @media only screen and (max-width: 1200px) {
@@ -33,7 +33,7 @@ body {
     display: grid;
     grid-template-columns:
         [full-start] minmax(3rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end];
-    grid-template-rows: 4rem 5rem 50vh minmax(min-content, 1fr) repeat(5, min-content);
+    grid-template-rows: 6rem 6rem 50vh minmax(min-content, 1fr) repeat(5, min-content);
 }
 
 button:focus {
@@ -58,8 +58,8 @@ button:focus {
 .mat-menu-panel.custom {
     border-radius: 0;
     position: absolute;
-    top: 0.4rem;
-    width: 20rem;
+    top: -0.1rem;
+    width: 22rem;
     border-top: 0.2rem solid $color-primary;
 
     & a {
@@ -119,4 +119,8 @@ button:focus {
 
 .mat-menu-item:hover {
     background: rgba(0, 0, 0, .04) !important;
+}
+
+.mat-drawer-inner-container {
+    background-color: $color-secondary;
 }

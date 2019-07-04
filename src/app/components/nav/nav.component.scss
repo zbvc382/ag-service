@@ -7,23 +7,38 @@
     position: fixed;
     width: 100%;
     padding: 0;
-    height: 4.1rem;
-    background-color: rgba(255, 255, 255, 0.9);
+    height: 6rem;
+    background-color: rgba(255, 255, 255, 1);
 
     display: grid;
     grid-gap: 2rem;
     grid-template-columns:
-        [full-start] minmax(6rem, 1fr) minmax(min-content, 27rem)[center-start] repeat(4, [col-start] max-content [col-end]) [center-end] minmax(min-content, 27rem) minmax(6rem, 1fr) [full-end];
+        [full-start] minmax(3rem, 1fr) minmax(min-content, 20rem) [center-start] repeat(5, [col-start] max-content [col-end]) [center-end] minmax(min-content, 21rem) minmax(3rem, 1fr) [full-end];
+
+    @media only screen and (max-width: 1342px) {
+        grid-template-columns:
+            [full-start] minmax(3rem, 1fr) minmax(min-content, 13rem) [center-start] repeat(5, [col-start] max-content [col-end]) [center-end] minmax(min-content, 13.5rem) minmax(3rem, 1fr) [full-end];
+
+        grid-gap: 1.5rem;
+    }
+
+
+    p {
+        text-transform: capitalize;
+    }
 
     &__logo {
         grid-column: 2 / col-start 1;
-        width: 12rem;
         align-self: center;
 
         img {
-            width: 12rem;
+            width: 14rem;
             opacity: 0;
             transition: all 0.3s ease;
+
+            @media only screen and (max-width: 1342px) {
+                width: 12rem;
+            }
         }
     }
 
@@ -32,9 +47,15 @@
         cursor: pointer;
         align-items: center;
         transform: translateY(0.15rem);
-        font-size: 1.5rem;
+        // align-self: center;
+        font-size: 1.6rem;
+        font-weight: 400;
         color: $color-secondary;
         text-decoration: none;
+
+        @media only screen and (max-width: 1342px) {
+            font-size: 1.4rem;
+        }
 
         &--1 {
             grid-column: col-start 1 / col-end 1;
@@ -68,11 +89,15 @@
         align-items: center;
         justify-self: end;
         transform: translateY(0.25rem);
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         font-weight: 700;
         font-family: $font-primary;
         opacity: 0;
         transition: all 0.3s ease;
+
+        @media only screen and (max-width: 1342px) {
+            font-size: 1.4rem;
+        }
 
         a {
             text-decoration: none;
@@ -81,6 +106,7 @@
     }
 
     &--sticky {
+
         & img,
         & .nav__phone {
             opacity: 100;
