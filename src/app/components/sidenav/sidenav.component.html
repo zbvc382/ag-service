@@ -1,17 +1,28 @@
 <mat-nav-list>
     <a mat-list-item [routerLink]="['/']" (click)="onSidenavClose()">
+        <i class="material-icons material-icons--white">home</i>
+        <span class="nav-caption">Home</span>
+    </a>
+    <a mat-list-item [routerLink]="['/']" (click)="onSidenavClose()">
+        <i class="material-icons material-icons--white">local_laundry_service</i>
         <span class="nav-caption">Appliance Repairs</span>
     </a>
     <a mat-list-item [routerLink]="['/']" (click)="onSidenavClose()">
+        <i class="material-icons material-icons--white">list_alt</i>
         <span class="nav-caption">Price List</span>
     </a>
     <a mat-list-item [routerLink]="['/']" (click)="onSidenavClose()">
+        <i class="material-icons material-icons--white">place</i>
         <span class="nav-caption">Areas Covered</span>
     </a>
     <a mat-list-item [routerLink]="['/']" (click)="onSidenavClose()">
+        <svg class="icon icon--md">
+            <use xlink:href="../../../assets/images/sprite.svg#info"></use>
+        </svg>
         <span class="nav-caption">About Us</span>
     </a>
     <a mat-list-item [routerLink]="['/']" (click)="onSidenavClose()">
+        <i class="material-icons material-icons--white">supervised_user_circle</i>
         <span class="nav-caption">Estate Agents & Landlors</span>
     </a>
 </mat-nav-list>

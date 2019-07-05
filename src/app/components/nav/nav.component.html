@@ -4,13 +4,23 @@
       menu
     </i>
   </button>
+  <div class="nav__numbers">
+    <div class="nav__resp-phone">
+      <i class="material-icons material-icons--primary">phone</i>
+      <a href="tel:0207 476 8725">0207 476 8725</a>
+    </div>
+    <div class="nav__resp-mobile">
+      <i class="material-icons material-icons--primary">smartphone</i>
+      <a href="tel:0754 085 2102">0754 085 2102</a>
+    </div>
+  </div>
 </nav>
 <nav *ngIf="!isMobile" role="navigation" class="nav" #nav [ngClass]="{'nav--sticky': isSticky}">
-  <button *ngIf="isMobile" class="btn-sidebar" type="button" aria-label="Toggle sidenav" (click)="onToggleSidenav()">
+  <!-- <button *ngIf="isMobile" class="btn-sidebar" type="button" aria-label="Toggle sidenav" (click)="onToggleSidenav()">
     <i class="material-icons" aria-label="Side nav toggle icon">
       menu
     </i>
-  </button>
+  </button> -->
   <div *ngIf="isBrowser" class="nav__logo">
     <a [routerLink]="['/']">
       <img src="../../../assets/images/logo-nav.svg" alt="">

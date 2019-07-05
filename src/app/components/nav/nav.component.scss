@@ -20,6 +20,78 @@
             [full-start] minmax(3rem, 1fr) minmax(min-content, 13rem) [center-start] repeat(5, [col-start] max-content [col-end]) [center-end] minmax(min-content, 13.5rem) minmax(3rem, 1fr) [full-end];
 
         grid-gap: 1.5rem;
+        height: 5rem;
+    }
+
+    @media only screen and (max-width: 1048px) {
+        grid-template-columns: 1fr 3fr;
+        height: 5rem;
+
+        .btn-sidebar {
+            background-color: #fff;
+            color: $color-primary;
+            border: none;
+            padding-left: 1.5rem;
+            padding-right: 1.4rem;
+            justify-self: start;
+
+            i {
+                align-self: center;
+                transform: translateY(0.25rem);
+            }
+
+        }
+
+        .nav__numbers {
+            justify-self: end;
+            align-self: center;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            @media only screen and (max-width: 426px) {
+                grid-template-columns: 1fr;
+            }
+
+            i {
+                font-size: 2.2rem;
+            }
+        }
+
+        &__resp-phone {
+            display: flex;
+            align-items: center;
+            // font-size: 1.4rem;
+            // font-weight: 400;
+            font-family: $font-primary;
+            margin-right: 3rem;
+
+            a {
+                text-decoration: none;
+                color: $color-secondary;
+                font-size: $font-size-secondary;
+                font-weight: 700;
+            }
+        }
+
+        &__resp-mobile {
+            display: flex;
+            align-items: center;
+            // font-size: 1.4rem;
+            // font-weight: 400;
+            font-family: $font-primary;
+            margin-right: 3rem;
+
+            a {
+                text-decoration: none;
+                color: $color-secondary;
+                font-size: $font-size-secondary;
+                font-weight: 700;
+            }
+
+            @media only screen and (max-width: 426px) {
+                display: none;
+            }
+        }
     }
 
 
