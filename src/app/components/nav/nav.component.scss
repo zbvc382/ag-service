@@ -21,6 +21,14 @@
 
         grid-gap: 1.5rem;
         height: 5rem;
+
+        .nav__numbers {
+            svg {
+                height: 2rem;
+                width: 2rem;
+                margin-right: 0.5rem;
+            }
+        }
     }
 
     @media only screen and (max-width: 1048px) {
@@ -31,15 +39,14 @@
             background-color: #fff;
             color: $color-primary;
             border: none;
-            padding-left: 1.5rem;
-            padding-right: 1.4rem;
+            padding-left: 2.5rem;
             justify-self: start;
 
-            i {
-                align-self: center;
+            svg {
+                height: 3rem;
+                width: 3rem;
                 transform: translateY(0.25rem);
             }
-
         }
 
         .nav__numbers {
@@ -48,27 +55,21 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr);
 
-            @media only screen and (max-width: 426px) {
+            @media only screen and (max-width: 470px) {
                 grid-template-columns: 1fr;
-            }
-
-            i {
-                font-size: 2.2rem;
             }
         }
 
         &__resp-phone {
             display: flex;
             align-items: center;
-            // font-size: 1.4rem;
-            // font-weight: 400;
             font-family: $font-primary;
             margin-right: 3rem;
 
             a {
                 text-decoration: none;
                 color: $color-secondary;
-                font-size: $font-size-secondary;
+                font-size: $font-size-primary;
                 font-weight: 700;
             }
         }
@@ -76,19 +77,17 @@
         &__resp-mobile {
             display: flex;
             align-items: center;
-            // font-size: 1.4rem;
-            // font-weight: 400;
             font-family: $font-primary;
             margin-right: 3rem;
 
             a {
                 text-decoration: none;
                 color: $color-secondary;
-                font-size: $font-size-secondary;
+                font-size: $font-size-primary;
                 font-weight: 700;
             }
 
-            @media only screen and (max-width: 426px) {
+            @media only screen and (max-width: 470px) {
                 display: none;
             }
         }
@@ -119,7 +118,6 @@
         cursor: pointer;
         align-items: center;
         transform: translateY(0.15rem);
-        // align-self: center;
         font-size: 1.6rem;
         font-weight: 400;
         color: $color-secondary;
@@ -168,12 +166,16 @@
         transition: all 0.3s ease;
 
         @media only screen and (max-width: 1342px) {
-            font-size: 1.4rem;
+            font-size: 1.6rem;
         }
 
         a {
             text-decoration: none;
             color: $color-grey;
+        }
+
+        svg {
+            margin-right: 0.5rem;
         }
     }
 

@@ -1,16 +1,20 @@
 <nav *ngIf="isMobile" role="navigation" class="nav" #nav [ngClass]="{'nav--sticky': isSticky}">
   <button class="btn-sidebar" type="button" aria-label="Toggle sidenav" (click)="onToggleSidenav()">
-    <i class="material-icons" aria-label="Side nav toggle icon">
-      menu
-    </i>
+    <svg class="icon icon--md icon--primary">
+        <use xlink:href="../../../assets/images/sprite.svg#squared_menu"></use>
+    </svg>
   </button>
   <div class="nav__numbers">
     <div class="nav__resp-phone">
-      <i class="material-icons material-icons--primary">phone</i>
+        <svg class="icon icon--sm icon--primary">
+            <use xlink:href="../../../assets/images/sprite.svg#phone_filled"></use>
+        </svg>
       <a href="tel:0207 476 8725">0207 476 8725</a>
     </div>
     <div class="nav__resp-mobile">
-      <i class="material-icons material-icons--primary">smartphone</i>
+        <svg class="icon icon--sm icon--primary">
+            <use xlink:href="../../../assets/images/sprite.svg#touchscreen_smartphone_filled"></use>
+        </svg>
       <a href="tel:0754 085 2102">0754 085 2102</a>
     </div>
   </div>
@@ -29,7 +33,9 @@
   <a class="nav__menu-items nav__menu-items--1" [matMenuTriggerFor]="menu" #menuTrigger="matMenuTrigger"
     (mouseover)="menuTrigger.openMenu()">
     Appliance Repairs
-    <i class="material-icons">keyboard_arrow_down</i>
+    <svg class="icon icon--sm icon--secondary">
+        <use xlink:href="../../../assets/images/sprite.svg#expand_arrow"></use>
+    </svg>
   </a>
   <a class="nav__menu-items nav__menu-items--2" [routerLink]="['/']">
     Price List
@@ -44,7 +50,9 @@
     Estate Agents & Landlors
   </a>
   <div *ngIf="isBrowser" class="nav__phone">
-    <i class="material-icons material-icons--primary material-icons--md-24">phone</i>
+      <svg class="icon icon--sm icon--primary">
+          <use xlink:href="../../../assets/images/sprite.svg#phone_filled"></use>
+      </svg>
     <a href="tel:0207 476 8725">0207 476 8725</a>
   </div>
   <mat-menu #menu="matMenu" class="custom" [overlapTrigger]="false">

@@ -5,15 +5,21 @@
       <img class="header__logo-wrapper--image" src="../../../assets/images/logo-header.svg" alt="" />
     </div>
     <div class="header__email">
-      <i class="material-icons material-icons--white material-icons--md-24">email</i>
+        <svg class="icon icon--md icon icon--white">
+            <use xlink:href="../../../assets/images/sprite.svg#mail_filled"></use>
+        </svg>
       <a href="mailto:contact@ag-repairs.co.uk">contact@ag-repairs.co.uk</a>
     </div>
     <div class="header__phone">
-      <i class="material-icons material-icons--white material-icons--md-24">phone</i>
+        <svg class="icon icon--md icon icon--white">
+            <use xlink:href="../../../assets/images/sprite.svg#phone_filled"></use>
+        </svg>
       <a href="tel:0207 476 8725">0207 476 8725</a>
     </div>
     <div class="header__mobile">
-      <i class="material-icons material-icons--white material-icons--md-24">smartphone</i>
+        <svg class="icon icon--md icon icon--white">
+            <use xlink:href="../../../assets/images/sprite.svg#touchscreen_smartphone_filled"></use>
+        </svg>
       <a href="tel:0754 085 2102">0754 085 2102</a>
     </div>
   </div>
@@ -38,35 +44,27 @@
       <h1 class="heading-1 heading-1--primary">why choose our services</h1>
     </header>
     <div class="reason">
-      <div class="icon-wrapper">
-        <i class="material-icons material-icons--secondary material-icons--md-56">
-          verified_user
-        </i>
-      </div>
+      <svg class="icon icon--lg icon icon--secondary">
+          <use xlink:href="../../../assets/images/sprite.svg#security_checked"></use>
+      </svg>
       <h1 class="heading-2 heading-2--grey">6 months guarantee on all appliance repairs</h1>
     </div>
     <div class="reason">
-      <div class="icon-wrapper">
-        <i class="material-icons material-icons--secondary material-icons--md-56">
-          home
-        </i>
-      </div>
+      <svg class="icon icon--lg icon icon--secondary">
+          <use xlink:href="../../../assets/images/sprite.svg#person_at_home"></use>
+      </svg>
       <h1 class="heading-2 heading-2--grey">Same and next day visits at no additional cost</h1>
     </div>
     <div class="reason">
-      <div class="icon-wrapper">
-        <i class="material-icons material-icons--secondary material-icons--md-56">
-          block
-        </i>
-      </div>
+      <svg class="icon icon--lg icon icon--secondary">
+          <use xlink:href="../../../assets/images/sprite.svg#cancel_2"></use>
+      </svg>
       <h1 class="heading-2 heading-2--grey">No hidden costs, no call out charges, no parking fees</h1>
     </div>
     <div class="reason">
-      <div class="icon-wrapper">
-        <i class="material-icons material-icons--secondary material-icons--md-56">
-          group
-        </i>
-      </div>
+      <svg class="icon icon--lg icon icon--secondary">
+          <use xlink:href="../../../assets/images/sprite.svg#user_group_man_man"></use>
+      </svg>
       <h1 class="heading-2 heading-2--grey"> Experienced Technicians</h1>
     </div>
   </section>
@@ -74,9 +72,9 @@
     <mat-tab-group mat-align-tabs="center">
       <mat-tab>
         <ng-template mat-tab-label>
-          <i class="material-icons material-icons--secondary">
-            build
-          </i>
+            <svg id="bpc" class="icon icon--md icon icon--secondary">
+                <use xlink:href="../../../assets/images/sprite.svg#bpc"></use>
+            </svg>
           Instant Qoute
         </ng-template>
         <div class="request__qoute" *ngIf="!isResult">
@@ -84,28 +82,22 @@
             call to get an instant quote.</h1>
           <div class="request__qoute--subheading">
             <div class="subheading-item">
-              <div class="icon-wrapper">
-                <i class="material-icons material-icons--primary material-icons--md-24">
-                  check
-                </i>
-              </div>
-              <p>Simply complete our three step repair booking form or give us</p>
+              <svg class="icon icon--md icon--primary">
+                  <use xlink:href="../../../assets/images/sprite.svg#checkmark"></use>
+              </svg>
+              <p>Simply complete our three step repair booking form</p>
             </div>
             <div class="subheading-item">
-              <div class="icon-wrapper">
-                <i class="material-icons material-icons--primary material-icons--md-24">
-                  check
-                </i>
-              </div>
-              <p>Simply complete our three step repair booking form or give us</p>
+              <svg class="icon icon--md icon--primary">
+                  <use xlink:href="../../../assets/images/sprite.svg#checkmark"></use>
+              </svg>
+              <p>Simply complete our three step repair booking form</p>
             </div>
             <div class="subheading-item">
-              <div class="icon-wrapper">
-                <i class="material-icons material-icons--primary material-icons--md-24">
-                  check
-                </i>
-              </div>
-              <p>Simply complete our three step repair booking form or give us</p>
+              <svg class="icon icon--md icon--primary">
+                  <use xlink:href="../../../assets/images/sprite.svg#checkmark"></use>
+              </svg>
+              <p>Simply complete our three step repair booking form</p>
             </div>
           </div>
           <app-qoute-form (qouteSubmitted)="qouteRequest($event)" class="request__qoute--form"></app-qoute-form>
@@ -127,66 +119,60 @@
               <div class="term-header">
                 <div class="term-header__items">
                   <div class="term-header__item">
-                    <i class="material-icons material-icons--white">schedule</i>
+                    <svg class="icon icon--md icon--white">
+                        <use xlink:href="../../../assets/images/sprite.svg#clock"></use>
+                    </svg>
                     <p>Available six days a week</p>
                   </div>
                   <div class="term-header__item">
-                    <i class="material-icons material-icons--white">payment</i>
+                    <svg class="icon icon--md icon--white">
+                        <use xlink:href="../../../assets/images/sprite.svg#card_in_use"></use>
+                    </svg>
                     <p>We accept cash and major credit cards</p>
                   </div>
                   <div class="term-header__item">
-                    <i class="material-icons material-icons--white">date_range</i>
+                    <svg class="icon icon--md icon--white">
+                        <use xlink:href="../../../assets/images/sprite.svg#today"></use>
+                    </svg>
                     <p>Hassle free appointments</p>
                   </div>
                 </div>
               </div>
               <div class="term-item">
-                <div class="icon-wrapper">
-                  <i class="material-icons material-icons--primary material-icons--md-24">
-                    arrow_right
-                  </i>
-                </div>
-                <p>Same and next day visits at.nd next day visi</p>
+                <svg class="icon icon--xs">
+                    <use xlink:href="../../../assets/images/sprite.svg#filled_circle"></use>
+                </svg>
+                <p>Same and next day visits at no additional cost.</p>
               </div>
               <div class="term-item">
-                <div class="icon-wrapper">
-                  <i class="material-icons material-icons--primary material-icons--md-24">
-                    arrow_right
-                  </i>
-                </div>
-                <p>Same and next day visits at no additional.nd next day visi</p>
+                <svg class="icon icon--xs">
+                    <use xlink:href="../../../assets/images/sprite.svg#filled_circle"></use>
+                </svg>
+                <p>Same and next day visits at no additional cost.</p>
               </div>
               <div class="term-item">
-                <div class="icon-wrapper">
-                  <i class="material-icons material-icons--primary material-icons--md-24">
-                    arrow_right
-                  </i>
-                </div>
-                <p>Same and next day visits at.nd next day visi</p>
+                <svg class="icon icon--xs">
+                    <use xlink:href="../../../assets/images/sprite.svg#filled_circle"></use>
+                </svg>
+                <p>Same and next day visits at no additional cost.</p>
               </div>
               <div class="term-item">
-                <div class="icon-wrapper">
-                  <i class="material-icons material-icons--primary material-icons--md-24">
-                    arrow_right
-                  </i>
-                </div>
-                <p>Same and next day visits at no.nd next day visind next day visi</p>
+                <svg class="icon icon--xs">
+                    <use xlink:href="../../../assets/images/sprite.svg#filled_circle"></use>
+                </svg>
+                <p>Same and next day visits at no additional cost.</p>
               </div>
               <div class="term-item">
-                <div class="icon-wrapper">
-                  <i class="material-icons material-icons--primary material-icons--md-24">
-                    arrow_right
-                  </i>
-                </div>
-                <p>Same and next day visits at no add.nd next day visind next day visind next day visi</p>
+                <svg class="icon icon--xs">
+                    <use xlink:href="../../../assets/images/sprite.svg#filled_circle"></use>
+                </svg>
+                <p>Same and next day visits at no additional cost.</p>
               </div>
               <div class="term-item">
-                <div class="icon-wrapper">
-                  <i class="material-icons material-icons--primary material-icons--md-24">
-                    arrow_right
-                  </i>
-                </div>
-                <p>Same and next day visits at no additional.</p>
+                <svg class="icon icon--xs">
+                    <use xlink:href="../../../assets/images/sprite.svg#filled_circle"></use>
+                </svg>
+                <p>Same and next day visits at no additional cost.</p>
               </div>
             </div>
           </div>
@@ -385,7 +371,6 @@
       <a class="btn-round" [routerLink]="[ '/']" class="btn-round">view all postcodes</a>
     </div>
   </section>
-
   <section class="reviews-container">
     <header class="section-header">
       <h1 class="heading-1 heading-1--primary">google reviews</h1>
@@ -399,30 +384,30 @@
           Marie Adam
         </div>
         <div class="review__stars">
-          <i class="material-icons material-icons--md-24">
-            star
-          </i>
-          <i class="material-icons material-icons--md-24">
-            star
-          </i>
-          <i class="material-icons material-icons--md-24">
-            star
-          </i>
-          <i class="material-icons material-icons--md-24">
-            star
-          </i>
-          <i class="material-icons material-icons--md-24">
-            star
-          </i>
+          <svg class="icon icon--md">
+              <use xlink:href="../../../assets/images/sprite.svg#star"></use>
+          </svg>
+          <svg class="icon icon--md">
+              <use xlink:href="../../../assets/images/sprite.svg#star"></use>
+          </svg>
+          <svg class="icon icon--md">
+              <use xlink:href="../../../assets/images/sprite.svg#star"></use>
+          </svg>
+          <svg class="icon icon--md">
+              <use xlink:href="../../../assets/images/sprite.svg#star"></use>
+          </svg>
+          <svg class="icon icon--md">
+              <use xlink:href="../../../assets/images/sprite.svg#star"></use>
+          </svg>
         </div>
         <div class="review__text">
-          <i class="material-icons">
-            format_quote
-          </i>
+          <svg class="icon icon--md icon--primary">
+              <use xlink:href="../../../assets/images/sprite.svg#quote_left"></use>
+          </svg>
           <p>Very professional & efficient. Great service at a very good price. I would definitely recommend.</p>
-          <i class="material-icons">
-            format_quote
-          </i>
+          <svg class="icon icon--md icon--primary">
+              <use xlink:href="../../../assets/images/sprite.svg#quote_right"></use>
+          </svg>
         </div>
       </div>
       <div class="review">
@@ -433,29 +418,30 @@
           George Pidgeon
         </div>
         <div class="review__stars">
-          <i class="material-icons material-icons--md-24">
-            star
-          </i>
-          <i class="material-icons material-icons--md-24">
-            star
-          </i>
-          <i class="material-icons material-icons--md-24">
-            star
-          </i>
-          <i class="material-icons material-icons--md-24">
-            star
-          </i>
-          <i class="material-icons material-icons--md-24">
-            star
-          </i>
+            <svg class="icon icon--md">
+                <use xlink:href="../../../assets/images/sprite.svg#star"></use>
+            </svg>
+            <svg class="icon icon--md">
+                <use xlink:href="../../../assets/images/sprite.svg#star"></use>
+            </svg>
+            <svg class="icon icon--md">
+                <use xlink:href="../../../assets/images/sprite.svg#star"></use>
+            </svg>
+            <svg class="icon icon--md">
+                <use xlink:href="../../../assets/images/sprite.svg#star"></use>
+            </svg>
+            <svg class="icon icon--md">
+                <use xlink:href="../../../assets/images/sprite.svg#star"></use>
+            </svg>
         </div>
         <div class="review__text">
-          <i class="material-icons">
-            format_quote
-          </i>
-          <p>Thank you - would definitely use again in future.</p><i class="material-icons">
-            format_quote
-          </i>
+          <svg class="icon icon--md icon--primary">
+              <use xlink:href="../../../assets/images/sprite.svg#quote_left"></use>
+          </svg>
+          <p>Thank you - would definitely use again in future.</p>
+          <svg class="icon icon--md icon--primary">
+              <use xlink:href="../../../assets/images/sprite.svg#quote_right"></use>
+          </svg>
         </div>
       </div>
       <div class="review">
@@ -466,29 +452,30 @@
           Annie Yusuf
         </div>
         <div class="review__stars">
-          <i class="material-icons material-icons--md-24">
-            star
-          </i>
-          <i class="material-icons material-icons--md-24">
-            star
-          </i>
-          <i class="material-icons material-icons--md-24">
-            star
-          </i>
-          <i class="material-icons material-icons--md-24">
-            star
-          </i>
-          <i style="color:#dddddd;" class="material-icons material-icons--md-24">
-            star
-          </i>
+            <svg class="icon icon--md">
+                <use xlink:href="../../../assets/images/sprite.svg#star"></use>
+            </svg>
+            <svg class="icon icon--md">
+                <use xlink:href="../../../assets/images/sprite.svg#star"></use>
+            </svg>
+            <svg class="icon icon--md">
+                <use xlink:href="../../../assets/images/sprite.svg#star"></use>
+            </svg>
+            <svg class="icon icon--md">
+                <use xlink:href="../../../assets/images/sprite.svg#star"></use>
+            </svg>
+            <svg class="icon icon--md" style="fill:#dddddd;">
+                <use xlink:href="../../../assets/images/sprite.svg#star"></use>
+            </svg>
         </div>
         <div class="review__text">
-          <i class="material-icons">
-            format_quote
-          </i>
-          <p>Good repair work.</p><i class="material-icons">
-            format_quote
-          </i>
+          <svg class="icon icon--md icon--primary">
+              <use xlink:href="../../../assets/images/sprite.svg#quote_left"></use>
+          </svg>
+          <p>Good repair work.</p>
+          <svg class="icon icon--md icon--primary">
+              <use xlink:href="../../../assets/images/sprite.svg#quote_right"></use>
+          </svg>
         </div>
       </div>
       <div class="review">
@@ -499,29 +486,30 @@
           Ellie Roberts
         </div>
         <div class="review__stars">
-          <i class="material-icons material-icons--md-24">
-            star
-          </i>
-          <i class="material-icons material-icons--md-24">
-            star
-          </i>
-          <i class="material-icons material-icons--md-24">
-            star
-          </i>
-          <i class="material-icons material-icons--md-24">
-            star
-          </i>
-          <i class="material-icons material-icons--md-24">
-            star
-          </i>
+            <svg class="icon icon--md">
+                <use xlink:href="../../../assets/images/sprite.svg#star"></use>
+            </svg>
+            <svg class="icon icon--md">
+                <use xlink:href="../../../assets/images/sprite.svg#star"></use>
+            </svg>
+            <svg class="icon icon--md">
+                <use xlink:href="../../../assets/images/sprite.svg#star"></use>
+            </svg>
+            <svg class="icon icon--md">
+                <use xlink:href="../../../assets/images/sprite.svg#star"></use>
+            </svg>
+            <svg class="icon icon--md">
+                <use xlink:href="../../../assets/images/sprite.svg#star"></use>
+            </svg>
         </div>
         <div class="review__text">
-          <i class="material-icons">
-            format_quote
-          </i>
-          <p>Quick and efficient service - I would use them again.</p><i class="material-icons">
-            format_quote
-          </i>
+          <svg class="icon icon--md icon--primary">
+              <use xlink:href="../../../assets/images/sprite.svg#quote_left"></use>
+          </svg>
+          <p>Quick and efficient service - I would use them again.</p>
+          <svg class="icon icon--md icon--primary">
+              <use xlink:href="../../../assets/images/sprite.svg#quote_right"></use>
+          </svg>
         </div>
       </div>
     </div>

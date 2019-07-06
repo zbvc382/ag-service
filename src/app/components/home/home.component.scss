@@ -69,6 +69,10 @@
         minmax(6rem, 1fr) repeat(2, [email-col-start] 14.25rem [email-col-end]) minmax(min-content, 20rem) [logo-start] min-content [logo-end] minmax(min-content, 20rem) repeat(2, [call-col-start] 14.25rem [call-col-end]) minmax(6rem, 1fr) [full-end];
     grid-auto-flow: column;
 
+    svg {
+        margin-right: 0.5rem;
+    }
+
 
     @media only screen and (max-width: 1048px) {
         grid-template-columns: minmax(3rem, 1fr) minmax(min-content, 1fr) minmax(3rem, 1fr);
@@ -76,11 +80,9 @@
     }
 
     &__logo-wrapper {
-        // display: block;
         width: 15rem;
 
         grid-column: logo-start / logo-end;
-        // place-self: center;
         align-self: center;
 
         &--image {
@@ -146,12 +148,6 @@
 
         @media only screen and (max-width: 1048px) {
             display: none;
-        }
-    }
-
-    @media only screen and (max-width: 1342px) {
-        i {
-            font-size: 2.2rem;
         }
     }
 }
@@ -230,6 +226,10 @@
 
     grid-column: full-start / full-end;
 
+    #bpc {
+        margin-right: 1rem;
+    }
+
     &__qoute {
         @extend %tab-body;
 
@@ -265,6 +265,10 @@
 
                 p {
                     margin-bottom: 0 !important;
+                }
+
+                svg {
+                    margin-right: 0.5rem;
                 }
             }
         }
@@ -366,6 +370,11 @@
             border-bottom: 1px solid $color-primary;
             padding-bottom: 0.5rem;
 
+            svg {
+                margin-right: 0.5rem;
+                fill: #fff;
+            }
+
             &__items {
                 display: grid;
                 grid-template-columns: repeat(3, minmax(min-content, max-content));
@@ -400,6 +409,11 @@
 
             p {
                 margin-bottom: 0 !important;
+            }
+
+            svg {
+                margin-right: 0.5rem;
+                fill: $color-primary;
             }
         }
 
@@ -676,6 +690,8 @@
     .section-header {
         @extend %section-header;
         margin-bottom: 6.5rem;
+        margin-left: 3rem;
+        margin-right: 3rem;
     }
 
     .coverage-text {
@@ -907,37 +923,8 @@
             align-self: center;
             justify-self: center;
 
-            i {
-                color: gold;
-
-                &:not(:last-child) {
-                    margin-right: 0.25rem;
-                }
-
-                @media only screen and (max-width: 1060px) {
-                    font-size: 3rem;
-
-                    &:not(:last-child) {
-                        margin-right: 1rem;
-                    }
-                }
-
-                @media only screen and (max-width: 768px) {
-                    font-size: 2.4rem;
-
-                    &:not(:last-child) {
-                        margin-right: 0.25rem;
-                    }
-                }
-
-                @media only screen and (max-width: 600px) {
-                    font-size: 3rem;
-
-                    &:not(:last-child) {
-                        margin-right: 1rem;
-                    }
-                }
-
+            svg {
+                fill: gold;
             }
         }
 
@@ -974,17 +961,13 @@
                 display: inline-block;
             }
 
-            i {
-                color: $color-primary;
-                display: inline-block;
+            svg:first-child {
+                margin-right: 0.5rem;
             }
 
-            i:first-child {
-                transform: rotate(180deg);
-            }
-
-            i:last-child {
+            svg:last-child {
                 align-self: end;
+                margin-left: 0.5rem;
             }
         }
     }

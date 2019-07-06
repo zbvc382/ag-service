@@ -117,18 +117,3 @@
         color: rgba($color: #fff, $alpha: 0.5);
     }
 }
-
-.icon {
-    background-size: auto 100% !important;
-    display: inline-block;
-
-    &--sm {
-        height: 1.5rem;
-        width: 1.5rem;
-    }
-
-    &--md {
-        height: 2rem;
-        width: 2rem;
-    }
-}

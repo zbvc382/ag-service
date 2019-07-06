@@ -143,3 +143,44 @@
         color: $color-secondary;
     }
 }
+
+.icon {
+    background-size: auto 100% !important;
+    display: inline-block;
+
+    &--xs {
+        height: 1rem;
+        width: 1rem;
+    }
+
+    &--sm {
+        height: 2rem;
+        width: 2rem;
+    }
+
+    &--md {
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+
+    &--lg {
+        height: 5.5rem;
+        width: 5.5rem;
+    }
+
+    &--white {
+        fill: #fff;
+    }
+
+    &--grey {
+        fill: $color-grey;
+    }
+
+    &--primary {
+        fill: $color-primary;
+    }
+
+    &--secondary {
+        fill: $color-secondary;
+    }
+}
