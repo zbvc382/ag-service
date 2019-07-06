@@ -62,46 +62,6 @@
     }
 }
 
-.intro-primary {
-    backface-visibility: hidden;
-    margin-bottom: 6rem;
-
-    &--main {
-        font-family: "Poppins", sans-serif;
-        color: #fff;
-        display: block;
-        font-size: 3rem;
-        font-weight: 600;
-        animation: moveInLeft 1s ease-out;
-        animation-delay: 0.1s;
-    }
-
-    &--sub {
-        font-family: "Poppins", sans-serif;
-        display: block;
-        font-weight: 300;
-        animation: moveInRight 1s ease-out;
-        animation-delay: 0.1s;
-    }
-
-    &--sub p {
-        font-size: 1.75rem;
-        margin-top: 4rem;
-        display: inline-block;
-        transform: translateY(-0.85rem);
-        color: #fff;
-    }
-
-    &--sub p:not(:last-child) {
-        margin-right: 4rem;
-    }
-
-    &--sub i {
-        font-size: 3rem;
-        margin-right: 1.5rem;
-    }
-}
-
 .material-icons {
     width: 2.4rem;
     height: 2.4rem;
