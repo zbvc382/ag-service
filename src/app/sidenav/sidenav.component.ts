@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-sidenav',
@@ -6,7 +6,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./sidenav.component.scss']
 })
 export class SidenavComponent implements OnInit {
-  // @Output() sidenavClose = new EventEmitter();
+  @Output() sidenavToggle = new EventEmitter();
 
   constructor() { }
 
@@ -14,6 +14,6 @@ export class SidenavComponent implements OnInit {
   }
 
   public onSidenavClose = () => {
-    // this.sidenavClose.emit();
+    this.sidenavToggle.emit();
   }
 }

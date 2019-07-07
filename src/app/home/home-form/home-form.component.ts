@@ -1,13 +1,13 @@
 import { Component, OnInit, OnDestroy, Output, EventEmitter } from '@angular/core';
 import { FormGroup, Validators, FormBuilder } from '@angular/forms';
-import { QouteFormModel } from 'src/app/Models/QouteFormModel';
+import { HomeFormModel } from 'src/app/_models/HomeFormModel';
 
 @Component({
-  selector: 'app-qoute-form',
-  templateUrl: './qoute-form.component.html',
-  styleUrls: ['./qoute-form.component.scss']
+  selector: 'app-home-form',
+  templateUrl: './home-form.component.html',
+  styleUrls: ['./home-form.component.scss']
 })
-export class QouteFormComponent implements OnInit, OnDestroy {
+export class HomeFormComponent implements OnInit, OnDestroy {
   @Output() qouteSubmitted = new EventEmitter();
 
   form: FormGroup;
@@ -76,7 +76,7 @@ export class QouteFormComponent implements OnInit, OnDestroy {
   }
 
   getFormValue() {
-    return this.form.value as QouteFormModel;
+    return this.form.value as HomeFormModel;
   }
 
   onSubmit(form: FormGroup) {

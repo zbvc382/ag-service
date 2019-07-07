@@ -1,6 +1,6 @@
 <mat-sidenav-container>
   <mat-sidenav role="navigation" #sidenav fixedInViewport="true" [opened]="false" [autoFocus]="false">
-    <app-sidenav></app-sidenav>
+    <app-sidenav (sidenavToggle)="sidenav.close()"></app-sidenav>
   </mat-sidenav>
   <mat-sidenav-content role="main">
     <app-nav (sidenavToggle)="sidenav.open()"></app-nav>

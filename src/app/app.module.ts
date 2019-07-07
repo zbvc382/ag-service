@@ -4,24 +4,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { MatSidenavModule, MatListModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatMenuModule } from '@angular/material/menu';
-import { MatTabsModule } from '@angular/material/tabs';
-import { ReactiveFormsModule } from '@angular/forms';
+import { HomeModule } from './home/home.module';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './components/home/home.component';
-import { NavComponent } from './components/nav/nav.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { SidenavComponent } from './components/sidenav/sidenav.component';
-import { QouteFormComponent } from './components/qoute-form/qoute-form.component';
+import { NavComponent } from './nav/nav.component';
+import { FooterComponent } from './footer/footer.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     NavComponent,
     FooterComponent,
-    SidenavComponent,
-    QouteFormComponent
+    SidenavComponent
   ],
   imports: [
     BrowserModule,
@@ -30,8 +25,7 @@ import { QouteFormComponent } from './components/qoute-form/qoute-form.component
     BrowserAnimationsModule,
     MatListModule,
     MatMenuModule,
-    MatTabsModule,
-    ReactiveFormsModule
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

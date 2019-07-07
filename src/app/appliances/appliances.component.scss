@@ -1,0 +1,9 @@
+@import "layout";
+
+.header {
+    height: 6rem;
+
+    @media only screen and (max-width: 1342px) {
+        height: 5rem;
+    }
+}

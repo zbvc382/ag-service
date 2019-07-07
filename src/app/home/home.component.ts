@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { QouteFormModel } from 'src/app/Models/QouteFormModel';
+import { HomeFormModel } from '../_models/HomeFormModel';
 
 @Component({
   selector: 'app-home',
@@ -10,7 +10,7 @@ export class HomeComponent implements OnInit {
   bothTypes = false;
   price = '£';
   isResult = false;
-  qoute: QouteFormModel;
+  qoute: HomeFormModel;
 
   premium = [
     'Miele',
@@ -46,7 +46,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
-  qouteRequest(qoute: QouteFormModel) {
+  qouteRequest(qoute: HomeFormModel) {
     if (qoute !== null) {
       this.resetPrice();
       this.calculateQoute(qoute);
@@ -55,7 +55,7 @@ export class HomeComponent implements OnInit {
     }
   }
 
-  calculateQoute(qoute: QouteFormModel) {
+  calculateQoute(qoute: HomeFormModel) {
     if (qoute.jobType === 'Repair') {
       if (this.fitted.includes(qoute.applianceType)) {
         if (this.premium.includes(qoute.applianceMake)) {
