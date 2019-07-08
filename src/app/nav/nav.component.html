@@ -1,30 +1,25 @@
 <nav *ngIf="isMobile" role="navigation" class="nav" #nav [ngClass]="{'nav--sticky': isSticky}">
   <button class="btn-sidebar" type="button" aria-label="Toggle sidenav" (click)="onToggleSidenav()">
     <svg class="icon icon--md icon--primary">
-        <use xlink:href="../../../assets/images/sprite.svg#squared_menu"></use>
+      <use xlink:href="../../../assets/images/sprite.svg#squared_menu"></use>
     </svg>
   </button>
   <div class="nav__numbers">
     <div class="nav__resp-phone">
-        <svg class="icon icon--sm icon--primary">
-            <use xlink:href="../../../assets/images/sprite.svg#phone_filled"></use>
-        </svg>
+      <svg class="icon icon--sm icon--primary">
+        <use xlink:href="../../../assets/images/sprite.svg#phone_filled"></use>
+      </svg>
       <a href="tel:0207 476 8725">0207 476 8725</a>
     </div>
     <div class="nav__resp-mobile">
-        <svg class="icon icon--sm icon--primary">
-            <use xlink:href="../../../assets/images/sprite.svg#touchscreen_smartphone_filled"></use>
-        </svg>
+      <svg class="icon icon--sm icon--primary">
+        <use xlink:href="../../../assets/images/sprite.svg#touchscreen_smartphone_filled"></use>
+      </svg>
       <a href="tel:0754 085 2102">0754 085 2102</a>
     </div>
   </div>
 </nav>
 <nav *ngIf="!isMobile" role="navigation" class="nav" #nav [ngClass]="{'nav--sticky': isSticky}">
-  <!-- <button *ngIf="isMobile" class="btn-sidebar" type="button" aria-label="Toggle sidenav" (click)="onToggleSidenav()">
-    <i class="material-icons" aria-label="Side nav toggle icon">
-      menu
-    </i>
-  </button> -->
   <div *ngIf="isBrowser" class="nav__logo">
     <a [routerLink]="['/']">
       <img src="../../../assets/images/logo-nav.svg" alt="">
@@ -34,7 +29,7 @@
     (mouseover)="menuTrigger.openMenu()">
     Appliance Repairs
     <svg class="icon icon--sm icon--secondary">
-        <use xlink:href="../../../assets/images/sprite.svg#expand_arrow"></use>
+      <use xlink:href="../../../assets/images/sprite.svg#expand_arrow"></use>
     </svg>
   </a>
   <a class="nav__menu-items nav__menu-items--2" [routerLink]="['/']">
@@ -50,9 +45,9 @@
     Estate Agents & Landlors
   </a>
   <div *ngIf="isBrowser" class="nav__phone">
-      <svg class="icon icon--sm icon--primary">
-          <use xlink:href="../../../assets/images/sprite.svg#phone_filled"></use>
-      </svg>
+    <svg class="icon icon--sm icon--primary">
+      <use xlink:href="../../../assets/images/sprite.svg#phone_filled"></use>
+    </svg>
     <a href="tel:0207 476 8725">0207 476 8725</a>
   </div>
   <mat-menu #menu="matMenu" class="custom" [overlapTrigger]="false">

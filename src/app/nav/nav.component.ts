@@ -12,6 +12,7 @@ import {
   ViewChild
 } from '@angular/core';
 import { BreakpointObserver } from '@angular/cdk/layout';
+import { WINDOW } from '@ng-toolkit/universal';
 
 @Component({
   selector: 'app-nav',
@@ -25,7 +26,8 @@ export class NavComponent implements OnInit, AfterViewInit {
   isBrowser = false;
   navPosition: any;
 
-  constructor(private renderer: Renderer2, private breakpointObserver: BreakpointObserver, @Inject(PLATFORM_ID) private platformId: any) { }
+// tslint:disable-next-line: max-line-length
+  constructor(@Inject(WINDOW) private window: Window, private renderer: Renderer2, private breakpointObserver: BreakpointObserver, @Inject(PLATFORM_ID) private platformId: any) { }
 
   ngOnInit() {
     this.isBrowser = isPlatformBrowser(this.platformId);
@@ -37,8 +39,8 @@ export class NavComponent implements OnInit, AfterViewInit {
 
       this.renderer.listen('window', 'scroll', (event) => {
         if (event) {
-          const windowScroll = window.pageYOffset;
-          if (windowScroll > this.navPosition) {
+          const window = this.window.pageYOffset;
+          if (window > this.navPosition) {
             this.isSticky = true;
           } else {
             this.isSticky = false;
