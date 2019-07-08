@@ -1,5 +1,4 @@
-@import "variables";
-// @import "layout";
+@import "../../styles/variables";
 
 %header-info {
     display: flex;
@@ -303,14 +302,36 @@
     }
 }
 
-.request {
+.request-tab {
     margin-top: 6rem;
+    grid-column: 1 / -1;
+    display: grid;
+    justify-content: center;
 
+    &__wrapper {
+        border-bottom: 0.5rem solid $color-primary;
+        padding: 0 1rem;
+    }
+
+    svg {
+        height: 3.25rem;
+        width: 3.25rem;
+        margin-right: 0.5rem;
+    }
+
+    p {
+        display: inline-block;
+        margin: 0;
+        font-size: 1.6rem;
+        transform: translateY(-1rem);
+    }
+}
+
+.request {
     grid-column: full-start / full-end;
 
-    #bpc {
-        margin-right: 1rem;
-    }
+    position: relative;
+    background-color: $color-secondary;
 
     &__qoute {
         @extend %tab-body;

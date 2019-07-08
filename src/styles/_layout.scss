@@ -1,0 +1,100 @@
+@import "./variables";
+
+%header-info {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: $font-primary;
+}
+
+.header {
+    background-color: #252f41;
+    padding-top: 0.5rem;
+    display: grid;
+    grid-column: full-start / full-end;
+    grid-template-columns:
+        minmax(6rem, 1fr) repeat(2, [email-col-start] 14.25rem [email-col-end]) minmax(min-content, 20rem) [logo-start] min-content [logo-end] minmax(min-content, 20rem) repeat(2, [call-col-start] 14.25rem [call-col-end]) minmax(6rem, 1fr) [full-end];
+    grid-auto-flow: column;
+
+    svg {
+        margin-right: 0.5rem;
+    }
+
+    @media only screen and (max-width: 1048px) {
+        grid-template-columns: minmax(3rem, 1fr) minmax(min-content, 1fr) minmax(3rem, 1fr);
+        justify-content: center;
+    }
+
+    &__logo-wrapper {
+        width: 15rem;
+
+        grid-column: logo-start / logo-end;
+        align-self: center;
+
+        &--image {
+            max-width: 15rem;
+        }
+
+        @media only screen and (max-width: 1342px) {
+            width: 12.5rem;
+
+            &--image {
+                max-width: 12.5rem;
+            }
+        }
+
+        @media only screen and (max-width: 1048px) {
+            grid-column: 2 / 3;
+            justify-self: center;
+            width: 12.5rem;
+
+            &--image {
+                max-width: 12.5rem;
+            }
+        }
+
+    }
+
+    &__email a,
+    &__phone a,
+    &__mobile a {
+        text-decoration: none;
+        color: #fff;
+        font-size: $font-size-primary;
+
+        @media only screen and (max-width: 1342px) {
+            font-size: 1.4rem;
+        }
+    }
+
+    &__email {
+        @extend %header-info;
+
+        grid-column: email-col-start 1 / email-col-end 2;
+
+        @media only screen and (max-width: 1048px) {
+            display: none;
+        }
+    }
+
+    &__phone {
+        @extend %header-info;
+
+        grid-column: call-col-start 1 / call-col-end 1;
+
+        @media only screen and (max-width: 1048px) {
+            display: none;
+        }
+    }
+
+    &__mobile {
+        @extend %header-info;
+
+        grid-column: call-col-start 2 / call-col-end 2;
+
+        @media only screen and (max-width: 1048px) {
+            display: none;
+        }
+    }
+}

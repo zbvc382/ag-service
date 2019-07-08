@@ -2,27 +2,27 @@
   <div class="header-backfill"></div>
   <div class="header">
     <div class="header__logo-wrapper">
-        <img class="header__logo-wrapper--image" src="../../../assets/images/logo-header.svg" alt="" />
+      <img class="header__logo-wrapper--image" src="../../../assets/images/logo-header.svg" alt="" />
     </div>
     <div class="header__email">
-        <svg class="icon icon--md icon icon--white">
-            <use xlink:href="../../../assets/images/sprite.svg#mail_filled"></use>
-        </svg>
-        <a href="mailto:contact@ag-repairs.co.uk">contact@ag-repairs.co.uk</a>
+      <svg class="icon icon--md icon icon--white">
+        <use xlink:href="../../../assets/images/sprite.svg#mail_filled"></use>
+      </svg>
+      <a href="mailto:contact@ag-repairs.co.uk">contact@ag-repairs.co.uk</a>
     </div>
     <div class="header__phone">
-        <svg class="icon icon--md icon icon--white">
-            <use xlink:href="../../../assets/images/sprite.svg#phone_filled"></use>
-        </svg>
-        <a href="tel:0207 476 8725">0207 476 8725</a>
+      <svg class="icon icon--md icon icon--white">
+        <use xlink:href="../../../assets/images/sprite.svg#phone_filled"></use>
+      </svg>
+      <a href="tel:0207 476 8725">0207 476 8725</a>
     </div>
     <div class="header__mobile">
-        <svg class="icon icon--md icon icon--white">
-            <use xlink:href="../../../assets/images/sprite.svg#touchscreen_smartphone_filled"></use>
-        </svg>
-        <a href="tel:0754 085 2102">0754 085 2102</a>
+      <svg class="icon icon--md icon icon--white">
+        <use xlink:href="../../../assets/images/sprite.svg#touchscreen_smartphone_filled"></use>
+      </svg>
+      <a href="tel:0754 085 2102">0754 085 2102</a>
     </div>
-</div>
+  </div>
   <div class="intro">
     <h1>The UK's number 1 domestic appliance repair service</h1>
     <div class="intro__sub">
@@ -81,118 +81,116 @@
       <h1 class="heading-2 heading-2--grey"> Experienced Technicians</h1>
     </div>
   </section>
+  <div class="request-tab">
+    <div class="request-tab__wrapper">
+      <svg class="icon icon icon--secondary">
+        <use xlink:href="../../../assets/images/sprite.svg#bpc"></use>
+      </svg>
+      <p>Instant Qoute</p>
+    </div>
+  </div>
   <section class="request">
-    <mat-tab-group mat-align-tabs="center">
-      <mat-tab>
-        <ng-template mat-tab-label>
-          <svg id="bpc" class="icon icon--md icon icon--secondary">
-            <use xlink:href="../../../assets/images/sprite.svg#bpc"></use>
+    <div class="request__qoute" *ngIf="!isResult">
+      <h1 class="request__qoute--heading heading-2">Simply complete our three step repair booking form or give us a
+        call to get an instant quote.</h1>
+      <div class="request__qoute--subheading">
+        <div class="subheading-item">
+          <svg class="icon icon--md icon--primary">
+            <use xlink:href="../../../assets/images/sprite.svg#checkmark"></use>
           </svg>
-          Instant Qoute
-        </ng-template>
-        <div class="request__qoute" *ngIf="!isResult">
-          <h1 class="request__qoute--heading heading-2">Simply complete our three step repair booking form or give us a
-            call to get an instant quote.</h1>
-          <div class="request__qoute--subheading">
-            <div class="subheading-item">
-              <svg class="icon icon--md icon--primary">
-                <use xlink:href="../../../assets/images/sprite.svg#checkmark"></use>
-              </svg>
-              <p>Simply complete our three step repair booking form</p>
-            </div>
-            <div class="subheading-item">
-              <svg class="icon icon--md icon--primary">
-                <use xlink:href="../../../assets/images/sprite.svg#checkmark"></use>
-              </svg>
-              <p>Simply complete our three step repair booking form</p>
-            </div>
-            <div class="subheading-item">
-              <svg class="icon icon--md icon--primary">
-                <use xlink:href="../../../assets/images/sprite.svg#checkmark"></use>
-              </svg>
-              <p>Simply complete our three step repair booking form</p>
-            </div>
-          </div>
-          <app-home-form (qouteSubmitted)="qouteRequest($event)" class="request__qoute--form"></app-home-form>
+          <p>Simply complete our three step repair booking form</p>
         </div>
-        <div *ngIf="isResult" class="request__result">
-          <div class="result__price-container">
-            <div class="header-text heading-2">
-              Price for {{qouteFitting}} {{qouteApplianceMake}} {{qouteApplianceType}} {{qouteJobType}}
-            </div>
-            <div class="price-info">
-              <p>{{price}}<span>+VAT</span></p>
-            </div>
-            <div class="call-info">
-              <p>Call <span><a href="tel:0207 476 8725">0207 476 8725</a></span> to book a service today!</p>
-            </div>
-          </div>
-          <div class="result__terms">
-            <div class="terms-container">
-              <div class="term-header">
-                <div class="term-header__items">
-                  <div class="term-header__item">
-                    <svg class="icon icon--md icon--white">
-                      <use xlink:href="../../../assets/images/sprite.svg#clock"></use>
-                    </svg>
-                    <p>Available six days a week</p>
-                  </div>
-                  <div class="term-header__item">
-                    <svg class="icon icon--md icon--white">
-                      <use xlink:href="../../../assets/images/sprite.svg#card_in_use"></use>
-                    </svg>
-                    <p>We accept cash and major credit cards</p>
-                  </div>
-                  <div class="term-header__item">
-                    <svg class="icon icon--md icon--white">
-                      <use xlink:href="../../../assets/images/sprite.svg#today"></use>
-                    </svg>
-                    <p>Hassle free appointments</p>
-                  </div>
-                </div>
-              </div>
-              <div class="term-item">
-                <svg class="icon icon--xs">
-                  <use xlink:href="../../../assets/images/sprite.svg#filled_circle"></use>
-                </svg>
-                <p>Same and next day visits at no additional cost.</p>
-              </div>
-              <div class="term-item">
-                <svg class="icon icon--xs">
-                  <use xlink:href="../../../assets/images/sprite.svg#filled_circle"></use>
-                </svg>
-                <p>Same and next day visits at no additional cost.</p>
-              </div>
-              <div class="term-item">
-                <svg class="icon icon--xs">
-                  <use xlink:href="../../../assets/images/sprite.svg#filled_circle"></use>
-                </svg>
-                <p>Same and next day visits at no additional cost.</p>
-              </div>
-              <div class="term-item">
-                <svg class="icon icon--xs">
-                  <use xlink:href="../../../assets/images/sprite.svg#filled_circle"></use>
-                </svg>
-                <p>Same and next day visits at no additional cost.</p>
-              </div>
-              <div class="term-item">
-                <svg class="icon icon--xs">
-                  <use xlink:href="../../../assets/images/sprite.svg#filled_circle"></use>
-                </svg>
-                <p>Same and next day visits at no additional cost.</p>
-              </div>
-              <div class="term-item">
-                <svg class="icon icon--xs">
-                  <use xlink:href="../../../assets/images/sprite.svg#filled_circle"></use>
-                </svg>
-                <p>Same and next day visits at no additional cost.</p>
-              </div>
-            </div>
-          </div>
-          <button class="qoute-reset btn-round btn--white" (click)="resetQoute()">new qoute</button>
+        <div class="subheading-item">
+          <svg class="icon icon--md icon--primary">
+            <use xlink:href="../../../assets/images/sprite.svg#checkmark"></use>
+          </svg>
+          <p>Simply complete our three step repair booking form</p>
         </div>
-      </mat-tab>
-    </mat-tab-group>
+        <div class="subheading-item">
+          <svg class="icon icon--md icon--primary">
+            <use xlink:href="../../../assets/images/sprite.svg#checkmark"></use>
+          </svg>
+          <p>Simply complete our three step repair booking form</p>
+        </div>
+      </div>
+      <app-home-form (qouteSubmitted)="qouteRequest($event)" class="request__qoute--form"></app-home-form>
+    </div>
+    <div *ngIf="isResult" class="request__result">
+      <div class="result__price-container">
+        <div class="header-text heading-2">
+          Price for {{qouteFitting}} {{qouteApplianceMake}} {{qouteApplianceType}} {{qouteJobType}}
+        </div>
+        <div class="price-info">
+          <p>{{price}}<span>+VAT</span></p>
+        </div>
+        <div class="call-info">
+          <p>Call <span><a href="tel:0207 476 8725">0207 476 8725</a></span> to book a service today!</p>
+        </div>
+      </div>
+      <div class="result__terms">
+        <div class="terms-container">
+          <div class="term-header">
+            <div class="term-header__items">
+              <div class="term-header__item">
+                <svg class="icon icon--md icon--white">
+                  <use xlink:href="../../../assets/images/sprite.svg#clock"></use>
+                </svg>
+                <p>Available six days a week</p>
+              </div>
+              <div class="term-header__item">
+                <svg class="icon icon--md icon--white">
+                  <use xlink:href="../../../assets/images/sprite.svg#card_in_use"></use>
+                </svg>
+                <p>We accept cash and major credit cards</p>
+              </div>
+              <div class="term-header__item">
+                <svg class="icon icon--md icon--white">
+                  <use xlink:href="../../../assets/images/sprite.svg#today"></use>
+                </svg>
+                <p>Hassle free appointments</p>
+              </div>
+            </div>
+          </div>
+          <div class="term-item">
+            <svg class="icon icon--xs">
+              <use xlink:href="../../../assets/images/sprite.svg#filled_circle"></use>
+            </svg>
+            <p>Same and next day visits at no additional cost.</p>
+          </div>
+          <div class="term-item">
+            <svg class="icon icon--xs">
+              <use xlink:href="../../../assets/images/sprite.svg#filled_circle"></use>
+            </svg>
+            <p>Same and next day visits at no additional cost.</p>
+          </div>
+          <div class="term-item">
+            <svg class="icon icon--xs">
+              <use xlink:href="../../../assets/images/sprite.svg#filled_circle"></use>
+            </svg>
+            <p>Same and next day visits at no additional cost.</p>
+          </div>
+          <div class="term-item">
+            <svg class="icon icon--xs">
+              <use xlink:href="../../../assets/images/sprite.svg#filled_circle"></use>
+            </svg>
+            <p>Same and next day visits at no additional cost.</p>
+          </div>
+          <div class="term-item">
+            <svg class="icon icon--xs">
+              <use xlink:href="../../../assets/images/sprite.svg#filled_circle"></use>
+            </svg>
+            <p>Same and next day visits at no additional cost.</p>
+          </div>
+          <div class="term-item">
+            <svg class="icon icon--xs">
+              <use xlink:href="../../../assets/images/sprite.svg#filled_circle"></use>
+            </svg>
+            <p>Same and next day visits at no additional cost.</p>
+          </div>
+        </div>
+      </div>
+      <button class="qoute-reset btn-round btn--white" (click)="resetQoute()">new qoute</button>
+    </div>
   </section>
   <section class="about-us">
     <header class="section-header">

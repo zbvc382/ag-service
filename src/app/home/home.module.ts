@@ -3,7 +3,6 @@ import { HomeFormComponent } from './home-form/home-form.component';
 import { HomeComponent } from './home.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { MatTabsModule } from '@angular/material';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
@@ -15,7 +14,6 @@ import { RouterModule } from '@angular/router';
     imports: [
         ReactiveFormsModule,
         CommonModule,
-        MatTabsModule,
         RouterModule
     ],
 
@@ -24,4 +22,4 @@ import { RouterModule } from '@angular/router';
         HomeFormComponent
     ]
 })
-export class HomeModule {}
+export class HomeModule { }
