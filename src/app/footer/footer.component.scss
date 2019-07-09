@@ -51,7 +51,20 @@
 
     }
 
+    &__hours {
+        margin-top: 2rem;
+        display: grid;
+        align-content: start;
+        // grid-column: col-start 1 / col-end 1;
+
+        ul {
+            text-transform: capitalize;
+            list-style-type: none;
+        }
+    }
+
     &__contacts {
+        // grid-row: 1 / 2;
         display: grid;
         grid-column: col-start 2 / col-end 2;
         align-content: start;
@@ -82,6 +95,7 @@
         display: grid;
         grid-column: col-start 3 / col-end 3;
         align-content: start;
+        // grid-row: 1 / 2;
         grid-row-gap: 1rem;
         text-transform: capitalize;
 
@@ -98,6 +112,7 @@
     &__other-links {
         display: grid;
         grid-column: col-start 4 / col-end 4;
+        // grid-row: 1 / 2;
         align-content: start;
         grid-row-gap: 1rem;
         text-transform: capitalize;
