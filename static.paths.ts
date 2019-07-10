@@ -1,2 +1,6 @@
-// specifies additional routes for prerender
-export const ROUTES = [];
+export const ROUTES = [
+  '/',
+  '/appliance-repairs',
+  '/appliance-repairs/washing-machine-repairs',
+  '/appliance-repairs/dishwasher-repairs'
+];

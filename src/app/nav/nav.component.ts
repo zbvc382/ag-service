@@ -1,4 +1,3 @@
-import { isPlatformBrowser } from '@angular/common';
 import {
   Component,
   OnInit,
@@ -7,12 +6,10 @@ import {
   Renderer2,
   ElementRef,
   AfterViewInit,
-  Inject,
-  PLATFORM_ID,
-  ViewChild
+  ViewChild,
+  HostListener
 } from '@angular/core';
 import { BreakpointObserver } from '@angular/cdk/layout';
-import { WINDOW } from '@ng-toolkit/universal';
 
 @Component({
   selector: 'app-nav',
@@ -23,30 +20,23 @@ export class NavComponent implements OnInit, AfterViewInit {
   @Output() public sidenavToggle = new EventEmitter();
   @ViewChild('nav', { static: false }) nav: ElementRef;
   isSticky = false;
-  isBrowser = false;
   navPosition: any;
 
-// tslint:disable-next-line: max-line-length
-  constructor(@Inject(WINDOW) private window: Window, private renderer: Renderer2, private breakpointObserver: BreakpointObserver, @Inject(PLATFORM_ID) private platformId: any) { }
+  constructor(private breakpointObserver: BreakpointObserver, private renderer: Renderer2) { }
 
-  ngOnInit() {
-    this.isBrowser = isPlatformBrowser(this.platformId);
-  }
+  ngOnInit() { }
 
   ngAfterViewInit() {
-    if (this.isBrowser) {
-      this.navPosition = this.nav.nativeElement.offsetTop;
+    this.navPosition = this.nav.nativeElement.offsetTop;
+  }
 
-      this.renderer.listen('window', 'scroll', (event) => {
-        if (event) {
-          const window = this.window.pageYOffset;
-          if (window > this.navPosition) {
-            this.isSticky = true;
-          } else {
-            this.isSticky = false;
-          }
-        }
-      });
+  @HostListener('window:scroll', ['$event'])
+  handleScroll() {
+    const windowScroll = window.pageYOffset;
+    if (windowScroll > this.navPosition) {
+      this.isSticky = true;
+    } else {
+      this.isSticky = false;
     }
   }
 

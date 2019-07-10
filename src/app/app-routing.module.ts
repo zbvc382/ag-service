@@ -1,13 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { AppliancesComponent } from './appliances/appliances.component';
 
 const routes: Routes = [
 
-  // { path: 'appliance-repairs', loadChildren: () => import('./appliances/appliances.module').then(m => m.AppliancesModule) },
-
-  { path: 'appliance-repairs', component: AppliancesComponent },
+  { path: 'appliance-repairs', loadChildren: './appliances/appliances.module#AppliancesModule' },
 
   { path: '', component: HomeComponent },
 

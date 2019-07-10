@@ -20,7 +20,7 @@
   </div>
 </nav>
 <nav *ngIf="!isMobile" role="navigation" class="nav" #nav [ngClass]="{'nav--sticky': isSticky}">
-  <div *ngIf="isBrowser" class="nav__logo">
+  <div class="nav__logo">
     <a [routerLink]="['/']">
       <img src="../../../assets/images/logo-nav.svg" alt="">
     </a>
@@ -44,7 +44,7 @@
   <a class="nav__menu-items nav__menu-items--5" [routerLink]="['/']">
     Estate Agents & Landlors
   </a>
-  <div *ngIf="isBrowser" class="nav__phone">
+  <div class="nav__phone">
     <svg class="icon icon--sm icon--primary">
       <use xlink:href="../../../assets/images/sprite.svg#phone_filled"></use>
     </svg>
@@ -53,10 +53,10 @@
   <mat-menu #menu="matMenu" class="custom" [overlapTrigger]="false">
     <ng-template matMenuContent>
       <span (mouseleave)="menuTrigger.closeMenu()">
-        <a [routerLink]="['/']">
+        <a [routerLink]="['/appliance-repairs/washing-machine-repairs']">
           <button mat-menu-item>Washing Machine Repairs</button>
         </a>
-        <a [routerLink]="['/']">
+        <a [routerLink]="['/appliance-repairs/dishwasher-repairs']">
           <button mat-menu-item>
             Dishwasher Repairs
           </button>

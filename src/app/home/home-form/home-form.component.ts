@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy, Output, EventEmitter } from '@angular/core';
 import { FormGroup, Validators, FormBuilder } from '@angular/forms';
-import { HomeFormModel } from 'src/app/_models/HomeFormModel';
+import { HomeFormModel } from '../../_models/HomeFormModel';
+// import { HomeFormModel } from 'src/app/_models/HomeFormModel';
 
 @Component({
   selector: 'app-home-form',
