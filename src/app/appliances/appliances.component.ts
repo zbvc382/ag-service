@@ -7,20 +7,58 @@ import { Router } from '@angular/router';
   styleUrls: ['./appliances.component.scss']
 })
 export class AppliancesComponent implements OnInit {
-  text: string;
+  headerText: string;
+
+  isWashingMachine = false;
+  isDishwasher = false;
+  isTumbleDryer = false;
+  isElectricCooker = false;
+  isMicrowave = false;
+  isExtractorHood = false;
+  isFridgeFreezer = false;
+  isCommercialAppliances = false;
 
   constructor(private router: Router) { }
 
   ngOnInit() {
-    if (this.router.url === '/appliance-repairs/washing-machine-repairs') {
-      this.text = 'This template is about WASHING MACHINE REPAIRS';
-    }
 
-    if (this.router.url === '/appliance-repairs/dishwasher-repairs') {
-      this.text = 'This template is about DISHWASHER REPAIRS';
+    switch (this.router.url) {
+      case '/appliance-repairs/washing-machine-repairs': {
+        this.headerText = 'Washing Machine Repairs';
+        break;
+      }
+      case '/appliance-repairs/dishwasher-repairs': {
+        this.headerText = 'Dishwasher Repairs';
+        break;
+      }
+      case '/appliance-repairs/tumble-dryer-repairs': {
+        this.headerText = 'Tumble Dryer Repairs';
+        break;
+      }
+      case '/appliance-repairs/electric-oven-repairs': {
+        this.headerText = 'Electric Oven Repairs';
+        break;
+      }
+      case '/appliance-repairs/microwave-repairs': {
+        this.headerText = 'Microwave Repairs';
+        break;
+      }
+      case '/appliance-repairs/extractor-hood-repairs': {
+        this.headerText = 'Extractor Hood Repairs';
+        break;
+      }
+      case '/appliance-repairs/fridge-freezer-repairs': {
+        this.headerText = 'Fridge Freezer Repairs';
+        break;
+      }
+      case '/appliance-repairs/commercial-appliance-repairs': {
+        this.headerText = 'Commercial Appliance Repairs';
+        break;
+      }
+      default: {
+        this.headerText = 'Appliance Repairs';
+        break;
+      }
     }
-
-    console.log(this.router.url);
   }
-
 }

@@ -4,7 +4,7 @@
         <div class="header__logo-wrapper">
             <a [routerLink]="[ '/']">
                 <img class="header__logo-wrapper--image" src="../../../assets/images/logo-header.svg" alt="" />
-              </a>
+            </a>
         </div>
         <div class="header__email">
             <svg class="icon icon--md icon icon--white">
@@ -30,9 +30,33 @@
             <img src="../../assets/images/intro.jpg" alt="">
         </div>
         <header>
-            <h1>The UK's number 1 domestic appliance repair service</h1>
+            <h1>{{headerText}}</h1>
         </header>
-        
+        <div class="intro__sub">
+            <div class="sub-item">
+                <svg class="icon icon--md icon--primary">
+                    <use xlink:href="../../../assets/images/sprite.svg#checked"></use>
+                </svg>
+                <p>Fast, reliable service</p>
+            </div>
+            <div class="sub-item">
+                <svg class="icon icon--md icon--primary">
+                    <use xlink:href="../../../assets/images/sprite.svg#checked"></use>
+                </svg>
+                <p>Largest UK coverage</p>
+            </div>
+            <div class="sub-item">
+                <svg class="icon icon--md icon--primary">
+                    <use xlink:href="../../../assets/images/sprite.svg#checked"></use>
+                </svg>
+                <p>Same/next day appointments</p>
+            </div>
+            <div class="sub-item">
+                <svg class="icon icon--md icon--primary">
+                    <use xlink:href="../../../assets/images/sprite.svg#checked"></use>
+                </svg>
+                <p>Same/next day appointments</p>
+            </div>
+        </div>
     </div>
-    {{text}}
 </div>
