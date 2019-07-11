@@ -14,13 +14,13 @@
 
 html {
     box-sizing: border-box;
-    // font-size: 62.5%; // 10px
-    font-size: 68.75%; // 11px
+    font-size: 62.5%; // 10px
+    // font-size: 68.75%; // 11px
     // font-size: 75%; // 12px
 
-    @media only screen and (max-width: 800px) {
-        font-size: 62.5%; // 10px
-    }
+    // @media only screen and (max-width: 800px) {
+    //     font-size: 62.5%; // 10px
+    // }
 
     height: 100%;
 }
@@ -33,12 +33,12 @@ body {
     display: grid;
     grid-template-columns:
         [full-start] minmax(3rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end];
-    grid-template-rows: 6rem 6rem 50vh minmax(min-content, 1fr) repeat(5, min-content);
+    grid-template-rows: 6rem 6rem;
 
     @media only screen and (max-width: 1342px) {
         grid-template-columns:
             [full-start] minmax(3rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end];
-        grid-template-rows: 5rem 5rem 50vh minmax(min-content, 1fr) repeat(6, min-content);
+        grid-template-rows: 5rem 5rem 50vh;
     }
 }
 
@@ -86,35 +86,35 @@ button:focus {
     color: $color-primary;
 }
 
-.mat-tab-label {
-    color: $color-grey;
-    opacity: 100 !important;
-    font-size: 1.5rem;
-    font-weight: 400;
-}
+// .mat-tab-label {
+//     color: $color-grey;
+//     opacity: 100 !important;
+//     font-size: 1.5rem;
+//     font-weight: 400;
+// }
 
-.mat-tab-group {
-    &.mat-primary {
-        .mat-ink-bar {
-            background-color: $color-primary;
-            height: 0.5rem;
-        }
-    }
-}
+// .mat-tab-group {
+//     &.mat-primary {
+//         .mat-ink-bar {
+//             background-color: $color-primary;
+//             height: 0.5rem;
+//         }
+//     }
+// }
 
-.mat-tab-body {
-    background-color: $color-secondary;
-    // min-height: 35rem;
-}
+// .mat-tab-body {
+//     background-color: $color-secondary;
+//     // min-height: 35rem;
+// }
 
-.mat-tab-header {
-    border: none;
-    backface-visibility: hidden;
-}
+// .mat-tab-header {
+//     border: none;
+//     backface-visibility: hidden;
+// }
 
-.mat-tab-header-pagination-controls-enabled .mat-tab-header-pagination {
-    display: block;
-}
+// .mat-tab-header-pagination-controls-enabled .mat-tab-header-pagination {
+//     display: block;
+// }
 
 .mat-menu-item-highlighted:not([disabled]),
 .mat-menu-item.cdk-keyboard-focused:not([disabled]),

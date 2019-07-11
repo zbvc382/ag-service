@@ -47,6 +47,7 @@
 }
 
 .intro {
+    height: 30rem;
     grid-column: full-start / full-end;
     display: grid;
     grid-template-columns: minmax(3rem, 1fr) 6fr minmax(3rem, 1fr);
@@ -721,6 +722,50 @@
             @media only screen and (max-width: 500px) {
                 font-size: 1.75rem;
             }
+        }
+    }
+}
+
+.brands {
+    margin-top: 6.5rem;
+
+    grid-column: col-start 1 / col-end 8;
+    display: grid;
+
+    .section-header {
+        @extend %section-header;
+    }
+
+    h2 {
+        background: $color-primary;
+        margin-top: 2rem;
+        padding: 0.5rem;
+        justify-self: center;
+    }
+
+    p {
+        margin-top: 3.5rem;
+        background: $color-primary;
+        padding: 0.5rem;
+        display: block;
+        justify-self: center;
+    }
+
+    .brand-grid {
+        margin-top: 3rem;
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+        grid-column-gap: 2rem;
+        grid-row-gap: 4rem;
+
+        .brand {
+            background-color: $color-secondary;
+            padding: 1rem 1rem;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            border-radius: 1rem;
         }
     }
 }
