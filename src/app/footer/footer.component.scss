@@ -63,6 +63,35 @@
         }
     }
 
+    &__payments {
+        margin-top: 1.25rem;
+        display: grid;
+            // align-content: center;
+
+        // .payments-logos-wrapper {
+        //     display: flex;
+
+        // }
+
+        // .payments-logos-wrapper {
+            
+        // }
+
+
+        .payments-wrapper{
+
+        }
+
+        .icon {
+            margin-right: 0.5rem;
+        }
+
+        .custom-size {
+            height: 4em;
+            width: 4rem;
+        }
+    }
+
     &__contacts {
         // grid-row: 1 / 2;
         display: grid;
