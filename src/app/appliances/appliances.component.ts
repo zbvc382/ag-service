@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 export class AppliancesComponent implements OnInit {
   headerText: string;
 
+  isAppliances = false;
   isWashingMachine = false;
   isDishwasher = false;
   isTumbleDryer = false;
@@ -57,6 +58,7 @@ export class AppliancesComponent implements OnInit {
       }
       default: {
         this.headerText = 'Appliance Repairs';
+        this.isAppliances = true;
         break;
       }
     }
