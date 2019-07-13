@@ -97,7 +97,7 @@
     </div>
   </div>
   <section class="request">
-    <div class="request__qoute" *ngIf="isResult">
+    <div class="request__qoute" *ngIf="!isResult">
       <h1 class="request__qoute--heading heading-2">Simply complete our three step repair booking form or give us a
         call to get an instant quote.</h1>
       <div class="request__qoute--subheading">
@@ -122,11 +122,10 @@
       </div>
       <app-home-form (qouteSubmitted)="qouteRequest($event)" class="request__qoute--form"></app-home-form>
     </div>
-    <div *ngIf="!isResult" class="request__result">
+    <div *ngIf="isResult" class="request__result">
       <div class="result__price-container">
         <div class="header-text heading-2">
-          Price for
-          <!-- {{qouteFitting}} {{qouteApplianceMake}} {{qouteApplianceType}} {{qouteJobType}} -->
+          Price for {{qouteFitting}} {{qouteApplianceMake}} {{qouteApplianceType}} {{qouteJobType}}
         </div>
         <div class="price-info">
           <p>{{price}}<span>+VAT</span></p>
