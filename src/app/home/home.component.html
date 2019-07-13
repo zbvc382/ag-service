@@ -97,7 +97,7 @@
     </div>
   </div>
   <section class="request">
-    <div class="request__qoute" *ngIf="!isResult">
+    <div class="request__qoute" *ngIf="isResult">
       <h1 class="request__qoute--heading heading-2">Simply complete our three step repair booking form or give us a
         call to get an instant quote.</h1>
       <div class="request__qoute--subheading">
@@ -122,78 +122,48 @@
       </div>
       <app-home-form (qouteSubmitted)="qouteRequest($event)" class="request__qoute--form"></app-home-form>
     </div>
-    <div *ngIf="isResult" class="request__result">
+    <div *ngIf="!isResult" class="request__result">
       <div class="result__price-container">
         <div class="header-text heading-2">
-          Price for {{qouteFitting}} {{qouteApplianceMake}} {{qouteApplianceType}} {{qouteJobType}}
+          Price for
+          <!-- {{qouteFitting}} {{qouteApplianceMake}} {{qouteApplianceType}} {{qouteJobType}} -->
         </div>
         <div class="price-info">
           <p>{{price}}<span>+VAT</span></p>
+          <p id="spare-parts-disc">(parts charged separately)</p>
         </div>
         <div class="call-info">
           <p>Call <span><a href="tel:0207 476 8725">0207 476 8725</a></span> to book a service today!</p>
         </div>
       </div>
       <div class="result__terms">
-        <div class="terms-container">
-          <div class="term-header">
-            <div class="term-header__items">
-              <div class="term-header__item">
-                <svg class="icon icon--md icon--white">
-                  <use xlink:href="../../../assets/images/sprite.svg#clock"></use>
-                </svg>
-                <p>Available six days a week</p>
-              </div>
-              <div class="term-header__item">
-                <svg class="icon icon--md icon--white">
-                  <use xlink:href="../../../assets/images/sprite.svg#card_in_use"></use>
-                </svg>
-                <p>We accept cash and major credit cards</p>
-              </div>
-              <div class="term-header__item">
-                <svg class="icon icon--md icon--white">
-                  <use xlink:href="../../../assets/images/sprite.svg#today"></use>
-                </svg>
-                <p>Hassle free appointments</p>
-              </div>
-            </div>
-          </div>
-          <div class="term-item">
-            <svg class="icon icon--xs">
-              <use xlink:href="../../../assets/images/sprite.svg#filled_circle"></use>
+        <!-- <div class="terms-container"> -->
+
+        <div class="result__icon-items">
+          <div class="result__icon-item">
+            <svg class="icon icon--white">
+              <use xlink:href="../../../assets/images/sprite.svg#clock"></use>
             </svg>
-            <p>Same and next day visits at no additional cost.</p>
+            <p>Available six days a week</p>
           </div>
-          <div class="term-item">
-            <svg class="icon icon--xs">
-              <use xlink:href="../../../assets/images/sprite.svg#filled_circle"></use>
+          <div class="result__icon-item">
+            <svg class="icon icon--white">
+              <use xlink:href="../../../assets/images/sprite.svg#card_in_use"></use>
             </svg>
-            <p>Same and next day visits at no additional cost.</p>
+            <p>We accept cash and major credit cards</p>
           </div>
-          <div class="term-item">
-            <svg class="icon icon--xs">
-              <use xlink:href="../../../assets/images/sprite.svg#filled_circle"></use>
+          <div class="result__icon-item">
+            <svg class="icon icon--white">
+              <use xlink:href="../../../assets/images/sprite.svg#today"></use>
             </svg>
-            <p>Same and next day visits at no additional cost.</p>
+            <p>Hassle free appointments</p>
           </div>
-          <div class="term-item">
-            <svg class="icon icon--xs">
-              <use xlink:href="../../../assets/images/sprite.svg#filled_circle"></use>
-            </svg>
-            <p>Same and next day visits at no additional cost.</p>
-          </div>
-          <div class="term-item">
-            <svg class="icon icon--xs">
-              <use xlink:href="../../../assets/images/sprite.svg#filled_circle"></use>
-            </svg>
-            <p>Same and next day visits at no additional cost.</p>
-          </div>
-          <div class="term-item">
-            <svg class="icon icon--xs">
-              <use xlink:href="../../../assets/images/sprite.svg#filled_circle"></use>
-            </svg>
-            <p>Same and next day visits at no additional cost.</p>
-          </div>
+        </div>
+        <div class="result__term-items">
+          <p><span>&#9679;</span> Same and next day visits at no additional cost</p>
+          <p><span>&#9679;</span> Same and next day visits at no additional cost</p>
+          <p><span>&#9679;</span> Same and next day visits at no additional cost</p>
+          <p><span>&#9679;</span> Same and next day visits at no additional cost</p>
         </div>
       </div>
       <button class="qoute-reset btn-round btn--white" (click)="resetQoute()">new qoute</button>
@@ -206,23 +176,24 @@
     <div class="about-us__content-container">
       <div class="about-us__text-1">
         <p>
-          Our appliance repair service centre offers local professional repair service
-          of household appliances and electronics using top quality tradesmanship and parts. We are able to resolve
-          technical problems and mend your appliance right in your home. Differentiated approach to technical problems
-          by experienced tradesmen allows our engineers to accurately determine the nature of the problem, source the
-          necessary parts, if they need replacing and quickly repair the failed appliance, be it a washing machine
-          repairs, microwave, electric oven, dishwasher or any other white good.
+          Our appliance repair service centre offers local professional repair service of household appliances and
+          electronics using top quality tradesmanship and parts. We are able to resolve technical problems and mend
+          your appliance right in your home. Differentiated approach to technical problems by experienced tradesmen
+          allows our engineers to accurately determine the nature of the problem, source the necessary parts, if they
+          need replacing and quickly repair the failed appliance, be it a <span><a
+              [routerLink]="[ '/appliance-repairs/washing-machine-repairs' ]">washing machine repairs</a></span>,
+          <span><a [routerLink]="[ '/appliance-repairs/microwave-repairs' ]">microwave</a></span>, <span><a
+              [routerLink]="[ '/appliance-repairs/electric-oven-repairs' ]">electric oven</a></span>,
+          <span><a [routerLink]="[ '/appliance-repairs/dishwasher-repairs' ]">dishwasher</a></span> or any other
+          white good.
         </p>
       </div>
       <div class="about-us__text-2">
+        <p>Our service is based on many years of experience with various
+          tools and devices, supplemented by a serious knowledge of domestic and commercial appliances. The use of
+          advanced tools and manufacturer’s spare parts accelerates the process of repairing household appliances, our
+          <span>repairs are guaranteed for 6 months</span>.</p>
         <p>
-          Our service is based on many years of
-          experience with various tools and devices, supplemented by a serious knowledge of domestic and commercial
-          appliances. The use of advanced tools and manufacturer’s spare parts accelerates the process of repairing
-          household appliances, our repairs are guaranteed for 6 months. In a competitive environment, our company is
-          growing thanks to our ability to provide personal local service
-          often same day/next day, i.e. if it is an emergency.
-        </p>
       </div>
       <div class="about-us__image-container">
         <figure>
@@ -297,10 +268,17 @@
     <header class="section-header">
       <h1 class="heading-1 heading-1--primary">Services</h1>
     </header>
-    <p class="section-text">A&G specialises in washing machine repairs in South, East, West, Central, North London.
+    <p class="section-text">A&G specialises in <span><a
+          [routerLink]="[ '/appliance-repairs/washing-machine-repairs' ]">washing machine repairs</a></span>
+      in South, East, West, Central, and North London.
       Engineers have many years
-      of experience in oven repairs, tumble dryer repairs, cooker repairs, dishwasher repairs and microwave repairs. We
-      also do tumble dryer repairs and cooker hood repairs. Place your confidence in a professional appliance repair
+      of experience in <span><a [routerLink]="[ '/appliance-repairs/electric-oven-repairs' ]">electric oven
+          repairs</a></span>, <span><a [routerLink]="[ '/appliance-repairs/tumble-dryer-repairs' ]">tumble
+          dryer repairs</a></span>, <span><a [routerLink]="[ '/appliance-repairs/dishwasher-repairs' ]">dishwasher
+          repairs</a></span> and
+      <span><a [routerLink]="[ '/appliance-repairs/microwave-repairs' ]">microwave repairs</a></span>. We
+      also do tumble dryer repairs and cooker hood repairs. Place your confidence in a professional appliance
+      repair
       company.</p>
     <div class="services">
       <a class="services__service" [routerLink]="['/appliance-repairs/washing-machine-repairs']">
@@ -353,9 +331,6 @@
       </a>
     </div>
   </section>
-
-
-
   <section class="brands">
     <header class="section-header">
       <h1 class="heading-1 heading-1--primary">Brands We Repair</h1>
@@ -402,8 +377,6 @@
           <use xlink:href="../../../assets/images/sprite.svg#zanussi"></use>
         </svg>
       </div>
-
-
       <div class="brand">
         <svg class="icon icon--xl">
           <use xlink:href="../../../assets/images/sprite.svg#whirlpool"></use>
