@@ -1,4 +1,4 @@
-<div class="container-main">
+<div class="container-main" *ngIf="isAppliances">
     <div class="header-backfill"></div>
     <div class="header">
         <div class="header__logo-wrapper">
@@ -420,4 +420,474 @@
         </div>
         <a [routerLink]="[ '/']" class="btn-round btn--secondary">leave a review</a>
     </section>
+</div>
+<div class="container-main" *ngIf="!isAppliances">
+    <div class="header-backfill"></div>
+    <div class="header">
+        <div class="header__logo-wrapper">
+            <a [routerLink]="[ '/']">
+                <img class="header__logo-wrapper--image" src="../../../assets/images/logo-header.svg" alt="" />
+            </a>
+        </div>
+        <div class="header__email">
+            <svg class="icon icon--md icon icon--white">
+                <use xlink:href="../../../assets/images/sprite.svg#mail_filled"></use>
+            </svg>
+            <a href="mailto:contact@ag-repairs.co.uk">contact@ag-repairs.co.uk</a>
+        </div>
+        <div class="header__phone">
+            <svg class="icon icon--md icon icon--white">
+                <use xlink:href="../../../assets/images/sprite.svg#phone_filled"></use>
+            </svg>
+            <a href="tel:0207 476 8725">0207 476 8725</a>
+        </div>
+        <div class="header__mobile">
+            <svg class="icon icon--md icon icon--white">
+                <use xlink:href="../../../assets/images/sprite.svg#touchscreen_smartphone_filled"></use>
+            </svg>
+            <a href="tel:0754 085 2102">0754 085 2102</a>
+        </div>
+    </div>
+    <div class="intro">
+        <div class="intro__image">
+            <img src="../../assets/images/appliances.jpg" alt="">
+        </div>
+        <header>
+            <h1>{{headerText}}</h1>
+        </header>
+        <div class="intro__sub">
+            <div class="sub-item">
+                <svg class="icon icon--md icon--primary">
+                    <use xlink:href="../../../assets/images/sprite.svg#checked"></use>
+                </svg>
+                <p>Fast, reliable service</p>
+            </div>
+            <div class="sub-item">
+                <svg class="icon icon--md icon--primary">
+                    <use xlink:href="../../../assets/images/sprite.svg#checked"></use>
+                </svg>
+                <p>Largest UK coverage</p>
+            </div>
+            <div class="sub-item">
+                <svg class="icon icon--md icon--primary">
+                    <use xlink:href="../../../assets/images/sprite.svg#checked"></use>
+                </svg>
+                <p>Same/next day appointments</p>
+            </div>
+            <div class="sub-item">
+                <svg class="icon icon--md icon--primary">
+                    <use xlink:href="../../../assets/images/sprite.svg#checked"></use>
+                </svg>
+                <p>Same/next day appointments</p>
+            </div>
+        </div>
+    </div>
+    <section class="appliance-repair-intro">
+        <header class="section-header">
+            <h1 class="heading-1 heading-1--primary">{{applianceName}} repair service in london</h1>
+        </header>
+        <p *ngIf="isWashingMachine" class="appliance-repair-intro__title-text">A&G Services is an established,
+            professional, washing machine repair company in London.
+            Our engineers are fully trained and competent in washers, washer dryers and washing machine repairs in
+            London. </p>
+        <div class="appliance-repair-intro__text">
+            <h2>At A&G we follow these principles when repairing a {{applianceName}}</h2>
+            <ul>
+                <li>Arrival of the engineer at a convenient time for you.</li>
+                <li>We carry large number of spare parts and tools to carry our the repair on the first visit. In only
+                    10-15% of instances we need to come back the second time in which case we charge £25 for the second
+                    visit.</li>
+                <li>Extreme care taken when working on the premises.</li>
+                <li>We are responsible for any damage caused to the property of our customers, although this does not
+                    happen.</li>
+                <li>Professional advice on the proper use of the repaired equipment.</li>
+                <li>We issue 6 months warranty on the repair.</li>
+                <li>Affordable/list prices on spare parts.</li>
+                <li>Our appliance repair service allows us to quickly repair a broken appliance on the spot, saving the
+                    customer time and money.</li>
+            </ul>
+        </div>
+        <div class="appliance-repair-intro__icon">
+            <div *ngIf="isWashingMachine">
+                <svg class="service__icon">
+                    <use xlink:href="../../../assets/images/sprite.svg#washing_machine"></use>
+                    <desc>washing machine</desc>
+                </svg>
+            </div>
+            <div *ngIf="isDishwasher">
+                <svg class="service__icon">
+                    <use xlink:href="../../../assets/images/sprite.svg#dishwasher"></use>
+                    <desc>washing machine</desc>
+                </svg>
+            </div>
+            <div *ngIf="isTumbleDryer">
+                <svg class="service__icon">
+                    <use xlink:href="../../../assets/images/sprite.svg#tumble_dryer"></use>
+                    <desc>washing machine</desc>
+                </svg>
+            </div>
+            <div *ngIf="isElectricCooker">
+                <svg class="service__icon">
+                    <use xlink:href="../../../assets/images/sprite.svg#cooker"></use>
+                    <desc>washing machine</desc>
+                </svg>
+            </div>
+            <div *ngIf="isMicrowave">
+                <svg class="service__icon">
+                    <use xlink:href="../../../assets/images/sprite.svg#microwave"></use>
+                    <desc>washing machine</desc>
+                </svg>
+            </div>
+            <div *ngIf="isExtractorHood">
+                <svg class="service__icon">
+                    <use xlink:href="../../../assets/images/sprite.svg#cooker_hood"></use>
+                    <desc>washing machine</desc>
+                </svg>
+            </div>
+            <div *ngIf="isFridgeFreezer">
+                <svg class="service__icon">
+                    <use xlink:href="../../../assets/images/sprite.svg#fridge"></use>
+                    <desc>washing machine</desc>
+                </svg>
+            </div>
+            <div *ngIf="isCommercialAppliances">
+                <svg class="service__icon">
+                    <use xlink:href="../../../assets/images/sprite.svg#cooker_dotted"></use>
+                    <desc>washing machine</desc>
+                </svg>
+            </div>
+        </div>
+    </section>
+    <section class="call-banner">
+        <h1>Call us at <a href="tel:0207 476 8725">0207 476 8725</a> or <a href="tel:0754 085 2102">0754 085 2102</a> to
+            book a service today!
+        </h1>
+    </section>
+    <section class="repair-prices">
+        <header class="section-header">
+            <h1 class="heading-1 heading-1--primary">repair prices</h1>
+        </header>
+        <div class="repair-prices__freestanding">
+            <div class="repair-prices__freestanding--title">
+                <h2 class="heading-2 heading-2--white">freestanding {{applianceName}}</h2>
+            </div>
+
+            <div class="repair-prices__freestanding--price">
+                <p>£60 <span>+VAT</span></p>
+            </div>
+
+            <div class="repair-prices__freestanding--points">
+                <p class="repair-prices__freestanding--points-1">&#9679; no call out charge</p>
+                <p class="repair-prices__freestanding--points-2">&#9679; one off labour/diagnostic charge</p>
+                <p class="repair-prices__freestanding--points-3">&#9679; six months guarantee</p>
+                <p class="repair-prices__freestanding--points-4">&#9679; no parking fees</p>
+                <p class="repair-prices__freestanding--points-5">&#9679; parts charged separately if required</p>
+            </div>
+        </div>
+        <div class="repair-prices__integrated">
+            <div class="repair-prices__integrated--title">
+                <h2 class="heading-2 heading-2--white">integrated {{applianceName}}</h2>
+            </div>
+
+            <div class="repair-prices__integrated--price">
+                <p>£70 <span>+VAT</span></p>
+            </div>
+
+            <div class="repair-prices__integrated--points">
+                <p class="repair-prices__integrated--points-1">&#9679; no call out charge</p>
+                <p class="repair-prices__integrated--points-2">&#9679; one off labour/diagnostic charge</p>
+                <p class="repair-prices__integrated--points-3">&#9679; six months guarantee</p>
+                <p class="repair-prices__integrated--points-4">&#9679; no parking fees</p>
+                <p class="repair-prices__integrated--points-5">&#9679; parts charged separately if required</p>
+            </div>
+        </div>
+
+        <div class="repair-prices__terms">
+            <p class="repair-prices__terms--1">If the repair is beyond economical charge the cost would be £35 excl.
+                VAT.</p>
+            <p class="repair-prices__terms--2">We do not guarantee blockages, heating elements or printed circuit
+                boards.</p>
+            <p class="repair-prices__terms--3">A congestion charge and parking fees apply if you live in CC zone.</p>
+        </div>
+    </section>
+    <section class="repair-tips" *ngIf="isWashingMachine">
+        <header class="section-header">
+            <h1 class="heading-1 heading-1--primary">repair tips</h1>
+        </header>
+        <p class="repair-tips__text repair-tips__text--1">
+            A quite a common problem is a blocked filter at the bottom of the machine or a <b>blocked</b> drain pump. In
+            this
+            case the best thing to do initially is to clear the filter out. Sometimes the plug is very difficult or
+            impossible to unscrew, because it has not been opened for a while or never, in this case, try and use pliers
+            to turn the plug. But be careful, you don’t want to break the plug. If you can feel that this does not help
+            and it does not open, leave the plug and move the washing machine out from the unit.
+        </p>
+
+        <ul class="repair-tips__text repair-tips__text--2">
+            <li>&#9679; You’ll find the drain pump at the back of the machine which you need to clear of debris.</li>
+            <li>&#9679; Make sure the washing machine is turned off and unplugged when you work on it.</li>
+            <li>&#9679; Sometimes there is a blockage in the pipe leading to the drain pipe under the sink which needs
+                to be
+                unblocked. You may try and unblock it yourself or call out a qualified plumber.</li>
+        </ul>
+        <p class="repair-tips__text repair-tips__text--3">
+            If the washing machine is not washing clothes properly or if it is goes on for a long time, stops in the
+            middle of the cycle, or if it blows the fuse and trips electricity, problem may be in the faulty heating
+            element. In this case the <b>heating element</b> needs to be replaced.
+        </p>
+        <p class="repair-tips__text repair-tips__text--4">If the washing machine <b>heater element</b> is faulty on a
+            modern washing machine there should be an <b>error code</b>
+            displayed which confirms the fault is with the heater circuit. On an older washing machine the symptoms
+            should be that it carries on washing indefinitely but other faults can cause this same symptom. A heating
+            element can easily be tested with a continuity meter and faulty ones are usually open circuit. A few modern
+            washing machines we have come
+            across over the years can develop faults that cause the washer to stick mid cycle and wash forever without
+            producing an error code even though they are supposed to and even though the heater is fine. In such cases
+            an engineer would be needed to sort it out. (This is sometimes down to the circuit board or timer receiving
+            a different reading of the heater (R resistance electrical) than when it was manufactured) It’s certainly
+            not a DIY job.</p>
+        <div class="repair-tips__error-codes">
+            <h2 class="heading-2 heading-2--white">error codes for</h2>
+            <div class="repair-tips__links">
+                <ul>
+                    <li><a href="">&#9679; whirlpool washing machine</a></li>
+                    <li><a href="">&#9679; indesit washing machine</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="brands">
+            <header class="section-header">
+                <h1 class="heading-1 heading-1--primary">Brands We Repair</h1>
+            </header>
+            <h2 class="heading-2 heading-2--white">We repair and work with all the major appliance makes:</h2>
+            <div class="brand-grid">
+                <div class="brand">
+                    <svg class="icon icon--xl">
+                        <use xlink:href="../../../assets/images/sprite.svg#aeg-2"></use>
+                    </svg>
+                </div>
+                <div class="brand">
+                    <svg class="icon icon--xl">
+                        <use xlink:href="../../../assets/images/sprite.svg#new-beko-logo"></use>
+                    </svg>
+                </div>
+                <div class="brand">
+                    <svg class="icon icon--xl">
+                        <use xlink:href="../../../assets/images/sprite.svg#hotpoint"></use>
+                    </svg>
+                </div>
+                <div class="brand">
+                    <svg class="icon icon--xl">
+                        <use xlink:href="../../../assets/images/sprite.svg#lg-electronics"></use>
+                    </svg>
+                </div>
+                <div class="brand">
+                    <svg class="icon icon--xl">
+                        <use xlink:href="../../../assets/images/sprite.svg#miele"></use>
+                    </svg>
+                </div>
+                <div class="brand">
+                    <svg class="icon icon--xl">
+                        <use xlink:href="../../../assets/images/sprite.svg#samsung-1"></use>
+                    </svg>
+                </div>
+                <div class="brand">
+                    <svg class="icon icon--xl">
+                        <use xlink:href="../../../assets/images/sprite.svg#siemens"></use>
+                    </svg>
+                </div>
+                <div class="brand">
+                    <svg class="icon icon--xl">
+                        <use xlink:href="../../../assets/images/sprite.svg#zanussi"></use>
+                    </svg>
+                </div>
+                <div class="brand">
+                    <svg class="icon icon--xl">
+                        <use xlink:href="../../../assets/images/sprite.svg#whirlpool"></use>
+                    </svg>
+                </div>
+                <div class="brand">
+                    <svg class="icon icon--xl">
+                        <use xlink:href="../../../assets/images/sprite.svg#bosch-1"></use>
+                    </svg>
+                </div>
+                <div class="brand">
+                    <svg class="icon icon--xl">
+                        <use xlink:href="../../../assets/images/sprite.svg#indesit-1"></use>
+                    </svg>
+                </div>
+                <div class="brand">
+                    <svg class="icon icon--xl">
+                        <use xlink:href="../../../assets/images/sprite.svg#hoover"></use>
+                    </svg>
+                </div>
+                <div class="brand">
+                    <svg class="icon icon--xl">
+                        <use xlink:href="../../../assets/images/sprite.svg#electrolux"></use>
+                    </svg>
+                </div>
+                <div class="brand">
+                    <svg class="icon icon--xl">
+                        <use xlink:href="../../../assets/images/sprite.svg#neff"></use>
+                    </svg>
+                </div>
+                <div class="brand">
+                    <svg class="icon icon--xl">
+                        <use xlink:href="../../../assets/images/sprite.svg#blaupunkt-29640"></use>
+                    </svg>
+                </div>
+                <div class="brand">
+                    <svg class="icon icon--xl">
+                        <use xlink:href="../../../assets/images/sprite.svg#daewoo-1"></use>
+                    </svg>
+                </div>
+            </div>
+            <p class="heading-2 heading-2--white">And many more!</p>
+        </section>
+        <section class="reviews-container">
+            <header class="section-header">
+                <h1 class="heading-1 heading-1--primary">google reviews</h1>
+            </header>
+            <div class="reviews">
+                <div class="review">
+                    <div class="review__profile-pic">
+                        <img src="../../../assets/images/profile_3.png" alt="">
+                    </div>
+                    <div class="review__profile-name">
+                        Marie Adam
+                    </div>
+                    <div class="review__stars">
+                        <svg class="icon icon--md">
+                            <use xlink:href="../../../assets/images/sprite.svg#star"></use>
+                        </svg>
+                        <svg class="icon icon--md">
+                            <use xlink:href="../../../assets/images/sprite.svg#star"></use>
+                        </svg>
+                        <svg class="icon icon--md">
+                            <use xlink:href="../../../assets/images/sprite.svg#star"></use>
+                        </svg>
+                        <svg class="icon icon--md">
+                            <use xlink:href="../../../assets/images/sprite.svg#star"></use>
+                        </svg>
+                        <svg class="icon icon--md">
+                            <use xlink:href="../../../assets/images/sprite.svg#star"></use>
+                        </svg>
+                    </div>
+                    <div class="review__text">
+                        <svg class="icon icon--md icon--primary">
+                            <use xlink:href="../../../assets/images/sprite.svg#quote_left"></use>
+                        </svg>
+                        <p>Very professional & efficient. Great service at a very good price. I would definitely recommend.
+                        </p>
+                        <svg class="icon icon--md icon--primary">
+                            <use xlink:href="../../../assets/images/sprite.svg#quote_right"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="review">
+                    <div class="review__profile-pic">
+                        <img src="../../../assets/images/profile_1.png" alt="">
+                    </div>
+                    <div class="review__profile-name">
+                        George Pidgeon
+                    </div>
+                    <div class="review__stars">
+                        <svg class="icon icon--md">
+                            <use xlink:href="../../../assets/images/sprite.svg#star"></use>
+                        </svg>
+                        <svg class="icon icon--md">
+                            <use xlink:href="../../../assets/images/sprite.svg#star"></use>
+                        </svg>
+                        <svg class="icon icon--md">
+                            <use xlink:href="../../../assets/images/sprite.svg#star"></use>
+                        </svg>
+                        <svg class="icon icon--md">
+                            <use xlink:href="../../../assets/images/sprite.svg#star"></use>
+                        </svg>
+                        <svg class="icon icon--md">
+                            <use xlink:href="../../../assets/images/sprite.svg#star"></use>
+                        </svg>
+                    </div>
+                    <div class="review__text">
+                        <svg class="icon icon--md icon--primary">
+                            <use xlink:href="../../../assets/images/sprite.svg#quote_left"></use>
+                        </svg>
+                        <p>Thank you - would definitely use again in future.</p>
+                        <svg class="icon icon--md icon--primary">
+                            <use xlink:href="../../../assets/images/sprite.svg#quote_right"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="review">
+                    <div class="review__profile-pic">
+                        <img src="../../../assets/images/profile_3.png" alt="">
+                    </div>
+                    <div class="review__profile-name">
+                        Annie Yusuf
+                    </div>
+                    <div class="review__stars">
+                        <svg class="icon icon--md">
+                            <use xlink:href="../../../assets/images/sprite.svg#star"></use>
+                        </svg>
+                        <svg class="icon icon--md">
+                            <use xlink:href="../../../assets/images/sprite.svg#star"></use>
+                        </svg>
+                        <svg class="icon icon--md">
+                            <use xlink:href="../../../assets/images/sprite.svg#star"></use>
+                        </svg>
+                        <svg class="icon icon--md">
+                            <use xlink:href="../../../assets/images/sprite.svg#star"></use>
+                        </svg>
+                        <svg class="icon icon--md" style="fill:#dddddd;">
+                            <use xlink:href="../../../assets/images/sprite.svg#star"></use>
+                        </svg>
+                    </div>
+                    <div class="review__text">
+                        <svg class="icon icon--md icon--primary">
+                            <use xlink:href="../../../assets/images/sprite.svg#quote_left"></use>
+                        </svg>
+                        <p>Good repair work.</p>
+                        <svg class="icon icon--md icon--primary">
+                            <use xlink:href="../../../assets/images/sprite.svg#quote_right"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="review">
+                    <div class="review__profile-pic">
+                        <img src="../../../assets/images/profile_2.png" alt="">
+                    </div>
+                    <div class="review__profile-name">
+                        Ellie Roberts
+                    </div>
+                    <div class="review__stars">
+                        <svg class="icon icon--md">
+                            <use xlink:href="../../../assets/images/sprite.svg#star"></use>
+                        </svg>
+                        <svg class="icon icon--md">
+                            <use xlink:href="../../../assets/images/sprite.svg#star"></use>
+                        </svg>
+                        <svg class="icon icon--md">
+                            <use xlink:href="../../../assets/images/sprite.svg#star"></use>
+                        </svg>
+                        <svg class="icon icon--md">
+                            <use xlink:href="../../../assets/images/sprite.svg#star"></use>
+                        </svg>
+                        <svg class="icon icon--md">
+                            <use xlink:href="../../../assets/images/sprite.svg#star"></use>
+                        </svg>
+                    </div>
+                    <div class="review__text">
+                        <svg class="icon icon--md icon--primary">
+                            <use xlink:href="../../../assets/images/sprite.svg#quote_left"></use>
+                        </svg>
+                        <p>Quick and efficient service - I would use them again.</p>
+                        <svg class="icon icon--md icon--primary">
+                            <use xlink:href="../../../assets/images/sprite.svg#quote_right"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <a [routerLink]="[ '/']" class="btn-round btn--secondary">leave a review</a>
+        </section>
 </div>

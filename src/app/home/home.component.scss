@@ -148,10 +148,10 @@
 }
 
 .request-tab {
-    margin-top: 6rem;
     grid-column: 1 / -1;
     display: grid;
     justify-content: center;
+    margin-top: 4rem;
 
     &__wrapper {
         border-bottom: 0.5rem solid $color-primary;
@@ -368,7 +368,6 @@
 
 
     &__booking {
-        margin: 4rem 0;
         color: #fff;
 
         grid-column: full-start / full-end;
@@ -391,19 +390,17 @@
 }
 
 .work {
-    margin-top: 6rem;
-
     grid-column: col-start 1 / col-end 8;
     display: grid;
     justify-content: center;
 
-    .section-header {
-        @extend %section-header;
-    }
+    // .section-header {
+    //     @extend %section-header;
+    // }
 
     h2 {
         background: $color-primary;
-        margin-top: 2rem;
+        // margin-top: 2rem;
         padding: 0.5rem;
         justify-self: center;
     }
@@ -463,17 +460,14 @@
 }
 
 .about-us {
-    margin-top: 6.5rem;
-
     grid-column: col-start 1 / col-end 8;
     display: grid;
 
-    .section-header {
-        @extend %section-header;
-    }
+    // .section-header {
+    //     @extend %section-header;
+    // }
 
     &__content-container {
-        margin-top: 4rem;
         display: grid;
         grid-template-columns: repeat(8, 1fr);
         grid-column-gap: 2.5rem;
@@ -553,8 +547,6 @@
 }
 
 .coverage {
-    margin-top: 6.5rem;
-
     grid-column: col-start 1 / col-end 8;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -596,7 +588,7 @@
     }
 
     .section-header {
-        @extend %section-header;
+        // @extend %section-header;
         margin-bottom: 6.5rem;
         margin-left: 3rem;
         margin-right: 3rem;
