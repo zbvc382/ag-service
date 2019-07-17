@@ -517,7 +517,7 @@
             Our engineers are fully trained and competent in washers, washer dryers and washing machine repairs in
             London. </p>
         <div class="appliance-repair-intro__text">
-            <h2>At A&G we follow these principles when repairing a {{applianceName}}</h2>
+            <h2>At A&G we follow these principles when repairing a {{applianceName}}:</h2>
             <ul>
                 <li>Arrival of the engineer at a convenient time for you.</li>
                 <li>We carry large number of spare parts and tools to carry our the repair on the first visit. In only
@@ -601,7 +601,7 @@
         </header>
         <div class="repair-prices__freestanding">
             <div class="repair-prices__freestanding--title">
-                <h2 class="heading-2 heading-2--white">freestanding {{applianceName}}</h2>
+                <h2>freestanding {{applianceName}}</h2>
             </div>
 
             <div class="repair-prices__freestanding--price">
@@ -643,10 +643,194 @@
         </div>
     </section>
 
-    <!-- Washing machine article -->
+    <!-- Common Faults-->
 
-    <article class="repair-tips" *ngIf="isWashingMachine">
+    <section class="common-faults">
         <header class="section-heading">
+            <h1 class="heading-1 heading-1--primary">common faults</h1>
+        </header>
+        <h2>We repair all {{applianceName}} issues inluding some of the most common ones:</h2>
+
+        <!-- Washing Machine list-->
+
+        <div class="common-faults__fault-grid" *ngIf="isWashingMachine">
+            <div class="common-faults__fault">
+                <p>leaking</p>
+            </div>
+            <div class="common-faults__fault">
+                <p>won’t start</p>
+            </div>
+            <div class="common-faults__fault">
+                <p>very noisy</p>
+            </div>
+            <div class="common-faults__fault">
+                <p>tripping the electrics</p>
+            </div>
+            <div class="common-faults__fault">
+                <p>door won't open</p>
+            </div>
+            <div class="common-faults__fault">
+                <p>no hot water</p>
+            </div>
+            <div class="common-faults__fault">
+                <p>showing an error</p>
+            </div>
+            <div class="common-faults__fault">
+                <p>won't drain</p>
+            </div>
+            <div class="common-faults__fault">
+                <p>not using detergent</p>
+            </div>
+            <div class="common-faults__fault">
+                <p>not spinning</p>
+            </div>
+        </div>
+
+         <!-- Dishwasher list-->
+
+         <div class="common-faults__fault-grid" *ngIf="isDishwasher">
+                <div class="common-faults__fault">
+                    <p>dishes don't get clean</p>
+                </div>
+                <div class="common-faults__fault">
+                    <p>leaking</p>
+                </div>
+                <div class="common-faults__fault">
+                    <p>water doesn't drain</p>
+                </div>
+                <div class="common-faults__fault">
+                    <p>tripping the electrics</p>
+                </div>
+                <div class="common-faults__fault">
+                    <p>door doesn't close</p>
+                </div>
+                <div class="common-faults__fault">
+                    <p>not dispensing detergent</p>
+                </div>
+                <div class="common-faults__fault">
+                    <p>not starting</p>
+                </div>
+                <div class="common-faults__fault">
+                    <p>damaged spray arms</p>
+                </div>
+                <div class="common-faults__fault">
+                    <p>warning lights on</p>
+                </div>
+                <div class="common-faults__fault">
+                    <p>very noisy</p>
+                </div>
+            </div>
+
+        <!-- Tumble Dryer list-->
+
+         <div class="common-faults__fault-grid" *ngIf="isTumbleDryer">
+                <div class="common-faults__fault">
+                    <p>drum doesn't spin</p>
+                </div>
+                <div class="common-faults__fault">
+                    <p>taking too long to dry</p>
+                </div>
+                <div class="common-faults__fault">
+                    <p>not starting</p>
+                </div>
+                <div class="common-faults__fault">
+                    <p>tripping the electrics</p>
+                </div>
+                <div class="common-faults__fault">
+                    <p>door doesn't close</p>
+                </div>
+                <div class="common-faults__fault">
+                    <p>wrinkled clothes</p>
+                </div>
+                <div class="common-faults__fault">
+                    <p>dryer gets too hot</p>
+                </div>
+                <div class="common-faults__fault">
+                    <p>very noisy</p>
+                </div>
+                <div class="common-faults__fault">
+                    <p>door doesn't open</p>
+                </div>
+                <div class="common-faults__fault">
+                    <p>water leaks</p>
+                </div>
+            </div>
+
+        <!-- Electric Oven list-->
+
+         <div class="common-faults__fault-grid" *ngIf="isElectricCooker">
+                <div class="common-faults__fault">
+                    <p>won't turn on</p>
+                </div>
+                <div class="common-faults__fault">
+                    <p>doesn't heat up</p>
+                </div>
+                <div class="common-faults__fault">
+                    <p>light not working</p>
+                </div>
+                <div class="common-faults__fault">
+                    <p>oven burns food</p>
+                </div>
+                <div class="common-faults__fault">
+                    <p>door won't close</p>
+                </div>
+                <div class="common-faults__fault">
+                    <p>fan not working</p>
+                </div>
+                <div class="common-faults__fault">
+                    <p>tripping the electrics</p>
+                </div>
+                <div class="common-faults__fault">
+                    <p>thermostat problem</p>
+                </div>
+                <div class="common-faults__fault">
+                    <p>very noisy</p>
+                </div>
+                <div class="common-faults__fault">
+                    <p>uneven cooking</p>
+                </div>
+            </div>
+
+        <!-- Microwave list-->
+
+         <div class="common-faults__fault-grid" *ngIf="isMicrowave">
+                <div class="common-faults__fault">
+                    <p>doesn't heat food</p>
+                </div>
+                <div class="common-faults__fault">
+                    <p>won't turn on</p>
+                </div>
+                <div class="common-faults__fault">
+                    <p>door doesn't close</p>
+                </div>
+                <div class="common-faults__fault">
+                    <p>runs and then stops</p>
+                </div>
+                <div class="common-faults__fault">
+                    <p>light-bulb doesn't turn on</p>
+                </div>
+                <div class="common-faults__fault">
+                    <p>plate doesn't spin</p>
+                </div>
+                <div class="common-faults__fault">
+                    <p>tripping the electrics</p>
+                </div>
+                <div class="common-faults__fault">
+                    <p>sparking inside microwave</p>
+                </div>
+                <div class="common-faults__fault">
+                    <p>excessive noise</p>
+                </div>
+                <div class="common-faults__fault">
+                    <p>exhaust fan does not work</p>
+                </div>
+            </div>
+    </section>
+
+    <!-- Washing machine Section -->
+
+    <section class="repair-tips" *ngIf="isWashingMachine">
+        <header class="[section-heading]">
             <h1 class="heading-1 heading-1--primary">repair tips</h1>
         </header>
 
@@ -661,13 +845,13 @@
                 help
                 and it does not open, leave the plug and move the washing machine out from the unit.</p>
             <ul>
-                <li>&#9679; You’ll find the drain pump at the back of the machine which you need to clear of debris.
+                <li>You’ll find the drain pump at the back of the machine which you need to clear of debris.
                 </li>
-                <li>&#9679; Make sure the washing machine is turned off and unplugged when you work on it.</li>
-                <li>&#9679; Sometimes there is a blockage in the pipe leading to the drain pipe under the sink which
+                <li>Make sure the washing machine is turned off and unplugged when you work on it.</li>
+                <li>Sometimes there is a blockage in the pipe leading to the drain pipe under the sink which
                     needs
                     to be
-                    unblocked. You may try and unblock it yourself or call out a qualified plumber.</li>
+                    unblocked.</li>
             </ul>
 
             <p> If the washing machine is not washing clothes properly or if it is goes on for a long time, stops in the
@@ -698,16 +882,14 @@
         <!-- Error code links -->
 
         <div class="repair-tips__error-codes">
-            <h2 class="heading-2 heading-2--white">error codes for</h2>
+            <h2 class="heading-2 heading-2--white">error fault codes for:</h2>
             <div class="repair-tips__links">
-                <ul>
-                    <li><a href="">&#9654; whirlpool washing machine</a></li>
-                    <li><a href="">&#9654; indesit washing machine</a></li>
-                    <li>&#9655; more coming soon!</li>
-                </ul>
+                <p><a routerLink="'[/]'"><span>&#9654;</span>&nbsp;&nbsp;whirlpool washing machine</a></p>
+                <p><a routerLink="'[/]'"><span>&#9654;</span>&nbsp;&nbsp;indesit washing machine</a></p>
+                <p><span>&#9655;</span>&nbsp;&nbsp;more coming soon!</p>
             </div>
         </div>
-    </article>
+    </section>
 
     <!-- Brands -->
 

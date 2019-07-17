@@ -75,15 +75,19 @@
 
         @media only screen and (max-width: 700px) {
             grid-column: 1 / -1;
-            // grid-column: 1 / 2;
-            // text-align: justify;
+            text-align: justify;
+        }
+
+        @media only screen and (max-width: 500px) {
+            grid-column: 1 / -1;
+            grid-row: 1 / 2;
+            text-align: justify;
         }
     }
 
     &__text {
         display: grid;
         grid-row-gap: 1rem;
-        // text-align: justify;
 
         @media only screen and (max-width: 1100px) {
             grid-column: 1 / -1;
@@ -97,12 +101,17 @@
         }
 
         ul {
+            margin-left: 1.35rem;
             font-size: $font-size-primary;
             color: $color-grey;
             text-rendering: optimizeLegibility;
 
             li {
-                list-style-position: inside;
+                text-align: justify;
+            }
+
+            li:not(:last-child) {
+                margin-bottom: 0.25rem;
             }
         }
     }
@@ -194,8 +203,13 @@
         &--title {
             background-color: $color-primary;
             padding: 0.25rem .5rem;
+            color: #fff;
             justify-self: center;
             text-transform: capitalize;
+
+            h2 {
+                margin: 0 !important;
+            }
         }
 
         &--price {
@@ -281,11 +295,57 @@
     }
 }
 
+.common-faults {
+    grid-column: center-start / center-end;
+    display: grid;
+
+    h2 {
+        padding: 0.25rem .5rem;
+        background-color: $color-primary;
+        color: #fff;
+        justify-self: center;
+        margin-bottom: 3rem;
+    }
+
+    &__fault-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        grid-column-gap: 2rem;
+        grid-row-gap: 2rem;
+
+    }
+
+    &__fault {
+        background-color: $color-secondary;
+        color: #fff;
+        font-size: $font-size-primary;
+        display: grid;
+        padding: 1rem 0;
+
+        p {
+            display: inline-block;
+            margin: 0 !important;
+            justify-self: center;
+            border-bottom: 0.25rem solid $color-primary;
+            text-transform: capitalize;
+        }
+    }
+}
+
 .repair-tips {
     grid-column: center-start / center-end;
     display: grid;
     grid-template-columns: 75% 25%;
     grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+
+    @media only screen and (max-width: 1050px) {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading {
+        margin-bottom: 2rem !important;
+    }
 
     &__text {
         font-size: $font-size-primary;
@@ -294,8 +354,10 @@
         text-align: justify;
 
         ul {
-            li {
-                list-style-type: none;
+            margin-left: 1.35rem;
+
+            li:not(:last-child) {
+                margin-bottom: 0.25rem;
             }
         }
     }
@@ -303,10 +365,9 @@
     &__error-codes {
         background-color: $color-secondary;
         display: grid;
-        grid-template-rows: min-content;
+        align-self: start;
         padding: 2rem;
         grid-row-gap: 2rem;
-        height: 50%;
 
         h2 {
             background-color: $color-primary;
@@ -314,27 +375,27 @@
             justify-self: center;
             align-self: start;
             text-transform: capitalize;
+            margin: 0 !important;
         }
     }
 
     &__links {
-        justify-self: start;
-        align-self: start;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        grid-column-gap: 2rem;
+        grid-row-gap: 2rem;
 
-        li {
-            list-style-type: none;
-            text-transform: capitalize;
-            line-height: 2;
+        a,
+        p {
             text-decoration: none;
             color: #fff;
             font-size: 1.5rem;
             vertical-align: middle;
+            margin: 0 !important;
+            text-transform: capitalize;
 
-            a {
-                text-decoration: none;
-                color: #fff;
-                font-size: 1.5rem;
-                vertical-align: middle;
+            span {
+                color: $color-primary;
             }
         }
     }
