@@ -102,7 +102,7 @@
     <section class="appliances-intro">
         <p>
             Our appliance repair service centre offers local professional repair service of household appliances and
-            electronics using top quality tradesmanship and parts. We are able to resolve technical problems and mend
+            electronics using top quality tradesmen and parts. We are able to resolve technical problems and mend
             your appliance right in your home. Differentiated approach to technical problems by experienced tradesmen
             allows our engineers to accurately determine the nature of the problem, source the necessary parts, if they
             need replacing and quickly repair the failed appliance, be it a <span><a
@@ -113,9 +113,10 @@
             white good.
         </p>
         <p>Our service is based on many years of experience with various
-            tools and devices, supplemented by a serious knowledge of domestic and commercial appliances. The use of
+            tools and devices, supplemented by a serious knowledge of <b>domestic</b> and <b>commercial</b> appliances.
+            The use of
             advanced tools and manufacturer’s spare parts accelerates the process of repairing household appliances, our
-            <span>repairs are guaranteed for 6 months</span>.</p>
+            <b>repairs are guaranteed for 6 months</b>.</p>
         <p>
             In a case of a serious issue, for example when a washer requires new bearings, a full diagnosis of the
             appliance will be conducted and, after the defect has been identified, we will suggest the best way to solve
@@ -144,9 +145,14 @@
             of experience in <span><a [routerLink]="[ '/appliance-repairs/electric-oven-repairs' ]">electric oven
                     repairs</a></span>, <span><a [routerLink]="[ '/appliance-repairs/tumble-dryer-repairs' ]">tumble
                     dryer repairs</a></span>, <span><a
-                    [routerLink]="[ '/appliance-repairs/dishwasher-repairs' ]">dishwasher repairs</a></span> and
+                    [routerLink]="[ '/appliance-repairs/dishwasher-repairs' ]">dishwasher
+                    repairs</a></span> and
             <span><a [routerLink]="[ '/appliance-repairs/microwave-repairs' ]">microwave repairs</a></span>. We
-            also do tumble dryer repairs and cooker hood repairs. Place your confidence in a professional appliance
+            also do <span><a [routerLink]="[ '/appliance-repairs/tumble-dryer-repairs' ]">tumble dryer
+                    repairs</a></span> and
+            <span><a [routerLink]="[ '/appliance-repairs/extractor-hood-repairs' ]"> cooker hood repairs</a></span>.
+            Place your
+            confidence in a professional appliance
             repair
             company.</p>
         <div class="services">
@@ -514,8 +520,33 @@
         </header>
         <p *ngIf="isWashingMachine" class="appliance-repair-intro__title-text">A&G Services is an established,
             professional, washing machine repair company in London.
-            Our engineers are fully trained and competent in washers, washer dryers and washing machine repairs in
-            London. </p>
+            Our engineers are fully trained and competent in <b>washer dryer</b> and <b>washing machine</b> repairs in
+            London.</p>
+        <p *ngIf="isDishwasher" class="appliance-repair-intro__title-text">A&G Services is an established, professional
+            dishwasher repair company.
+            Our engineers are fully trained and competent in <b>dishwasher</b> repairs in London.</p>
+        <p *ngIf="isTumbleDryer" class="appliance-repair-intro__title-text">A&G Services is an established,
+            professional
+            tumble dryer repair company.
+            Our engineers are fully trained and competent in <b>tumble dryer</b> repairs in London.</p>
+        <p *ngIf="isElectricCooker" class="appliance-repair-intro__title-text">A&G Services is an established,
+            professional
+            electric cooker/oven repair company.
+            Our engineers are fully trained and competent in <b>electric cooker</b>, and <b>electric oven</b> repairs in London.</p>
+        <p *ngIf="isMicrowave" class="appliance-repair-intro__title-text">A&G Services is an established,
+            professional
+            microwave repair company.
+            Our engineers are fully trained and competent in <b>microwave</b> repairs in London.</p>
+        <p *ngIf="isExtractorHood" class="appliance-repair-intro__title-text">A&G Services is an established,
+            professional
+            extractor hood repair company.
+            Our engineers are fully trained and competent in <b>extractor hood</b> repairs in London.</p>
+        <p *ngIf="isFridgeFreezer" class="appliance-repair-intro__title-text">A&G Services is an established,
+            professional
+            fridge freezer repair company.
+            Our engineers are fully trained and competent in <b>fridge</b>, <b>freezer</b>, and <b>fridge freezer</b>
+            repairs in
+            London.</p>
         <div class="appliance-repair-intro__text">
             <h2>At A&G we follow these principles when repairing a {{applianceName}}:</h2>
             <ul>
@@ -686,154 +717,223 @@
             </div>
         </div>
 
-         <!-- Dishwasher list-->
+        <!-- Dishwasher list-->
 
-         <div class="common-faults__fault-grid" *ngIf="isDishwasher">
-                <div class="common-faults__fault">
-                    <p>dishes don't get clean</p>
-                </div>
-                <div class="common-faults__fault">
-                    <p>leaking</p>
-                </div>
-                <div class="common-faults__fault">
-                    <p>water doesn't drain</p>
-                </div>
-                <div class="common-faults__fault">
-                    <p>tripping the electrics</p>
-                </div>
-                <div class="common-faults__fault">
-                    <p>door doesn't close</p>
-                </div>
-                <div class="common-faults__fault">
-                    <p>not dispensing detergent</p>
-                </div>
-                <div class="common-faults__fault">
-                    <p>not starting</p>
-                </div>
-                <div class="common-faults__fault">
-                    <p>damaged spray arms</p>
-                </div>
-                <div class="common-faults__fault">
-                    <p>warning lights on</p>
-                </div>
-                <div class="common-faults__fault">
-                    <p>very noisy</p>
-                </div>
+        <div class="common-faults__fault-grid" *ngIf="isDishwasher">
+            <div class="common-faults__fault">
+                <p>dishes don't get clean</p>
             </div>
+            <div class="common-faults__fault">
+                <p>leaking</p>
+            </div>
+            <div class="common-faults__fault">
+                <p>water doesn't drain</p>
+            </div>
+            <div class="common-faults__fault">
+                <p>tripping the electrics</p>
+            </div>
+            <div class="common-faults__fault">
+                <p>door doesn't close</p>
+            </div>
+            <div class="common-faults__fault">
+                <p>not dispensing detergent</p>
+            </div>
+            <div class="common-faults__fault">
+                <p>not starting</p>
+            </div>
+            <div class="common-faults__fault">
+                <p>damaged spray arms</p>
+            </div>
+            <div class="common-faults__fault">
+                <p>warning lights on</p>
+            </div>
+            <div class="common-faults__fault">
+                <p>very noisy</p>
+            </div>
+        </div>
 
         <!-- Tumble Dryer list-->
 
-         <div class="common-faults__fault-grid" *ngIf="isTumbleDryer">
-                <div class="common-faults__fault">
-                    <p>drum doesn't spin</p>
-                </div>
-                <div class="common-faults__fault">
-                    <p>taking too long to dry</p>
-                </div>
-                <div class="common-faults__fault">
-                    <p>not starting</p>
-                </div>
-                <div class="common-faults__fault">
-                    <p>tripping the electrics</p>
-                </div>
-                <div class="common-faults__fault">
-                    <p>door doesn't close</p>
-                </div>
-                <div class="common-faults__fault">
-                    <p>wrinkled clothes</p>
-                </div>
-                <div class="common-faults__fault">
-                    <p>dryer gets too hot</p>
-                </div>
-                <div class="common-faults__fault">
-                    <p>very noisy</p>
-                </div>
-                <div class="common-faults__fault">
-                    <p>door doesn't open</p>
-                </div>
-                <div class="common-faults__fault">
-                    <p>water leaks</p>
-                </div>
+        <div class="common-faults__fault-grid" *ngIf="isTumbleDryer">
+            <div class="common-faults__fault">
+                <p>drum doesn't spin</p>
             </div>
+            <div class="common-faults__fault">
+                <p>taking too long to dry</p>
+            </div>
+            <div class="common-faults__fault">
+                <p>not starting</p>
+            </div>
+            <div class="common-faults__fault">
+                <p>tripping the electrics</p>
+            </div>
+            <div class="common-faults__fault">
+                <p>door doesn't close</p>
+            </div>
+            <div class="common-faults__fault">
+                <p>wrinkled clothes</p>
+            </div>
+            <div class="common-faults__fault">
+                <p>dryer gets too hot</p>
+            </div>
+            <div class="common-faults__fault">
+                <p>very noisy</p>
+            </div>
+            <div class="common-faults__fault">
+                <p>door doesn't open</p>
+            </div>
+            <div class="common-faults__fault">
+                <p>water leaks</p>
+            </div>
+        </div>
 
         <!-- Electric Oven list-->
 
-         <div class="common-faults__fault-grid" *ngIf="isElectricCooker">
-                <div class="common-faults__fault">
-                    <p>won't turn on</p>
-                </div>
-                <div class="common-faults__fault">
-                    <p>doesn't heat up</p>
-                </div>
-                <div class="common-faults__fault">
-                    <p>light not working</p>
-                </div>
-                <div class="common-faults__fault">
-                    <p>oven burns food</p>
-                </div>
-                <div class="common-faults__fault">
-                    <p>door won't close</p>
-                </div>
-                <div class="common-faults__fault">
-                    <p>fan not working</p>
-                </div>
-                <div class="common-faults__fault">
-                    <p>tripping the electrics</p>
-                </div>
-                <div class="common-faults__fault">
-                    <p>thermostat problem</p>
-                </div>
-                <div class="common-faults__fault">
-                    <p>very noisy</p>
-                </div>
-                <div class="common-faults__fault">
-                    <p>uneven cooking</p>
-                </div>
+        <div class="common-faults__fault-grid" *ngIf="isElectricCooker">
+            <div class="common-faults__fault">
+                <p>won't turn on</p>
             </div>
+            <div class="common-faults__fault">
+                <p>doesn't heat up</p>
+            </div>
+            <div class="common-faults__fault">
+                <p>light not working</p>
+            </div>
+            <div class="common-faults__fault">
+                <p>oven burns food</p>
+            </div>
+            <div class="common-faults__fault">
+                <p>door won't close</p>
+            </div>
+            <div class="common-faults__fault">
+                <p>fan not working</p>
+            </div>
+            <div class="common-faults__fault">
+                <p>tripping the electrics</p>
+            </div>
+            <div class="common-faults__fault">
+                <p>thermostat problem</p>
+            </div>
+            <div class="common-faults__fault">
+                <p>very noisy</p>
+            </div>
+            <div class="common-faults__fault">
+                <p>uneven cooking</p>
+            </div>
+        </div>
 
         <!-- Microwave list-->
 
-         <div class="common-faults__fault-grid" *ngIf="isMicrowave">
-                <div class="common-faults__fault">
-                    <p>doesn't heat food</p>
-                </div>
-                <div class="common-faults__fault">
-                    <p>won't turn on</p>
-                </div>
-                <div class="common-faults__fault">
-                    <p>door doesn't close</p>
-                </div>
-                <div class="common-faults__fault">
-                    <p>runs and then stops</p>
-                </div>
-                <div class="common-faults__fault">
-                    <p>light-bulb doesn't turn on</p>
-                </div>
-                <div class="common-faults__fault">
-                    <p>plate doesn't spin</p>
-                </div>
-                <div class="common-faults__fault">
-                    <p>tripping the electrics</p>
-                </div>
-                <div class="common-faults__fault">
-                    <p>sparking inside microwave</p>
-                </div>
-                <div class="common-faults__fault">
-                    <p>excessive noise</p>
-                </div>
-                <div class="common-faults__fault">
-                    <p>exhaust fan does not work</p>
-                </div>
+        <div class="common-faults__fault-grid" *ngIf="isMicrowave">
+            <div class="common-faults__fault">
+                <p>doesn't heat food</p>
             </div>
+            <div class="common-faults__fault">
+                <p>won't turn on</p>
+            </div>
+            <div class="common-faults__fault">
+                <p>door doesn't close</p>
+            </div>
+            <div class="common-faults__fault">
+                <p>runs and then stops</p>
+            </div>
+            <div class="common-faults__fault">
+                <p>light-bulb doesn't turn on</p>
+            </div>
+            <div class="common-faults__fault">
+                <p>plate doesn't spin</p>
+            </div>
+            <div class="common-faults__fault">
+                <p>tripping the electrics</p>
+            </div>
+            <div class="common-faults__fault">
+                <p>sparking inside microwave</p>
+            </div>
+            <div class="common-faults__fault">
+                <p>excessive noise</p>
+            </div>
+            <div class="common-faults__fault">
+                <p>exhaust fan does not work</p>
+            </div>
+        </div>
+
+        <!-- Extractor Hood list-->
+
+        <div class="common-faults__fault-grid" *ngIf="isExtractorHood">
+            <div class="common-faults__fault">
+                <p>poor airflow or extraction</p>
+            </div>
+            <div class="common-faults__fault">
+                <p>won't turn on</p>
+            </div>
+            <div class="common-faults__fault">
+                <p>rattling or humming noise</p>
+            </div>
+            <div class="common-faults__fault">
+                <p>lights are not working</p>
+            </div>
+            <div class="common-faults__fault">
+                <p>excessive noise</p>
+            </div>
+            <div class="common-faults__fault">
+                <p>fan doesn't work</p>
+            </div>
+            <div class="common-faults__fault">
+                <p>tripping the electrics</p>
+            </div>
+            <div class="common-faults__fault">
+                <p>faulty control panel</p>
+            </div>
+            <div class="common-faults__fault">
+                <p>no power</p>
+            </div>
+            <div class="common-faults__fault">
+                <p>not removing steam</p>
+            </div>
+        </div>
+
+        <!-- Fridge Freezer list-->
+
+        <div class="common-faults__fault-grid" *ngIf="isFridgeFreezer">
+            <div class="common-faults__fault">
+                <p>excessive condensation</p>
+            </div>
+            <div class="common-faults__fault">
+                <p>leaking</p>
+            </div>
+            <div class="common-faults__fault">
+                <p>noises</p>
+            </div>
+            <div class="common-faults__fault">
+                <p>thermostat not working</p>
+            </div>
+            <div class="common-faults__fault">
+                <p>faulty hinges</p>
+            </div>
+            <div class="common-faults__fault">
+                <p>frost build up</p>
+            </div>
+            <div class="common-faults__fault">
+                <p>tripping the electrics</p>
+            </div>
+            <div class="common-faults__fault">
+                <p>door doesn't close</p>
+            </div>
+            <div class="common-faults__fault">
+                <p>freezer not cooling</p>
+            </div>
+            <div class="common-faults__fault">
+                <p>fridge not cooling</p>
+            </div>
+        </div>
     </section>
 
     <!-- Washing machine Section -->
 
     <section class="repair-tips" *ngIf="isWashingMachine">
-        <header class="[section-heading]">
+        <header class="section-heading">
             <h1 class="heading-1 heading-1--primary">repair tips</h1>
         </header>
-
         <div class="repair-tips__text">
             <p> A quite a common problem is a <b>blocked filter</b> at the bottom of the machine or a <b>blocked drain
                     pump</b>. In
@@ -886,6 +986,165 @@
             <div class="repair-tips__links">
                 <p><a routerLink="'[/]'"><span>&#9654;</span>&nbsp;&nbsp;whirlpool washing machine</a></p>
                 <p><a routerLink="'[/]'"><span>&#9654;</span>&nbsp;&nbsp;indesit washing machine</a></p>
+                <p><span>&#9655;</span>&nbsp;&nbsp;more coming soon!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dishwasher Section -->
+
+    <section class="repair-tips" *ngIf="isDishwasher">
+        <header class="section-heading">
+            <h1 class="heading-1 heading-1--primary">repair tips</h1>
+        </header>
+        <div class="repair-tips__text">
+            <p> If the problem is a <b>lack of water</b>, open the dishwasher when it's not running and check the float.
+                It
+                looks like an inverted cup in the bottom of your washer and controls how much water gets let inside.
+                When the float reaches a certain level, the water stops filling; if it becomes stuck in the open
+                position or won't open at all, you won't get any water.</p>
+
+            <p>If <b>too much water</b> is the trouble, take a look at the hose where the water comes in. Usually, your
+                washer
+                will be next to the sink and will have an inlet hose there. Take a flashlight and look inside, and if
+                you find black rubber bits, or can break some off with your finger, the rubber gasket has decayed and
+                needs replacement.</p>
+
+            <p>Next, look in the bottom of the washer for any food or other objects clogging the drain. Your dishwasher
+                may be filling up, but unable to drain fast enough. In addition, make sure to look at the nozzles on the
+                sprayer arms. If they're clogged, use a small wire brush to clean them out.</p>
+
+            <p>If <b>noise is the problem</b>, start by stopping the wash cycle and opening the door. Try reconfiguring
+                the
+                dishes in the racks. Also, make sure to spin the top "sprayer arm," located directly under the top rack.
+                Dishes may have shifted during the cycle, blocking the arm's circular path. Finally, make sure all of
+                the racks and rails are still tight. Over time, movement in the washer due to water pressure can cause
+                screws to loosen, in turn causing noise. Tightening the screws should solve the problem.</p>
+        </div>
+
+        <!-- Error code links -->
+
+        <div class="repair-tips__error-codes">
+            <h2 class="heading-2 heading-2--white">error fault codes for:</h2>
+            <div class="repair-tips__links">
+                <!-- <p><a routerLink="'[/]'"><span>&#9654;</span>&nbsp;&nbsp;whirlpool washing machine</a></p>
+                    <p><a routerLink="'[/]'"><span>&#9654;</span>&nbsp;&nbsp;indesit washing machine</a></p> -->
+                <p><span>&#9655;</span>&nbsp;&nbsp;more coming soon!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tumble Dryer Section -->
+
+    <!-- <section class="repair-tips" *ngIf="isTumbleDryer">
+        <header class="section-heading">
+            <h1 class="heading-1 heading-1--primary">repair tips</h1>
+        </header>
+        <div class="repair-tips__text">
+        </div> -->
+
+    <!-- Error code links -->
+
+    <!-- <div class="repair-tips__error-codes">
+            <h2 class="heading-2 heading-2--white">error fault codes for:</h2>
+            <div class="repair-tips__links">
+                <p><span>&#9655;</span>&nbsp;&nbsp;more coming soon!</p>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Electric Oven Section -->
+
+    <section class="repair-tips" *ngIf="isElectricCooker">
+        <header class="section-heading">
+            <h1 class="heading-1 heading-1--primary">repair tips</h1>
+        </header>
+        <div class="repair-tips__text">
+            <p> After working in the appliance repair industry for a long time we have a list of common problems that
+                can
+                occur with electric ovens and cookers which we share with you below:</p>
+
+            <p> 1. <b>Oven tripping electrics</b> in the house - possible heater or a grill element
+                failure. Usually the element in question need replacing. Please turn off the appliance before carrying
+                out any work
+                on it.</p>
+
+            <p> 2. <b>Oven has no power</b> - check the fuse and check whether there is power supply to the oven, for
+                example if the oven is
+                connected to a wall switch, sometimes the switch is faulty. Check if you haven’t accidentally switched
+                off
+                the oven by pressing the power switch button.</p>
+            <p>3. <b>Oven making noise</b> – either main fan/fan motor failed or needs cleaning.</p>
+
+        </div>
+
+        <!-- Error code links -->
+
+        <div class="repair-tips__error-codes">
+            <h2 class="heading-2 heading-2--white">error fault codes for:</h2>
+            <div class="repair-tips__links">
+                <!-- <p><a routerLink="'[/]'"><span>&#9654;</span>&nbsp;&nbsp;whirlpool washing machine</a></p>
+                        <p><a routerLink="'[/]'"><span>&#9654;</span>&nbsp;&nbsp;indesit washing machine</a></p> -->
+                <p><span>&#9655;</span>&nbsp;&nbsp;more coming soon!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Microwave Section -->
+
+    <section class="repair-tips" *ngIf="isMicrowave">
+        <header class="section-heading">
+            <h1 class="heading-1 heading-1--primary">repair tips</h1>
+        </header>
+        <div class="repair-tips__text">
+            <p><b>Note:</b> Before touching any internal parts, be sure to discharge the capacitor. The capacitor stores
+                additional voltage and can hurt you even if the unit is unplugged. To discharge a capacitor safely, you
+                will need the following: a screwdriver, a wire-wound resistor with a 2 watt-20,000ohm rating, and a pair
+                of jumper wires with alligator clips on the ends. Clip a wire to each end of the resistor. Clip one wire
+                to the metal shaft of the screwdriver. Clip the other wire to one of the capacitor’s terminals. Now,
+                touch the other terminal with the tip of the screwdriver. There may be a small spark. If the capacitor
+                has three terminals, do the same process with the middle terminal and each outside terminal.</p>
+
+            <p><b>Problem:</b> The microwave oven won’t run at all.</p>
+            <p><b>Solution:</b> Unplug the power cord and check for voltage at the outlet. Inspect the cord for any
+                damage or burn marks. Because of all the safety devices in a microwave oven, any one of them could be
+                the cause. You will need to remove the outside shell of the microwave. Unscrew the screws underneath and
+                on the back that hold the shell in place and slide it off. Here’s a list of things to check that may be
+                causing this problem.</p>
+            <ul>
+                <li>The fuse could be blown — Remove the fuse with a set of fusepullers. Place it on a paper towel so it
+                    doesn’t roll away. With your VOM set to RX1, place a probe on each end of the fuse. The reading
+                    should be zero. If not, replace the fuse with an identical one.</li>
+                <li>Door switch could be bad — Locate the door switches and remove the leads. With the VOM on RX1, probe
+                    the terminals. The reading should be infinity with the door open and zero with it closed. If not,
+                    replace. Check both door switches.</li>
+                <li>Fan motor could be bad — Locate the fan and remove the leads. With the VOM set to RX1, probe the
+                    terminals. If the reading is infinity, then it is bad.</li>
+            </ul>
+
+            <p><b>Problem:</b> The microwave oven cooks slowly or unevenly.</p>
+            <p><b>Solution:</b> Check the voltage at the outlet supplying power. If it is lower than 115 volts, there is
+                a problem with your electrical service or breaker. A bad turntable motor may also be the cause. To check
+                it, turn the microwave over onto its top. Remove the bottom grill. Set the VOM to RX1 and remove one
+                lead from the motor terminals. Probe the terminals. If the reading is infinity, then replace the motor.
+                The magnetron and the wave guide may also be the culprits here. They need to be serviced by a
+                professional.</p>
+
+            <p><b>Problem:</b> The microwave runs but it’s not cooking anything.</p>
+            <p><b>Solution:</b> Check the thermal cutoffs for both the oven and the magnetron. The thermal cutoffs are
+                little disc shaped devices with a wire connecting the two of them. Remove a lead and set the VOM to RX1.
+                Probe the terminals and look for a reading of zero. If not, replace. Check both thermal cutoffs. If
+                these are OK, check the capacitor and diode as described above. The magnetron or transformer could also
+                be bad, but they need to be serviced by a professional.</p>
+        </div>
+
+        <!-- Error code links -->
+
+        <div class="repair-tips__error-codes">
+            <h2 class="heading-2 heading-2--white">error fault codes for:</h2>
+            <div class="repair-tips__links">
+                <!-- <p><a routerLink="'[/]'"><span>&#9654;</span>&nbsp;&nbsp;whirlpool washing machine</a></p>
+                                    <p><a routerLink="'[/]'"><span>&#9654;</span>&nbsp;&nbsp;indesit washing machine</a></p> -->
                 <p><span>&#9655;</span>&nbsp;&nbsp;more coming soon!</p>
             </div>
         </div>

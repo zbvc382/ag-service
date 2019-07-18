@@ -12,6 +12,7 @@ import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
+import { PriceListModule } from './price-list/price-list.module';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { SidenavComponent } from './sidenav/sidenav.component';
     MatMenuModule,
     HomeModule,
     AppliancesModule,
+    PriceListModule,
     TransferHttpCacheModule,
   ],
   providers: [],

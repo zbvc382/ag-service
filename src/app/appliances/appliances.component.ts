@@ -49,8 +49,8 @@ export class AppliancesComponent implements OnInit {
       case '/appliance-repairs/electric-oven-repairs': {
         this.reset();
         this.isElectricCooker = true;
-        this.headerText = 'Electric Oven Repairs';
-        this.applianceName = 'electric oven';
+        this.headerText = 'Electric Cooker/Oven Repairs';
+        this.applianceName = 'electric oven/cooker';
         break;
       }
       case '/appliance-repairs/microwave-repairs': {

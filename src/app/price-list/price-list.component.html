@@ -1,0 +1,65 @@
+<div class="grid-container">
+    <div class="header-background"></div>
+    <div class="header">
+        <div class="header__logo">
+            <a [routerLink]="[ '/']">
+                <img class="header__logo-wrapper--image" src="../../../assets/images/logo-header.svg" alt="" />
+            </a>
+        </div>
+        <div class="header__email">
+            <svg class="icon icon--md icon icon--white">
+                <use xlink:href="../../../assets/images/sprite.svg#mail_filled"></use>
+            </svg>
+            <a href="mailto:contact@ag-repairs.co.uk">contact@ag-repairs.co.uk</a>
+        </div>
+        <div class="header__phone">
+            <svg class="icon icon--md icon icon--white">
+                <use xlink:href="../../../assets/images/sprite.svg#phone_filled"></use>
+            </svg>
+            <a href="tel:0207 476 8725">0207 476 8725</a>
+        </div>
+        <div class="header__mobile">
+            <svg class="icon icon--md icon icon--white">
+                <use xlink:href="../../../assets/images/sprite.svg#touchscreen_smartphone_filled"></use>
+            </svg>
+            <a href="tel:0754 085 2102">0754 085 2102</a>
+        </div>
+    </div>
+
+    <!-- Intro -->
+
+    <div class="intro">
+        <div class="intro__image">
+            <img src="../../assets/images/money.jpg" alt="">
+        </div>
+        <header>
+            <h1>{{headerText}}</h1>
+        </header>
+        <div class="intro__sub">
+            <div class="sub-item">
+                <svg class="icon icon--md icon--primary">
+                    <use xlink:href="../../../assets/images/sprite.svg#checked"></use>
+                </svg>
+                <p>Fast, reliable service</p>
+            </div>
+            <div class="sub-item">
+                <svg class="icon icon--md icon--primary">
+                    <use xlink:href="../../../assets/images/sprite.svg#checked"></use>
+                </svg>
+                <p>Largest UK coverage</p>
+            </div>
+            <div class="sub-item">
+                <svg class="icon icon--md icon--primary">
+                    <use xlink:href="../../../assets/images/sprite.svg#checked"></use>
+                </svg>
+                <p>Same/next day appointments</p>
+            </div>
+            <div class="sub-item">
+                <svg class="icon icon--md icon--primary">
+                    <use xlink:href="../../../assets/images/sprite.svg#checked"></use>
+                </svg>
+                <p>Same/next day appointments</p>
+            </div>
+        </div>
+    </div>
+</div>

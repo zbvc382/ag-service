@@ -6,6 +6,8 @@ const routes: Routes = [
 
   { path: 'appliance-repairs', loadChildren: './appliances/appliances.module#AppliancesModule' },
 
+  { path: 'appliance-repair-prices', loadChildren: './price-list/price-list.module#PriceListModule' },
+
   { path: '', component: HomeComponent },
 
   { path: '**', redirectTo: '', pathMatch: 'full' }
