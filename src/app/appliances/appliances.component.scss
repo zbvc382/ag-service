@@ -1,4 +1,5 @@
 @import "../../styles/variables";
+@import "../../styles/typography";
 
 .appliances-intro {
     grid-column: col-start 1 / col-end 8;
@@ -32,10 +33,6 @@
                 font-size: 2.5rem;
             }
         }
-
-        // h2 {
-        //     font-size: 1.6rem;
-        // }
     }
 
     @media only screen and (max-width: 600px) {
@@ -94,9 +91,6 @@
         }
 
         h2 {
-            color: #fff;
-            background-color: $color-primary;
-            padding: 0.25rem .5rem;
             justify-self: center;
         }
 
@@ -201,15 +195,8 @@
         box-shadow: 0 1.5rem 4rem rgba(#000, .1);
 
         &--title {
-            background-color: $color-primary;
-            padding: 0.25rem .5rem;
-            color: #fff;
             justify-self: center;
             text-transform: capitalize;
-
-            h2 {
-                margin: 0 !important;
-            }
         }
 
         &--price {
@@ -300,9 +287,6 @@
     display: grid;
 
     h2 {
-        padding: 0.25rem .5rem;
-        background-color: $color-primary;
-        color: #fff;
         justify-self: center;
         margin-bottom: 3rem;
     }
@@ -370,12 +354,9 @@
         grid-row-gap: 2rem;
 
         h2 {
-            background-color: $color-primary;
-            padding: 0.25rem .5rem;
             justify-self: center;
             align-self: start;
             text-transform: capitalize;
-            margin: 0 !important;
         }
     }
 

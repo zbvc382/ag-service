@@ -1,5 +1,6 @@
 export const ROUTES = [
   '/',
+  '/appliance-repair-prices',
   '/appliance-repairs',
   '/appliance-repairs/washing-machine-repairs',
   '/appliance-repairs/dishwasher-repairs',

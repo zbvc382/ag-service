@@ -27,7 +27,8 @@
 .heading-2 {
     @extend %fonts;
     font-size: 2rem;
-    line-height: 1.2 !important;
+    padding: 0.25rem .5rem;
+    background-color: $color-primary;
     color: #fff;
 
     &--grey {
