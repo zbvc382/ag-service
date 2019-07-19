@@ -1,0 +1,121 @@
+@import '../../styles/variables';
+
+.prices {
+    grid-column: center-start / center-end;
+    display: grid;
+    grid-template-columns: 1fr minmax(25rem, 35rem);
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+
+    @media only screen and (max-width: 850px) {
+        header {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__table-responsive {
+        grid-column: 1 / 2;
+        font-size: $font-size-primary;
+
+        @media only screen and (max-width: 850px) {
+            grid-column: 1 / -1;
+        }
+
+        table {
+            text-transform: capitalize;
+
+            thead {
+                background-color: $color-primary;
+                color: #fff;
+                border-bottom: 0.25rem solid $color-secondary;
+            }
+        }
+    }
+
+    &__info-container {
+        display: grid;
+        grid-row-gap: 2rem;
+
+        @media only screen and (max-width: 850px) {
+            grid-column: 1 / -1;
+        }
+    }
+
+    &__terms {
+        border-top: 0.1rem solid #dee2e6;
+        background-color: $color-secondary;
+        color: #fff;
+        padding: 2rem;
+        display: grid;
+        align-self: start;
+
+        p {
+            font-size: 1.35rem;
+        }
+
+        p::before {
+            content: "* ";
+            color: $color-primary;
+        }
+    }
+
+    &__links {
+        display: grid;
+        background-color: $color-secondary;
+        padding: 2rem;
+        grid-row-gap: 2rem;
+
+        h2 {
+            grid-column: 1 / -1;
+            justify-self: center;
+            text-transform: capitalize;
+        }
+    }
+
+    &__link {
+        display: grid;
+        grid-template-columns: 20% 80%;
+        text-decoration: none;
+
+        svg {
+            fill: #fff;
+            justify-self: center;
+            height: 4rem;
+            width: 4rem;
+
+            @media only screen and (max-width: 850px) {
+                height: 5rem;
+                width: 5rem;
+            }
+
+            @media only screen and (max-width: 450px) {
+                height: 4rem;
+                width: 4rem;
+            }
+
+            @media only screen and (max-width: 400px) {
+                height: 3.75rem;
+                width: 3.75rem;
+            }
+        }
+
+        p {
+            font-size: 1.6rem;
+            color: #fff;
+            margin-bottom: 0;
+            align-self: center;
+
+            @media only screen and (max-width: 850px) {
+                font-size: 2rem;
+            }
+
+            @media only screen and (max-width: 450px) {
+                font-size: 1.6rem;
+            }
+
+            @media only screen and (max-width: 400px) {
+                font-size: 1.35rem;
+            }
+        }
+    }
+}

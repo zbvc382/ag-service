@@ -14,7 +14,6 @@ export class HomeComponent implements OnInit {
 
   premium = [
     'Miele',
-    'Gaggenau',
     'De Dietrich',
     'Fisher & Paykel',
     'Kuppersbusch'

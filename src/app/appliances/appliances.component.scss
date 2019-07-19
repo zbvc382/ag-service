@@ -137,36 +137,6 @@
     }
 }
 
-.call-banner {
-    grid-column: full-start / full-end;
-    background-color: $color-secondary;
-    color: #fff;
-    text-align: center;
-    padding: 2rem;
-    margin-top: 4rem;
-
-    h1 {
-        font-size: 2.5rem;
-    }
-
-    a {
-        text-decoration: none;
-        color: $color-primary;
-        font-weight: 700;
-        font-size: 2.75rem;
-    }
-
-    @media only screen and (max-width: 400px) {
-        h1 {
-            font-size: 2rem;
-        }
-
-        a {
-            font-size: 2.25rem;
-        }
-    }
-}
-
 .repair-prices {
     grid-column: center-start / center-end;
     display: grid;
