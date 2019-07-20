@@ -8,6 +8,12 @@ const routes: Routes = [
 
   { path: 'appliance-repair-prices', loadChildren: './price-list/price-list.module#PriceListModule' },
 
+  { path: 'areas-covered', loadChildren: './areas-covered/areas-covered.module#AreasCoveredModule' },
+
+  { path: 'estate-agents-landlords', loadChildren: './estate-agents/estate-agents.module#EstateAgentsModule' },
+
+  { path: 'about-us', loadChildren: './about-us/about-us.module#AboutUsModule' },
+
   { path: '', component: HomeComponent },
 
   { path: '**', redirectTo: '', pathMatch: 'full' }
@@ -15,7 +21,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'})],
+  imports: [RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled' })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

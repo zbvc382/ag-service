@@ -1,0 +1,27 @@
+@import '../../styles/variables';
+
+.about-us {
+    display: grid;
+    grid-column: center-start / center-end;
+    color: $color-grey;
+
+    p {
+        font-size: $font-size-primary;
+        color: $color-grey;
+        text-rendering: optimizeLegibility;
+        text-align: justify;
+
+        a,
+        span {
+            text-decoration: none;
+            color: $color-primary;
+            font-weight: 700;
+            font-size: 1.8rem;
+        }
+    }
+
+    ul {
+        list-style-position: inside;
+        font-size: $font-size-primary;
+    }
+}

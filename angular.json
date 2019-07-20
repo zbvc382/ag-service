@@ -24,7 +24,7 @@
               },
               {
                 "glob": "favicon.ico",
-                "input": "src",
+                "input": "src/assets/images",
                 "output": "/"
               }
             ],
@@ -94,7 +94,7 @@
               },
               {
                 "glob": "favicon.ico",
-                "input": "src",
+                "input": "src/assets/images",
                 "output": "/"
               }
             ]

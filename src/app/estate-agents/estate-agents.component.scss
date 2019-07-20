@@ -1,0 +1,21 @@
+@import '../../styles/variables';
+
+.estates-agents-intro {
+    grid-column: center-start / center-end;
+    display: grid;
+    color: $color-grey;
+
+    p {
+        font-size: $font-size-primary;
+    }
+
+    h2 {
+        text-transform: capitalize;
+        justify-self: center;
+    }
+
+    ul {
+        list-style-position: inside;
+        font-size: $font-size-primary;
+    }
+}
