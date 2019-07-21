@@ -32,7 +32,7 @@
 
     <div class="intro">
         <div class="intro__image">
-            <img src="../../assets/images/appliances.jpg" alt="">
+            <img src="../../assets/images/kitchen.jpg" alt="">
         </div>
         <header>
             <h1>{{headerText}}</h1>
@@ -71,25 +71,25 @@
         <header class="section-heading">
             <h1 class="heading-1 heading-1--primary">why choose our services</h1>
         </header>
-        <div class="reasons__reason">
+        <div class="reasons__reason reasons__reason--1">
             <svg class="icon icon--lg icon icon--secondary">
                 <use xlink:href="../../../assets/images/sprite.svg#security_checked"></use>
             </svg>
             <h3 class="heading-3 heading-3--grey">6 months guarantee on all appliance repairs</h3>
         </div>
-        <div class="reasons__reason">
+        <div class="reasons__reason reasons__reason--2">
             <svg class="icon icon--lg icon icon--secondary">
                 <use xlink:href="../../../assets/images/sprite.svg#person_at_home"></use>
             </svg>
             <h3 class="heading-3 heading-3--grey">Same and next day visits at no additional cost</h3>
         </div>
-        <div class="reasons__reason">
+        <div class="reasons__reason reasons__reason--3">
             <svg class="icon icon--lg icon icon--secondary">
                 <use xlink:href="../../../assets/images/sprite.svg#cancel_2"></use>
             </svg>
             <h3 class="heading-3 heading-3--grey">No hidden costs, no call out charges, no parking fees</h3>
         </div>
-        <div class="reasons__reason">
+        <div class="reasons__reason reasons__reason--4">
             <svg class="icon icon--lg icon icon--secondary">
                 <use xlink:href="../../../assets/images/sprite.svg#user_group_man_man"></use>
             </svg>
@@ -446,6 +446,15 @@
         </div>
         <a [routerLink]="[ '/']" class="btn-round btn--secondary">leave a review</a>
     </section>
+
+    <!-- Reason info -->
+
+    <div class="reason-info">
+        <p class="reason-info__p-1">6 months guarantee on the repair and parts (we do not guarantee
+            blockages, heating elements or printed circuit boards).</p>
+        <p class="reason-info__p-2">A congestion charge, ULEZ charge and parking fees apply if you live in central
+            London.</p>
+    </div>
 </div>
 
 <!-- Individual appliances page -->
@@ -667,17 +676,18 @@
         </div>
 
         <div class="repair-prices__terms">
-            <p class="repair-prices__terms--1">If the repair is beyond economical charge the cost would be £35 excl.
-                VAT.</p>
-            <p class="repair-prices__terms--2">We do not guarantee blockages, heating elements or printed circuit
-                boards.</p>
-            <p class="repair-prices__terms--3">A congestion charge and parking fees apply if you live in CC zone.</p>
+            <p class="repair-prices__terms--1">If appliance is too expensive/uneconomical to repair - you only need to
+                pay the diagnostic charge of £35 +VAT.</p>
+            <p class="repair-prices__terms--2">6 months guarantee on the repair and parts (we do not guarantee
+                blockages, heating elements or printed circuit boards).</p>
+            <p class="repair-prices__terms--3">A congestion charge, ULEZ charge and parking fees apply if you live in
+                central London.</p>
         </div>
     </section>
 
     <!-- Common Faults-->
 
-    <section class="common-faults">
+    <section class="common-faults" *ngIf="!isCommercialAppliances">
         <header class="section-heading">
             <h1 class="heading-1 heading-1--primary">common faults</h1>
         </header>
@@ -936,7 +946,7 @@
             <h1 class="heading-1 heading-1--primary">repair tips</h1>
         </header>
         <div class="repair-tips__text">
-            <p> A quite a common problem is a <b>blocked filter</b> at the bottom of the machine or a <b>blocked drain
+            <p> A common problem is a <b>blocked filter</b> at the bottom of the machine or a <b>blocked drain
                     pump</b>. In
                 this
                 case the best thing to do initially is to clear the filter out. Sometimes the plug is very difficult or
@@ -983,7 +993,7 @@
         <!-- Error code links -->
 
         <div class="repair-tips__error-codes">
-            <h2 class="heading-2">error fault codes for:</h2>
+            <h2 class="heading-2">fault and error Codes</h2>
             <div class="repair-tips__links">
                 <p><a routerLink="'[/]'"><span>&#9654;</span>&nbsp;&nbsp;whirlpool washing machine</a></p>
                 <p><a routerLink="'[/]'"><span>&#9654;</span>&nbsp;&nbsp;indesit washing machine</a></p>
@@ -999,13 +1009,14 @@
             <h1 class="heading-1 heading-1--primary">repair tips</h1>
         </header>
         <div class="repair-tips__text">
-            <p> If the problem is a <b>lack of water</b>, open the dishwasher when it's not running and check the float.
+            <b class="p-heading">Lack of water</b>
+            <p> Open the dishwasher when it's not running and check the float.
                 It
                 looks like an inverted cup in the bottom of your washer and controls how much water gets let inside.
                 When the float reaches a certain level, the water stops filling; if it becomes stuck in the open
                 position or won't open at all, you won't get any water.</p>
-
-            <p>If <b>too much water</b> is the trouble, take a look at the hose where the water comes in. Usually, your
+            <b class="p-heading">Too much water</b>
+            <p>If is the trouble, take a look at the hose where the water comes in. Usually, your
                 washer
                 will be next to the sink and will have an inlet hose there. Take a flashlight and look inside, and if
                 you find black rubber bits, or can break some off with your finger, the rubber gasket has decayed and
@@ -1015,7 +1026,8 @@
                 may be filling up, but unable to drain fast enough. In addition, make sure to look at the nozzles on the
                 sprayer arms. If they're clogged, use a small wire brush to clean them out.</p>
 
-            <p>If <b>noise is the problem</b>, start by stopping the wash cycle and opening the door. Try reconfiguring
+            <b class="p-heading">Noisy</b>
+            <p>Start by stopping the wash cycle and opening the door. Try reconfiguring
                 the
                 dishes in the racks. Also, make sure to spin the top "sprayer arm," located directly under the top rack.
                 Dishes may have shifted during the cycle, blocking the arm's circular path. Finally, make sure all of
@@ -1037,22 +1049,47 @@
 
     <!-- Tumble Dryer Section -->
 
-    <!-- <section class="repair-tips" *ngIf="isTumbleDryer">
+    <section class="repair-tips" *ngIf="isTumbleDryer">
         <header class="section-heading">
             <h1 class="heading-1 heading-1--primary">repair tips</h1>
         </header>
         <div class="repair-tips__text">
-        </div> -->
+            <b class="p-heading">Clothes feel warm but don't fully dry</b>
+            <p>
+                You put a load in the dryer, start it and walk away. You return after the cycle finishes, only to find
+                the clothes aren't completely dry. Maybe you just overloaded it a bit, so you run a second, shorter
+                cycle to finish the job.
+            </p>
+            <p>
+                This may be the worst problem of all: Everything seems like it's working mostly as it should be, but the
+                problem gradually gets worse over time until you realize the clothes are still sopping wet after a full
+                cycle.
+            </p>
+            <b class="p-heading">Cause</b>
+            <p>The culprit here could be a faulty heating element. If the heating element isn't working properly, the
+                dryer will still spin and the cycle will complete, but it won't get hot enough to help dry the clothes.
+            </p>
+            <p>Heating elements can naturally wear out over time, but overloading the dryer, not cleaning the lint
+                screen and poor ventilation can all speed up that process.</p>
+            <b class="p-heading">Fix</b>
+            <p>Fortunately, replacing a heating element isn't a terribly difficult job. You can usually find a
+                replacement heating element at a local hardware store or online by searching for your dryer model
+                number.</p>
+            <p>Once you have the part, unplug the dryer, remove the back panel, remove the connections and install the
+                new one. Some heating elements may require you to remove the existing thermostat from the old heating
+                element and install it on the new one. Reattach the back panel, reconnect power and run a test cycle to
+                check for heat.</p>
+        </div>
 
-    <!-- Error code links -->
+        <!-- Error code links -->
 
-    <!-- <div class="repair-tips__error-codes">
+        <div class="repair-tips__error-codes">
             <h2 class="heading-2 heading-2--white">error fault codes for:</h2>
             <div class="repair-tips__links">
                 <p><span>&#9655;</span>&nbsp;&nbsp;more coming soon!</p>
             </div>
         </div>
-    </section> -->
+    </section>
 
     <!-- Electric Oven Section -->
 
@@ -1063,20 +1100,20 @@
         <div class="repair-tips__text">
             <p> After working in the appliance repair industry for a long time we have a list of common problems that
                 can
-                occur with electric ovens and cookers which we share with you below:</p>
-
-            <p> 1. <b>Oven tripping electrics</b> in the house - possible heater or a grill element
+                occur with electric ovens and cookers which we share with you below.</p>
+            <b class="p-heading">Oven tripping electrics</b>
+            <p> Possible heater or a grill element
                 failure. Usually the element in question need replacing. Please turn off the appliance before carrying
                 out any work
                 on it.</p>
-
-            <p> 2. <b>Oven has no power</b> - check the fuse and check whether there is power supply to the oven, for
+            <b class="p-heading">Oven house no power</b>
+            <p> Check the fuse and check whether there is power supply to the oven, for
                 example if the oven is
                 connected to a wall switch, sometimes the switch is faulty. Check if you haven’t accidentally switched
                 off
                 the oven by pressing the power switch button.</p>
-            <p>3. <b>Oven making noise</b> – either main fan/fan motor failed or needs cleaning.</p>
-
+            <b class="p-heading">Strange noise</b>
+            <p>Either main fan/fan motor failed or needs cleaning.</p>
         </div>
 
         <!-- Error code links -->
@@ -1105,9 +1142,8 @@
                 to the metal shaft of the screwdriver. Clip the other wire to one of the capacitor’s terminals. Now,
                 touch the other terminal with the tip of the screwdriver. There may be a small spark. If the capacitor
                 has three terminals, do the same process with the middle terminal and each outside terminal.</p>
-
-            <p><b>Problem:</b> The microwave oven won’t run at all.</p>
-            <p><b>Solution:</b> Unplug the power cord and check for voltage at the outlet. Inspect the cord for any
+            <b class="p-heading">The microwave oven won’t run at all</b>
+            <p>Unplug the power cord and check for voltage at the outlet. Inspect the cord for any
                 damage or burn marks. Because of all the safety devices in a microwave oven, any one of them could be
                 the cause. You will need to remove the outside shell of the microwave. Unscrew the screws underneath and
                 on the back that hold the shell in place and slide it off. Here’s a list of things to check that may be
@@ -1122,17 +1158,15 @@
                 <li>Fan motor could be bad — Locate the fan and remove the leads. With the VOM set to RX1, probe the
                     terminals. If the reading is infinity, then it is bad.</li>
             </ul>
-
-            <p><b>Problem:</b> The microwave oven cooks slowly or unevenly.</p>
-            <p><b>Solution:</b> Check the voltage at the outlet supplying power. If it is lower than 115 volts, there is
+            <b class="p-heading">The microwave oven won’t run at all</b>
+            <p>Check the voltage at the outlet supplying power. If it is lower than 115 volts, there is
                 a problem with your electrical service or breaker. A bad turntable motor may also be the cause. To check
                 it, turn the microwave over onto its top. Remove the bottom grill. Set the VOM to RX1 and remove one
                 lead from the motor terminals. Probe the terminals. If the reading is infinity, then replace the motor.
                 The magnetron and the wave guide may also be the culprits here. They need to be serviced by a
                 professional.</p>
-
-            <p><b>Problem:</b> The microwave runs but it’s not cooking anything.</p>
-            <p><b>Solution:</b> Check the thermal cutoffs for both the oven and the magnetron. The thermal cutoffs are
+            <b class="p-heading">The microwave runs but it’s not cooking anything</b>
+            <p>Check the thermal cutoffs for both the oven and the magnetron. The thermal cutoffs are
                 little disc shaped devices with a wire connecting the two of them. Remove a lead and set the VOM to RX1.
                 Probe the terminals and look for a reading of zero. If not, replace. Check both thermal cutoffs. If
                 these are OK, check the capacitor and diode as described above. The magnetron or transformer could also

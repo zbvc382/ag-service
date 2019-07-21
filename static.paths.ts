@@ -1,8 +1,9 @@
 export const ROUTES = [
   '/',
-  '/appliance-repair-prices',
-  '/areas-covered',
   '/about-us',
+  '/estate-agents-landlords',
+  '/areas-covered',
+  '/appliance-repair-prices',
   '/appliance-repairs',
   '/appliance-repairs/washing-machine-repairs',
   '/appliance-repairs/dishwasher-repairs',

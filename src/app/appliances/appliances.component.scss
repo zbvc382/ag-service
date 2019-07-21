@@ -307,6 +307,12 @@
         text-rendering: optimizeLegibility;
         text-align: justify;
 
+        .p-heading {
+            display: inline-block;
+            border-bottom: 0.25rem solid $color-primary;
+            margin-bottom: 1rem;
+        }
+
         ul {
             margin-left: 1.35rem;
 

@@ -49,13 +49,19 @@
         display: grid;
         align-self: start;
 
-        p {
+        ul {
+            list-style: none;
             font-size: 1.35rem;
-        }
+            line-height: 2.5rem;
 
-        p::before {
-            content: "* ";
-            color: $color-primary;
+            li::before {
+                content: "\2022";
+                color: $color-primary;
+                font-weight: bold;
+                display: inline-block;
+                width: 1rem;
+                margin-left: -1rem;
+            }
         }
     }
 
