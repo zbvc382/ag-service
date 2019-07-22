@@ -1,0 +1,180 @@
+@import '../../styles/variables';
+
+.error-codes-home {
+    grid-column: center-start / center-end;
+    display: grid;
+
+    &__errors {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+        grid-column-gap: 2rem;
+        grid-row-gap: 2rem;
+        justify-content: center;
+    }
+
+    &__error {
+        display: grid;
+        grid-row-gap: 2rem;
+        background-color: $color-secondary;
+        padding: 2rem;
+        align-content: start;
+        box-shadow: 0 2rem 5rem rgba(#000, .15);
+    }
+
+    &__error-heading {
+        display: grid;
+        grid-row-gap: 1rem;
+        grid-column-gap: 1rem;
+
+        h2 {
+            justify-self: center;
+            text-transform: capitalize;
+        }
+
+        svg {
+            justify-self: center;
+        }
+    }
+
+    &__error-content {
+        display: grid;
+        grid-row-gap: 3rem;
+        grid-column-gap: 3rem;
+        grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));
+        justify-items: center;
+    }
+
+    &__link-icon {
+        border-radius: 1rem;
+        padding: .5rem;
+
+        &--inactive {
+            border: 0.25rem solid grey;
+            width: 8.85rem;
+            height: 9.25rem;
+        }
+
+        &--active {
+            border: 0.25rem solid $color-primary;
+            transition: all .2s;
+
+            svg {
+                border-radius: 5rem;
+            }
+        }
+
+        &--active:hover {
+            border: 0.25rem solid $color-primary;
+            border-radius: 5rem;
+        }
+    }
+}
+
+.error-codes-individual {
+    display: grid;
+    grid-column: col-start 1 / col-end 8;
+    grid-template-columns: 1fr minmax(25rem, 35rem);
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+    font-size: $font-size-primary;
+    color: $color-grey;
+
+    &__description {
+        grid-column: 1 / -1;
+    }
+
+    &__table-responsive {
+        grid-column: 1 / 2;
+        font-size: $font-size-primary;
+
+        @media only screen and (max-width: 1000px) {
+            grid-column: 1 / -1;
+        }
+
+        table {
+            text-transform: capitalize;
+
+            thead {
+                background-color: $color-primary;
+                color: #fff;
+                border-bottom: 0.25rem solid $color-secondary;
+            }
+        }
+    }
+
+    &__links {
+        display: grid;
+        background-color: $color-secondary;
+        padding: 2rem;
+        grid-row-gap: 2rem;
+        align-content: start;
+
+        h2 {
+            grid-column: 1 / -1;
+            justify-self: center;
+            text-transform: capitalize;
+        }
+
+        @media only screen and (max-width: 1000px) {
+            grid-column: 1 / -1;
+        }
+    }
+
+    &__link {
+        display: grid;
+        grid-template-columns: 20% 80%;
+        text-decoration: none;
+
+        svg {
+            fill: #fff;
+            justify-self: center;
+            height: 4rem;
+            width: 4rem;
+
+            @media only screen and (max-width: 1000px) {
+                height: 5.5rem;
+                width: 5.5rem;
+            }
+
+            @media only screen and (max-width: 550px) {
+                height: 4rem;
+                width: 4rem;
+            }
+
+            @media only screen and (max-width: 450px) {
+                height: 3.75rem;
+                width: 3.75rem;
+            }
+        }
+
+        p {
+            font-size: 1.6rem;
+            color: #fff;
+            margin-bottom: 0;
+            align-self: center;
+
+            @media only screen and (max-width: 1000px) {
+                font-size: 2rem;
+            }
+
+            @media only screen and (max-width: 550px) {
+                font-size: 1.85rem;
+            }
+
+            @media only screen and (max-width: 450px) {
+                font-size: 1.35rem;
+            }
+        }
+    }
+
+    &__models {
+        display: grid;
+        grid-column: 1 / -1;
+        grid-row: 4 / 5;
+
+        h2 {
+            justify-self: center;
+            margin-bottom: 2rem;
+        }
+    }
+}

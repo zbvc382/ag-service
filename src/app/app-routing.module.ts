@@ -14,6 +14,8 @@ const routes: Routes = [
 
   { path: 'about-us', loadChildren: './about-us/about-us.module#AboutUsModule' },
 
+  { path: 'error-codes', loadChildren: './error-codes/error-codes.module#ErrorCodesModule' },
+
   { path: '', component: HomeComponent },
 
   { path: '**', redirectTo: '', pathMatch: 'full' }

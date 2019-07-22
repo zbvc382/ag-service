@@ -14,10 +14,9 @@ import { FooterComponent } from './footer/footer.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { PriceListModule } from './price-list/price-list.module';
 import { AreasCoveredModule } from './areas-covered/areas-covered.module';
-import { EstateAgentsComponent } from './estate-agents/estate-agents.component';
 import { EstateAgentsModule } from './estate-agents/estate-agents.module';
-import { AboutUsComponent } from './about-us/about-us.component';
 import { AboutUsModule } from './about-us/about-us.module';
+import { ErrorCodesModule } from './error-codes/error-codes.module';
 
 @NgModule({
   declarations: [
@@ -39,6 +38,7 @@ import { AboutUsModule } from './about-us/about-us.module';
     AreasCoveredModule,
     EstateAgentsModule,
     AboutUsModule,
+    ErrorCodesModule,
     TransferHttpCacheModule
   ],
   providers: [],

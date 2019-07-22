@@ -1,0 +1,686 @@
+<div class="grid-container">
+    <div class="header-background"></div>
+    <div class="header">
+        <div class="header__logo">
+            <a [routerLink]="[ '/']">
+                <img class="header__logo-wrapper--image" src="../../../assets/images/logo-header.svg" alt="" />
+            </a>
+        </div>
+        <div class="header__email">
+            <svg class="icon icon--md icon icon--white">
+                <use xlink:href="../../../assets/images/sprite.svg#mail_filled"></use>
+            </svg>
+            <a href="mailto:contact@ag-repairs.co.uk">contact@ag-repairs.co.uk</a>
+        </div>
+        <div class="header__phone">
+            <svg class="icon icon--md icon icon--white">
+                <use xlink:href="../../../assets/images/sprite.svg#phone_filled"></use>
+            </svg>
+            <a href="tel:0207 476 8725">0207 476 8725</a>
+        </div>
+        <div class="header__mobile">
+            <svg class="icon icon--md icon icon--white">
+                <use xlink:href="../../../assets/images/sprite.svg#touchscreen_smartphone_filled"></use>
+            </svg>
+            <a href="tel:0754 085 2102">0754 085 2102</a>
+        </div>
+    </div>
+
+    <!-- Intro -->
+
+    <div class="intro">
+        <div class="intro__image">
+            <img src="../../assets/images/error.jpg" alt="">
+        </div>
+        <header>
+            <h1>{{headerText}}</h1>
+        </header>
+        <div class="intro__sub">
+            <div class="sub-item">
+                <svg class="icon icon--md icon--primary">
+                    <use xlink:href="../../../assets/images/sprite.svg#checked"></use>
+                </svg>
+                <p>Fast, reliable service</p>
+            </div>
+            <div class="sub-item">
+                <svg class="icon icon--md icon--primary">
+                    <use xlink:href="../../../assets/images/sprite.svg#checked"></use>
+                </svg>
+                <p>Largest UK coverage</p>
+            </div>
+            <div class="sub-item">
+                <svg class="icon icon--md icon--primary">
+                    <use xlink:href="../../../assets/images/sprite.svg#checked"></use>
+                </svg>
+                <p>Same/next day appointments</p>
+            </div>
+            <div class="sub-item">
+                <svg class="icon icon--md icon--primary">
+                    <use xlink:href="../../../assets/images/sprite.svg#checked"></use>
+                </svg>
+                <p>Same/next day appointments</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reasons -->
+
+    <section class="reasons">
+        <header class="section-heading">
+            <h1 class="heading-1 heading-1--primary">why choose our services</h1>
+        </header>
+        <div class="reasons__reason reasons__reason--1">
+            <svg class="icon icon--lg icon icon--secondary">
+                <use xlink:href="../../../assets/images/sprite.svg#security_checked"></use>
+            </svg>
+            <h3 class="heading-3 heading-3--grey">6 months guarantee on all appliance repairs</h3>
+        </div>
+        <div class="reasons__reason reasons__reason--2">
+            <svg class="icon icon--lg icon icon--secondary">
+                <use xlink:href="../../../assets/images/sprite.svg#person_at_home"></use>
+            </svg>
+            <h3 class="heading-3 heading-3--grey">Same and next day visits at no additional cost</h3>
+        </div>
+        <div class="reasons__reason reasons__reason--3">
+            <svg class="icon icon--lg icon icon--secondary">
+                <use xlink:href="../../../assets/images/sprite.svg#cancel_2"></use>
+            </svg>
+            <h3 class="heading-3 heading-3--grey">No hidden costs, no call out charges, no parking fees</h3>
+        </div>
+        <div class="reasons__reason reasons__reason--4">
+            <svg class="icon icon--lg icon icon--secondary">
+                <use xlink:href="../../../assets/images/sprite.svg#user_group_man_man"></use>
+            </svg>
+            <h3 class="heading-3 heading-3--grey">Experienced Technicians</h3>
+        </div>
+    </section>
+
+    <!-- Call banner -->
+
+    <section class="call-banner">
+        <h1>Call us at <a href="tel:0207 476 8725">0207 476 8725</a> or <a href="tel:0754 085 2102">0754 085 2102</a> to
+            book a service today!
+        </h1>
+    </section>
+
+    <!-- Error codes home -->
+
+    <section class="error-codes-home" *ngIf="isErrorCodes">
+        <header class="section-heading">
+            <h1 class="heading-1 heading-1--primary">error codes</h1>
+        </header>
+        <div class="error-codes-home__errors">
+            <div class="error-codes-home__error">
+                <div class="error-codes-home__error-heading">
+                    <h2 class="heading-2">washing machine</h2>
+                    <svg class="icon icon--xxl icon--white">
+                        <use xlink:href="../../../assets/images/sprite.svg#washing_machine"></use>
+                    </svg>
+                </div>
+                <div class="error-codes-home__error-content">
+                    <a class="error-codes-home__link-icon error-codes-home__link-icon--active"
+                        [routerLink]="['indesit-washing-machine-fault-codes']">
+                        <svg class="icon icon--xl">
+                            <use xlink:href="../../../assets/images/sprite.svg#indesit-1"></use>
+                        </svg>
+                    </a>
+                    <a class="error-codes-home__link-icon error-codes-home__link-icon--active"
+                        [routerLink]="['whirlpool-washing-machine-error-codes']">
+                        <svg class="icon icon--xl">
+                            <use xlink:href="../../../assets/images/sprite.svg#whirlpool"></use>
+                        </svg>
+                    </a>
+                    <a class="error-codes-home__link-icon error-codes-home__link-icon--inactive"></a>
+                    <a class="error-codes-home__link-icon error-codes-home__link-icon--inactive"></a>
+                    <a class="error-codes-home__link-icon error-codes-home__link-icon--inactive"></a>
+                    <a class="error-codes-home__link-icon error-codes-home__link-icon--inactive"></a>
+                </div>
+            </div>
+            <div class="error-codes-home__error">
+                <div class="error-codes-home__error-heading">
+                    <h2 class="heading-2">dishwasher</h2>
+                    <svg class="icon icon--xxl icon--white">
+                        <use xlink:href="../../../assets/images/sprite.svg#dishwasher"></use>
+                    </svg>
+                </div>
+                <div class="error-codes-home__error-content">
+                    <a class="error-codes-home__link-icon error-codes-home__link-icon--inactive"></a>
+                    <a class="error-codes-home__link-icon error-codes-home__link-icon--inactive"></a>
+                    <a class="error-codes-home__link-icon error-codes-home__link-icon--inactive"></a>
+                    <a class="error-codes-home__link-icon error-codes-home__link-icon--inactive"></a>
+                    <a class="error-codes-home__link-icon error-codes-home__link-icon--inactive"></a>
+                    <a class="error-codes-home__link-icon error-codes-home__link-icon--inactive"></a>
+                </div>
+            </div>
+            <div class="error-codes-home__error">
+                <div class="error-codes-home__error-heading">
+                    <h2 class="heading-2">tumble dryer</h2>
+                    <svg class="icon icon--xxl icon--white">
+                        <use xlink:href="../../../assets/images/sprite.svg#tumble_dryer"></use>
+                    </svg>
+                </div>
+                <div class="error-codes-home__error-content">
+                    <a class="error-codes-home__link-icon error-codes-home__link-icon--inactive"></a>
+                    <a class="error-codes-home__link-icon error-codes-home__link-icon--inactive"></a>
+                    <a class="error-codes-home__link-icon error-codes-home__link-icon--inactive"></a>
+                    <a class="error-codes-home__link-icon error-codes-home__link-icon--inactive"></a>
+                    <a class="error-codes-home__link-icon error-codes-home__link-icon--inactive"></a>
+                    <a class="error-codes-home__link-icon error-codes-home__link-icon--inactive"></a>
+                </div>
+            </div>
+            <div class="error-codes-home__error">
+                <div class="error-codes-home__error-heading">
+                    <h2 class="heading-2">electric oven</h2>
+                    <svg class="icon icon--xxl icon--white">
+                        <use xlink:href="../../../assets/images/sprite.svg#cooker"></use>
+                    </svg>
+                </div>
+                <div class="error-codes-home__error-content">
+                    <a class="error-codes-home__link-icon error-codes-home__link-icon--inactive"></a>
+                    <a class="error-codes-home__link-icon error-codes-home__link-icon--inactive"></a>
+                    <a class="error-codes-home__link-icon error-codes-home__link-icon--inactive"></a>
+                    <a class="error-codes-home__link-icon error-codes-home__link-icon--inactive"></a>
+                    <a class="error-codes-home__link-icon error-codes-home__link-icon--inactive"></a>
+                    <a class="error-codes-home__link-icon error-codes-home__link-icon--inactive"></a>
+                </div>
+            </div>
+            <div class="error-codes-home__error">
+                <div class="error-codes-home__error-heading">
+                    <h2 class="heading-2">microwave</h2>
+                    <svg class="icon icon--xxl icon--white">
+                        <use xlink:href="../../../assets/images/sprite.svg#microwave"></use>
+                    </svg>
+                </div>
+                <div class="error-codes-home__error-content">
+                    <a class="error-codes-home__link-icon error-codes-home__link-icon--inactive"></a>
+                    <a class="error-codes-home__link-icon error-codes-home__link-icon--inactive"></a>
+                    <a class="error-codes-home__link-icon error-codes-home__link-icon--inactive"></a>
+                    <a class="error-codes-home__link-icon error-codes-home__link-icon--inactive"></a>
+                    <a class="error-codes-home__link-icon error-codes-home__link-icon--inactive"></a>
+                    <a class="error-codes-home__link-icon error-codes-home__link-icon--inactive"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Error codes individual | Indesit Washing Machine -->
+
+    <section class="error-codes-individual" *ngIf="isWashingMachineIndesit">
+        <header class="section-heading">
+            <h1 class="heading-1 heading-1--primary">error codes</h1>
+        </header>
+        <p class="error-codes-individual__description">Below you can find Indesit washing machine fault codes.
+            We hope that these Indesit washing machine fault codes. will help you diagnose the problem you are
+            experiencing with the washer and have a better idea of how to resolve it.</p>
+        <div class="error-codes-individual__table-responsive table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">code</th>
+                        <th scope="col">fault</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>F10</td>
+                        <td>No cold fill. Check that the taps are on or if the drain hoses are kinked.</td>
+                    </tr>
+                    <tr>
+                        <td>F11</td>
+                        <td>No hot fill. The ambient temperature is likely to be below freezing possibly due to the
+                            pipes being
+                            frozen. Also check that the taps are on or if the drain hoses are kinked.</td>
+                    </tr>
+                    <tr>
+                        <td>F12</td>
+                        <td>No mixed fill. It is likely that the water is not turned on at the taps.</td>
+                    </tr>
+                    <tr>
+                        <td>F13</td>
+                        <td>Check the water supply, inlet valve and hot and cold hose connections.</td>
+                    </tr>
+                    <tr>
+                        <td>F14</td>
+                        <td>A fault with the water heating has occurred.</td>
+                    </tr>
+                    <tr>
+                        <td>F15</td>
+                        <td>Water is not being pumped out and a flood condition could occur. Check that the drainage
+                            hose is
+                            raised to the recommended minimum height and that the pipe is not blocked.</td>
+                    </tr>
+                    <tr>
+                        <td>F16</td>
+                        <td>Extremely high water level Disconnect or turn off the water supply and ensure that the water
+                            level
+                            does not rise any more.</td>
+                    </tr>
+                    <tr>
+                        <td>F17</td>
+                        <td>Door not closed properly. Close door firmly at the 3 o’clock position.</td>
+                    </tr>
+                    <tr>
+                        <td>F20/1</td>
+                        <td>The thermistor resistance has drifted or the temperature scanning sequence is incorrect. The
+                            ambient temperature could be below freezing.</td>
+                    </tr>
+                    <tr>
+                        <td>F30/31</td>
+                        <td>A motor drive problem has occurred. Try running the programme again.</td>
+                    </tr>
+                    <tr>
+                        <td>F40</td>
+                        <td>Water below protection level during a heat step.</td>
+                    </tr>
+                    <tr>
+                        <td>F41</td>
+                        <td>Water level detect sequence incorrect.</td>
+                    </tr>
+                    <tr>
+                        <td>F50/51</td>
+                        <td>Customer language and wash programme have not been saved.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="error-codes-individual__models">
+            <h2 class="heading-2">These Indesit washing machine fault codes are relevant to
+                these models:</h2>
+            <p>IWB5113, IWC6125, IWC6125S, IWC6145, IWC6145S, IWC6165, IWC6165S, IWC8148UK, IWD6125, IWE7145B, IWE7145K,
+                IWE7145S, IWE7168B, IWE7168S, IWSC5125, PWE8128W, PWE8148S, PWE8148W, PWE8168S, SIXL145, SIXL145D,
+                SIXL145K,
+                SIXL145S, SIXL145W, WIXXE147, IWME126UK, IWB5123, IWB6113, IWC8148, PWC8128W, SIXL145BL, W103, W113,
+                W123,
+                W123S, W123SILVER, W133, W143, W143S, W83, W93, WA105, WA115, WA115IND, WA125, WA135, WA155, WAX120,
+                WAX120JUM, WE10, WE11, WE12, WE12S, WE12SILVER, WE14, WE14S, WE14SILVER, WE16, WE16S, WE16SILVER, WE21,
+                WG1030G, WG1130TG, WG113D, WG1185WG, WG1230G, WG1230GH, WG1286S, WG1286WG, G1436TG, WG820G, WG920PG,
+                WI101,
+                WI121, WI141, WIA101, WIA111, WIA121, WIB101, WIB111, WIE127, WIE137S, WIE147, WIE147TE, WIE157S,
+                WIE167,
+                WIL103, WIL113, WIL123S, WIL123SILVER, WIL133, WIL143, WIL143S, WIL143SILVER, WIL144SP, WIL153, WIL163,
+                WIL163S, WIL163SILVER, WIXE167, WIXL1200OT, WIXL123, WIXL123S, WIXL143, WIXL143S, WIXL163, WIXL163S,
+                WIXXE147S, WIXXE167, WIXXE167S, WIXXL146</p>
+        </div>
+        <div class="error-codes-individual__links">
+            <h2 class="heading-2">our services</h2>
+            <a class="error-codes-individual__link" [routerLink]="['/appliance-repairs/washing-machine-repairs']">
+                <svg class="icon">
+                    <use xlink:href="../../../assets/images/sprite.svg#washing_machine"></use>
+                </svg>
+                <p>&nbsp;Washing Machine Repairs</p>
+            </a>
+            <a class="error-codes-individual__link" [routerLink]="['/appliance-repairs/dishwasher-repairs']">
+                <svg class="icon">
+                    <use xlink:href="../../../assets/images/sprite.svg#dishwasher"></use>
+                </svg>
+                <p>&nbsp;Diswasher Repairs</p>
+            </a>
+            <a class="error-codes-individual__link" [routerLink]="['/appliance-repairs/tumble-dryer-repairs']">
+                <svg class="icon">
+                    <use xlink:href="../../../assets/images/sprite.svg#tumble_dryer"></use>
+                </svg>
+                <p>&nbsp;Tumble Dryer Repairs</p>
+            </a>
+            <a class="error-codes-individual__link" [routerLink]="['/appliance-repairs/electric-oven-repairs']">
+                <svg class="icon">
+                    <use xlink:href="../../../assets/images/sprite.svg#cooker"></use>
+                </svg>
+                <p>&nbsp;Electric Cooker/Oven Repairs</p>
+            </a>
+            <a class="error-codes-individual__link" [routerLink]="['/appliance-repairs/microwave-repairs']">
+                <svg class="icon">
+                    <use xlink:href="../../../assets/images/sprite.svg#microwave"></use>
+                </svg>
+                <p>&nbsp;Microwave Repairs</p>
+            </a>
+            <a class="error-codes-individual__link" [routerLink]="['/appliance-repairs/extractor-hood-repairs']">
+                <svg class="icon">
+                    <use xlink:href="../../../assets/images/sprite.svg#cooker_hood"></use>
+                </svg>
+                <p>&nbsp;Extractor Hood Repairs</p>
+            </a>
+            <a class="error-codes-individual__link" [routerLink]="['/appliance-repairs/fridge-freezer-repairs']">
+                <svg class="icon">
+                    <use xlink:href="../../../assets/images/sprite.svg#fridge"></use>
+                </svg>
+                <p>&nbsp;Fridge Freezer Repairs</p>
+            </a>
+            <a class="error-codes-individual__link" [routerLink]="['/appliance-repairs/commercial-appliance-repairs']">
+                <svg class="icon">
+                    <use xlink:href="../../../assets/images/sprite.svg#cooker_dotted"></use>
+                </svg>
+                <p>&nbsp;Commercial Appliance Repairs</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Error codes individual | Whirpool Washing Machine -->
+
+    <section class="error-codes-individual" *ngIf="isWashingMachineWhirpool">
+        <header class="section-heading">
+            <h1 class="heading-1 heading-1--primary">error codes</h1>
+        </header>
+        <p class="error-codes-individual__description">Below you can see error codes for the Whirlpool washing machines
+            and washer dryers. We hope these will help you to have a better understanding of what is happening to your
+            washer.</p>
+        <div class="error-codes-individual__table-responsive table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">code</th>
+                        <th scope="col">fault</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>FH</td>
+                        <td>No Water Inlet.</td>
+                    </tr>
+                    <tr>
+                        <td>FA</td>
+                        <td>Aquastop Failure.</td>
+                    </tr>
+                    <tr>
+                        <td>FP</td>
+                        <td>NTC Failure.</td>
+                    </tr>
+                    <tr>
+                        <td>F6</td>
+                        <td>Tachometer Failure (no motor movement detected).</td>
+                    </tr>
+                    <tr>
+                        <td>F7</td>
+                        <td>Tachometer Failure (no motor movement detected).</td>
+                    </tr>
+                    <tr>
+                        <td>F7</td>
+                        <td>Triac Short Circuit detection.</td>
+                    </tr>
+                    <tr>
+                        <td>F8</td>
+                        <td>Heating Element, Open Circuit.</td>
+                    </tr>
+                    <tr>
+                        <td>F9</td>
+                        <td>Overflow Failure.</td>
+                    </tr>
+                    <tr>
+                        <td>F10</td>
+                        <td>Motor control unit (Thermal).</td>
+                    </tr>
+                    <tr>
+                        <td>F11</td>
+                        <td>Communication failure.</td>
+                    </tr>
+                    <tr>
+                        <td>F12</td>
+                        <td>Heating Element Short Circuit.</td>
+                    </tr>
+                    <tr>
+                        <td>F13</td>
+                        <td>Dispenser Circuit Error.</td>
+                    </tr>
+                    <tr>
+                        <td>F14</td>
+                        <td>EEPROM Failure.</td>
+                    </tr>
+                    <tr>
+                        <td>F15</td>
+                        <td>Motor Control Unit Error.</td>
+                    </tr>
+                    <tr>
+                        <td>F16</td>
+                        <td>Control Failure (Control Unit).</td>
+                    </tr>
+                    <tr>
+                        <td>F18</td>
+                        <td>Control Failure (Control Unit).</td>
+                    </tr>
+                    <tr>
+                        <td>F20</td>
+                        <td>Water level detect sequence incorrect.</td>
+                    </tr>
+                    <tr>
+                        <td>F20</td>
+                        <td>Water level detect sequence incorrect.</td>
+                    </tr>
+                    <tr>
+                        <td>F21</td>
+                        <td>Control Failure (User Board).</td>
+                    </tr>
+
+                    <tr>
+                        <td>F22</td>
+                        <td>Control Failure (User Board).</td>
+                    </tr>
+                    <tr>
+                        <td>FDL</td>
+                        <td>Door Lock Error.</td>
+                    </tr>
+                    <tr>
+                        <td>FDU</td>
+                        <td>Door Unlock Error.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="error-codes-individual__models">
+            <h2 class="heading-2">These Whirpool washing machine fault codes are relevant to
+                these models:</h2>
+            <p>AQUA9759, AQUA9760, AQUA9769B, AQUA9770, AQUA9770B, AQUASTEAM976, AWOD4505, AWOD4605, AWOD5526, AWOD5527,
+                AWOD5706S, AWOD5726, AWOD5727, AWOD5926, AWOD6527, AWOD6528, AWOD6727, AWOD6728, AWOD6927, AWOD6927S,
+                AWOD6928, AWOE8548, AWOE8558, AWOE8559, AWOE8748, AWOE8758, AWOE8759B, AWOE8760, AWOE8760B, AWOE9558,
+                AWOE9558B, AWOE9558S, AWOE9559B, AWOE9559S, AWOE9759, AWOE9760, HDW1010SI, HDW1011WG, PROW0612IIM,
+                PROW0614I, SCW1112WH, ACM880, ACM883, AMH244, AQUA9769, AWM023, AWM1000, AWM3203, AWM3213, AWM3233WH,
+                AWM3243, AWM3253, AWM3283, AWM3363, AWM3373, AWM5104, AWM51043, AWM51044, AWM51045, AWM5125, AWM51254,
+                AWM51255, AWM5125S, AWM5145, AWM51452, AWM51453, AWM51454, AWM51455, AWM51455SP, AWM6100, AWM61001,
+                AWM6120, AWM61201, AWM61203, AWM6123, AWM6140, AWM61403, AWM6141, AWM61411, AWM8000, AWM8101, AWM8103,
+                AWM81031, AWM81131, AWM8121, AWM8123, AWM81231, AWM81233, AWM8125, AWM81253, AWM8143, AWM81431,
+                AWM81433, AWM8145, AWM81453, AWM8163, AWM81631, AWM81633, AWM9000, AWM9100, AWO10561, AWO10761,
+                AWO10961, AWO12963, AWO129635, AWO12963S, AWO3561, AWO35615, AWO3571, AWO3761, AWO37615, AWO37615S,
+                AWO3761S, AWO3771, AWO3961, AWO39615, AWO5763, AWO57635, AWO5963, AWO59635, AWOD4305, AWOD4705,
+                AWOD5306, AWOD5316, AWOD5506, AWOD5516, AWOD5556, AWOD5706, AWOD5716, AWOD6507, AWOD6707, AWOD7508,
+                AWOD7708, AWOD8508, AWOD8708, AWODAS128, AWODAS148, AWT51084, AWT51085, HDW0614WG, HDW1011BG, SCW1012UG,
+                WAWM51045</p>
+        </div>
+        <div class="error-codes-individual__links">
+            <h2 class="heading-2">our services</h2>
+            <a class="error-codes-individual__link" [routerLink]="['/appliance-repairs/washing-machine-repairs']">
+                <svg class="icon">
+                    <use xlink:href="../../../assets/images/sprite.svg#washing_machine"></use>
+                </svg>
+                <p>&nbsp;Washing Machine Repairs</p>
+            </a>
+            <a class="error-codes-individual__link" [routerLink]="['/appliance-repairs/dishwasher-repairs']">
+                <svg class="icon">
+                    <use xlink:href="../../../assets/images/sprite.svg#dishwasher"></use>
+                </svg>
+                <p>&nbsp;Diswasher Repairs</p>
+            </a>
+            <a class="error-codes-individual__link" [routerLink]="['/appliance-repairs/tumble-dryer-repairs']">
+                <svg class="icon">
+                    <use xlink:href="../../../assets/images/sprite.svg#tumble_dryer"></use>
+                </svg>
+                <p>&nbsp;Tumble Dryer Repairs</p>
+            </a>
+            <a class="error-codes-individual__link" [routerLink]="['/appliance-repairs/electric-oven-repairs']">
+                <svg class="icon">
+                    <use xlink:href="../../../assets/images/sprite.svg#cooker"></use>
+                </svg>
+                <p>&nbsp;Electric Cooker/Oven Repairs</p>
+            </a>
+            <a class="error-codes-individual__link" [routerLink]="['/appliance-repairs/microwave-repairs']">
+                <svg class="icon">
+                    <use xlink:href="../../../assets/images/sprite.svg#microwave"></use>
+                </svg>
+                <p>&nbsp;Microwave Repairs</p>
+            </a>
+            <a class="error-codes-individual__link" [routerLink]="['/appliance-repairs/extractor-hood-repairs']">
+                <svg class="icon">
+                    <use xlink:href="../../../assets/images/sprite.svg#cooker_hood"></use>
+                </svg>
+                <p>&nbsp;Extractor Hood Repairs</p>
+            </a>
+            <a class="error-codes-individual__link" [routerLink]="['/appliance-repairs/fridge-freezer-repairs']">
+                <svg class="icon">
+                    <use xlink:href="../../../assets/images/sprite.svg#fridge"></use>
+                </svg>
+                <p>&nbsp;Fridge Freezer Repairs</p>
+            </a>
+            <a class="error-codes-individual__link" [routerLink]="['/appliance-repairs/commercial-appliance-repairs']">
+                <svg class="icon">
+                    <use xlink:href="../../../assets/images/sprite.svg#cooker_dotted"></use>
+                </svg>
+                <p>&nbsp;Commercial Appliance Repairs</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Reviews -->
+
+    <section class="reviews-container">
+        <header class="section-heading">
+            <h1 class="heading-1 heading-1--primary">google reviews</h1>
+        </header>
+        <div class="reviews">
+            <div class="review">
+                <div class="review__profile-pic">
+                    <img src="../../../assets/images/profile_3.png" alt="">
+                </div>
+                <div class="review__profile-name">
+                    Marie Adam
+                </div>
+                <div class="review__stars">
+                    <svg class="icon icon--md">
+                        <use xlink:href="../../../assets/images/sprite.svg#star"></use>
+                    </svg>
+                    <svg class="icon icon--md">
+                        <use xlink:href="../../../assets/images/sprite.svg#star"></use>
+                    </svg>
+                    <svg class="icon icon--md">
+                        <use xlink:href="../../../assets/images/sprite.svg#star"></use>
+                    </svg>
+                    <svg class="icon icon--md">
+                        <use xlink:href="../../../assets/images/sprite.svg#star"></use>
+                    </svg>
+                    <svg class="icon icon--md">
+                        <use xlink:href="../../../assets/images/sprite.svg#star"></use>
+                    </svg>
+                </div>
+                <div class="review__text">
+                    <svg class="icon icon--md icon--primary">
+                        <use xlink:href="../../../assets/images/sprite.svg#quote_left"></use>
+                    </svg>
+                    <p>Very professional & efficient. Great service at a very good price. I would definitely recommend.
+                    </p>
+                    <svg class="icon icon--md icon--primary">
+                        <use xlink:href="../../../assets/images/sprite.svg#quote_right"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="review">
+                <div class="review__profile-pic">
+                    <img src="../../../assets/images/profile_1.png" alt="">
+                </div>
+                <div class="review__profile-name">
+                    George Pidgeon
+                </div>
+                <div class="review__stars">
+                    <svg class="icon icon--md">
+                        <use xlink:href="../../../assets/images/sprite.svg#star"></use>
+                    </svg>
+                    <svg class="icon icon--md">
+                        <use xlink:href="../../../assets/images/sprite.svg#star"></use>
+                    </svg>
+                    <svg class="icon icon--md">
+                        <use xlink:href="../../../assets/images/sprite.svg#star"></use>
+                    </svg>
+                    <svg class="icon icon--md">
+                        <use xlink:href="../../../assets/images/sprite.svg#star"></use>
+                    </svg>
+                    <svg class="icon icon--md">
+                        <use xlink:href="../../../assets/images/sprite.svg#star"></use>
+                    </svg>
+                </div>
+                <div class="review__text">
+                    <svg class="icon icon--md icon--primary">[]
+                        <use xlink:href="../../../assets/images/sprite.svg#quote_left"></use>
+                    </svg>
+                    <p>Thank you - would definitely use again in future.</p>
+                    <svg class="icon icon--md icon--primary">
+                        <use xlink:href="../../../assets/images/sprite.svg#quote_right"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="review">
+                <div class="review__profile-pic">
+                    <img src="../../../assets/images/profile_3.png" alt="">
+                </div>
+                <div class="review__profile-name">
+                    Annie Yusuf
+                </div>
+                <div class="review__stars">
+                    <svg class="icon icon--md">
+                        <use xlink:href="../../../assets/images/sprite.svg#star"></use>
+                    </svg>
+                    <svg class="icon icon--md">
+                        <use xlink:href="../../../assets/images/sprite.svg#star"></use>
+                    </svg>
+                    <svg class="icon icon--md">
+                        <use xlink:href="../../../assets/images/sprite.svg#star"></use>
+                    </svg>
+                    <svg class="icon icon--md">
+                        <use xlink:href="../../../assets/images/sprite.svg#star"></use>
+                    </svg>
+                    <svg class="icon icon--md" style="fill:#dddddd;">
+                        <use xlink:href="../../../assets/images/sprite.svg#star"></use>
+                    </svg>
+                </div>
+                <div class="review__text">
+                    <svg class="icon icon--md icon--primary">
+                        <use xlink:href="../../../assets/images/sprite.svg#quote_left"></use>
+                    </svg>
+                    <p>Good repair work.</p>
+                    <svg class="icon icon--md icon--primary">
+                        <use xlink:href="../../../assets/images/sprite.svg#quote_right"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="review">
+                <div class="review__profile-pic">
+                    <img src="../../../assets/images/profile_2.png" alt="">
+                </div>
+                <div class="review__profile-name">
+                    Ellie Roberts
+                </div>
+                <div class="review__stars">
+                    <svg class="icon icon--md">
+                        <use xlink:href="../../../assets/images/sprite.svg#star"></use>
+                    </svg>
+                    <svg class="icon icon--md">
+                        <use xlink:href="../../../assets/images/sprite.svg#star"></use>
+                    </svg>
+                    <svg class="icon icon--md">
+                        <use xlink:href="../../../assets/images/sprite.svg#star"></use>
+                    </svg>
+                    <svg class="icon icon--md">
+                        <use xlink:href="../../../assets/images/sprite.svg#star"></use>
+                    </svg>
+                    <svg class="icon icon--md">
+                        <use xlink:href="../../../assets/images/sprite.svg#star"></use>
+                    </svg>
+                </div>
+                <div class="review__text">
+                    <svg class="icon icon--md icon--primary">
+                        <use xlink:href="../../../assets/images/sprite.svg#quote_left"></use>
+                    </svg>
+                    <p>Quick and efficient service - I would use them again.</p>
+                    <svg class="icon icon--md icon--primary">
+                        <use xlink:href="../../../assets/images/sprite.svg#quote_right"></use>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <a [routerLink]="[ '/']" class="btn-round btn--secondary">leave a review</a>
+    </section>
+</div>

@@ -12,5 +12,8 @@ export const ROUTES = [
   '/appliance-repairs/microwave-repairs',
   '/appliance-repairs/extractor-hood-repairs',
   '/appliance-repairs/fridge-freezer-repairs',
-  '/appliance-repairs/commercial-appliance-repairs'
+  '/appliance-repairs/commercial-appliance-repairs',
+  '/error-codes',
+  '/error-codes/indesit-washing-machine-fault-codes',
+  '/error-codes/whirlpool-washing-machine-error-codes'
 ];
