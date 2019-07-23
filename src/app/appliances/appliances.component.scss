@@ -1,6 +1,44 @@
 @import "../../styles/variables";
 @import "../../styles/typography";
 
+.intro {
+    &__image {
+        grid-row: 1 / 4;
+    }
+
+    &__discount {
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+        justify-self: center;
+
+        svg {
+            display: inline-block;
+            transform: translateY(1.5rem);
+            margin-right: 1rem;
+        }
+
+        h2 {
+            display: inline-block;
+            color: #fff;
+            text-transform: capitalize;
+            font-size: 2.5rem;
+            border-bottom: .5rem solid $color-primary;
+            transform: translateY(-.5rem);
+
+            span {
+                font-weight: 700;
+            }
+
+        }
+
+        h2::after {
+            content: " \2020";
+            color: gold;
+            font-size: 1.6rem;
+        }
+    }
+}
+
 .appliances-intro {
     grid-column: col-start 1 / col-end 8;
     display: grid;

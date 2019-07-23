@@ -39,6 +39,89 @@
     }
 }
 
+.intro {
+
+    @media only screen and (max-width: 600px) {
+        height: 38rem;
+    }
+
+    @media only screen and (max-width: 450px) {
+        height: 40rem;
+    }
+
+    &__image {
+        grid-row: 1 / 4;
+    }
+
+    &__discount {
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+        justify-self: center;
+
+        @media only screen and (max-width: 435px) {
+            margin-top: 1rem;
+        }
+
+        svg {
+            display: inline-block;
+            transform: translateY(1.5rem);
+            margin-right: .5rem;
+
+            @media only screen and (max-width: 750px) {
+                height: 4.5rem;
+                width: 4.5rem;
+            }
+
+            @media only screen and (max-width: 550px) {
+                height: 3.5rem;
+                width: 3.5rem;
+
+                transform: translateY(1rem);
+            }
+
+            @media only screen and (max-width: 435px) {
+                display: none;
+            }
+        }
+
+        h2 {
+            display: inline-block;
+            color: #fff;
+            text-transform: capitalize;
+            font-size: 2.5rem;
+            border-bottom: .5rem solid $color-primary;
+            transform: translateY(-.5rem);
+
+            @media only screen and (max-width: 750px) {
+                font-size: 1.8rem;
+            }
+
+            @media only screen and (max-width: 550px) {
+                font-size: 1.45rem;
+            }
+
+            @media only screen and (max-width: 375px) {
+                font-size: 1.35rem;
+            }
+
+            @media only screen and (max-width: 355px) {
+                font-size: 1.25rem;
+            }
+
+            span {
+                font-weight: 700;
+            }
+
+        }
+
+        h2::after {
+            content: " \2020";
+            color: gold;
+            font-size: 1.6rem;
+        }
+    }
+}
+
 .request-tab {
     grid-column: 1 / -1;
     display: grid;
@@ -70,7 +153,7 @@
     position: relative;
     background-color: $color-secondary;
 
-    &__qoute {
+    &__quote {
         @extend %tab-body;
 
         &--heading {
@@ -122,7 +205,7 @@
         @extend %tab-body;
     }
 
-    .qoute-reset {
+    .quote-reset {
         grid-column: col-start 1 / col-end 8;
         max-width: max-content;
         justify-self: center;

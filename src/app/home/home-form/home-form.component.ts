@@ -9,7 +9,7 @@ import { HomeFormModel } from '../../_models/HomeFormModel';
   styleUrls: ['./home-form.component.scss']
 })
 export class HomeFormComponent implements OnInit, OnDestroy {
-  @Output() qouteSubmitted = new EventEmitter();
+  @Output() quoteSubmitted = new EventEmitter();
 
   form: FormGroup;
   isError = false;
@@ -82,7 +82,7 @@ export class HomeFormComponent implements OnInit, OnDestroy {
 
   onSubmit(form: FormGroup) {
     if (form.valid) {
-      this.qouteSubmitted.emit(this.getFormValue());
+      this.quoteSubmitted.emit(this.getFormValue());
     } else {
       this.isError = true;
     }

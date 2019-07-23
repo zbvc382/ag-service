@@ -10,12 +10,11 @@ export class HomeComponent implements OnInit {
   bothTypes = false;
   price = '£';
   isResult = false;
-  qoute: HomeFormModel;
+  quote: HomeFormModel;
 
   premium = [
     'Miele',
     'De Dietrich',
-    'Fisher & Paykel',
     'Kuppersbusch'
   ];
 
@@ -45,33 +44,37 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
-  qouteRequest(qoute: HomeFormModel) {
-    if (qoute !== null) {
+  quoteRequest(quote: HomeFormModel) {
+    if (quote !== null) {
       this.resetPrice();
-      this.calculateQoute(qoute);
-      this.qoute = qoute;
+      this.calculateQuote(quote);
+      this.quote = quote;
       this.isResult = true;
     }
   }
 
-  calculateQoute(qoute: HomeFormModel) {
-    if (qoute.jobType === 'Repair') {
-      if (this.fitted.includes(qoute.applianceType)) {
-        if (this.premium.includes(qoute.applianceMake)) {
+  calculateQuote(quote: HomeFormModel) {
+    if (quote.applianceMake === 'Other') {
+      quote.applianceMake = '';
+    }
+
+    if (quote.jobType === 'Repair') {
+      if (this.fitted.includes(quote.applianceType)) {
+        if (this.premium.includes(quote.applianceMake)) {
           this.price += '80';
           return;
         }
-        if (qoute.fitting === 'Integrated') {
+        if (quote.fitting === 'Integrated') {
           this.price += '70';
           return;
         }
-        if (qoute.fitting === 'Freestanding') {
+        if (quote.fitting === 'Freestanding') {
           this.price += '60';
           return;
         }
       }
-      if (this.nonFitted.includes(qoute.applianceType)) {
-        if (this.premium.includes(qoute.applianceMake)) {
+      if (this.nonFitted.includes(quote.applianceType)) {
+        if (this.premium.includes(quote.applianceMake)) {
           this.price += '80';
           return;
         } else {
@@ -79,18 +82,18 @@ export class HomeComponent implements OnInit {
           return;
         }
       }
-      if (this.commercial.includes(qoute.applianceType)) {
+      if (this.commercial.includes(quote.applianceType)) {
         this.price += '80';
         return;
       }
     }
 
-    if (qoute.jobType === 'Installation') {
-      if (qoute.fitting === 'Integrated') {
+    if (quote.jobType === 'Installation') {
+      if (quote.fitting === 'Integrated') {
         this.price += '70';
         return;
       }
-      if (qoute.fitting === 'Freestanding') {
+      if (quote.fitting === 'Freestanding') {
         this.price += '60';
         return;
       }
@@ -101,28 +104,28 @@ export class HomeComponent implements OnInit {
     this.price = '£';
   }
 
-  resetQoute() {
+  resetQuote() {
     this.isResult = false;
   }
 
-  get qouteFitting() {
-    if (this.qoute.fitting !== null) {
-      return this.qoute.fitting;
+  get quoteFitting() {
+    if (this.quote.fitting !== null) {
+      return this.quote.fitting;
 
     } else {
       return 'FAFDASF';
     }
   }
 
-  get qouteApplianceType() {
-    return this.qoute.applianceType;
+  get quoteApplianceType() {
+    return this.quote.applianceType;
   }
 
-  get qouteApplianceMake() {
-    return this.qoute.applianceMake;
+  get quoteApplianceMake() {
+    return this.quote.applianceMake;
   }
 
-  get qouteJobType() {
-    return this.qoute.jobType;
+  get quoteJobType() {
+    return this.quote.jobType;
   }
 }
