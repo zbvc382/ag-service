@@ -17,6 +17,8 @@ import { AreasCoveredModule } from './areas-covered/areas-covered.module';
 import { EstateAgentsModule } from './estate-agents/estate-agents.module';
 import { AboutUsModule } from './about-us/about-us.module';
 import { ErrorCodesModule } from './error-codes/error-codes.module';
+import { BlogComponent } from './blog/blog.component';
+import { BlogModule } from './blog/blog.module';
 
 @NgModule({
   declarations: [
@@ -39,6 +41,7 @@ import { ErrorCodesModule } from './error-codes/error-codes.module';
     EstateAgentsModule,
     AboutUsModule,
     ErrorCodesModule,
+    BlogModule,
     TransferHttpCacheModule
   ],
   providers: [],

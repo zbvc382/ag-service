@@ -15,5 +15,9 @@ export const ROUTES = [
   '/appliance-repairs/commercial-appliance-repairs',
   '/error-codes',
   '/error-codes/indesit-washing-machine-fault-codes',
-  '/error-codes/whirlpool-washing-machine-error-codes'
+  '/error-codes/whirlpool-washing-machine-error-codes',
+  '/blog',
+  '/blog/common-electric-oven-problems',
+  '/blog/oven-does-not-work-timer-set-manual-or-automatic',
+  '/blog/fridge-freezer-not-cooling-any-more-fault-finding'
 ];

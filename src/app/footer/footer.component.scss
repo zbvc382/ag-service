@@ -57,7 +57,7 @@
         &__hours {
             display: grid;
             align-content: start;
-            grid-row-gap: 0.5rem;
+            grid-row-gap: 1rem;
 
             ul {
                 text-transform: capitalize;
@@ -82,7 +82,7 @@
         &__contacts {
             display: grid;
             align-content: start;
-            grid-row-gap: 0.75rem;
+            grid-row-gap: 1rem;
         }
 
         &__contact {
@@ -98,14 +98,14 @@
         &__repair-links {
             display: grid;
             align-content: start;
-            grid-row-gap: 0.5rem;
+            grid-row-gap: 1rem;
             text-transform: capitalize;
         }
 
         &__other-links {
             display: grid;
             align-content: start;
-            grid-row-gap: 0.5rem;
+            grid-row-gap: 1rem;
             text-transform: capitalize;
         }
     }

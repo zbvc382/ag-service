@@ -1,0 +1,363 @@
+<div class="grid-container">
+    <div class="header-background"></div>
+    <div class="header">
+        <div class="header__logo">
+            <a [routerLink]="[ '/']">
+                <img class="header__logo-wrapper--image" src="../../../assets/images/logo-header.svg" alt="" />
+            </a>
+        </div>
+        <div class="header__email">
+            <svg class="icon icon--md icon icon--white">
+                <use xlink:href="../../../assets/images/sprite.svg#mail_filled"></use>
+            </svg>
+            <a href="mailto:contact@ag-repairs.co.uk">contact@ag-repairs.co.uk</a>
+        </div>
+        <div class="header__phone">
+            <svg class="icon icon--md icon icon--white">
+                <use xlink:href="../../../assets/images/sprite.svg#phone_filled"></use>
+            </svg>
+            <a href="tel:0207 476 8725">0207 476 8725</a>
+        </div>
+        <div class="header__mobile">
+            <svg class="icon icon--md icon icon--white">
+                <use xlink:href="../../../assets/images/sprite.svg#touchscreen_smartphone_filled"></use>
+            </svg>
+            <a href="tel:0754 085 2102">0754 085 2102</a>
+        </div>
+    </div>
+
+    <!-- Intro -->
+
+    <div class="intro">
+        <div class="intro__image">
+            <img src="../../assets/images/blog.jpg" alt="">
+        </div>
+        <header>
+            <h1>{{headerText}}</h1>
+        </header>
+        <div class="intro__sub">
+            <div class="sub-item">
+                <svg class="icon icon--md icon--primary">
+                    <use xlink:href="../../../assets/images/sprite.svg#checked"></use>
+                </svg>
+                <p>Fast, reliable service</p>
+            </div>
+            <div class="sub-item">
+                <svg class="icon icon--md icon--primary">
+                    <use xlink:href="../../../assets/images/sprite.svg#checked"></use>
+                </svg>
+                <p>Largest UK coverage</p>
+            </div>
+            <div class="sub-item">
+                <svg class="icon icon--md icon--primary">
+                    <use xlink:href="../../../assets/images/sprite.svg#checked"></use>
+                </svg>
+                <p>Same/next day appointments</p>
+            </div>
+            <div class="sub-item">
+                <svg class="icon icon--md icon--primary">
+                    <use xlink:href="../../../assets/images/sprite.svg#checked"></use>
+                </svg>
+                <p>Same/next day appointments</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Blogs container-->
+
+    <section class="blogs-container">
+        <header class="section-heading">
+            <h1 class="heading-1 heading-1--primary" *ngIf="isMain">our recent blog posts</h1>
+            <h1 class="heading-1 heading-1--primary" *ngIf="!isMain">blog post</h1>
+        </header>
+        <div class="blogs" *ngIf="isMain">
+
+            <!-- Short blogs -->
+
+            <div class="blogs__blog">
+                <h2 class="blogs__blog--title heading-2">Fridge freezer not cooling any more, fault finding</h2>
+                <h3 class="blogs__blog--date">January 23rd, 2015</h3>
+                <p class="blogs__blog--paragraph">
+                    Fridge freezer not cooling?
+                    This can be caused by a thermostat failure but that is rare to be honest. More likely the compressor
+                    is not running or not running properly for some reason.
+                </p>
+                <ul class="blogs__blog--list">
+                    <li>Compressor failure</li>
+                    <li>Compressor PTC</li>
+                    <li>Compressor relay</li>
+                    <li>Thermostat</li>
+                    <li>Thermistor failure</li>
+                </ul>
+                <p class="blogs__blog--paragraph">If the fridge cools a little on a fridge freezer and the freezer
+                    section seems okay then it can also
+                    be a sign that there is either a blockage or a shortage of gas.</p>
+                <a class="blogs__blog--link btn-round-sm btn--white"
+                    [routerLink]="['fridge-freezer-not-cooling-any-more-fault-finding']">read more</a>
+            </div>
+            <div class="blogs__blog">
+                <h2 class="blogs__blog--title heading-2">Oven does not work. Timer set – manual or automatic?</h2>
+                <h3 class="blogs__blog--date">January 23rd, 2015</h3>
+                <p class="blogs__blog--paragraph">
+                    In quite a few instances we come across a problem where a person has an oven on automatic and they
+                    can’t use it.
+                </p>
+                <p class="blogs__blog--paragraph">For the oven to work on the automatic, the timer needs to be set. It’s
+                    best if the oven is in manual mode. Read your oven manual first before doing anything else.</p>
+                <p class="blogs__blog--paragraph">If you don’t have a manual, try doing this:
+
+                    Try holding the ‘bell’ button down at the same time as you press the ‘pan x’ button.</p>
+                <a class="blogs__blog--link btn-round-sm btn--white"
+                    [routerLink]="['oven-does-not-work-timer-set-manual-or-automatic']">read more</a>
+            </div>
+            <div class="blogs__blog">
+                <h2 class="blogs__blog--title heading-2">Common electric oven problems</h2>
+                <h3 class="blogs__blog--date">January 22nd, 2015</h3>
+                <p class="blogs__blog--paragraph">
+                    From our experience, the most common problem with the electric ovens is the failure of the heating
+                    element.
+                </p>
+                <p class="blogs__blog--paragraph">
+                    In these instances, the heating element needs replacing, the average cost of the element is £30-£35
+                    or more.
+                </p>
+                <p class="blogs__blog--paragraph">Our engineers carry heating elements with them and can repair the oven
+                    there and then. Recently we had a job where the heating element was fine, but the oven kept tripping
+                    the electricity in the house.</p>
+                <a class="blogs__blog--link btn-round-sm btn--white"
+                    [routerLink]="['common-electric-oven-problems']">read more</a>
+            </div>
+        </div>
+
+        <!-- Individual Blogs -->
+
+        <div class="blogs" *ngIf="isSubOne">
+            <div class="blogs__blog">
+                <h2 class="blogs__blog--title heading-2">Common electric oven problems</h2>
+                <h3 class="blogs__blog--date">January 22nd, 2015</h3>
+                <p class="blogs__blog--paragraph">
+                    From our experience, the most common problem with the electric ovens is the failure of the heating
+                    element.
+                </p>
+                <p class="blogs__blog--paragraph">
+                    In these instances, the heating element needs replacing, the average cost of the element is £30-£35
+                    or more.
+                </p>
+                <p class="blogs__blog--paragraph">Our engineers carry heating elements with them and can repair the oven
+                    there and then. Recently we had a job where the heating element was fine, but the oven kept tripping
+                    the electricity in the house. It turned out that the wiring to the control module was burned out,
+                    the engineer had to clean the wires and solder them for the oven to work.</p>
+                <p class="blogs__blog--paragraph">Leave a message or call us if you have a problem with your oven or
+                    electric cooker.</p>
+            </div>
+        </div>
+        <div class="blogs" *ngIf="isSubTwo">
+            <div class="blogs__blog">
+                <h2 class="blogs__blog--title heading-2">Oven does not work. Timer set – manual or automatic?</h2>
+                <h3 class="blogs__blog--date">January 23rd, 2015</h3>
+                <p class="blogs__blog--paragraph">
+                    In quite a few instances we come across a problem where a person has an oven on automatic and they
+                    can’t use it.
+                </p>
+                <p class="blogs__blog--paragraph">For the oven to work on the automatic, the timer needs to be set. It’s
+                    best if the oven is in manual mode. Read your oven manual first before doing anything else.</p>
+                <p class="blogs__blog--paragraph">If you don’t have a manual, try doing this:
+                    Try holding the ‘bell’ button down at the same time as you press the ‘pan x’ button.Failing that
+                    turn off the mains cooker switch so it resets when switched on again. Try to put your oven into
+                    manual mode, if you can’t operate it, before calling an engineer. Good luck!</p>
+            </div>
+        </div>
+        <div class="blogs" *ngIf="isSubThree">
+            <div class="blogs__blog">
+                <h2 class="blogs__blog--title heading-2">Fridge freezer not cooling any more, fault finding</h2>
+                <h3 class="blogs__blog--date">January 23rd, 2015</h3>
+                <p class="blogs__blog--paragraph">
+                    Fridge freezer not cooling?
+                    This can be caused by a thermostat failure but that is rare to be honest. More likely the compressor
+                    is not running or not running properly for some reason.
+                </p>
+                <ul class="blogs__blog--list">
+                    <li>Compressor failure</li>
+                    <li>Compressor PTC</li>
+                    <li>Compressor relay</li>
+                    <li>Thermostat</li>
+                    <li>Thermistor failure</li>
+                </ul>
+                <p class="blogs__blog--paragraph">If the fridge cools a little on a fridge freezer and the freezer
+                    section seems okay then it can also
+                    be a sign that there is either a blockage or a shortage of gas. Please note that a gas shortage will
+                    not manifest itself magically after a few years unless there has been physical damage to the
+                    pipework. Basically this is pretty much an experts area, but the causes are as follows in the main:
+                </p>
+                <ul class="blogs__blog--list">
+                    <li>Shortage of gas on appliances under a year old</li>
+                    <li>Blockage or choke in pipework</li>
+                    <li>Changeover valve faulty</li>
+                    <li>Compressor pumping weak (highly likely on older machines 8 years or more old)</li>
+                </ul>
+                <b class="p-heading">Fridge freezer not cooling</b>
+                <p class="blogs__blog--paragraph">See above as it’s pretty much the same as for a fridge.</p>
+                <b class="p-heading">Punctured a hole while defrosting…</b>
+                <p class="blogs__blog--paragraph">We see this a lot I’m afraid and it’s this simple, don’t ever go near
+                    the inside of a fridge with anything sharp and metal to defrost with as there is an extremely high
+                    probability that you will pierce a pipe in the fridge. This lets all the gas out, so no cooling,
+                    then because most people run them thinking it might be okay, oil gets dragged up from the compressor
+                    and chokes the pipework. Invariably the machine is a total write off.</p>
+                <p class="blogs__blog--paragraph">If this is your problem, sorry but there’s not much that anyone can do
+                    to help you I’m afraid.</p>
+            </div>
+        </div>
+        <div class="sidebar">
+            <div class="sidebar__info">
+                <p>no hidden costs</p>
+                <span>&#9679;</span>
+                <p>unlimited return visits</p>
+                <span>&#9679;</span>
+                <p>6 months guarantee</p>
+            </div>
+            <div class="sidebar__links">
+                <h2 class="heading-2">our services</h2>
+                <a class="sidebar__link" [routerLink]="['/appliance-repairs/washing-machine-repairs']">
+                    <svg class="icon">
+                        <use xlink:href="../../../assets/images/sprite.svg#washing_machine"></use>
+                    </svg>
+                    <p>&nbsp;Washing Machine Repairs</p>
+                </a>
+                <a class="sidebar__link" [routerLink]="['/appliance-repairs/dishwasher-repairs']">
+                    <svg class="icon">
+                        <use xlink:href="../../../assets/images/sprite.svg#dishwasher"></use>
+                    </svg>
+                    <p>&nbsp;Diswasher Repairs</p>
+                </a>
+                <a class="sidebar__link" [routerLink]="['/appliance-repairs/tumble-dryer-repairs']">
+                    <svg class="icon">
+                        <use xlink:href="../../../assets/images/sprite.svg#tumble_dryer"></use>
+                    </svg>
+                    <p>&nbsp;Tumble Dryer Repairs</p>
+                </a>
+                <a class="sidebar__link" [routerLink]="['/appliance-repairs/electric-oven-repairs']">
+                    <svg class="icon">
+                        <use xlink:href="../../../assets/images/sprite.svg#cooker"></use>
+                    </svg>
+                    <p>&nbsp;Electric Cooker/Oven Repairs</p>
+                </a>
+                <a class="sidebar__link" [routerLink]="['/appliance-repairs/microwave-repairs']">
+                    <svg class="icon">
+                        <use xlink:href="../../../assets/images/sprite.svg#microwave"></use>
+                    </svg>
+                    <p>&nbsp;Microwave Repairs</p>
+                </a>
+                <a class="sidebar__link" [routerLink]="['/appliance-repairs/extractor-hood-repairs']">
+                    <svg class="icon">
+                        <use xlink:href="../../../assets/images/sprite.svg#cooker_hood"></use>
+                    </svg>
+                    <p>&nbsp;Extractor Hood Repairs</p>
+                </a>
+                <a class="sidebar__link" [routerLink]="['/appliance-repairs/fridge-freezer-repairs']">
+                    <svg class="icon">
+                        <use xlink:href="../../../assets/images/sprite.svg#fridge"></use>
+                    </svg>
+                    <p>&nbsp;Fridge Freezer Repairs</p>
+                </a>
+                <a class="sidebar__link" [routerLink]="['/appliance-repairs/commercial-appliance-repairs']">
+                    <svg class="icon">
+                        <use xlink:href="../../../assets/images/sprite.svg#cooker_dotted"></use>
+                    </svg>
+                    <p>&nbsp;Commercial Appliance Repairs</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands -->
+
+    <section class="brands">
+        <header class="section-heading">
+            <h1 class="heading-1 heading-1--primary">Brands We Repair</h1>
+        </header>
+        <h2 class="heading-2">We repair and work with all the major appliance makes:</h2>
+        <div class="brand-grid">
+            <div class="brand">
+                <svg class="icon icon--xl">
+                    <use xlink:href="../../../assets/images/sprite.svg#aeg-2"></use>
+                </svg>
+            </div>
+            <div class="brand">
+                <svg class="icon icon--xl">
+                    <use xlink:href="../../../assets/images/sprite.svg#new-beko-logo"></use>
+                </svg>
+            </div>
+            <div class="brand">
+                <svg class="icon icon--xl">
+                    <use xlink:href="../../../assets/images/sprite.svg#hotpoint"></use>
+                </svg>
+            </div>
+            <div class="brand">
+                <svg class="icon icon--xl">
+                    <use xlink:href="../../../assets/images/sprite.svg#lg-electronics"></use>
+                </svg>
+            </div>
+            <div class="brand">
+                <svg class="icon icon--xl">
+                    <use xlink:href="../../../assets/images/sprite.svg#miele"></use>
+                </svg>
+            </div>
+            <div class="brand">
+                <svg class="icon icon--xl">
+                    <use xlink:href="../../../assets/images/sprite.svg#samsung-1"></use>
+                </svg>
+            </div>
+            <div class="brand">
+                <svg class="icon icon--xl">
+                    <use xlink:href="../../../assets/images/sprite.svg#siemens"></use>
+                </svg>
+            </div>
+            <div class="brand">
+                <svg class="icon icon--xl">
+                    <use xlink:href="../../../assets/images/sprite.svg#zanussi"></use>
+                </svg>
+            </div>
+            <div class="brand">
+                <svg class="icon icon--xl">
+                    <use xlink:href="../../../assets/images/sprite.svg#whirlpool"></use>
+                </svg>
+            </div>
+            <div class="brand">
+                <svg class="icon icon--xl">
+                    <use xlink:href="../../../assets/images/sprite.svg#bosch-1"></use>
+                </svg>
+            </div>
+            <div class="brand">
+                <svg class="icon icon--xl">
+                    <use xlink:href="../../../assets/images/sprite.svg#indesit-1"></use>
+                </svg>
+            </div>
+            <div class="brand">
+                <svg class="icon icon--xl">
+                    <use xlink:href="../../../assets/images/sprite.svg#hoover"></use>
+                </svg>
+            </div>
+            <div class="brand">
+                <svg class="icon icon--xl">
+                    <use xlink:href="../../../assets/images/sprite.svg#electrolux"></use>
+                </svg>
+            </div>
+            <div class="brand">
+                <svg class="icon icon--xl">
+                    <use xlink:href="../../../assets/images/sprite.svg#neff"></use>
+                </svg>
+            </div>
+            <div class="brand">
+                <svg class="icon icon--xl">
+                    <use xlink:href="../../../assets/images/sprite.svg#blaupunkt-29640"></use>
+                </svg>
+            </div>
+            <div class="brand">
+                <svg class="icon icon--xl">
+                    <use xlink:href="../../../assets/images/sprite.svg#daewoo-1"></use>
+                </svg>
+            </div>
+        </div>
+        <p class="heading-2">And many more!</p>
+    </section>
+</div>
