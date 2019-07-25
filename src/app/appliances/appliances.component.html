@@ -32,7 +32,7 @@
 
     <div class="intro">
         <div class="intro__image">
-            <img src="../../assets/images/kitchen.jpg" alt="">
+            <img src="../../assets/images/appliances-cover.jpg" alt="">
         </div>
         <header>
             <h1>{{headerText}}</h1>
@@ -75,7 +75,7 @@
 
     <section class="reasons">
         <header class="section-heading">
-            <h1 class="heading-1 heading-1--primary">why choose our services</h1>
+            <h1 class="heading-1 heading-1--primary">why choose us</h1>
         </header>
         <div class="reasons__reason reasons__reason--1">
             <svg class="icon icon--lg icon icon--secondary">
@@ -497,7 +497,14 @@
     </div>
     <div class="intro">
         <div class="intro__image">
-            <img src="../../assets/images/appliances.jpg" alt="">
+            <img src="../../assets/images/wm-cover.jpg" alt="" *ngIf="isWashingMachine">
+            <img src="../../assets/images/dw-cover.jpg" alt="" *ngIf="isDishwasher">
+            <img src="../../assets/images/td-cover.jpg" alt="" *ngIf="isTumbleDryer">
+            <img src="../../assets/images/eo-cover.jpg" alt="" *ngIf="isElectricCooker">
+            <img src="../../assets/images/mw-cover.jpg" alt="" *ngIf="isMicrowave">
+            <img src="../../assets/images/eh-cover.jpg" alt="" *ngIf="isExtractorHood">
+            <img src="../../assets/images/ff-cover.jpg" alt="" *ngIf="isFridgeFreezer">
+            <img src="../../assets/images/ca-cover.jpg" alt="" *ngIf="isCommercialAppliances">
         </div>
         <header>
             <h1>{{headerText}}</h1>

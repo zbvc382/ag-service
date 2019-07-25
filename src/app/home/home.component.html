@@ -25,10 +25,9 @@
       <a href="tel:0754 085 2102">0754 085 2102</a>
     </div>
   </div>
-
   <div class="intro">
     <div class="intro__image">
-      <img src="../../assets/images/intro.jpg" alt="">
+      <img src="../../assets/images/intro-cover.jpg" alt="">
     </div>
     <header>
       <h1>The UK's number 1 domestic appliance repair service</h1>
@@ -68,7 +67,7 @@
   </div>
   <section class="reasons">
     <header class="section-heading">
-      <h1 class="heading-1 heading-1--primary">why choose our services</h1>
+      <h1 class="heading-1 heading-1--primary">why choose us</h1>
     </header>
     <div class="reasons__reason reasons__reason--1">
       <svg class="icon icon--lg icon icon--secondary">
@@ -202,7 +201,7 @@
       </div>
       <div class="about-us__image-container">
         <figure>
-          <img src="../../../assets/images/car2.jpg" alt="" />
+          <img src="../../assets/images/van.jpg" alt="" />
           <figcaption>
             <p>
               Over 15 years of experience in white goods servicing
@@ -521,6 +520,99 @@
       <a class="btn-round" [routerLink]="[ '/areas-covered']" class="btn-round">view all postcodes</a>
     </div>
   </section>
+
+  <!-- Short blogs -->
+
+  <section class="blogs">
+    <header class="section-heading">
+      <h1 class="heading-1 heading-1--primary">recent blog posts</h1>
+    </header>
+
+    <div class="blogs__blog">
+      <div class="blogs__blog--heading">
+        <figure>
+          <img src="../../assets/images/freezer-sm.jpg" alt="" />
+          <figcaption>
+            <p>
+              Fridge freezer not cooling any more, fault finding
+            </p>
+          </figcaption>
+        </figure>
+      </div>
+      <h3 class="blogs__blog--date">July 23rd, 2019</h3>
+      <div class="blogs__blog--text">
+        <p class="blogs__blog--paragraph">
+          Fridge freezer not cooling?
+          This can be caused by a thermostat failure but that is rare to be honest. More likely the compressor
+          is not running or not running properly for some reason.
+        </p>
+        <ul class="blogs__blog--list">
+          <li>Compressor failure</li>
+          <li>Compressor PTC</li>
+          <li>Compressor relay</li>
+          <li>Thermostat</li>
+          <li>Thermistor failure</li>
+        </ul>
+      </div>
+      <a class="blogs__blog--link btn-round-sm btn--white"
+        [routerLink]="['/blog/fridge-freezer-not-cooling-any-more-fault-finding']">read more</a>
+    </div>
+    <div class="blogs__blog">
+      <div class="blogs__blog--heading">
+        <figure>
+          <img src="../../assets/images/oven_timer-thumbnail.jpg" alt="" />
+          <figcaption>
+            <p>
+              Oven does not work. Timer set – manual or automatic?
+            </p>
+          </figcaption>
+        </figure>
+      </div>
+      <h3 class="blogs__blog--date">June 15th, 2019</h3>
+      <div class="blogs__blog--text">
+        <p class="blogs__blog--paragraph">
+          In quite a few instances we come across a problem where a person has an oven on automatic and they
+          can’t use it.
+        </p>
+        <p class="blogs__blog--paragraph">For the oven to work on the automatic, the timer needs to be set. It’s
+          best if the oven is in manual mode. Read your oven manual first before doing anything else.</p>
+        <p class="blogs__blog--paragraph">If you don’t have a manual, try doing this:
+          Try holding the ‘bell’ button down at the same time as you press the ‘pan x’ button.</p>
+      </div>
+      <a class="blogs__blog--link btn-round-sm btn--white"
+        [routerLink]="['/blog/oven-does-not-work-timer-set-manual-or-automatic']">read more</a>
+    </div>
+    <div class="blogs__blog">
+      <div class="blogs__blog--heading">
+        <figure>
+          <img src="../../assets/images/oven-opend-thumbnail.jpg" alt="" />
+          <figcaption>
+            <p>
+              Common electric oven problems
+            </p>
+          </figcaption>
+        </figure>
+      </div>
+      <h3 class="blogs__blog--date">May 11th, 2019</h3>
+      <div class="blogs__blog--text">
+        <p class="blogs__blog--paragraph">
+          From our experience, the most common problem with the electric ovens is the failure of the heating
+          element.
+        </p>
+        <p class="blogs__blog--paragraph">
+          In these instances, the heating element needs replacing, the average cost of the element is £30-£35
+          or more.
+        </p>
+        <p class="blogs__blog--paragraph">Our engineers carry heating elements with them and can repair the oven
+          there and then. Recently we had a job where the heating element was fine, but the oven kept tripping
+          the electricity in the house.</p>
+      </div>
+      <a class="blogs__blog--link btn-round-sm btn--white" [routerLink]="['/blog/common-electric-oven-problems']">read
+        more</a>
+    </div>
+  </section>
+
+  <!-- Reviews -->
   <section class="reviews-container">
     <header class="section-heading">
       <h1 class="heading-1 heading-1--primary">google reviews</h1>
