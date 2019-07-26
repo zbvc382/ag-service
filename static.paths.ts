@@ -19,5 +19,6 @@ export const ROUTES = [
   '/blog',
   '/blog/common-electric-oven-problems',
   '/blog/oven-does-not-work-timer-set-manual-or-automatic',
-  '/blog/fridge-freezer-not-cooling-any-more-fault-finding'
+  '/blog/fridge-freezer-not-cooling-any-more-fault-finding',
+  '/terms'
 ];

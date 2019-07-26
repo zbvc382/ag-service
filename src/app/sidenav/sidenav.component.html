@@ -35,4 +35,10 @@
         </svg>
         <span class="nav-caption">Error Codes</span>
     </a>
+    <a mat-list-item [routerLink]="['/blog']" (click)="onSidenavClose()">
+        <svg class="icon icon--md icon--white">
+            <use href="../../../assets/images/sprite.svg#blog"></use>
+        </svg>
+        <span class="nav-caption">Blog</span>
+    </a>
 </mat-nav-list>

@@ -658,13 +658,34 @@
 
     <!-- Repair prices -->
 
-    <section class="repair-prices">
+    <section class="repair-prices" *ngIf="!isCommercialAppliances">
         <header class="section-heading">
             <h1 class="heading-1 heading-1--primary">repair prices</h1>
         </header>
-        <div class="repair-prices__freestanding">
+        <div class="repair-prices__extractor-hood" *ngIf="isExtractorHood">
+            <div class="repair-prices__extractor-hood--title">
+                <h2 class="heading-2" *ngIf="!isTumbleDryer && !isElectricCooker">{{applianceName}}</h2>
+                <h2 class="heading-2" *ngIf="isTumbleDryer">{{applianceName}}</h2>
+                <h2 class="heading-2" *ngIf="isElectricCooker">{{applianceName}}</h2>
+            </div>
+
+            <div class="repair-prices__extractor-hood--price">
+                <p>£60 <span>+VAT</span></p>
+            </div>
+
+            <div class="repair-prices__extractor-hood--points">
+                <p class="repair-prices__extractor-hood--points-1">&#9679; no call out charge</p>
+                <p class="repair-prices__extractor-hood--points-2">&#9679; one off labour/Diagnostic charge</p>
+                <p class="repair-prices__extractor-hood--points-3">&#9679; six months guarantee</p>
+                <p class="repair-prices__extractor-hood--points-4">&#9679; no parking fees</p>
+                <p class="repair-prices__extractor-hood--points-5">&#9679; parts charged separately if required</p>
+            </div>
+        </div>
+        <div class="repair-prices__freestanding" *ngIf="!isExtractorHood">
             <div class="repair-prices__freestanding--title">
-                <h2 class="heading-2">freestanding {{applianceName}}</h2>
+                <h2 class="heading-2" *ngIf="!isTumbleDryer && !isElectricCooker">freestanding {{applianceName}}</h2>
+                <h2 class="heading-2" *ngIf="isTumbleDryer">{{applianceName}}</h2>
+                <h2 class="heading-2" *ngIf="isElectricCooker">{{applianceName}}</h2>
             </div>
 
             <div class="repair-prices__freestanding--price">
@@ -679,13 +700,17 @@
                 <p class="repair-prices__freestanding--points-5">&#9679; parts charged separately if required</p>
             </div>
         </div>
-        <div class="repair-prices__integrated">
+        <div class="repair-prices__integrated" *ngIf="!isExtractorHood">
             <div class="repair-prices__integrated--title">
-                <h2 class="heading-2">integrated {{applianceName}}</h2>
+                <h2 class="heading-2" *ngIf="!isTumbleDryer && !isElectricCooker">integrated {{applianceName}}</h2>
+                <h2 class="heading-2" *ngIf="isTumbleDryer">condenser dryer</h2>
+                <h2 class="heading-2" *ngIf="isElectricCooker">range cooker</h2>
             </div>
 
             <div class="repair-prices__integrated--price">
-                <p>£70 <span>+VAT</span></p>
+                <p *ngIf="!isTumbleDryer && !isElectricCooker">£70 <span>+VAT</span></p>
+                <p *ngIf="isTumbleDryer">£65 <span>+VAT</span></p>
+                <p *ngIf="isElectricCooker">£80 <span>+VAT</span></p>
             </div>
 
             <div class="repair-prices__integrated--points">

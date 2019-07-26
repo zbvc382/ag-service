@@ -458,7 +458,7 @@
 
     &__button-container {
         grid-column: 1 / -1;
-        margin-top: 3rem;
+        padding-top: 3rem;
         justify-items: center;
         display: flex;
         justify-content: center;
@@ -475,6 +475,7 @@
 
         @media only screen and (max-width: 1060px) {
             background-color: $color-secondary;
+            padding: 4rem 0;
 
             a {
                 color: $color-secondary;
@@ -600,16 +601,14 @@
 .blogs {
     display: grid;
     grid-column: col-start 1 / col-end 8;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 35rem));
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     padding: 1rem 0;
     grid-column-gap: 3rem;
-    // text-align: justify;
     grid-row-gap: 3rem;
 
-    // @media only screen and (max-width: 850px) {
-    //     grid-column: 1 / -1;
-    //     margin-right: 0;
-    // }
+    @media only screen and (max-width: 400px) {
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    }
 
     header {
         margin-bottom: 1rem;
@@ -618,11 +617,6 @@
     &__blog {
         display: grid;
         align-self: start;
-        // grid-template-rows: 10rem 20rem 30rem;
-
-        // @media only screen and (max-width: 850px) {
-        //     text-align: justify;
-        // }
 
         .p-heading {
             justify-self: start;
@@ -655,15 +649,14 @@
                     color: #fff;
                     font-size: 1.8rem;
                     font-weight: 700;
-                    // background: linear-gradient(to left, #e04447 0%, #b72837 100%);
                     background: $color-primary;
                     padding: 0.25rem .5rem;
-
+                }
+                
+                a:hover {
+                    text-decoration: none;
                 }
             }
-
-            // justify-self: center;
-            // background: linear-gradient(to left, #e04447 0%, #b72837 100%);
         }
 
         &--date {
@@ -673,10 +666,6 @@
             background-color: $color-secondary;
             color: #fff;
             margin-bottom: 1rem;
-        }
-
-        &--text {
-            // min-height: 30rem;
         }
 
         &--list {

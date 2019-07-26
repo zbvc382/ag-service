@@ -18,6 +18,8 @@ const routes: Routes = [
 
   { path: 'blog', loadChildren: './blog/blog.module#BlogModule' },
 
+  { path: 'terms', loadChildren: './terms/terms.module#TermsModule' },
+
   { path: '', component: HomeComponent },
 
   { path: '**', redirectTo: '', pathMatch: 'full' }

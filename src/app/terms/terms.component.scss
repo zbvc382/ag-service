@@ -1,0 +1,7 @@
+@import '../../styles/variables';
+
+.terms {
+    grid-column: center-start / center-end;
+    font-size: $font-size-primary;
+    color: $color-grey;
+}

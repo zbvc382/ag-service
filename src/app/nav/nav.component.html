@@ -25,13 +25,13 @@
       <img src="../../../assets/images/logo-nav.svg" alt="">
     </a>
   </div>
-  <a class="nav__menu-items nav__menu-items--1" [matMenuTriggerFor]="menu" #menuTrigger="matMenuTrigger"
+  <div class="nav__menu-items nav__menu-items--1" [matMenuTriggerFor]="menu" #menuTrigger="matMenuTrigger"
     (mouseover)="menuTrigger.openMenu()">
     Appliance Repairs
     <svg class="icon icon--sm icon--secondary">
       <use xlink:href="../../../assets/images/sprite.svg#expand_arrow"></use>
     </svg>
-  </a>
+  </div>
   <a class="nav__menu-items nav__menu-items--2" [routerLink]="['/appliance-repair-prices']">
     Prices
   </a>

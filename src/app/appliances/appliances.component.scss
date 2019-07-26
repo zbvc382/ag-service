@@ -271,7 +271,8 @@
     }
 
     &__freestanding,
-    &__integrated {
+    &__integrated,
+    &__extractor-hood {
         display: grid;
         padding: 2rem;
         grid-row-gap: 2rem;
@@ -358,6 +359,16 @@
     &__integrated {
         grid-column: 3 / 4;
         background-color: $color-secondary;
+
+        @media only screen and (max-width: 750px) {
+            grid-column: 2 / 3;
+        }
+    }
+
+    &__extractor-hood {
+        grid-column: 2 / 4;
+        background-color: $color-secondary;
+        justify-self: center;
 
         @media only screen and (max-width: 750px) {
             grid-column: 2 / 3;
