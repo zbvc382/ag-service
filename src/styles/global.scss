@@ -649,6 +649,10 @@ body {
         justify-self: center;
     }
 
+    &__list-wrapper {
+        margin-left: 1.75rem;
+    }
+
     &__item {
         display: grid;
         grid-template-columns: 1fr 14fr;
@@ -690,10 +694,6 @@ body {
 
         &-text {
             font-size: $font-size-primary;
-
-            ul {
-                list-style-position: inside;
-            }
 
             h3 {
                 font-weight: 700;

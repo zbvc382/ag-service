@@ -98,7 +98,7 @@ export class HomeComponent implements OnInit {
           return;
         }
         if (quote.fitting === 'Integrated') {
-          this.price += '70';
+          this.price += '65';
           return;
         }
         if (quote.fitting === 'Freestanding') {
@@ -137,14 +137,19 @@ export class HomeComponent implements OnInit {
         }
       }
       if (this.commercial.includes(quote.applianceType)) {
-        this.price += '80';
-        return;
+        if (quote.applianceType === 'Commercial Microwave') {
+          this.price += '75';
+          return;
+        } else {
+          this.price += '80';
+          return;
+        }
       }
     }
 
     if (quote.jobType === 'Installation') {
       if (quote.fitting === 'Integrated') {
-        this.price += '70';
+        this.price += '65';
         return;
       }
       if (quote.fitting === 'Freestanding') {

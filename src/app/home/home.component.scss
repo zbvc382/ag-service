@@ -327,10 +327,25 @@
             grid-row-gap: 1rem;
             background-color: $color-primary;
             padding: 1rem;
+            align-content: start;
+
+            &--wrapper {
+                margin-left: 1.75rem;
+                font-size: 1.4rem;
+
+                ul {
+                    margin-bottom: 0 !important;
+                }
+
+                li:not(:last-child) {
+                    margin-bottom: 0.5rem;
+                }
+            }
 
             p {
                 font-size: 1.25rem;
                 display: inline-block;
+                margin-bottom: 0 !important;
             }
 
             svg {
@@ -652,7 +667,7 @@
                     background: $color-primary;
                     padding: 0.25rem .5rem;
                 }
-                
+
                 a:hover {
                     text-decoration: none;
                 }

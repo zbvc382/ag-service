@@ -104,26 +104,25 @@
   </div>
   <section class="request">
     <div class="request__quote" *ngIf="!isResult">
-      <h1 class="request__quote--heading heading-2">Simply complete our three step repair booking form or give us a
-        call to get an instant quote.</h1>
+      <h1 class="request__quote--heading heading-2">Complete our short form to get an instant quote.</h1>
       <div class="request__quote--subheading">
         <div class="subheading-item">
           <svg class="icon icon--md icon--primary">
             <use xlink:href="../../../assets/images/sprite.svg#checkmark"></use>
           </svg>
-          <p>Simply complete our three step repair booking form</p>
+          <p>Hassle-Free Appointments</p>
         </div>
         <div class="subheading-item">
           <svg class="icon icon--md icon--primary">
             <use xlink:href="../../../assets/images/sprite.svg#checkmark"></use>
           </svg>
-          <p>Simply complete our three step repair booking form</p>
+          <p>Fully Equipped Vans</p>
         </div>
         <div class="subheading-item">
           <svg class="icon icon--md icon--primary">
             <use xlink:href="../../../assets/images/sprite.svg#checkmark"></use>
           </svg>
-          <p>Simply complete our three step repair booking form</p>
+          <p>Highly Qualified Engineers</p>
         </div>
       </div>
       <app-home-form (quoteSubmitted)="quoteRequest($event)" class="request__quote--form"></app-home-form>
@@ -131,7 +130,7 @@
     <div *ngIf="isResult" class="request__result">
       <div class="result__price-container">
         <div class="header-text heading-2">
-          Price for {{quoteFitting}} {{quoteApplianceMake}} {{quoteApplianceType}} {{quoteJobType}}
+          Total Price For {{quoteFitting}} {{quoteApplianceMake}} {{quoteApplianceType}} {{quoteJobType}}
         </div>
         <div class="price-info">
           <p>{{price}}<span>+VAT</span></p>
@@ -163,10 +162,15 @@
           </div>
         </div>
         <div class="result__term-items">
-          <p><span>&#9679;</span> Same and next day visits at no additional cost</p>
-          <p><span>&#9679;</span> Same and next day visits at no additional cost</p>
-          <p><span>&#9679;</span> Same and next day visits at no additional cost</p>
-          <p><span>&#9679;</span> Same and next day visits at no additional cost</p>
+          <div class="result__term-items--wrapper">
+            <ul>
+              <li>Fixed diagnostic and repair charges, no hidden cost</li>
+              <li>Evening and weekend appointments at no additional cost.</li>
+              <li>We carry large number of spare parts to carry out the repair on the first visit.</li>
+              <li>No extra charge for revisits if a new part needs to be ordered.</li>
+              <li>We are fully insured for public liability.</li>
+            </ul>
+          </div>
         </div>
       </div>
       <button class="quote-reset btn-round btn--white" (click)="resetQuote()">new quote</button>
@@ -223,14 +227,17 @@
       </div>
       <div class="work__item-text">
         <h3 class="heading-3 heading-3--secondary">simple pricing structure</h3>
-        <ul>
-          <li>A fixed diagnostic charge of £35 which covers the time spent identifying the cause of the fault.</li>
-          <li>A repair charge payable only after your appliance is repaired and confirmed as working.</li>
-          <li>No service fee is charged if the engineer is unable to identify the fault.
-          </li>
-          <li>If new parts are required,
-            we’ll give you a fixed quote for these before proceeding with the repair.</li>
-        </ul>
+        <div class="work__list-wrapper">
+          <ul>
+            <li>A fixed diagnostic charge of £35 which covers the time spent identifying the cause of the fault.</li>
+            <li>A repair charge payable after your appliance is repaired and confirmed as working.</li>
+            <li>No service fee is charged if the engineer is unable to identify the fault.
+            </li>
+            <li>If new parts are required,
+              we’ll give you a fixed quote for these before proceeding with the repair.</li>
+            <li>No extra charge for subsequent visits.</li>
+          </ul>
+        </div>
       </div>
     </div>
     <div class="work__item">

@@ -304,18 +304,18 @@
 
         }
 
-        &--points-2::after {
+        // &--points-2::after {
+        //     content: " *";
+        //     color: $color-primary;
+        // }
+
+        &--points-3::after {
             content: " *";
             color: $color-primary;
         }
 
-        &--points-3::after {
-            content: " **";
-            color: $color-primary;
-        }
-
         &--points-4::after {
-            content: " ***";
+            content: " **";
             color: $color-primary;
         }
     }
@@ -332,12 +332,12 @@
         }
 
         &--2::before {
-            content: "** ";
+            content: "* ";
             color: $color-primary;
         }
 
         &--3::before {
-            content: "*** ";
+            content: "** ";
             color: $color-primary;
         }
 
