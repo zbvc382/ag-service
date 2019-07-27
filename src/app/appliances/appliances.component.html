@@ -664,9 +664,7 @@
         </header>
         <div class="repair-prices__extractor-hood" *ngIf="isExtractorHood">
             <div class="repair-prices__extractor-hood--title">
-                <h2 class="heading-2" *ngIf="!isTumbleDryer && !isElectricCooker">{{applianceName}}</h2>
-                <h2 class="heading-2" *ngIf="isTumbleDryer">{{applianceName}}</h2>
-                <h2 class="heading-2" *ngIf="isElectricCooker">{{applianceName}}</h2>
+                <h2 class="heading-2">{{applianceName}}</h2>
             </div>
 
             <div class="repair-prices__extractor-hood--price">
@@ -683,13 +681,16 @@
         </div>
         <div class="repair-prices__freestanding" *ngIf="!isExtractorHood">
             <div class="repair-prices__freestanding--title">
-                <h2 class="heading-2" *ngIf="!isTumbleDryer && !isElectricCooker">freestanding {{applianceName}}</h2>
+                <h2 class="heading-2" *ngIf="!isTumbleDryer && !isElectricCooker && !isFridgeFreezer">freestanding
+                    {{applianceName}}</h2>
                 <h2 class="heading-2" *ngIf="isTumbleDryer">{{applianceName}}</h2>
                 <h2 class="heading-2" *ngIf="isElectricCooker">{{applianceName}}</h2>
+                <h2 class="heading-2" *ngIf="isFridgeFreezer">{{applianceName}}</h2>
             </div>
 
             <div class="repair-prices__freestanding--price">
-                <p>£60 <span>+VAT</span></p>
+                <p *ngIf="!isFridgeFreezer">£60 <span>+VAT</span></p>
+                <p *ngIf="isFridgeFreezer">£80 <span>+VAT</span></p>
             </div>
 
             <div class="repair-prices__freestanding--points">
@@ -702,15 +703,18 @@
         </div>
         <div class="repair-prices__integrated" *ngIf="!isExtractorHood">
             <div class="repair-prices__integrated--title">
-                <h2 class="heading-2" *ngIf="!isTumbleDryer && !isElectricCooker">integrated {{applianceName}}</h2>
+                <h2 class="heading-2" *ngIf="!isTumbleDryer && !isElectricCooker && !isFridgeFreezer">integrated
+                    {{applianceName}}</h2>
                 <h2 class="heading-2" *ngIf="isTumbleDryer">condenser dryer</h2>
                 <h2 class="heading-2" *ngIf="isElectricCooker">range cooker</h2>
+                <h2 class="heading-2" *ngIf="isFridgeFreezer">{{applianceName}} (American Style)</h2>
             </div>
 
             <div class="repair-prices__integrated--price">
-                <p *ngIf="!isTumbleDryer && !isElectricCooker">£70 <span>+VAT</span></p>
+                <p *ngIf="!isTumbleDryer && !isElectricCooker && !isFridgeFreezer">£70 <span>+VAT</span></p>
                 <p *ngIf="isTumbleDryer">£65 <span>+VAT</span></p>
                 <p *ngIf="isElectricCooker">£80 <span>+VAT</span></p>
+                <p *ngIf="isFridgeFreezer">£85 <span>+VAT</span></p>
             </div>
 
             <div class="repair-prices__integrated--points">

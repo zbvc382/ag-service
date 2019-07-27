@@ -13,6 +13,23 @@
         }
     }
 
+    .table-foot {
+        grid-column: 1 / -1;
+        font-size: 1.6rem;
+
+        ul {
+            list-style-position: inside;
+        }
+
+        .premium-brands {
+            color: #3771c8;
+        }
+    
+        span {
+            color: $color-primary;
+        }
+    }
+
     &__table-responsive {
         grid-column: 1 / 2;
         font-size: $font-size-primary;
@@ -21,8 +38,34 @@
             grid-column: 1 / -1;
         }
 
+        .premium-brands {
+            color: #3771c8;
+        }
+    
+        span {
+            color: $color-primary;
+        }
+
         table {
             text-transform: capitalize;
+
+            @media only screen and (max-width: 600px) {
+                thead,tbody {
+                    font-size: 1.25rem;
+                }
+            }
+
+            @media only screen and (max-width: 400px) {
+                thead,tbody {
+                    font-size: 1.15rem;
+                }
+            }
+
+            @media only screen and (max-width: 350px) {
+                thead,tbody {
+                    font-size: 1.1rem;
+                }
+            }
 
             thead {
                 background-color: $color-primary;
