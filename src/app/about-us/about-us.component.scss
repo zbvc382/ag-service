@@ -5,6 +5,10 @@
     grid-column: center-start / center-end;
     color: $color-grey;
 
+    &__list-wrapper {
+        margin-left: 2.5rem;
+    }
+
     p {
         font-size: $font-size-primary;
         color: $color-grey;

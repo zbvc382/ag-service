@@ -42,12 +42,10 @@ body {
     text-transform: capitalize;
 
     h1 {
-        all: revert !important;
         font-size: 2.4rem;
         font-family: $font-primary;
-        font-weight: 400;
         color: $color-primary;
-        margin: 0 !important;
+        margin: 0 !important
     }
 
     &::before,
@@ -661,7 +659,7 @@ body {
     }
 
     &__list-wrapper {
-        margin-left: 1.75rem;
+        margin-left: 2.5rem;
     }
 
     &__item {

@@ -5,7 +5,8 @@
     <div class="header">
         <div class="header__logo">
             <a [routerLink]="[ '/']">
-                <img class="header__logo-wrapper--image" src="../../../assets/images/logo-header.svg" alt="" />
+                <img class="header__logo-wrapper--image" src="../../../assets/images/logo-header.svg"
+                    alt="Company logo" />
             </a>
         </div>
         <div class="header__email">
@@ -32,7 +33,7 @@
 
     <div class="intro">
         <div class="intro__image">
-            <img src="../../assets/images/appliances-cover.jpg" alt="">
+            <img src="../../assets/images/appliances-cover.jpg" alt="Two appliances">
         </div>
         <header>
             <h1>{{headerText}}</h1>
@@ -144,7 +145,7 @@
         <header class="section-heading">
             <h1>services</h1>
         </header>
-        <p class="section-text">A&G specialises in <span><a
+        <p class="section-text">A&amp;G specialises in <span><a
                     [routerLink]="[ '/appliance-repairs/washing-machine-repairs' ]">washing machine repairs</a></span>
             in South, East, West, Central, and North London.
             Engineers have many years
@@ -314,7 +315,7 @@
         <div class="reviews">
             <div class="review">
                 <div class="review__profile-pic">
-                    <img src="../../../assets/images/profile_3.png" alt="">
+                    <img src="../../../assets/images/profile_3.png" alt="Google profile picture">
                 </div>
                 <div class="review__profile-name">
                     Marie Adam
@@ -340,7 +341,8 @@
                     <svg class="icon icon--md icon--primary">
                         <use xlink:href="../../../assets/images/sprite.svg#quote_left"></use>
                     </svg>
-                    <p>Very professional & efficient. Great service at a very good price. I would definitely recommend.
+                    <p>Very professional &amp; efficient. Great service at a very good price. I would definitely
+                        recommend.
                     </p>
                     <svg class="icon icon--md icon--primary">
                         <use xlink:href="../../../assets/images/sprite.svg#quote_right"></use>
@@ -349,7 +351,7 @@
             </div>
             <div class="review">
                 <div class="review__profile-pic">
-                    <img src="../../../assets/images/profile_1.png" alt="">
+                    <img src="../../../assets/images/profile_1.png" alt="Google profile picture">
                 </div>
                 <div class="review__profile-name">
                     George Pidgeon
@@ -383,7 +385,7 @@
             </div>
             <div class="review">
                 <div class="review__profile-pic">
-                    <img src="../../../assets/images/profile_3.png" alt="">
+                    <img src="../../../assets/images/profile_3.png" alt="Google profile picture">
                 </div>
                 <div class="review__profile-name">
                     Annie Yusuf
@@ -417,7 +419,7 @@
             </div>
             <div class="review">
                 <div class="review__profile-pic">
-                    <img src="../../../assets/images/profile_2.png" alt="">
+                    <img src="../../../assets/images/profile_2.png" alt="Google profile picture">
                 </div>
                 <div class="review__profile-name">
                     Ellie Roberts
@@ -473,7 +475,8 @@
     <div class="header">
         <div class="header__logo">
             <a [routerLink]="[ '/']">
-                <img class="header__logo-wrapper--image" src="../../../assets/images/logo-header.svg" alt="" />
+                <img class="header__logo-wrapper--image" src="../../../assets/images/logo-header.svg"
+                    alt="Company logo" />
             </a>
         </div>
         <div class="header__email">
@@ -497,14 +500,14 @@
     </div>
     <div class="intro">
         <div class="intro__image">
-            <img src="../../assets/images/wm-cover.jpg" alt="" *ngIf="isWashingMachine">
-            <img src="../../assets/images/dw-cover.jpg" alt="" *ngIf="isDishwasher">
-            <img src="../../assets/images/td-cover.jpg" alt="" *ngIf="isTumbleDryer">
-            <img src="../../assets/images/eo-cover.jpg" alt="" *ngIf="isElectricCooker">
-            <img src="../../assets/images/mw-cover.jpg" alt="" *ngIf="isMicrowave">
-            <img src="../../assets/images/eh-cover.jpg" alt="" *ngIf="isExtractorHood">
-            <img src="../../assets/images/ff-cover.jpg" alt="" *ngIf="isFridgeFreezer">
-            <img src="../../assets/images/ca-cover.jpg" alt="" *ngIf="isCommercialAppliances">
+            <img src="../../assets/images/wm-cover.jpg" alt="Washing machine" *ngIf="isWashingMachine">
+            <img src="../../assets/images/dw-cover.jpg" alt="Dishwasher" *ngIf="isDishwasher">
+            <img src="../../assets/images/td-cover.jpg" alt="Tumble Dryer" *ngIf="isTumbleDryer">
+            <img src="../../assets/images/eo-cover.jpg" alt="Electric Cooker" *ngIf="isElectricCooker">
+            <img src="../../assets/images/mw-cover.jpg" alt="Microwave in the kitchen" *ngIf="isMicrowave">
+            <img src="../../assets/images/eh-cover.jpg" alt="Extractor Hod" *ngIf="isExtractorHood">
+            <img src="../../assets/images/ff-cover.jpg" alt="Fridge Freezer" *ngIf="isFridgeFreezer">
+            <img src="../../assets/images/ca-cover.jpg" alt="Kitchen" *ngIf="isCommercialAppliances">
         </div>
         <header>
             <h1>{{headerText}}</h1>
@@ -549,38 +552,39 @@
         <header class="section-heading">
             <h1>{{applianceName}} repair service in london</h1>
         </header>
-        <p *ngIf="isWashingMachine" class="appliance-repair-intro__title-text">A&G Services is an established,
+        <p *ngIf="isWashingMachine" class="appliance-repair-intro__title-text">A&amp;G Services is an established,
             professional, washing machine repair company in London.
             Our engineers are fully trained and competent in <b>washer dryer</b> and <b>washing machine</b> repairs in
             London.</p>
-        <p *ngIf="isDishwasher" class="appliance-repair-intro__title-text">A&G Services is an established, professional
+        <p *ngIf="isDishwasher" class="appliance-repair-intro__title-text">A&amp;G Services is an established,
+            professional
             dishwasher repair company.
             Our engineers are fully trained and competent in <b>dishwasher</b> repairs in London.</p>
-        <p *ngIf="isTumbleDryer" class="appliance-repair-intro__title-text">A&G Services is an established,
+        <p *ngIf="isTumbleDryer" class="appliance-repair-intro__title-text">A&amp;G Services is an established,
             professional
             tumble dryer repair company.
             Our engineers are fully trained and competent in <b>tumble dryer</b> repairs in London.</p>
-        <p *ngIf="isElectricCooker" class="appliance-repair-intro__title-text">A&G Services is an established,
+        <p *ngIf="isElectricCooker" class="appliance-repair-intro__title-text">A&amp;G Services is an established,
             professional
             electric cooker/oven repair company.
             Our engineers are fully trained and competent in <b>electric cooker</b>, and <b>electric oven</b> repairs in
             London.</p>
-        <p *ngIf="isMicrowave" class="appliance-repair-intro__title-text">A&G Services is an established,
+        <p *ngIf="isMicrowave" class="appliance-repair-intro__title-text">A&amp;G Services is an established,
             professional
             microwave repair company.
             Our engineers are fully trained and competent in <b>microwave</b> repairs in London.</p>
-        <p *ngIf="isExtractorHood" class="appliance-repair-intro__title-text">A&G Services is an established,
+        <p *ngIf="isExtractorHood" class="appliance-repair-intro__title-text">A&amp;G Services is an established,
             professional
             extractor hood repair company.
             Our engineers are fully trained and competent in <b>extractor hood</b> repairs in London.</p>
-        <p *ngIf="isFridgeFreezer" class="appliance-repair-intro__title-text">A&G Services is an established,
+        <p *ngIf="isFridgeFreezer" class="appliance-repair-intro__title-text">A&amp;G Services is an established,
             professional
             fridge freezer repair company.
             Our engineers are fully trained and competent in <b>fridge</b>, <b>freezer</b>, and <b>fridge freezer</b>
             repairs in
             London.</p>
         <div class="appliance-repair-intro__text">
-            <h2 class="heading-2">At A&G we follow these principles when repairing a {{applianceName}}:</h2>
+            <h2 class="heading-2">At A&amp;G we follow these principles when repairing a {{applianceName}}:</h2>
             <ul>
                 <li>Arrival of the engineer at a convenient time for you.</li>
                 <li>We carry large number of spare parts and tools to carry our the repair on the first visit.</li>
@@ -1332,7 +1336,7 @@
         <div class="reviews">
             <div class="review">
                 <div class="review__profile-pic">
-                    <img src="../../../assets/images/profile_3.png" alt="">
+                    <img src="../../../assets/images/profile_3.png" alt="Google profile picture">
                 </div>
                 <div class="review__profile-name">
                     Marie Adam
@@ -1358,7 +1362,8 @@
                     <svg class="icon icon--md icon--primary">
                         <use xlink:href="../../../assets/images/sprite.svg#quote_left"></use>
                     </svg>
-                    <p>Very professional & efficient. Great service at a very good price. I would definitely recommend.
+                    <p>Very professional &amp; efficient. Great service at a very good price. I would definitely
+                        recommend.
                     </p>
                     <svg class="icon icon--md icon--primary">
                         <use xlink:href="../../../assets/images/sprite.svg#quote_right"></use>
@@ -1367,7 +1372,7 @@
             </div>
             <div class="review">
                 <div class="review__profile-pic">
-                    <img src="../../../assets/images/profile_1.png" alt="">
+                    <img src="../../../assets/images/profile_1.png" alt="Google profile picture">
                 </div>
                 <div class="review__profile-name">
                     George Pidgeon
@@ -1401,7 +1406,7 @@
             </div>
             <div class="review">
                 <div class="review__profile-pic">
-                    <img src="../../../assets/images/profile_3.png" alt="">
+                    <img src="../../../assets/images/profile_3.png" alt="Google profile picture">
                 </div>
                 <div class="review__profile-name">
                     Annie Yusuf
@@ -1435,7 +1440,7 @@
             </div>
             <div class="review">
                 <div class="review__profile-pic">
-                    <img src="../../../assets/images/profile_2.png" alt="">
+                    <img src="../../../assets/images/profile_2.png" alt="Google profile picture">
                 </div>
                 <div class="review__profile-name">
                     Ellie Roberts
