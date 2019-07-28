@@ -75,31 +75,31 @@
 
     <section class="reasons">
         <header class="section-heading">
-            <h1 class="heading-1 heading-1--primary">why choose us</h1>
+            <h1>why choose us</h1>
         </header>
         <div class="reasons__reason reasons__reason--1">
-            <svg class="icon icon--lg icon icon--secondary">
+            <svg class="icon icon--secondary">
                 <use xlink:href="../../../assets/images/sprite.svg#security_checked"></use>
             </svg>
-            <h3 class="heading-3 heading-3--grey">6 months guarantee on all appliance repairs and parts</h3>
+            <h3 class="heading-3--grey">6 months guarantee on all appliance repairs and parts</h3>
         </div>
         <div class="reasons__reason reasons__reason--2">
-            <svg class="icon icon--lg icon icon--secondary">
+            <svg class="icon icon--secondary">
                 <use xlink:href="../../../assets/images/sprite.svg#person_at_home"></use>
             </svg>
-            <h3 class="heading-3 heading-3--grey">Unlimited return visits at no additional cost</h3>
+            <h3 class="heading-3--grey">Same or next day appointments at no additional cost</h3>
         </div>
         <div class="reasons__reason reasons__reason--3">
-            <svg class="icon icon--lg icon icon--secondary">
+            <svg class="icon icon--secondary">
                 <use xlink:href="../../../assets/images/sprite.svg#cancel_2"></use>
             </svg>
-            <h3 class="heading-3 heading-3--grey">No hidden costs, no call out charges, no parking fees</h3>
+            <h3 class="heading-3--grey">No hidden costs, no call out charges, no parking fees</h3>
         </div>
         <div class="reasons__reason reasons__reason--4">
-            <svg class="icon icon--lg icon icon--secondary">
+            <svg class="icon icon--secondary">
                 <use xlink:href="../../../assets/images/sprite.svg#user_group_man_man"></use>
             </svg>
-            <h3 class="heading-3 heading-3--grey">Technicians with over 15 years of experience</h3>
+            <h3 class="heading-3--grey">Technicians with over 15 years of experience</h3>
         </div>
     </section>
 
@@ -142,7 +142,7 @@
 
     <section class="services-container">
         <header class="section-heading">
-            <h1 class="heading-1 heading-1--primary">Services</h1>
+            <h1>services</h1>
         </header>
         <p class="section-text">A&G specialises in <span><a
                     [routerLink]="[ '/appliance-repairs/washing-machine-repairs' ]">washing machine repairs</a></span>
@@ -217,7 +217,7 @@
 
     <section class="brands">
         <header class="section-heading">
-            <h1 class="heading-1 heading-1--primary">Brands We Repair</h1>
+            <h1>brands we repair</h1>
         </header>
         <h2 class="heading-2 heading-2--white">We repair and work with all the major appliance makes:</h2>
         <div class="brand-grid">
@@ -309,7 +309,7 @@
 
     <section class="reviews-container">
         <header class="section-heading">
-            <h1 class="heading-1 heading-1--primary">google reviews</h1>
+            <h1>google reviews</h1>
         </header>
         <div class="reviews">
             <div class="review">
@@ -547,7 +547,7 @@
 
     <section class="appliance-repair-intro">
         <header class="section-heading">
-            <h1 class="heading-1 heading-1--primary">{{applianceName}} repair service in london</h1>
+            <h1>{{applianceName}} repair service in london</h1>
         </header>
         <p *ngIf="isWashingMachine" class="appliance-repair-intro__title-text">A&G Services is an established,
             professional, washing machine repair company in London.
@@ -583,17 +583,13 @@
             <h2 class="heading-2">At A&G we follow these principles when repairing a {{applianceName}}:</h2>
             <ul>
                 <li>Arrival of the engineer at a convenient time for you.</li>
-                <li>We carry large number of spare parts and tools to carry our the repair on the first visit. In only
-                    10-15% of instances we need to come back the second time in which case we charge £25 for the second
-                    visit.</li>
+                <li>We carry large number of spare parts and tools to carry our the repair on the first visit.</li>
                 <li>Extreme care taken when working on the premises.</li>
                 <li>We are responsible for any damage caused to the property of our customers, although this does not
                     happen.</li>
                 <li>Professional advice on the proper use of the repaired equipment.</li>
-                <li>We issue 6 months warranty on the repair.</li>
+                <li>We issue 6 months warranty on the repair and parts.</li>
                 <li>Affordable/list prices on spare parts.</li>
-                <li>Our appliance repair service allows us to quickly repair a broken appliance on the spot, saving the
-                    customer time and money.</li>
             </ul>
         </div>
         <div class="appliance-repair-intro__icon">
@@ -660,7 +656,7 @@
 
     <section class="repair-prices" *ngIf="!isCommercialAppliances">
         <header class="section-heading">
-            <h1 class="heading-1 heading-1--primary">repair prices</h1>
+            <h1>repair prices</h1>
         </header>
         <div class="repair-prices__extractor-hood" *ngIf="isExtractorHood">
             <div class="repair-prices__extractor-hood--title">
@@ -738,7 +734,7 @@
 
     <section class="common-faults" *ngIf="!isCommercialAppliances">
         <header class="section-heading">
-            <h1 class="heading-1 heading-1--primary">common faults</h1>
+            <h1>common faults</h1>
         </header>
         <h2 class="heading-2">We repair all {{applianceName}} issues inluding some of the most common ones:</h2>
 
@@ -992,7 +988,7 @@
 
     <section class="repair-tips" *ngIf="isWashingMachine">
         <header class="section-heading">
-            <h1 class="heading-1 heading-1--primary">repair tips</h1>
+            <h1>repair tips</h1>
         </header>
         <div class="repair-tips__text">
             <p> A common problem is a <b>blocked filter</b> at the bottom of the machine or a <b>blocked drain
@@ -1056,7 +1052,7 @@
 
     <section class="repair-tips" *ngIf="isDishwasher">
         <header class="section-heading">
-            <h1 class="heading-1 heading-1--primary">repair tips</h1>
+            <h1>repair tips</h1>
         </header>
         <div class="repair-tips__text">
             <b class="p-heading">Lack of water</b>
@@ -1101,7 +1097,7 @@
 
     <section class="repair-tips" *ngIf="isTumbleDryer">
         <header class="section-heading">
-            <h1 class="heading-1 heading-1--primary">repair tips</h1>
+            <h1>repair tips</h1>
         </header>
         <div class="repair-tips__text">
             <b class="p-heading">Clothes feel warm but don't fully dry</b>
@@ -1145,7 +1141,7 @@
 
     <section class="repair-tips" *ngIf="isElectricCooker">
         <header class="section-heading">
-            <h1 class="heading-1 heading-1--primary">repair tips</h1>
+            <h1>repair tips</h1>
         </header>
         <div class="repair-tips__text">
             <p> After working in the appliance repair industry for a long time we have a list of common problems that
@@ -1182,7 +1178,7 @@
 
     <section class="repair-tips" *ngIf="isMicrowave">
         <header class="section-heading">
-            <h1 class="heading-1 heading-1--primary">repair tips</h1>
+            <h1>repair tips</h1>
         </header>
         <div class="repair-tips__text">
             <p><b>Note:</b> Before touching any internal parts, be sure to discharge the capacitor. The capacitor stores
@@ -1239,7 +1235,7 @@
 
     <section class="brands">
         <header class="section-heading">
-            <h1 class="heading-1 heading-1--primary">Brands We Repair</h1>
+            <h1>brands we repair</h1>
         </header>
         <h2 class="heading-2">We repair and work with all the major appliance makes:</h2>
         <div class="brand-grid">
@@ -1331,7 +1327,7 @@
 
     <section class="reviews-container">
         <header class="section-heading">
-            <h1 class="heading-1 heading-1--primary">google reviews</h1>
+            <h1>google reviews</h1>
         </header>
         <div class="reviews">
             <div class="review">

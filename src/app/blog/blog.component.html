@@ -67,8 +67,8 @@
 
     <section class="blogs-container">
         <header class="section-heading">
-            <h1 class="heading-1 heading-1--primary" *ngIf="isMain">our recent blog posts</h1>
-            <h1 class="heading-1 heading-1--primary" *ngIf="!isMain">blog post</h1>
+            <h1 *ngIf="isMain">our recent blog posts</h1>
+            <h1 *ngIf="!isMain">blog post</h1>
         </header>
         <div class="blogs" *ngIf="isMain">
 
@@ -270,7 +270,7 @@
 
     <section class="brands">
         <header class="section-heading">
-            <h1 class="heading-1 heading-1--primary">Brands We Repair</h1>
+            <h1>brands we repair</h1>
         </header>
         <h2 class="heading-2">We repair and work with all the major appliance makes:</h2>
         <div class="brand-grid">

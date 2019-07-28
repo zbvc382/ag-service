@@ -9,7 +9,8 @@
     @extend %fonts;
     font-size: 3rem;
     color: #fff;
-    line-height: 1.2 !important;
+    line-height: 1 !important;
+    margin: 0 !important;
 
     &--grey {
         color: $color-grey;
