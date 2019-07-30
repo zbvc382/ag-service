@@ -10,6 +10,7 @@ import { HomeFormModel } from '../../_models/HomeFormModel';
 })
 export class HomeFormComponent implements OnInit, OnDestroy {
   @Output() quoteSubmitted = new EventEmitter();
+  @Output() scrollUp = new EventEmitter();
 
   form: FormGroup;
   isError = false;
@@ -92,6 +93,10 @@ export class HomeFormComponent implements OnInit, OnDestroy {
     } else {
       this.isError = true;
     }
+  }
+
+  scroll() {
+    this.scrollUp.emit();
   }
 
   ngOnDestroy(): void {

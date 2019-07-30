@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { HomeFormModel } from '../_models/HomeFormModel';
 import { MetaService } from '../_services/meta.service';
-import { Router } from '@angular/router';
 import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
@@ -10,6 +9,7 @@ import { Title, Meta } from '@angular/platform-browser';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  @ViewChild('tab', { static: false }) totalEl: ElementRef<HTMLElement>;
   bothTypes = false;
   price = '£';
   isResult = false;
@@ -42,7 +42,6 @@ export class HomeComponent implements OnInit {
   commercial = [
     'Commercial Microwave',
     'Commercial Dishwasher',
-    'Commercial Oven'
   ];
 
   constructor(private title: Title, private meta: Meta, private metaService: MetaService) { }
@@ -165,6 +164,7 @@ export class HomeComponent implements OnInit {
 
   resetQuote() {
     this.isResult = false;
+    this.totalEl.nativeElement.scrollIntoView();
   }
 
   get quoteFitting() {
@@ -186,5 +186,9 @@ export class HomeComponent implements OnInit {
 
   get quoteJobType() {
     return this.quote.jobType;
+  }
+
+  settup() {
+    this.totalEl.nativeElement.scrollIntoView();
   }
 }

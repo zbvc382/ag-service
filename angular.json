@@ -26,6 +26,11 @@
                 "glob": "favicon.ico",
                 "input": "src/assets/images",
                 "output": "/"
+              },
+              {
+                "glob": "robots.txt",
+                "input": "src/assets",
+                "output": "/"
               }
             ],
             "styles": [
@@ -95,6 +100,11 @@
               {
                 "glob": "favicon.ico",
                 "input": "src/assets/images",
+                "output": "/"
+              },
+              {
+                "glob": "robots.txt",
+                "input": "src/assets",
                 "output": "/"
               }
             ]

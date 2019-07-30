@@ -1,36 +1,6 @@
 @import "../../styles/variables";
 @import "../../styles/typography";
 
-// .section-heading {
-//     margin: 4rem 0;
-//     grid-column: 1 / -1;
-//     display: grid;
-//     grid-template-columns: 1fr max-content 1fr;
-//     grid-column-gap: 1.5rem;
-//     align-items: center;
-//     text-transform: capitalize;
-
-//     &::before,
-//     &::after {
-//         content: "";
-//         height: 0.15rem;
-//         display: block;
-//         background-color: $color-secondary;
-//     }
-
-//     @media only screen and (max-width: 500px) {
-//         h1 {
-//             font-size: 2.5rem;
-//         }
-//     }
-
-//     @media only screen and (max-width: 450px) {
-//         h1 {
-//             font-size: 2.2rem;
-//         }
-//     }
-// }
-
 .intro {
 
     @media only screen and (max-width: 600px) {

@@ -222,6 +222,10 @@
             @media only screen and (max-width: 1100px) {
                 grid-column: col-start 1 / col-end 8;
             }
+            
+            @media only screen and (min-width: 1101px) {
+                margin-right: 2rem;
+            }
 
             .header-text {
                 justify-self: center;
@@ -251,9 +255,10 @@
             .call-info {
                 font-size: 2.5rem;
                 justify-self: center;
-
+            
                 p {
                     margin-bottom: 0;
+                    text-align: center;
                 }
 
                 span {
@@ -275,7 +280,8 @@
             justify-self: center;
             display: grid;
             grid-row-gap: 2rem;
-            align-content: start;
+            align-content: center;
+            text-align: justify;
 
             @media only screen and (max-width: 1100px) {
                 grid-column: col-start 1 / col-end 8;
@@ -287,6 +293,7 @@
             grid-template-columns: repeat(3, minmax(min-content, max-content));
             grid-column-gap: 1rem;
             grid-row-gap: 1rem;
+            justify-content: center;
 
 
             @media only screen and (max-width: 600px) {
@@ -329,28 +336,10 @@
             padding: 1rem;
             align-content: start;
 
-            &--wrapper {
-                margin-left: 1.75rem;
-                font-size: 1.4rem;
-
-                ul {
-                    margin-bottom: 0 !important;
-                }
-
-                li:not(:last-child) {
-                    margin-bottom: 0.5rem;
-                }
-            }
-
             p {
-                font-size: 1.25rem;
+                font-size: 1.35rem;
                 display: inline-block;
                 margin-bottom: 0 !important;
-            }
-
-            svg {
-                fill: $color-primary;
-                margin-right: 1rem;
             }
         }
     }
@@ -395,6 +384,21 @@
 
     &__text-2 {
         @extend %about-us-text;
+
+        p {
+            font-size: $font-size-primary;
+            color: $color-grey;
+            text-rendering: optimizeLegibility;
+            text-align: justify;
+    
+            a,
+            span {
+                text-decoration: none;
+                color: $color-primary;
+                font-weight: 700;
+                font-size: 1.8rem;
+            }
+        }
     }
 
     &__image-container {
@@ -469,6 +473,11 @@
 
     @media only screen and (max-width: 1060px) {
         grid-column: full-start / full-end;
+
+        .section-heading {
+            margin-left: 3rem;
+            margin-right: 3rem;
+        }
     }
 
     &__button-container {
@@ -506,10 +515,14 @@
     .coverage-text {
         font-size: $font-size-primary;
         color: $color-grey;
-        margin-bottom: 0;
         grid-column: 2 / 3;
         grid-row: 2 / 3;
         text-align: center;
+
+        span {
+            font-weight: 700;
+            font-size: 1.8rem;
+        }
 
         @media only screen and (max-width: 1060px) {
             align-self: center;
@@ -520,6 +533,10 @@
         @media only screen and (max-width: 850px) {
             grid-column: 1 / -1;
             grid-row: auto;
+            // margin: 2rem 0;
+            margin-bottom: 2rem;
+            margin-top: 2rem;
+            
         }
     }
 

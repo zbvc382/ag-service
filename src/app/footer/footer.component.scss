@@ -89,8 +89,11 @@
             display: flex;
             align-content: center;
 
+            .contact-mr {
+                margin-right: 1.5rem;
+            }
+
             svg {
-                margin-right: 1rem;
                 fill: #fff;
             }
         }

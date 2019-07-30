@@ -3,7 +3,7 @@
     <div class="form-group">
       <label class="label label--required" for="applianceType">Appliance Type</label>
       <select class="form-control" formControlName="applianceType"
-        [ngClass]="{'form-group--error': isError && !form.controls.applianceType.valid}">
+        [ngClass]="{'form-group--error': isError && !form.controls.applianceType.valid}" aria-label="Appliance Type">
         <option value="" disabled>Please select</option>
         <option value="Washing Machine">Washing Machine</option>
         <option value="Washer Dryer">Washer Dryer</option>
@@ -18,13 +18,12 @@
         <option value="Microwave">Microwave</option>
         <option value="Commercial Microwave">Commercial Microwave</option>
         <option value="Commercial Dishwasher">Commercial Dishwasher</option>
-        <option value="Commercial Oven">Commercial Oven</option>
       </select>
     </div>
     <div class="form-group">
       <label class="label label--required" for="applianceMake">Appliance Make</label>
       <select class="form-control" formControlName="applianceMake"
-        [ngClass]="{'form-group--error': isError && !form.controls.applianceMake.valid}">
+        [ngClass]="{'form-group--error': isError && !form.controls.applianceMake.valid}" aria-label="Appliance Make">
         <option value="" disabled>Please select</option>
         <option value='AEG'>AEG</option>
         <option value='Baumatic'>Baumatic</option>
@@ -54,7 +53,7 @@
     <div class="form-group">
       <label class="label label--required" for="jobType">Job type</label>
       <select class="form-control" formControlName="jobType"
-        [ngClass]="{'form-group--error': isError && !form.controls.jobType.valid}">
+        [ngClass]="{'form-group--error': isError && !form.controls.jobType.valid}" aria-label="Job Type">
         <option value="" disabled>Please select</option>
         <ng-container *ngIf="isRepAndInst; else repOnly">
           <option value="Repair">Repair</option>
@@ -68,7 +67,8 @@
     <div class="form-group">
       <label class="label label--required" for="fitting">Freestanding or Intergrated</label>
       <select class="form-control" formControlName="fitting"
-        [ngClass]="{'form-group--error': isError && !form.controls.fitting.valid}">
+        [ngClass]="{'form-group--error': isError && !form.controls.fitting.valid}"
+        aria-label="Freestanding or Integrated">
         <option value="" disabled>Please select</option>
         <option value="Freestanding">Freestanding</option>
         <option value="Integrated">Integrated</option>
@@ -84,7 +84,7 @@
   </div>
   <div class="row">
     <div class="col text-center">
-      <button type="submit" class="btn-round btn--white">submit</button>
+      <button type="submit" class="btn-round btn--white" aria-label="Submit" (click)="scroll()">submit</button>
     </div>
   </div>
 </form>

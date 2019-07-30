@@ -12,6 +12,17 @@
     @media only screen and (max-width: 650px) {
         grid-template-columns: 1fr;
     }
+
+    label {
+        font-size: $font-size-secondary;
+        margin-left: 0.1rem;
+    }
+
+    @media screen and (-webkit-min-device-pixel-ratio: 0) {
+        select:focus, textarea:focus, input:focus {
+                font-size: 16px;
+            }
+        }
 }
 
 select.form-control:not([size]):not([multiple]) {

@@ -30,32 +30,32 @@
       <img src="../../assets/images/intro-cover.jpg" alt="Kitchen">
     </div>
     <header>
-      <h1>The UK's number 1 domestic appliance repair service</h1>
+      <h1>Domestic & Commercial Appliance Repairs in London</h1>
     </header>
     <div class="intro__sub">
       <div class="sub-item">
         <svg class="icon icon--md icon--primary">
           <use xlink:href="../../../assets/images/sprite.svg#checked"></use>
         </svg>
-        <p>Fast, reliable service</p>
+        <p>Friendly and reliable service</p>
       </div>
       <div class="sub-item">
         <svg class="icon icon--md icon--primary">
           <use xlink:href="../../../assets/images/sprite.svg#checked"></use>
         </svg>
-        <p>Largest UK coverage</p>
+        <p>Highly qualified engineers</p>
       </div>
       <div class="sub-item">
         <svg class="icon icon--md icon--primary">
           <use xlink:href="../../../assets/images/sprite.svg#checked"></use>
         </svg>
-        <p>Same/next day appointments</p>
+        <p>Same day service available</p>
       </div>
       <div class="sub-item">
         <svg class="icon icon--md icon--primary">
           <use xlink:href="../../../assets/images/sprite.svg#checked"></use>
         </svg>
-        <p>Same/next day appointments</p>
+        <p>Fixed repair charges</p>
       </div>
     </div>
     <div class="intro__discount">
@@ -73,28 +73,30 @@
       <svg class="icon icon--lg icon icon--secondary">
         <use xlink:href="../../../assets/images/sprite.svg#security_checked"></use>
       </svg>
-      <h3 class="heading-3 heading-3--grey">6 months guarantee on all appliance repairs and parts</h3>
+      <h3 class="heading-3 heading-3--grey">6 months guarantee on all appliance repairs and parts<span
+          class="asterisk">&nbsp;*</span></h3>
     </div>
     <div class="reasons__reason reasons__reason--2">
       <svg class="icon icon--lg icon icon--secondary">
         <use xlink:href="../../../assets/images/sprite.svg#person_at_home"></use>
       </svg>
-      <h3 class="heading-3 heading-3--grey">Same or next day appointments at no additional cost</h3>
+      <h3 class="heading-3 heading-3--grey">Same and next day visits for East London postcodes</h3>
     </div>
     <div class="reasons__reason reasons__reason--3">
       <svg class="icon icon--lg icon icon--secondary">
         <use xlink:href="../../../assets/images/sprite.svg#cancel_2"></use>
       </svg>
-      <h3 class="heading-3 heading-3--grey">No hidden costs, no call out charges, no parking fees</h3>
+      <h3 class="heading-3 heading-3--grey">No call out charges or parking fees<span class="asterisk">&nbsp;**</span>
+      </h3>
     </div>
     <div class="reasons__reason reasons__reason--4">
       <svg class="icon icon--lg icon icon--secondary">
         <use xlink:href="../../../assets/images/sprite.svg#user_group_man_man"></use>
       </svg>
-      <h3 class="heading-3 heading-3--grey">Technicians with over 15 years of experience</h3>
+      <h3 class="heading-3 heading-3--grey">Technicians with many years of experience</h3>
     </div>
   </section>
-  <div class="request-tab">
+  <div #tab class="request-tab">
     <div class="request-tab__wrapper">
       <svg class="icon icon icon--secondary">
         <use xlink:href="../../../assets/images/sprite.svg#bpc"></use>
@@ -110,22 +112,25 @@
           <svg class="icon icon--md icon--primary">
             <use xlink:href="../../../assets/images/sprite.svg#checkmark"></use>
           </svg>
-          <p>Hassle-Free Appointments</p>
+          <p>No hidden charges</p>
         </div>
         <div class="subheading-item">
           <svg class="icon icon--md icon--primary">
             <use xlink:href="../../../assets/images/sprite.svg#checkmark"></use>
           </svg>
-          <p>Fully Equipped Vans</p>
+          <p>Weekend visits at no additional cost</p>
         </div>
         <div class="subheading-item">
           <svg class="icon icon--md icon--primary">
             <use xlink:href="../../../assets/images/sprite.svg#checkmark"></use>
           </svg>
-          <p>Highly Qualified Engineers</p>
+          <p>Affordable prices
+          </p>
         </div>
       </div>
-      <app-home-form (quoteSubmitted)="quoteRequest($event)" class="request__quote--form"></app-home-form>
+      <app-home-form (scrollUp)="settup($event)" (quoteSubmitted)="quoteRequest($event)" class="request__quote--form">
+      </app-home-form>
+
     </div>
     <div *ngIf="isResult" class="request__result">
       <div class="result__price-container">
@@ -137,7 +142,12 @@
           <p id="spare-parts-disc">(parts charged separately)</p>
         </div>
         <div class="call-info">
-          <p>Call <span><a href="tel:0207 476 8725">0207 476 8725</a></span> to book a service today!</p>
+          <p>For more information or to book a service call us at
+              <span><a href="tel:0207 476 8725">0207 476 8725</a></span>
+            <!-- <span><a href="tel:0207 476 8725">0207&nbsp;</a></span>
+            <span><a href="tel:0207 476 8725">476&nbsp;</a></span>
+            <span><a href="tel:0207 476 8725">8725&nbsp;</a></span> -->
+          </p>
         </div>
       </div>
       <div class="result__terms">
@@ -162,57 +172,15 @@
           </div>
         </div>
         <div class="result__term-items">
-          <div class="result__term-items--wrapper">
-            <ul>
-              <li>Fixed diagnostic and repair charges.</li>
-              <li>Evening and weekend appointments at no additional cost.</li>
-              <li>We carry large number of spare parts to carry out the repair on the first visit.</li>
-              <li>No extra charge for revisits if a new part needs to be ordered.</li>
-              <li>We are fully insured for public liability.</li>
-            </ul>
-          </div>
+          <p>The total price includes the diagnostic and repair charge. The diagnostic charge covers the time spent by
+            the engineer identifying the fault and is paid on the first visit. After the diagnostics, you will be
+            informed about the condition of the appliance, and what needs to be fixed. The repair charge is payable once
+            the appliance has been repaired and is confirmed to work. In
+            cases when the appliance is not repairable or beyond economical repair, you will only need to pay the
+            diagnostic charge.</p>
         </div>
       </div>
       <button class="quote-reset btn-round btn--white" (click)="resetQuote()">new quote</button>
-    </div>
-  </section>
-  <section class="about-us">
-    <header class="section-heading">
-      <h1>about us</h1>
-    </header>
-    <div class="about-us__content-container">
-      <div class="about-us__text-1">
-        <p>
-          Our appliance repair service centre offers local professional repair service of household appliances and
-          electronics using top quality tradesmen and parts. We are able to resolve technical problems and mend
-          your appliance right in your home. Differentiated approach to technical problems by experienced tradesmen
-          allows our engineers to accurately determine the nature of the problem, source the necessary parts, if they
-          need replacing and quickly repair the failed appliance, be it a <span><a
-              [routerLink]="[ '/appliance-repairs/washing-machine-repairs' ]">washing machine repairs</a></span>,
-          <span><a [routerLink]="[ '/appliance-repairs/microwave-repairs' ]">microwave</a></span>, <span><a
-              [routerLink]="[ '/appliance-repairs/electric-oven-repairs' ]">electric oven</a></span>,
-          <span><a [routerLink]="[ '/appliance-repairs/dishwasher-repairs' ]">dishwasher</a></span> or any other
-          white good.
-        </p>
-      </div>
-      <div class="about-us__text-2">
-        <p>Our service is based on many years of experience with various
-          tools and devices, supplemented by a serious knowledge of <b>domestic</b> and <b>commercial</b> appliances.
-          The use of
-          advanced tools and manufacturer’s spare parts accelerates the process of repairing household appliances, our
-          <b>repairs are guaranteed for 6 months</b>.</p>
-        <p>
-      </div>
-      <div class="about-us__image-container">
-        <figure>
-          <img src="../../assets/images/van.jpg" alt="Van" />
-          <figcaption>
-            <p>
-              Over 15 years of experience in white goods servicing
-            </p>
-          </figcaption>
-        </figure>
-      </div>
     </div>
   </section>
   <section class="work">
@@ -230,7 +198,7 @@
         <div class="work__list-wrapper">
           <ul>
             <li>A fixed diagnostic charge of £35 which covers the time spent identifying the cause of the fault.</li>
-            <li>A repair charge payable after your appliance is repaired and confirmed as working.</li>
+            <li>A repair charge that is payable after your appliance has been repaired.</li>
             <li>No service fee is charged if the engineer is unable to identify the fault.
             </li>
             <li>If new parts are required,
@@ -260,6 +228,47 @@
         <h3 class="heading-3 heading-3--secondary">guaranteed for peace of mind</h3>
         <p>We guarantee all our work and parts fitted for six months. This means if the appliance
           develops the same fault, we will fix it for you, free of charge.</p>
+      </div>
+    </div>
+  </section>
+  <section class="about-us">
+    <header class="section-heading">
+      <h1>about us</h1>
+    </header>
+    <div class="about-us__content-container">
+      <div class="about-us__text-1">
+        <p>
+          Our appliance repair service centre offers local professional repair service of household appliances and
+          electronics using top quality tradesmen and parts. We are able to resolve technical problems and mend
+          your appliance right in your home. Differentiated approach to technical problems by experienced tradesmen
+          allows our engineers to accurately determine the nature of the problem, source the necessary parts, if they
+          need replacing and quickly repair the failed appliance, be it a <span><a
+              [routerLink]="[ '/appliance-repairs/washing-machine-repairs' ]">washing machine repairs</a></span>,
+          <span><a [routerLink]="[ '/appliance-repairs/microwave-repairs' ]">microwave</a></span>, <span><a
+              [routerLink]="[ '/appliance-repairs/electric-oven-repairs' ]">electric oven</a></span>,
+          <span><a [routerLink]="[ '/appliance-repairs/dishwasher-repairs' ]">dishwasher</a></span> or any other
+          white good.
+        </p>
+      </div>
+      <div class="about-us__text-2">
+        <p>
+          Our service is based on many years of experience with various
+          tools and devices, supplemented by a serious knowledge of <b>domestic</b> and <b>commercial</b> appliances.
+          To call out our appliance engineer to your house, you can contact us by phone on <a
+            href="tel:0207 476 8725"><span>0207 476 8725</span></a>,
+          and briefly describe the technical problem you are experiencing. In most cases, we only need one visit to
+          repair your appliance.
+        </p>
+      </div>
+      <div class="about-us__image-container">
+        <figure>
+          <img src="../../assets/images/van.jpg" alt="Van" />
+          <figcaption>
+            <p>
+              Over 15 years of experience in white goods servicing
+            </p>
+          </figcaption>
+        </figure>
       </div>
     </div>
   </section>
@@ -337,7 +346,7 @@
     <header class="section-heading">
       <h1>brands we repair</h1>
     </header>
-    <h2 class="heading-2">We repair and work with all the major appliance makes:</h2>
+    <h2 class="heading-2">We repair and work with all the major appliance makes.</h2>
     <div class="brand-grid">
       <div class="brand">
         <svg class="icon icon--xl">
@@ -429,85 +438,88 @@
     <figure>
       <img src="../../../assets/images/map.gif" alt="Map of London" />
     </figure>
-    <p class="coverage-text">Our appliance and London washing machine repair service cover postcodes which you see on
-      the map below most of
-      the postcodes within M25.
-      Excluding UB, TW, KT, HA, DA, CR postcodes.
-    </p>
+    <h3 class="coverage-text">
+      <span>
+        Our domestic and commercial appliance repair service covers all
+        postcodes which you see on
+        the map.
+      </span>
+
+    </h3>
     <div class="coverage__col-container">
       <div class="coverege-text-col">
         <h2 class="coverege-text-col__heading heading-2">east london</h2>
         <ul class="coverege-text-col__list">
-          <li>E1 Head district</li>
-          <li>E2 Bethnal Green</li>
-          <li>E3 Bow</li>
-          <li>E4 Chingford</li>
-          <li>E5 Clapton</li>
-          <li>E6 East Ham</li>
-          <li>E7 Forest Gate</li>
-          <li>E8 Hackney</li>
-          <li>E9 Homerton</li>
-          <li>E10 Leyton</li>
-          <li>E11 Leytonstone</li>
-          <li>E12 Manor Park</li>
-          <li>E13 Plaistow</li>
-          <li>E14 Poplar</li>
-          <li>E15 Stratford</li>
-          <li>E16 Victoria Docks</li>
-          <li>E17 Walthamstow</li>
-          <li>E18 South Woodford</li>
+          <li><strong>E1</strong> Head district</li>
+          <li><strong>E2</strong> Bethnal Green</li>
+          <li><strong>E3</strong> Bow</li>
+          <li><strong>E4</strong> Chingford</li>
+          <li><strong>E5</strong> Clapton</li>
+          <li><strong>E6</strong> East Ham</li>
+          <li><strong>E7</strong> Forest Gate</li>
+          <li><strong>E8</strong> Hackney</li>
+          <li><strong>E9</strong> Homerton</li>
+          <li><strong>E10</strong> Leyton</li>
+          <li><strong>E11</strong> Leytonstone</li>
+          <li><strong>E12</strong> Manor Park</li>
+          <li><strong>E13</strong> Plaistow</li>
+          <li><strong>E14</strong> Poplar</li>
+          <li><strong>E15</strong> Stratford</li>
+          <li><strong>E16</strong> Victoria Docks</li>
+          <li><strong>E17</strong> Walthamstow</li>
+          <li><strong>E18</strong> South Woodford</li>
         </ul>
       </div>
       <div class="coverege-text-col">
         <h2 class="coverege-text-col__heading heading-2">north london</h2>
         <ul class="coverege-text-col__list">
-          <li>N1 Head district</li>
-          <li>N2 East Finchley</li>
-          <li>N3 Finchley</li>
-          <li>N4 Finsbury Park</li>
-          <li>N5 Highbury</li>
-          <li>N6 Highgate</li>
-          <li>N7 Holloway</li>
-          <li>N8 Hornsey</li>
-          <li>N9 Lower Edmonton</li>
-          <li>N10 Muswell Hill</li>
-          <li>N11 New Southgate</li>
-          <li>N12 North Finchley</li>
-          <li>N13 Palmers Green</li>
-          <li>N14 Southgate</li>
-          <li>N15 South Tottenham</li>
-          <li>N16 Stoke Newington</li>
-          <li>N17 Tottenham</li>
-          <li>N18 Upper Edmonton</li>
-          <li>N19 Upper Holloway</li>
-          <li>N20 Whetstone</li>
-          <li>N21 Winchmore Hill</li>
-          <li>N22 Wood Green</li>
+          <li><strong>N1</strong> Head district</li>
+          <li><strong>N2</strong> East Finchley</li>
+          <li><strong>N3</strong> Finchley</li>
+          <li><strong>N4</strong> Finsbury Park</li>
+          <li><strong>N5</strong> Highbury</li>
+          <li><strong>N6</strong> Highgate</li>
+          <li><strong>N7</strong> Holloway</li>
+          <li><strong>N8</strong> Hornsey</li>
+          <li><strong>N9</strong> Lower Edmonton</li>
+          <li><strong>N10</strong> Muswell Hill</li>
+          <li><strong>N11</strong> New Southgate</li>
+          <li><strong>N12</strong> North Finchley</li>
+          <li><strong>N13</strong> Palmers Green</li>
+          <li><strong>N14</strong> Southgate</li>
+          <li><strong>N15</strong> South Tottenham</li>
+          <li><strong>N16</strong> Stoke Newington</li>
+          <li><strong>N17</strong> Tottenham</li>
+          <li><strong>N18</strong> Upper Edmonton</li>
+          <li><strong>N19</strong> Upper Holloway</li>
+          <li><strong>N20</strong> Whetstone</li>
+          <li><strong>N21</strong> Winchmore Hill</li>
+          <li><strong>N22</strong> Wood Green</li>
         </ul>
       </div>
       <div class="coverege-text-col">
         <h2 class="coverege-text-col__heading heading-2">central london</h2>
         <ul class="coverege-text-col__list">
-          <li>EC1 Head district</li>
-          <li>EC2 Bishopsgate</li>
-          <li>EC3 Fenchurch Street</li>
-          <li>EC4 Fleet Street</li>
+          <li><strong>EC1</strong> Head district</li>
+          <li><strong>EC2</strong> Bishopsgate</li>
+          <li><strong>EC3</strong> Fenchurch Street</li>
+          <li><strong>EC4</strong> Fleet Street</li>
         </ul>
       </div>
       <div class="coverege-text-col">
         <h2 class="coverege-text-col__heading coverege-text-col__heading--alt heading-2">NW london</h2>
         <ul class="coverege-text-col__list">
-          <li>NW1 Head district</li>
-          <li>NW2 Cricklewood</li>
-          <li>NW3 Hampstead</li>
-          <li>NW4 Hendon</li>
-          <li>NW5 Kentish Town</li>
-          <li>NW6 Kilburn</li>
-          <li>NW7 Mill Hill</li>
-          <li>NW8 St John’s Wood</li>
-          <li>NW9 The Hyde</li>
-          <li>NW10 Willesden</li>
-          <li>NW11 Golders Green</li>
+          <li><strong>NW1</strong> Head district</li>
+          <li><strong>NW2</strong> Cricklewood</li>
+          <li><strong>NW3</strong> Hampstead</li>
+          <li><strong>NW4</strong> Hendon</li>
+          <li><strong>NW5</strong> Kentish Town</li>
+          <li><strong>NW6</strong> Kilburn</li>
+          <li><strong>NW7</strong> Mill Hill</li>
+          <li><strong>NW8</strong> St John’s Wood</li>
+          <li><strong>NW9</strong> The Hyde</li>
+          <li><strong>NW10</strong> Willesden</li>
+          <li><strong>NW11</strong> Golders Green</li>
         </ul>
       </div>
     </div>
