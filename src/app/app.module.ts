@@ -46,7 +46,7 @@ import { MetaService } from './_services/meta.service';
     TermsModule,
     TransferHttpCacheModule
   ],
-  providers: [ MetaService ],
-  bootstrap: [ AppComponent ]
+  providers: [MetaService],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

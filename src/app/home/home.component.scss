@@ -38,6 +38,12 @@
     }
 }
 
+.header-background {
+    z-index: 1;
+    background-color: red;
+    grid-column: 1 / -1;
+}
+
 .intro {
 
     @media only screen and (max-width: 600px) {
@@ -222,7 +228,7 @@
             @media only screen and (max-width: 1100px) {
                 grid-column: col-start 1 / col-end 8;
             }
-            
+
             @media only screen and (min-width: 1101px) {
                 margin-right: 2rem;
             }
@@ -255,7 +261,7 @@
             .call-info {
                 font-size: 2.5rem;
                 justify-self: center;
-            
+
                 p {
                     margin-bottom: 0;
                     text-align: center;
@@ -390,7 +396,7 @@
             color: $color-grey;
             text-rendering: optimizeLegibility;
             text-align: justify;
-    
+
             a,
             span {
                 text-decoration: none;
@@ -536,7 +542,7 @@
             // margin: 2rem 0;
             margin-bottom: 2rem;
             margin-top: 2rem;
-            
+
         }
     }
 
@@ -676,7 +682,7 @@
                 transform: translate(-50%, -50%);
                 width: 70%;
 
-                p {
+                .blog-title {
                     margin-bottom: 0 !important;
                     color: #fff;
                     font-size: 1.8rem;

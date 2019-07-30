@@ -22,13 +22,14 @@ body {
 }
 
 .grid-container {
+    top: 6rem;
+    position: relative;
     display: grid;
     grid-template-columns:
         [full-start] minmax(3rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end];
-    grid-template-rows: 6rem 6rem;
 
     @media only screen and (max-width: 1342px) {
-        grid-template-rows: 5rem 5rem;
+        top: 5rem;
     }
 }
 
@@ -41,7 +42,7 @@ body {
 
     text-transform: capitalize;
 
-    h1 {
+    h2 {
         font-size: 2.4rem;
         font-family: $font-primary;
         color: $color-primary;
@@ -72,8 +73,8 @@ body {
 }
 
 .header {
+    height: 6rem;
     background-color: #252f41;
-    padding-top: 0.5rem;
     display: grid;
     grid-column: full-start / full-end;
     grid-template-columns:
@@ -262,7 +263,6 @@ body {
 .reasons {
     grid-column: col-start 1 / col-end 8;
     display: grid;
-    grid-template-columns: repeat(4, minmax(25rem, 1fr));
     grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
     grid-column-gap: .85rem;
     grid-row-gap: 2rem;
@@ -347,11 +347,11 @@ body {
             }
 
             .service__icon {
-                max-width: 45%;
+                max-width: 37%;
                 fill: #fff;
 
                 &--commercial {
-                    max-width: 51%;
+                    max-width: 43%;
                     fill: #fff;
                 }
             }
@@ -604,9 +604,7 @@ body {
     justify-content: center;
     color: $color-grey;
 
-    h2 {
-        background: $color-primary;
-        padding: 0.5rem;
+    h3 {
         justify-self: center;
     }
 
@@ -656,7 +654,7 @@ body {
         &-text {
             font-size: $font-size-primary;
 
-            h3 {
+            h4 {
                 font-weight: 700;
                 font-size: 1.8rem;
                 text-transform: capitalize;

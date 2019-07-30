@@ -17,12 +17,6 @@
         font-size: $font-size-secondary;
         margin-left: 0.1rem;
     }
-
-    @media screen and (-webkit-min-device-pixel-ratio: 0) {
-        select:focus, textarea:focus, input:focus {
-                font-size: 16px;
-            }
-        }
 }
 
 select.form-control:not([size]):not([multiple]) {
@@ -35,7 +29,7 @@ select.form-control:not([size]):not([multiple]) {
 
 .form-control {
     height: 4rem;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
 
     &:disabled {
         background-color: rgba(255, 255, 255, .65);
