@@ -1,5 +1,4 @@
 <div class="grid-container">
-    <div class="header-background"></div>
     <div class="header">
         <div class="header__logo">
             <a [routerLink]="[ '/']">
@@ -26,58 +25,62 @@
             <a href="tel:0754 085 2102">0754 085 2102</a>
         </div>
     </div>
-    <div class="intro">
+
+    <!-- Intro -->
+
+    <section class="intro">
         <div class="intro__image">
             <img src="../../assets/images/coverage-cover.jpg" alt="London skyline from above">
         </div>
         <header>
-            <h1>Areas Covered</h1>
+            <h1>Coverage</h1>
         </header>
         <div class="intro__sub">
             <div class="sub-item">
-                <svg class="icon icon--md icon--primary">
+                <svg class="icon icon--md icon--primary" role="img" aria-labelledby="title">
+                    <title>Check</title>
                     <use xlink:href="../../../assets/images/sprite.svg#checked"></use>
                 </svg>
                 <p>Friendly and reliable service</p>
             </div>
             <div class="sub-item">
-                <svg class="icon icon--md icon--primary">
+                <svg class="icon icon--md icon--primary" role="img" aria-labelledby="title">
+                    <title>Check</title>
                     <use xlink:href="../../../assets/images/sprite.svg#checked"></use>
                 </svg>
                 <p>Highly qualified engineers</p>
             </div>
             <div class="sub-item">
-                <svg class="icon icon--md icon--primary">
+                <svg class="icon icon--md icon--primary" role="img" aria-labelledby="title">
+                    <title>Check</title>
                     <use xlink:href="../../../assets/images/sprite.svg#checked"></use>
                 </svg>
-                <p>Same/next day appointments</p>
+                <p>Same day service available</p>
             </div>
             <div class="sub-item">
-                <svg class="icon icon--md icon--primary">
+                <svg class="icon icon--md icon--primary" role="img" aria-labelledby="title">
+                    <title>Check</title>
                     <use xlink:href="../../../assets/images/sprite.svg#checked"></use>
                 </svg>
                 <p>Fixed repair charges</p>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- Areas Covered -->
 
     <section class="areas-covered">
         <header class="section-heading">
-            <h1>coverage in london</h1>
+            <h2>Areas We Cover in London</h2>
         </header>
-        <h2 class="heading-2">
+        <h2 class="sub-heading heading-2">
             Our appliance and London washing machine repair service cover postcodes which you see on the map below most
             of the postcodes within M25.
         </h2>
-
         <figure>
             <img src="../../../assets/images/map.gif" alt="Map of London" />
         </figure>
-
         <div class="areas-covered__col-wrapper">
-
             <div class="areas-covered__col-container">
                 <div class="areas-covered__col">
                     <h3 class="heading-2">east london</h3>
@@ -241,34 +244,36 @@
 
     <section class="reasons">
         <header class="section-heading">
-            <h1>why choose us</h1>
+            <h2>why choose us</h2>
         </header>
         <div class="reasons__reason reasons__reason--1">
-            <svg class="icon icon--lg icon icon--secondary">
+            <svg class="icon icon--lg icon icon--secondary" role="img" aria-labelledby="title">
+                <title>Security checked</title>
                 <use xlink:href="../../../assets/images/sprite.svg#security_checked"></use>
             </svg>
-            <h3 class="heading-3 heading-3--grey">6 months guarantee on all appliance repairs and parts<span
-                    class="asterisk">&nbsp;*</span></h3>
+            <h3>6 months guarantee on all appliance repairs and parts<span class="asterisk">&nbsp;*</span></h3>
         </div>
         <div class="reasons__reason reasons__reason--2">
-            <svg class="icon icon--lg icon icon--secondary">
+            <svg class="icon icon--lg icon icon--secondary" role="img" aria-labelledby="title">
+                <title>Person at home</title>
                 <use xlink:href="../../../assets/images/sprite.svg#person_at_home"></use>
             </svg>
-            <h3 class="heading-3 heading-3--grey">Same and next day visits for East London postcodes</h3>
+            <h3>Same and next day visits for East London postcodes</h3>
         </div>
         <div class="reasons__reason reasons__reason--3">
-            <svg class="icon icon--lg icon icon--secondary">
+            <svg class="icon icon--lg icon icon--secondary" role="img" aria-labelledby="title">
+                <title>Cancel</title>
                 <use xlink:href="../../../assets/images/sprite.svg#cancel_2"></use>
             </svg>
-            <h3 class="heading-3 heading-3--grey">No call out charges or parking fees<span
-                    class="asterisk">&nbsp;**</span>
+            <h3>No call out charges or parking fees<span class="asterisk">&nbsp;**</span>
             </h3>
         </div>
         <div class="reasons__reason reasons__reason--4">
-            <svg class="icon icon--lg icon icon--secondary">
+            <svg class="icon icon--lg icon icon--secondary" role="img" aria-labelledby="title">
+                <title>User group</title>
                 <use xlink:href="../../../assets/images/sprite.svg#user_group_man_man"></use>
             </svg>
-            <h3 class="heading-3 heading-3--grey">Technicians with many years of experience</h3>
+            <h3>Technicians with many years of experience</h3>
         </div>
     </section>
 
@@ -276,7 +281,7 @@
 
     <section class="services-container">
         <header class="section-heading">
-            <h1>services</h1>
+            <h2>services</h2>
         </header>
         <p class="section-text">A&amp;G specialises in <span><a
                     [routerLink]="[ '/appliance-repairs/washing-machine-repairs' ]">washing machine repairs</a></span>
@@ -351,87 +356,103 @@
 
     <section class="brands">
         <header class="section-heading">
-            <h1>brands we repair</h1>
+            <h2>brands we repair</h2>
         </header>
-        <h2 class="heading-2 heading-2--white">We repair and work with all the major appliance makes.</h2>
+        <h2 class="heading-2">We repair and work with all the major appliance makes.</h2>
         <div class="brand-grid">
             <div class="brand">
-                <svg class="icon icon--xl">
+                <svg class="icon icon--xl" role="img" aria-labelledby="title">
+                    <title>AEG</title>
                     <use xlink:href="../../../assets/images/sprite.svg#aeg-2"></use>
                 </svg>
             </div>
             <div class="brand">
-                <svg class="icon icon--xl">
+                <svg class="icon icon--xl" role="img" aria-labelledby="title">
+                    <title>BEKO</title>
                     <use xlink:href="../../../assets/images/sprite.svg#new-beko-logo"></use>
                 </svg>
             </div>
             <div class="brand">
-                <svg class="icon icon--xl">
+                <svg class="icon icon--xl" role="img" aria-labelledby="title">
+                    <title>Hotpoint</title>
                     <use xlink:href="../../../assets/images/sprite.svg#hotpoint"></use>
                 </svg>
             </div>
             <div class="brand">
-                <svg class="icon icon--xl">
+                <svg class="icon icon--xl" role="img" aria-labelledby="title">
+                    <title>LG</title>
                     <use xlink:href="../../../assets/images/sprite.svg#lg-electronics"></use>
                 </svg>
             </div>
             <div class="brand">
-                <svg class="icon icon--xl">
+                <svg class="icon icon--xl" role="img" aria-labelledby="title">
+                    <title>Miele</title>
                     <use xlink:href="../../../assets/images/sprite.svg#miele"></use>
                 </svg>
             </div>
             <div class="brand">
-                <svg class="icon icon--xl">
+                <svg class="icon icon--xl" role="img" aria-labelledby="title">
+                    <title>Samsung</title>
                     <use xlink:href="../../../assets/images/sprite.svg#samsung-1"></use>
                 </svg>
             </div>
             <div class="brand">
-                <svg class="icon icon--xl">
+                <svg class="icon icon--xl" role="img" aria-labelledby="title">
+                    <title>Siemens</title>
                     <use xlink:href="../../../assets/images/sprite.svg#siemens"></use>
                 </svg>
             </div>
             <div class="brand">
-                <svg class="icon icon--xl">
+                <svg class="icon icon--xl" role="img" aria-labelledby="title">
+                    <title>Zanussi</title>
                     <use xlink:href="../../../assets/images/sprite.svg#zanussi"></use>
                 </svg>
             </div>
             <div class="brand">
-                <svg class="icon icon--xl">
+                <svg class="icon icon--xl" role="img" aria-labelledby="title">
+                    <title>Whirpool</title>
                     <use xlink:href="../../../assets/images/sprite.svg#whirlpool"></use>
                 </svg>
             </div>
             <div class="brand">
-                <svg class="icon icon--xl">
+                <svg class="icon icon--xl" role="img" aria-labelledby="title">
+                    <title>Bosch</title>
                     <use xlink:href="../../../assets/images/sprite.svg#bosch-1"></use>
                 </svg>
             </div>
             <div class="brand">
-                <svg class="icon icon--xl">
+                <svg class="icon icon--xl" role="img" aria-labelledby="title">
+                    <title>Indesit</title>
                     <use xlink:href="../../../assets/images/sprite.svg#indesit-1"></use>
                 </svg>
             </div>
             <div class="brand">
-                <svg class="icon icon--xl">
+                <svg class="icon icon--xl" role="img" aria-labelledby="title">
+                    <title>Hoover</title>
                     <use xlink:href="../../../assets/images/sprite.svg#hoover"></use>
                 </svg>
             </div>
             <div class="brand">
-                <svg class="icon icon--xl">
+                <svg class="icon icon--xl" role="img" aria-labelledby="title">
+                    <title>Electrolux</title>
                     <use xlink:href="../../../assets/images/sprite.svg#electrolux"></use>
                 </svg>
             </div>
             <div class="brand">
-                <svg class="icon icon--xl">
+                <svg class="icon icon--xl" role="img" aria-labelledby="title">
+                    <title>Neff</title>
                     <use xlink:href="../../../assets/images/sprite.svg#neff"></use>
                 </svg>
             </div>
             <div class="brand">
-                <svg class="icon icon--xl">
+                <svg class="icon icon--xl" role="img" aria-labelledby="title">
+                    <title>Blaupunkt</title>
                     <use xlink:href="../../../assets/images/sprite.svg#blaupunkt-29640"></use>
                 </svg>
             </div>
             <div class="brand">
-                <svg class="icon icon--xl">
+                <svg class="icon icon--xl" role="img" aria-labelledby="title">
+                    <title>Daewoo</title>
                     <use xlink:href="../../../assets/images/sprite.svg#daewoo-1"></use>
                 </svg>
             </div>
@@ -439,11 +460,11 @@
         <p class="heading-2">And many more!</p>
     </section>
 
-    <!-- Reviews -->
+    <!-- Reviews  -->
 
     <section class="reviews-container">
         <header class="section-heading">
-            <h1>google reviews</h1>
+            <h2>google reviews</h2>
         </header>
         <div class="reviews">
             <div class="review">
@@ -454,30 +475,36 @@
                     Marie Adam
                 </div>
                 <div class="review__stars">
-                    <svg class="icon icon--md">
+                    <svg class="icon icon--md" role="img" aria-labelledby="title">
+                        <title>Star</title>
                         <use xlink:href="../../../assets/images/sprite.svg#star"></use>
                     </svg>
-                    <svg class="icon icon--md">
+                    <svg class="icon icon--md" role="img" aria-labelledby="title">
+                        <title>Star</title>
                         <use xlink:href="../../../assets/images/sprite.svg#star"></use>
                     </svg>
-                    <svg class="icon icon--md">
+                    <svg class="icon icon--md" role="img" aria-labelledby="title">
+                        <title>Star</title>
                         <use xlink:href="../../../assets/images/sprite.svg#star"></use>
                     </svg>
-                    <svg class="icon icon--md">
+                    <svg class="icon icon--md" role="img" aria-labelledby="title">
+                        <title>Star</title>
                         <use xlink:href="../../../assets/images/sprite.svg#star"></use>
                     </svg>
-                    <svg class="icon icon--md">
+                    <svg class="icon icon--md" role="img" aria-labelledby="title">
+                        <title>Star</title>
                         <use xlink:href="../../../assets/images/sprite.svg#star"></use>
                     </svg>
                 </div>
                 <div class="review__text">
-                    <svg class="icon icon--md icon--primary">
+                    <svg class="icon icon--md icon--primary" role="img" aria-labelledby="title">
+                        <title>Quotation mark</title>
                         <use xlink:href="../../../assets/images/sprite.svg#quote_left"></use>
                     </svg>
                     <p>Very professional &amp; efficient. Great service at a very good price. I would definitely
-                        recommend.
-                    </p>
-                    <svg class="icon icon--md icon--primary">
+                        recommend.</p>
+                    <svg class="icon icon--md icon--primary" role="img" aria-labelledby="title">
+                        <title>Quotation mark</title>
                         <use xlink:href="../../../assets/images/sprite.svg#quote_right"></use>
                     </svg>
                 </div>
@@ -490,28 +517,35 @@
                     George Pidgeon
                 </div>
                 <div class="review__stars">
-                    <svg class="icon icon--md">
+                    <svg class="icon icon--md" role="img" aria-labelledby="title">
+                        <title>Star</title>
                         <use xlink:href="../../../assets/images/sprite.svg#star"></use>
                     </svg>
-                    <svg class="icon icon--md">
+                    <svg class="icon icon--md" role="img" aria-labelledby="title">
+                        <title>Star</title>
                         <use xlink:href="../../../assets/images/sprite.svg#star"></use>
                     </svg>
-                    <svg class="icon icon--md">
+                    <svg class="icon icon--md" role="img" aria-labelledby="title">
+                        <title>Star</title>
                         <use xlink:href="../../../assets/images/sprite.svg#star"></use>
                     </svg>
-                    <svg class="icon icon--md">
+                    <svg class="icon icon--md" role="img" aria-labelledby="title">
+                        <title>Star</title>
                         <use xlink:href="../../../assets/images/sprite.svg#star"></use>
                     </svg>
-                    <svg class="icon icon--md">
+                    <svg class="icon icon--md" role="img" aria-labelledby="title">
+                        <title>Star</title>
                         <use xlink:href="../../../assets/images/sprite.svg#star"></use>
                     </svg>
                 </div>
                 <div class="review__text">
-                    <svg class="icon icon--md icon--primary">
+                    <svg class="icon icon--md icon--primary" role="img" aria-labelledby="title">
+                        <title>Quotation mark</title>
                         <use xlink:href="../../../assets/images/sprite.svg#quote_left"></use>
                     </svg>
                     <p>Thank you - would definitely use again in future.</p>
-                    <svg class="icon icon--md icon--primary">
+                    <svg class="icon icon--md icon--primary" role="img" aria-labelledby="title">
+                        <title>Quotation mark</title>
                         <use xlink:href="../../../assets/images/sprite.svg#quote_right"></use>
                     </svg>
                 </div>
@@ -524,28 +558,35 @@
                     Annie Yusuf
                 </div>
                 <div class="review__stars">
-                    <svg class="icon icon--md">
+                    <svg class="icon icon--md" role="img" aria-labelledby="title">
+                        <title>Star</title>
                         <use xlink:href="../../../assets/images/sprite.svg#star"></use>
                     </svg>
-                    <svg class="icon icon--md">
+                    <svg class="icon icon--md" role="img" aria-labelledby="title">
+                        <title>Star</title>
                         <use xlink:href="../../../assets/images/sprite.svg#star"></use>
                     </svg>
-                    <svg class="icon icon--md">
+                    <svg class="icon icon--md" role="img" aria-labelledby="title">
+                        <title>Star</title>
                         <use xlink:href="../../../assets/images/sprite.svg#star"></use>
                     </svg>
-                    <svg class="icon icon--md">
+                    <svg class="icon icon--md" role="img" aria-labelledby="title">
+                        <title>Star</title>
                         <use xlink:href="../../../assets/images/sprite.svg#star"></use>
                     </svg>
-                    <svg class="icon icon--md" style="fill:#dddddd;">
+                    <svg class="icon icon--md" style="fill:#dddddd;" role="img" aria-labelledby="title">
+                        <title>Star</title>
                         <use xlink:href="../../../assets/images/sprite.svg#star"></use>
                     </svg>
                 </div>
                 <div class="review__text">
-                    <svg class="icon icon--md icon--primary">
+                    <svg class="icon icon--md icon--primary" role="img" aria-labelledby="title">
+                        <title>Quotation mark</title>
                         <use xlink:href="../../../assets/images/sprite.svg#quote_left"></use>
                     </svg>
                     <p>Good repair work.</p>
-                    <svg class="icon icon--md icon--primary">
+                    <svg class="icon icon--md icon--primary" role="img" aria-labelledby="title">
+                        <title>Quotation mark</title>
                         <use xlink:href="../../../assets/images/sprite.svg#quote_right"></use>
                     </svg>
                 </div>
@@ -558,28 +599,35 @@
                     Ellie Roberts
                 </div>
                 <div class="review__stars">
-                    <svg class="icon icon--md">
+                    <svg class="icon icon--md" role="img" aria-labelledby="title">
+                        <title>Star</title>
                         <use xlink:href="../../../assets/images/sprite.svg#star"></use>
                     </svg>
-                    <svg class="icon icon--md">
+                    <svg class="icon icon--md" role="img" aria-labelledby="title">
+                        <title>Star</title>
                         <use xlink:href="../../../assets/images/sprite.svg#star"></use>
                     </svg>
-                    <svg class="icon icon--md">
+                    <svg class="icon icon--md" role="img" aria-labelledby="title">
+                        <title>Star</title>
                         <use xlink:href="../../../assets/images/sprite.svg#star"></use>
                     </svg>
-                    <svg class="icon icon--md">
+                    <svg class="icon icon--md" role="img" aria-labelledby="title">
+                        <title>Star</title>
                         <use xlink:href="../../../assets/images/sprite.svg#star"></use>
                     </svg>
-                    <svg class="icon icon--md">
+                    <svg class="icon icon--md" role="img" aria-labelledby="title">
+                        <title>Star</title>
                         <use xlink:href="../../../assets/images/sprite.svg#star"></use>
                     </svg>
                 </div>
                 <div class="review__text">
-                    <svg class="icon icon--md icon--primary">
+                    <svg class="icon icon--md icon--primary" role="img" aria-labelledby="title">
+                        <title>Quotation mark</title>
                         <use xlink:href="../../../assets/images/sprite.svg#quote_left"></use>
                     </svg>
                     <p>Quick and efficient service - I would use them again.</p>
-                    <svg class="icon icon--md icon--primary">
+                    <svg class="icon icon--md icon--primary" role="img" aria-labelledby="title">
+                        <title>Quotation mark</title>
                         <use xlink:href="../../../assets/images/sprite.svg#quote_right"></use>
                     </svg>
                 </div>

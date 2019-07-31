@@ -1,5 +1,4 @@
 <div class="grid-container">
-    <div class="header-background"></div>
     <div class="header">
         <div class="header__logo">
             <a [routerLink]="[ '/']">
@@ -29,7 +28,7 @@
 
     <!-- Intro -->
 
-    <div class="intro">
+    <section class="intro">
         <div class="intro__image">
             <img src="../../assets/images/blog-cover.jpg" alt="Kitchen">
         </div>
@@ -38,31 +37,35 @@
         </header>
         <div class="intro__sub">
             <div class="sub-item">
-                <svg class="icon icon--md icon--primary">
+                <svg class="icon icon--md icon--primary" role="img" aria-labelledby="title">
+                    <title>Check</title>
                     <use xlink:href="../../../assets/images/sprite.svg#checked"></use>
                 </svg>
                 <p>Friendly and reliable service</p>
             </div>
             <div class="sub-item">
-                <svg class="icon icon--md icon--primary">
+                <svg class="icon icon--md icon--primary" role="img" aria-labelledby="title">
+                    <title>Check</title>
                     <use xlink:href="../../../assets/images/sprite.svg#checked"></use>
                 </svg>
                 <p>Highly qualified engineers</p>
             </div>
             <div class="sub-item">
-                <svg class="icon icon--md icon--primary">
+                <svg class="icon icon--md icon--primary" role="img" aria-labelledby="title">
+                    <title>Check</title>
                     <use xlink:href="../../../assets/images/sprite.svg#checked"></use>
                 </svg>
-                <p>Same/next day appointments</p>
+                <p>Same day service available</p>
             </div>
             <div class="sub-item">
-                <svg class="icon icon--md icon--primary">
+                <svg class="icon icon--md icon--primary" role="img" aria-labelledby="title">
+                    <title>Check</title>
                     <use xlink:href="../../../assets/images/sprite.svg#checked"></use>
                 </svg>
                 <p>Fixed repair charges</p>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- Blogs container-->
 
@@ -75,64 +78,83 @@
 
             <!-- Short blogs -->
 
-            <div class="blogs__blog">
-                <h2 class="blogs__blog--title heading-2">Fridge freezer not cooling any more, fault finding</h2>
-                <h3 class="blogs__blog--date">July 23rd, 2019</h3>
-                <p class="blogs__blog--paragraph">
-                    Fridge freezer not cooling?
-                    This can be caused by a thermostat failure but that is rare to be honest. More likely the compressor
-                    is not running or not running properly for some reason.
-                </p>
-                <ul class="blogs__blog--list">
-                    <li>Compressor failure</li>
-                    <li>Compressor PTC</li>
-                    <li>Compressor relay</li>
-                    <li>Thermostat</li>
-                    <li>Thermistor failure</li>
-                </ul>
+            <article class="blogs__blog">
+                <h3 class="blogs__blog--title heading-2">
+                    Fridge freezer not cooling any more, fault finding
+                </h3>
+                <p class="blogs__blog--date">July 23rd, 2019</p>
+                <div class="blogs__blog--text">
+                    <p class="blogs__blog--paragraph">
+                        Fridge freezer not cooling?
+                        This can be caused by a thermostat failure but that is rare to be honest. More likely the
+                        compressor
+                        is not running or not running properly for some reason.
+                    </p>
+                    <ul class="blogs__blog--list">
+                        <li>Compressor failure</li>
+                        <li>Compressor PTC</li>
+                        <li>Compressor relay</li>
+                        <li>Thermostat</li>
+                        <li>Thermistor failure</li>
+                    </ul>
+                </div>
                 <a class="blogs__blog--link btn-round-sm btn--white"
-                    [routerLink]="['fridge-freezer-not-cooling-any-more-fault-finding']">read more</a>
-            </div>
-            <div class="blogs__blog">
-                <h2 class="blogs__blog--title heading-2">Oven does not work. Timer set – manual or automatic?</h2>
-                <h3 class="blogs__blog--date">June 15th, 2019</h3>
-                <p class="blogs__blog--paragraph">
-                    In quite a few instances we come across a problem where a person has an oven on automatic and they
-                    can’t use it.
-                </p>
-                <p class="blogs__blog--paragraph">For the oven to work on the automatic, the timer needs to be set. It’s
-                    best if the oven is in manual mode. Read your oven manual first before doing anything else.</p>
-                <p class="blogs__blog--paragraph">If you don’t have a manual, try doing this:
-
-                    Try holding the ‘bell’ button down at the same time as you press the ‘pan x’ button.</p>
+                    [routerLink]="['/blog/fridge-freezer-not-cooling-any-more-fault-finding']">read more</a>
+            </article>
+            <article class="blogs__blog">
+                <h3 class="blogs__blog--title heading-2">
+                    Oven does not work. Timer set – manual or automatic?
+                </h3>
+                <p class="blogs__blog--date">June 15th, 2019</p>
+                <div class="blogs__blog--text">
+                    <p class="blogs__blog--paragraph">
+                        In quite a few instances we come across a problem where a person has an oven on automatic and
+                        they
+                        can’t use it.
+                    </p>
+                    <p class="blogs__blog--paragraph">For the oven to work on the automatic, the timer needs to be set.
+                        It’s
+                        best if the oven is in manual mode. Read your oven manual first before doing anything else.</p>
+                    <p class="blogs__blog--paragraph">If you don’t have a manual, try doing this:
+                        Try holding the ‘bell’ button down at the same time as you press the ‘pan x’ button.</p>
+                </div>
                 <a class="blogs__blog--link btn-round-sm btn--white"
-                    [routerLink]="['oven-does-not-work-timer-set-manual-or-automatic']">read more</a>
-            </div>
-            <div class="blogs__blog">
-                <h2 class="blogs__blog--title heading-2">Common electric oven problems</h2>
-                <h3 class="blogs__blog--date">May 11th, 2019</h3>
-                <p class="blogs__blog--paragraph">
-                    From our experience, the most common problem with the electric ovens is the failure of the heating
-                    element.
-                </p>
-                <p class="blogs__blog--paragraph">
-                    In these instances, the heating element needs replacing, the average cost of the element is £30-£35
-                    or more.
-                </p>
-                <p class="blogs__blog--paragraph">Our engineers carry heating elements with them and can repair the oven
-                    there and then. Recently we had a job where the heating element was fine, but the oven kept tripping
-                    the electricity in the house.</p>
+                    [routerLink]="['/blog/oven-does-not-work-timer-set-manual-or-automatic']">read more</a>
+            </article>
+            <article class="blogs__blog">
+                <h3 class="blogs__blog--title heading-2">
+                    Common electric oven problems
+                </h3>
+                <p class="blogs__blog--date">May 11th, 2019</p>
+                <div class="blogs__blog--text">
+                    <p class="blogs__blog--paragraph">
+                        From our experience, the most common problem with the electric ovens is the failure of the
+                        heating
+                        element.
+                    </p>
+                    <p class="blogs__blog--paragraph">
+                        In these instances, the heating element needs replacing, the average cost of the element is
+                        £30-£35
+                        or more.
+                    </p>
+                    <p class="blogs__blog--paragraph">Our engineers carry heating elements with them and can repair the
+                        oven
+                        there and then. Recently we had a job where the heating element was fine, but the oven kept
+                        tripping
+                        the electricity in the house.</p>
+                </div>
                 <a class="blogs__blog--link btn-round-sm btn--white"
-                    [routerLink]="['common-electric-oven-problems']">read more</a>
-            </div>
+                    [routerLink]="['/blog/common-electric-oven-problems']">read
+                    more</a>
+            </article>
         </div>
 
         <!-- Individual Blogs -->
 
-        <div class="blogs" *ngIf="isSubOne">
+        <article class="blogs" *ngIf="isSubOne">
             <div class="blogs__blog">
-                <h2 class="blogs__blog--title heading-2">Common electric oven problems</h2>
-                <h3 class="blogs__blog--date">May 11th, 2019</h3>
+                <h3 class="blogs__blog--title heading-2">Common electric oven problems</h3>
+                <p class="blogs__blog--date">May 11th, 2019</p>
                 <p class="blogs__blog--paragraph">
                     From our experience, the most common problem with the electric ovens is the failure of the heating
                     element.
@@ -148,11 +170,11 @@
                 <p class="blogs__blog--paragraph">Leave a message or call us if you have a problem with your oven or
                     electric cooker.</p>
             </div>
-        </div>
+        </article>
         <div class="blogs" *ngIf="isSubTwo">
             <div class="blogs__blog">
-                <h2 class="blogs__blog--title heading-2">Oven does not work. Timer set – manual or automatic?</h2>
-                <h3 class="blogs__blog--date">June 15th, 2019</h3>
+                <h3 class="blogs__blog--title heading-2">Oven does not work. Timer set – manual or automatic?</h3>
+                <p class="blogs__blog--date">June 15th, 2019</p>
                 <p class="blogs__blog--paragraph">
                     In quite a few instances we come across a problem where a person has an oven on automatic and they
                     can’t use it.
@@ -165,10 +187,10 @@
                     manual mode, if you can’t operate it, before calling an engineer. Good luck!</p>
             </div>
         </div>
-        <div class="blogs" *ngIf="isSubThree">
+        <article class="blogs" *ngIf="isSubThree">
             <div class="blogs__blog">
-                <h2 class="blogs__blog--title heading-2">Fridge freezer not cooling any more, fault finding</h2>
-                <h3 class="blogs__blog--date">July 23rd, 2019</h3>
+                <h3 class="blogs__blog--title heading-2">Fridge freezer not cooling any more, fault finding</h3>
+                <p class="blogs__blog--date">July 23rd, 2019</p>
                 <p class="blogs__blog--paragraph">
                     Fridge freezer not cooling?
                     This can be caused by a thermostat failure but that is rare to be honest. More likely the compressor
@@ -204,8 +226,8 @@
                 <p class="blogs__blog--paragraph">If this is your problem, sorry but there’s not much that anyone can do
                     to help you I’m afraid.</p>
             </div>
-        </div>
-        <div class="sidebar">
+        </article>
+        <aside class="sidebar">
             <div class="sidebar__info">
                 <p>no hidden costs</p>
                 <span>&#9679;</span>
@@ -264,94 +286,110 @@
                     <p>&nbsp;Commercial Appliance Repairs</p>
                 </a>
             </div>
-        </div>
+        </aside>
     </section>
 
     <!-- Brands -->
 
     <section class="brands">
         <header class="section-heading">
-            <h1>brands we repair</h1>
+            <h2>brands we repair</h2>
         </header>
         <h2 class="heading-2">We repair and work with all the major appliance makes.</h2>
         <div class="brand-grid">
             <div class="brand">
-                <svg class="icon icon--xl">
+                <svg class="icon icon--xl" role="img" aria-labelledby="title">
+                    <title>AEG</title>
                     <use xlink:href="../../../assets/images/sprite.svg#aeg-2"></use>
                 </svg>
             </div>
             <div class="brand">
-                <svg class="icon icon--xl">
+                <svg class="icon icon--xl" role="img" aria-labelledby="title">
+                    <title>BEKO</title>
                     <use xlink:href="../../../assets/images/sprite.svg#new-beko-logo"></use>
                 </svg>
             </div>
             <div class="brand">
-                <svg class="icon icon--xl">
+                <svg class="icon icon--xl" role="img" aria-labelledby="title">
+                    <title>Hotpoint</title>
                     <use xlink:href="../../../assets/images/sprite.svg#hotpoint"></use>
                 </svg>
             </div>
             <div class="brand">
-                <svg class="icon icon--xl">
+                <svg class="icon icon--xl" role="img" aria-labelledby="title">
+                    <title>LG</title>
                     <use xlink:href="../../../assets/images/sprite.svg#lg-electronics"></use>
                 </svg>
             </div>
             <div class="brand">
-                <svg class="icon icon--xl">
+                <svg class="icon icon--xl" role="img" aria-labelledby="title">
+                    <title>Miele</title>
                     <use xlink:href="../../../assets/images/sprite.svg#miele"></use>
                 </svg>
             </div>
             <div class="brand">
-                <svg class="icon icon--xl">
+                <svg class="icon icon--xl" role="img" aria-labelledby="title">
+                    <title>Samsung</title>
                     <use xlink:href="../../../assets/images/sprite.svg#samsung-1"></use>
                 </svg>
             </div>
             <div class="brand">
-                <svg class="icon icon--xl">
+                <svg class="icon icon--xl" role="img" aria-labelledby="title">
+                    <title>Siemens</title>
                     <use xlink:href="../../../assets/images/sprite.svg#siemens"></use>
                 </svg>
             </div>
             <div class="brand">
-                <svg class="icon icon--xl">
+                <svg class="icon icon--xl" role="img" aria-labelledby="title">
+                    <title>Zanussi</title>
                     <use xlink:href="../../../assets/images/sprite.svg#zanussi"></use>
                 </svg>
             </div>
             <div class="brand">
-                <svg class="icon icon--xl">
+                <svg class="icon icon--xl" role="img" aria-labelledby="title">
+                    <title>Whirpool</title>
                     <use xlink:href="../../../assets/images/sprite.svg#whirlpool"></use>
                 </svg>
             </div>
             <div class="brand">
-                <svg class="icon icon--xl">
+                <svg class="icon icon--xl" role="img" aria-labelledby="title">
+                    <title>Bosch</title>
                     <use xlink:href="../../../assets/images/sprite.svg#bosch-1"></use>
                 </svg>
             </div>
             <div class="brand">
-                <svg class="icon icon--xl">
+                <svg class="icon icon--xl" role="img" aria-labelledby="title">
+                    <title>Indesit</title>
                     <use xlink:href="../../../assets/images/sprite.svg#indesit-1"></use>
                 </svg>
             </div>
             <div class="brand">
-                <svg class="icon icon--xl">
+                <svg class="icon icon--xl" role="img" aria-labelledby="title">
+                    <title>Hoover</title>
                     <use xlink:href="../../../assets/images/sprite.svg#hoover"></use>
                 </svg>
             </div>
             <div class="brand">
-                <svg class="icon icon--xl">
+                <svg class="icon icon--xl" role="img" aria-labelledby="title">
+                    <title>Electrolux</title>
                     <use xlink:href="../../../assets/images/sprite.svg#electrolux"></use>
                 </svg>
             </div>
             <div class="brand">
-                <svg class="icon icon--xl">
+                <svg class="icon icon--xl" role="img" aria-labelledby="title">
+                    <title>Neff</title>
                     <use xlink:href="../../../assets/images/sprite.svg#neff"></use>
                 </svg>
             </div>
             <div class="brand">
-                <svg class="icon icon--xl">
+                <svg class="icon icon--xl" role="img" aria-labelledby="title">
+                    <title>Blaupunkt</title>
                     <use xlink:href="../../../assets/images/sprite.svg#blaupunkt-29640"></use>
                 </svg>
             </div>
             <div class="brand">
-                <svg class="icon icon--xl">
+                <svg class="icon icon--xl" role="img" aria-labelledby="title">
+                    <title>Daewoo</title>
                     <use xlink:href="../../../assets/images/sprite.svg#daewoo-1"></use>
                 </svg>
             </div>

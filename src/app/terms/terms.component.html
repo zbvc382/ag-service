@@ -1,5 +1,4 @@
 <div class="grid-container">
-    <div class="header-background"></div>
     <div class="header">
         <div class="header__logo">
             <a [routerLink]="[ '/']">
@@ -26,7 +25,10 @@
             <a href="tel:0754 085 2102">0754 085 2102</a>
         </div>
     </div>
-    <div class="intro">
+
+    <!-- Intro -->
+
+    <section class="intro">
         <div class="intro__image">
             <img src="../../assets/images/terms-cover.jpg" alt="Kitchen">
         </div>
@@ -35,34 +37,41 @@
         </header>
         <div class="intro__sub">
             <div class="sub-item">
-                <svg class="icon icon--md icon--primary">
+                <svg class="icon icon--md icon--primary" role="img" aria-labelledby="title">
+                    <title>Check</title>
                     <use xlink:href="../../../assets/images/sprite.svg#checked"></use>
                 </svg>
                 <p>Friendly and reliable service</p>
             </div>
             <div class="sub-item">
-                <svg class="icon icon--md icon--primary">
+                <svg class="icon icon--md icon--primary" role="img" aria-labelledby="title">
+                    <title>Check</title>
                     <use xlink:href="../../../assets/images/sprite.svg#checked"></use>
                 </svg>
                 <p>Highly qualified engineers</p>
             </div>
             <div class="sub-item">
-                <svg class="icon icon--md icon--primary">
+                <svg class="icon icon--md icon--primary" role="img" aria-labelledby="title">
+                    <title>Check</title>
                     <use xlink:href="../../../assets/images/sprite.svg#checked"></use>
                 </svg>
-                <p>Same/next day appointments</p>
+                <p>Same day service available</p>
             </div>
             <div class="sub-item">
-                <svg class="icon icon--md icon--primary">
+                <svg class="icon icon--md icon--primary" role="img" aria-labelledby="title">
+                    <title>Check</title>
                     <use xlink:href="../../../assets/images/sprite.svg#checked"></use>
                 </svg>
                 <p>Fixed repair charges</p>
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Terms -->
+
     <section class="terms">
         <header class="section-heading">
-            <h1>terms and conditions</h1>
+            <h2>terms and conditions</h2>
         </header>
         <p>
             <p><strong>Appliance Repair Terms and Conditions for Use, Service and Sale</strong></p>
