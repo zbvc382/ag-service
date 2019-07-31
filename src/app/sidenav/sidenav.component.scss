@@ -1,6 +1,12 @@
+@import '../../styles/variables';
+
 a {
     text-decoration: none;
     color: white;
+}
+
+.link-active {
+    background-color: #222B3B;
 }
 
 // a:hover,

@@ -126,8 +126,8 @@
         color: $color-secondary;
         text-decoration: none;
 
-        &--active {
-            color: blue;
+        p {
+            margin: 0 !important;
         }
 
         @media only screen and (max-width: 1342px) {
@@ -156,7 +156,22 @@
 
         &:hover {
             color: $color-primary;
+
+            .nav__menu-items-link {
+                color: $color-primary;
+            }
         }
+
+        &--active {
+            .nav__menu-items-link {
+                border-bottom: 0.25rem solid $color-primary;
+            }
+        }
+    }
+
+    &__menu-items-link {
+        border-bottom: 0.25rem solid #fff;
+        display: inline-block;
     }
 
     mat-menu {
@@ -210,12 +225,16 @@
         text-decoration: none;
 
         a {
-            color: $color-secondary !important;
+            color: $color-secondary;
         }
 
         a:hover {
-            color: $color-primary !important;
+            color: $color-primary;
             text-decoration: none;
+        }
+
+        svg {
+            vertical-align: top;
         }
     }
 
