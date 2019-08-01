@@ -1,89 +1,96 @@
 <nav *ngIf="isMobile" role="navigation" class="nav" #nav [ngClass]="{'nav--sticky': isSticky}">
   <button class="btn-sidebar" type="button" aria-label="Toggle sidenav" (click)="onToggleSidenav()">
-    <svg class="icon icon--md icon--primary">
+    <svg class="icon icon--md icon--primary" aria-label="Menu">
+      <title>Menu</title>
       <use xlink:href="../../../assets/images/sprite.svg#squared_menu"></use>
     </svg>
   </button>
   <div class="nav__numbers">
     <div class="nav__resp-phone">
-      <svg class="icon icon--sm icon--primary">
+      <svg class="icon icon--sm icon--primary" aria-label="Landline phone">
+        <title>Landline phone</title>
         <use xlink:href="../../../assets/images/sprite.svg#phone_filled"></use>
       </svg>
-      <a href="tel:0207 476 8725">0207 476 8725</a>
+      <a href="tel:0207 476 8725" aria-label="Call landline">0207 476 8725</a>
     </div>
     <div class="nav__resp-mobile">
-      <svg class="icon icon--sm icon--primary">
+      <svg class="icon icon--sm icon--primary" aria-label="Mobile phone">
+        <title>Mobile phone</title>
         <use xlink:href="../../../assets/images/sprite.svg#touchscreen_smartphone_filled"></use>
       </svg>
-      <a href="tel:0754 085 2102">0754 085 2102</a>
+      <a href="tel:0754 085 2102" aria-label="Call mobile">0754 085 2102</a>
     </div>
   </div>
 </nav>
 <nav *ngIf="!isMobile" role="navigation" class="nav" #nav [ngClass]="{'nav--sticky': isSticky}">
   <div class="nav__logo">
-    <a [routerLink]="['/']">
+    <a [routerLink]="['/']" aria-label="Go back to home page">
       <img src="../../../assets/images/logo-nav.svg" alt="Company logo">
     </a>
   </div>
   <a class="nav__menu-items nav__menu-items--1" [routerLink]="['/']" [routerLinkActiveOptions]="{exact:
-    true}" routerLinkActive="nav__menu-items--active">
+    true}" routerLinkActive="nav__menu-items--active" aria-label="Home link">
     <p class="nav__menu-items-link">Home</p>
   </a>
   <div class="nav__menu-items nav__menu-items--2 dropdown" routerLinkActive="nav__menu-items--active">
     <div id="services">
-      <a [routerLink]="['/appliance-repairs']">
+      <a [routerLink]="['/appliance-repairs']" aria-label="Services link">
         <p class="nav__menu-items-link">Services</p>
       </a>
     </div>
     <div class="dropdown-content">
-      <a [routerLink]="['/appliance-repairs/washing-machine-repairs']">
+      <a [routerLink]="['/appliance-repairs/washing-machine-repairs']" aria-label="Got to washing machine repairs page">
         <p>Washing Machine Repairs</p>
       </a>
-      <a [routerLink]="['/appliance-repairs/dishwasher-repairs']">
+      <a [routerLink]="['/appliance-repairs/dishwasher-repairs']" aria-label="Go to dishwasher repairs page">
         <p>Dishwasher Repairs</p>
       </a>
-      <a [routerLink]="['/appliance-repairs/tumble-dryer-repairs']">
+      <a [routerLink]="['/appliance-repairs/tumble-dryer-repairs']" aria-label="Go to tumble dryer repairs page">
         <p>Tumble Dryer Repairs</p>
       </a>
-      <a [routerLink]="['/appliance-repairs/electric-oven-repairs']">
+      <a [routerLink]="['/appliance-repairs/electric-oven-repairs']" aria-label="Go to electric oven repairs page">
         <p>Electric Oven Repairs</p>
       </a>
-      <a [routerLink]="['/appliance-repairs/microwave-repairs']">
+      <a [routerLink]="['/appliance-repairs/microwave-repairs']" aria-label="Go to microwave repairs page">
         <p>Microwave Repairs</p>
       </a>
-      <a [routerLink]="['/appliance-repairs/extractor-hood-repairs']">
+      <a [routerLink]="['/appliance-repairs/extractor-hood-repairs']" aria-label="Extractor hood repairs page">
         <p>Extractor Hood Repairs</p>
       </a>
-      <a [routerLink]="['/appliance-repairs/fridge-freezer-repairs']">
+      <a [routerLink]="['/appliance-repairs/fridge-freezer-repairs']" aria-label="Go to fridge freezer repairs page">
         <p>Fridge Freezer Repairs</p>
       </a>
-      <a [routerLink]="['/appliance-repairs/commercial-appliance-repairs']">
+      <a [routerLink]="['/appliance-repairs/commercial-appliance-repairs']"
+        aria-label="Go to commercial appliance repairs">
         <p>Commercial Appliance Repairs</p>
       </a>
     </div>
   </div>
   <a class="nav__menu-items nav__menu-items--3" [routerLink]="['/appliance-repair-prices']"
-    routerLinkActive="nav__menu-items--active">
+    routerLinkActive="nav__menu-items--active" aria-label="Go to prices page">
     <p class="nav__menu-items-link">Prices</p>
   </a>
   <a class="nav__menu-items nav__menu-items--4" [routerLink]="['/areas-covered']"
-    routerLinkActive="nav__menu-items--active">
+    routerLinkActive="nav__menu-items--active" aria-label="Go to coverage page">
     <p class="nav__menu-items-link">Coverage</p>
   </a>
-  <a class="nav__menu-items nav__menu-items--5" [routerLink]="['/about-us']" routerLinkActive="nav__menu-items--active">
+  <a class="nav__menu-items nav__menu-items--5" [routerLink]="['/about-us']" routerLinkActive="nav__menu-items--active"
+    aria-label="Go to about us page">
     <p class="nav__menu-items-link">About Us</p>
   </a>
   <a class="nav__menu-items nav__menu-items--6" [routerLink]="['/error-codes']"
-    routerLinkActive="nav__menu-items--active">
+    routerLinkActive="nav__menu-items--active" aria-label="Go to error codes page">
     <p class="nav__menu-items-link">Error Codes</p>
   </a>
-  <a class="nav__menu-items nav__menu-items--7" [routerLink]="['/blog']" routerLinkActive="nav__menu-items--active">
+  <a class="nav__menu-items nav__menu-items--7" [routerLink]="['/blog']" routerLinkActive="nav__menu-items--active"
+    aria-label="Go to blog page">
     <p class="nav__menu-items-link">Blog</p>
   </a>
   <div class="nav__phone">
-    <svg class="icon icon--sm icon--primary">
+    <svg class="icon icon--sm icon--primary" aria-label="Landline phone">
+      <title>Landline phone</title>
       <use xlink:href="../../../assets/images/sprite.svg#phone_filled"></use>
     </svg>
-    <a href="tel:0207 476 8725">0207 476 8725</a>
+    <a href="tel:0207 476 8725" aria-label="Call landline phone">0207 476 8725</a>
   </div>
 </nav>
