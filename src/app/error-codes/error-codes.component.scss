@@ -1,5 +1,11 @@
 @import '../../styles/variables';
 
+.intro {
+    &__sub {
+        align-items: start;
+    }
+}
+
 .error-codes-home {
     grid-column: center-start / center-end;
     display: grid;

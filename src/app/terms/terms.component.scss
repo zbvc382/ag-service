@@ -1,5 +1,11 @@
 @import '../../styles/variables';
 
+.intro {
+    &__sub {
+        align-items: start;
+    }
+}
+
 .terms {
     grid-column: center-start / center-end;
     font-size: $font-size-primary;

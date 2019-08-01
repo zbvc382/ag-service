@@ -1,5 +1,11 @@
 @import '../../styles/variables';
 
+.intro {
+    &__sub {
+        align-items: start;
+    }
+}
+
 .about-us {
     display: grid;
     grid-column: center-start / center-end;

@@ -82,13 +82,15 @@
                 </li>
             </ul>
         </div>
+        <p class="vat-note"><span>NOTE</span>: All prices below are VAT EXCLUSIVE. E.g. price + spare part (if
+            required) + VAT = total to be paid.</p>
         <div class="prices__table-responsive table-responsive">
             <table class="table table-striped main-table">
                 <thead>
                     <tr>
                         <th scope="col">appliance</th>
                         <th scope="col">diagnostic</th>
-                        <th scope="col">repair&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                        <th scope="col">repair&nbsp;&nbsp;&nbsp;</th>
                         <th scope="col">total&nbsp;&nbsp;&nbsp;&nbsp;</th>
                     </tr>
                 </thead>
@@ -236,78 +238,49 @@
                 </tbody>
             </table>
         </div>
-        <div class="prices__info-container">
-            <div class="prices__terms">
+        <article class="prices__info-container">
+            <section class="prices__terms">
+                <h2 class="prices__terms--title">Prices</h2>
                 <ul>
-                    <li>All prices are +VAT.</li>
+                    <li>All prices are <strong>VAT exclusive</strong>.</li>
                     <li>The diagnostic charge covers the time spent identifying the cause of the fault.</li>
-                    <li>A repair charge that is payable after your appliance has been repaired.</li>
-                    <li>Price of parts are not included. If new parts are required, we’ll give you a fixed quote for
+                    <li>The repair charge is payable after your appliance has been repaired and is confirmed working.
+                    </li>
+                    <li>Price of parts are <strong>not</strong> included. If new parts are required, we’ll give you a
+                        fixed quote for
                         these before proceeding with the repair.</li>
-                    <li>6 months guarantee on the repair and parts (we do not guarantee blockages, heating elements or
-                        printed
-                        circuit boards).</li>
-                    <li>No extra charge for revisits if a new part needs to be ordered.</li>
+                    <li><strong>No</strong> extra charge for revisits if a new part needs to be ordered.</li>
+                    <li>If the new part is too expensive and the machine is uneconomical to repair, there is no
+                        obligation to proceed with the repair. You only need to paid the diagnostic charge.
+                    </li>
                     <li>A congestion charge, ULEZ charge and parking fees apply if you live in central London.</li>
-                    <li>No service fee is charged if the engineer is unable to identify the fault.
+                    <li><strong>No</strong> service fee is charged if the engineer is unable to identify the fault.
                     </li>
                     <li>In a case of a serious issue, for example when a washer requires new bearings, we will provide a
                         seperate quote for the repair and parts.</li>
-                    <li>We provide 50% discount for each additional appliance needed to repair on the first visit.</li>
+                    <li>We provide <strong>50% discount</strong> for each additional appliance needed to repair on the
+                        first visit.</li>
                 </ul>
-            </div>
-            <div class="prices__links">
-                <h2 class="heading-2">our services</h2>
-                <a class="prices__link" [routerLink]="['/appliance-repairs/washing-machine-repairs']">
-                    <svg class="icon">
-                        <use xlink:href="../../../assets/images/sprite.svg#washing_machine"></use>
-                    </svg>
-                    <p>&nbsp;Washing Machine Repairs</p>
-                </a>
-                <a class="prices__link" [routerLink]="['/appliance-repairs/dishwasher-repairs']">
-                    <svg class="icon">
-                        <use xlink:href="../../../assets/images/sprite.svg#dishwasher"></use>
-                    </svg>
-                    <p>&nbsp;Diswasher Repairs</p>
-                </a>
-                <a class="prices__link" [routerLink]="['/appliance-repairs/tumble-dryer-repairs']">
-                    <svg class="icon">
-                        <use xlink:href="../../../assets/images/sprite.svg#tumble_dryer"></use>
-                    </svg>
-                    <p>&nbsp;Tumble Dryer Repairs</p>
-                </a>
-                <a class="prices__link" [routerLink]="['/appliance-repairs/electric-oven-repairs']">
-                    <svg class="icon">
-                        <use xlink:href="../../../assets/images/sprite.svg#cooker"></use>
-                    </svg>
-                    <p>&nbsp;Electric Cooker/Oven Repairs</p>
-                </a>
-                <a class="prices__link" [routerLink]="['/appliance-repairs/microwave-repairs']">
-                    <svg class="icon">
-                        <use xlink:href="../../../assets/images/sprite.svg#microwave"></use>
-                    </svg>
-                    <p>&nbsp;Microwave Repairs</p>
-                </a>
-                <a class="prices__link" [routerLink]="['/appliance-repairs/extractor-hood-repairs']">
-                    <svg class="icon">
-                        <use xlink:href="../../../assets/images/sprite.svg#cooker_hood"></use>
-                    </svg>
-                    <p>&nbsp;Extractor Hood Repairs</p>
-                </a>
-                <a class="prices__link" [routerLink]="['/appliance-repairs/fridge-freezer-repairs']">
-                    <svg class="icon">
-                        <use xlink:href="../../../assets/images/sprite.svg#fridge"></use>
-                    </svg>
-                    <p>&nbsp;Fridge Freezer Repairs</p>
-                </a>
-                <a class="prices__link" [routerLink]="['/appliance-repairs/commercial-appliance-repairs']">
-                    <svg class="icon">
-                        <use xlink:href="../../../assets/images/sprite.svg#cooker_dotted"></use>
-                    </svg>
-                    <p>&nbsp;Commercial Appliance Repairs</p>
-                </a>
-            </div>
-        </div>
+                <h2 class="prices__terms--title">Guarantee</h2>
+                <ul>
+                    <li>
+                        We give <strong>6 months guarantee</strong> on the repair and parts. We do not guarantee
+                        blockages,
+                        cosmetic damage or parts that have become faulty due to external forces (i.e. faulty pump due to
+                        a stuck hair clip blocking the impeller). We do not guarantee any part or machine that is
+                        damaged due to
+                        neglect, flooding, fire, infestation or damp.
+                    </li>
+                </ul>
+                <h2 class="prices__terms--title-discount">Discount</h2>
+                <ul class="discount-list">
+                    <li>The £10 discount is only available to customers residing in the following London postcodes: E1,
+                        E1W, E2, E3, E5, E6, E7, E8, E9, E10, E11, E13, E14, E15, E16,
+                        SE16, SE10, SE8, IG1.</li>
+                    <li><span>Note: </span>The discount only applies to the repair charge.</li>
+                </ul>
+            </section>
+        </article>
     </section>
 
     <!-- Call banner -->

@@ -1,14 +1,16 @@
 @import '../../styles/variables';
 
+.intro {
+    &__sub {
+        align-items: start;
+    }
+}
+
 .areas-covered {
     display: grid;
     grid-column: full-start / full-end;
-    // color: $color-grey;
     grid-template-columns:
         [full-start] minmax(3rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end];
-
-    // grid-column-gap: 2rem;
-    // grid-row-gap: 2rem;
 
     header {
         grid-column: center-start / center-end;

@@ -1,5 +1,11 @@
 @import '../../styles/variables';
 
+.intro {
+    &__sub {
+        align-items: start;
+    }
+}
+
 .blogs-container {
     display: grid;
     grid-column: center-start / center-end;
