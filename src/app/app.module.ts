@@ -19,8 +19,6 @@ import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { MetaService } from './_services/meta.service';
-import { ContactModule } from './contact/contact.module';
-import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -43,9 +41,7 @@ import { HttpClientModule } from '@angular/common/http';
     AboutUsModule,
     ErrorCodesModule,
     BlogModule,
-    ContactModule,
     TermsModule,
-    HttpClientModule,
     TransferHttpCacheModule
   ],
   providers: [MetaService],

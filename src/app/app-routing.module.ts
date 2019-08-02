@@ -20,8 +20,6 @@ const routes: Routes = [
 
   { path: 'terms', loadChildren: './terms/terms.module#TermsModule' },
 
-  { path: 'contact-us-appliance-services', loadChildren: './contact/contact.module#ContactModule' },
-
   { path: '', component: HomeComponent },
 
   { path: '**', redirectTo: '', pathMatch: 'full' }
