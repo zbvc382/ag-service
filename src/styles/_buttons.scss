@@ -48,10 +48,40 @@
     }
 }
 
+.btn-round-md {
+
+    &,
+    &:link,
+    &:visited {
+        font-size: 1.2rem;
+        font-family: $font-primary;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.1rem 3rem;
+        display: inline-block;
+        border-radius: 10rem;
+        transition: all 0.2s;
+        position: relative;
+        border: none;
+        cursor: pointer;
+    }
+
+    &:hover {
+        box-shadow: 0 1rem 2rem rgba(black, 0.15);
+        transform: translateY(-0.1rem);
+    }
+}
+
 .btn {
     &--white {
         background-color: #fff;
         color: $color-secondary;
+        font-weight: 700;
+    }
+
+    &--green {
+        background-color: #fff;
+        background-color: #1BA054;
         font-weight: 700;
     }
 
