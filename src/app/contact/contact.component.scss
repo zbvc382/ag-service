@@ -1,0 +1,60 @@
+@import '../../styles/variables';
+
+.intro {
+    &__sub {
+        align-items: start;
+    }
+}
+
+.contact {
+    grid-column: center-start / center-end;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    &__info {
+        display: grid;
+        align-items: start;
+    }
+
+    &__form {
+        display: grid;
+        align-items: start;
+        font-size: $font-size-primary;
+    }
+
+    .heading-2 {
+        justify-self: center;
+    }
+}
+
+.form {
+    label {
+        font-size: $font-size-secondary;
+        color: #fff;
+        padding: 0.25rem .5rem;
+        background-color: $color-secondary;
+        margin-left: 0.1rem;
+    }
+
+    input, textarea {
+        font-size: $font-size-primary;
+    }
+
+    small {
+        color: $color-primary;
+    }
+
+    button {
+        margin-top: 2rem;
+        text-transform: uppercase;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #fff;
+
+        &:hover {
+            background-color: #1C8348;
+        }
+    }
+}
+
