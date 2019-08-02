@@ -14,6 +14,7 @@ export class HomeComponent implements OnInit {
   price = '£';
   isResult = false;
   quote: HomeFormModel;
+  isInstallation = false;
 
   premium = [
     'Miele',
@@ -25,7 +26,6 @@ export class HomeComponent implements OnInit {
     'Washing Machine',
     'Washer Dryer',
     'Dishwasher',
-    'Microwave'
   ];
 
   nonFitted = [
@@ -36,7 +36,8 @@ export class HomeComponent implements OnInit {
     'Extractor Hood',
     'Range Cooker',
     'Fridge Freezer',
-    'Fridge Freezer (American)'
+    'Fridge Freezer (American)',
+    'Microwave'
   ];
 
   commercial = [
@@ -137,7 +138,7 @@ export class HomeComponent implements OnInit {
       }
       if (this.commercial.includes(quote.applianceType)) {
         if (quote.applianceType === 'Commercial Microwave') {
-          this.price += '75';
+          this.price += '70';
           return;
         } else {
           this.price += '80';
@@ -147,6 +148,8 @@ export class HomeComponent implements OnInit {
     }
 
     if (quote.jobType === 'Installation') {
+      this.isInstallation = true;
+
       if (quote.fitting === 'Integrated') {
         this.price += '65';
         return;
@@ -164,6 +167,7 @@ export class HomeComponent implements OnInit {
 
   resetQuote() {
     this.isResult = false;
+    this.isInstallation = false;
     this.totalEl.nativeElement.scrollIntoView();
   }
 

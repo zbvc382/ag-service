@@ -64,7 +64,7 @@
           <title>Check</title>
           <use xlink:href="../../../assets/images/sprite.svg#checked"></use>
         </svg>
-        <p>Fixed repair charges</p>
+        <p>Fixed price diagnostic & labour</p>
       </div>
     </div>
     <div class="intro__discount">
@@ -87,7 +87,7 @@
         <title>Security checked</title>
         <use xlink:href="../../../assets/images/sprite.svg#security_checked"></use>
       </svg>
-      <h3>6 months guarantee on all appliance repairs and parts<span class="asterisk">&nbsp;*</span></h3>
+      <h3>6 months guarantee on all appliance repairs and parts</h3>
     </div>
     <div class="reasons__reason reasons__reason--2">
       <svg class="icon icon--lg icon icon--secondary" role="img" aria-label="Person at home">
@@ -101,7 +101,7 @@
         <title>Cancel</title>
         <use xlink:href="../../../assets/images/sprite.svg#cancel_2"></use>
       </svg>
-      <h3>No call out charges or parking fees<span class="asterisk">&nbsp;**</span>
+      <h3>No call out charges or parking fees<span class="asterisk">&nbsp;*</span>
       </h3>
     </div>
     <div class="reasons__reason reasons__reason--4">
@@ -165,7 +165,8 @@
         </div>
         <div class="price-info">
           <p>{{price}}<span>+VAT</span></p>
-          <p id="spare-parts-disc">(parts charged separately)</p>
+          <p id="spare-parts-disc" *ngIf="!isInstallation">(parts charged separately)</p>
+          <p id="spare-parts-disc" *ngIf="isInstallation">(price does not include optional delivery and removal)</p>
         </div>
         <div class="call-info">
           <p>For more information or to book a service call us at
@@ -198,12 +199,21 @@
           </div>
         </div>
         <div class="result__term-items">
-          <p>The total price includes the diagnostic and repair charge. The diagnostic charge covers the time spent by
+          <p *ngIf="!isInstallation">The total price includes the diagnostic and repair charge. The diagnostic charge
+            covers the time spent by
             the engineer identifying the fault and is paid on the first visit. After the diagnostics, you will be
-            informed about the condition of the appliance, and what needs to be fixed. The repair charge is payable once
-            the appliance has been repaired and is confirmed to work. In
-            cases when the appliance is not repairable or beyond economical repair, you will only need to pay the
-            diagnostic charge.</p>
+            informed about the condition of the appliance, and what needs to be fixed. The repair charge covers the time
+            spent
+            repairing the appliance and is payable only if the fault has been
+            fixed. If new parts are required, we’ll give you a
+            fixed quote for
+            these before proceeding with the repair. In cases when the new part is too expensive or the machine is
+            uneconomical to repair, there is no
+            obligation to proceed with the repair. You only need to paid the diagnostic charge.</p>
+          <p *ngIf="isInstallation">The price includes installation of the appliance if it's provided by you. For
+            delivery of a new appliance and/or removal
+            of the old one, there is an extra charge of £15 +VAT for each of these additional services.
+          </p>
         </div>
       </div>
       <button class="quote-reset btn-round btn--white" (click)="resetQuote()">new quote</button>
@@ -228,7 +238,9 @@
           <ul>
             <li>A fixed diagnostic charge of £35 +VAT which covers the time spent identifying the cause of the fault.
             </li>
-            <li>A repair charge that is payable after your appliance has been repaired and is confirmed to work.</li>
+            <li>A repair charge that covers time spent repairing the appliance and is payable only if the fault has
+              been
+              fixed.</li>
             <li>No service fee is charged if the engineer is unable to identify the fault.
             </li>
             <li>If new parts are required,
@@ -869,13 +881,11 @@
   <!-- Reason info -->
 
   <div class="reason-info">
-    <p class="reason-info__p-1">6 months guarantee on the repair and parts (we do not guarantee
-      blockages, heating elements or printed circuit boards).</p>
     <p class="reason-info__p-2">A congestion charge, ULEZ charge and parking fees apply if you live in central London.
     </p>
-    <p class="reason-info__p-3">£10 discount applies to the following postcodes: E1, E1W, E2, E3, E5, E6, E7, E8, E9,
-      E10,
-      E11, E13, E14, E15, E16,
+    <p class="reason-info__p-3">The £10 discount is only available to customers residing in the following London
+      postcodes: E1,
+      E1W, E2, E3, E5, E6, E7, E8, E9, E10, E11, E13, E14, E15, E16,
       SE16, SE10, SE8, IG1.</p>
   </div>
 </div>

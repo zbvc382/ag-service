@@ -103,6 +103,11 @@
                 color: #fff;
                 border-bottom: 0.25rem solid $color-secondary;
             }
+
+            .installation {
+                background-color: #4447e0;
+                border-bottom: 0.25rem solid $color-primary;
+            }
         }
 
         .main-table {
@@ -118,12 +123,6 @@
             grid-column: 1 / -1;
         }
     }
-
-    // &__discount {
-    //     grid-column: 1 / -1;
-    //     background: linear-gradient(to left, #F3F32B 0%, #FFC300   100%);
-    //     padding: 1rem;
-    // }
 
     &__terms {
         border-top: 0.1rem solid #dee2e6;
@@ -158,6 +157,7 @@
             list-style: none;
             font-size: 1.35rem;
             line-height: 2.5rem;
+            text-align: justify;
 
             li::before {
                 content: "\2022";

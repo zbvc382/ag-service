@@ -333,6 +333,8 @@
         grid-column: 2 / 4;
         background-color: $color-secondary;
         justify-self: center;
+        padding-left: 6rem;
+        padding-right: 6rem;
 
         @media only screen and (max-width: 750px) {
             grid-column: 2 / 3;

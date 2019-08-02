@@ -29,7 +29,8 @@ export class HomeFormComponent implements OnInit, OnDestroy {
     'Condenser Dryer',
     'Range Cooker',
     'Fridge Freezer',
-    'Fridge Freezer (American)'
+    'Fridge Freezer (American)',
+    'Microwave'
   ];
 
   nonInstallable = [
@@ -43,7 +44,8 @@ export class HomeFormComponent implements OnInit, OnDestroy {
     'Condenser Dryer',
     'Range Cooker',
     'Fridge Freezer',
-    'Fridge Freezer (American)'
+    'Fridge Freezer (American)',
+    'Microwave'
   ];
 
   constructor(private fb: FormBuilder) { }
