@@ -15,6 +15,10 @@ html {
     box-sizing: border-box;
     font-size: 62.5%;
     height: 100%;
+
+    @media only screen and (max-width: 365px) {
+        font-size: 56.25%;
+    }
 }
 
 body {
@@ -377,7 +381,7 @@ body {
     p {
         margin-top: 3.5rem;
         background: $color-primary;
-        padding: 0.5rem;
+        padding: 0.25rem .5rem;
         display: block;
         justify-self: center;
     }

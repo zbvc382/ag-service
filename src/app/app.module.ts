@@ -13,6 +13,7 @@ import { AboutUsModule } from './about-us/about-us.module';
 import { ErrorCodesModule } from './error-codes/error-codes.module';
 import { BlogModule } from './blog/blog.module';
 import { TermsModule } from './terms/terms.module';
+import { ContactModule } from './contact/contact.module';
 
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
@@ -42,6 +43,7 @@ import { MetaService } from './_services/meta.service';
     ErrorCodesModule,
     BlogModule,
     TermsModule,
+    ContactModule,
     TransferHttpCacheModule
   ],
   providers: [MetaService],

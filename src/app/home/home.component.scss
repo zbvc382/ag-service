@@ -235,7 +235,8 @@
 
             .header-text {
                 justify-self: center;
-                background: $color-primary;
+                align-self: start;
+                background: linear-gradient(to left, #e04447 0%, #b72837 100%);
                 padding: 0.5rem;
                 text-align: center;
             }
@@ -261,7 +262,7 @@
             }
 
             .call-info {
-                font-size: 2.5rem;
+                font-size: 2.35rem;
                 justify-self: center;
 
                 p {
@@ -277,7 +278,7 @@
                     a {
                         text-decoration: none;
                         color: $color-primary;
-                        font-size: 3rem;
+                        font-size: 2.55rem;
                     }
                 }
             }
@@ -289,7 +290,7 @@
             display: grid;
             grid-row-gap: 2rem;
             align-content: center;
-            text-align: justify;
+            // text-align: justify;
 
             @media only screen and (max-width: 1100px) {
                 grid-column: col-start 1 / col-end 8;
@@ -340,9 +341,25 @@
         &__term-items {
             display: grid;
             grid-row-gap: 1rem;
-            background-color: $color-primary;
-            padding: 1rem;
+            background: linear-gradient(to left, #e04447 0%, #b72837 100%);
+            padding: 1.5rem;
             align-content: start;
+
+            &--title {
+                justify-self: center;
+                color: #fff;
+                background: $color-secondary;
+                padding: 0.25rem .5rem;
+            }
+
+            &--list {
+                margin-left: 1.5rem;
+                font-size: 1.35rem;
+
+                li:not(last-of-type) {
+                    margin: 1rem 0;
+                }
+            }
 
             p {
                 font-size: 1.35rem;

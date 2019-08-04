@@ -4,7 +4,10 @@ import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
 
-  { path: 'appliance-repairs', loadChildren: './appliances/appliances.module#AppliancesModule' },
+  {
+    path: 'appliance-repairs',
+    loadChildren: './appliances/appliances.module#AppliancesModule'
+  },
 
   { path: 'appliance-repair-prices', loadChildren: './price-list/price-list.module#PriceListModule' },
 
@@ -20,9 +23,9 @@ const routes: Routes = [
 
   { path: 'terms', loadChildren: './terms/terms.module#TermsModule' },
 
-  { path: '', component: HomeComponent },
+  { path: 'contact-us-appliance-services', loadChildren: './contact/contact.module#ContactModule' },
 
-  { path: '**', redirectTo: '', pathMatch: 'full' }
+  { path: '', component: HomeComponent }
 
 ];
 

@@ -64,7 +64,7 @@
           <title>Check</title>
           <use xlink:href="../../../assets/images/sprite.svg#checked"></use>
         </svg>
-        <p>Fixed price diagnostic & labour</p>
+        <p>Fixed diagnostic & repair charges</p>
       </div>
     </div>
     <div class="intro__discount">
@@ -170,7 +170,8 @@
         </div>
         <div class="call-info">
           <p>For more information or to book a service call us at
-            <span><a href="tel:0207 476 8725">0207 476 8725</a></span>
+            <span><a href="tel:0207 476 8725">0207 476 8725</a></span> or email <span><a
+                href="mailto:contact@ag-repairs.co.uk">contact@ag-repairs.co.uk</a></span>
           </p>
         </div>
       </div>
@@ -199,17 +200,28 @@
           </div>
         </div>
         <div class="result__term-items">
-          <p *ngIf="!isInstallation">The total price includes the diagnostic and repair charge. The diagnostic charge
-            covers the time spent by
-            the engineer identifying the fault and is paid on the first visit. After the diagnostics, you will be
-            informed about the condition of the appliance, and what needs to be fixed. The repair charge covers the time
-            spent
-            repairing the appliance and is payable only if the fault has been
-            fixed. If new parts are required, we’ll give you a
+
+          <p class="result__term-items--title" *ngIf="!isInstallation">The total price includes the diagnostic and
+            repair charge.</p>
+          <div class="result__term-items--list" *ngIf="!isInstallation">
+            <ul>
+              <li>A fixed diagnostic charge of £35 +VAT which covers the time spent by
+                the engineer inspecting the appliance and identifying the root cause of the fault. After the
+                diagnostics,
+                you will be
+                informed about the condition of the appliance, and what needs to be repaired.</li>
+              <li>A repair charge of £{{repairPrice}} +VAT which covers the time
+                spent by the engineer
+                repairing and testing the appliance and is payable only once the fault is fixed.</li>
+            </ul>
+          </div>
+          <p *ngIf="!isInstallation">
+            If new parts are required, we’ll give you a
             fixed quote for
             these before proceeding with the repair. In cases when the new part is too expensive or the machine is
             uneconomical to repair, there is no
-            obligation to proceed with the repair. You only need to paid the diagnostic charge.</p>
+            obligation to proceed with the repair. You only need to pay the diagnostic charge.
+          </p>
           <p *ngIf="isInstallation">The price includes installation of the appliance if it's provided by you. For
             delivery of a new appliance and/or removal
             of the old one, there is an extra charge of £15 +VAT for each of these additional services.
@@ -236,16 +248,15 @@
         <h4 class="heading-3 heading-3--secondary">simple pricing structure</h4>
         <div class="work__list-wrapper">
           <ul>
-            <li>A fixed diagnostic charge of £35 +VAT which covers the time spent identifying the cause of the fault.
+            <li>A fixed diagnostic charge of £35 +VAT which covers the time spent by
+              the engineer inspecting the appliance and identifying the root cause of the fault.
             </li>
-            <li>A repair charge that covers time spent repairing the appliance and is payable only if the fault has
-              been
-              fixed.</li>
-            <li>No service fee is charged if the engineer is unable to identify the fault.
-            </li>
+            <li>A repair charge that covers the time
+              spent by the engineer
+              repairing and testing the appliance and is payable only once the fault is fixed.</li>
             <li>If new parts are required,
               we’ll give you a fixed quote for these before proceeding with the repair.</li>
-            <li>No extra charge for subsequent visits if new parts need to be ordered.</li>
+            <li>No extra charge for revisits if a new part needs to be ordered.</li>
             <li>We provide 50% discount for each additional appliance needed to repair on the first visit.</li>
           </ul>
         </div>
@@ -258,7 +269,7 @@
       <div class="work__item-text">
         <h4 class="heading-3 heading-3--secondary">easy way to pay</h4>
         <p>To make things easy, we accept all major credit and debit cards, PayPal, and cash. Our commercial customers
-          can be invoiced and can pay by cheque, bank transfer or
+          can be invoiced and may pay by cheque, bank transfer or
           card.</p>
       </div>
     </section>
@@ -530,6 +541,7 @@
         <h4 class="coverege-text-col__heading heading-2">east london</h4>
         <ul class="coverege-text-col__list">
           <li><strong>E1</strong> Head district</li>
+          <li><strong>E1W</strong> Wapping</li>
           <li><strong>E2</strong> Bethnal Green</li>
           <li><strong>E3</strong> Bow</li>
           <li><strong>E4</strong> Chingford</li>

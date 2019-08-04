@@ -15,6 +15,7 @@ export class HomeComponent implements OnInit {
   isResult = false;
   quote: HomeFormModel;
   isInstallation = false;
+  repairPrice: number;
 
   premium = [
     'Miele',
@@ -94,54 +95,54 @@ export class HomeComponent implements OnInit {
     if (quote.jobType === 'Repair') {
       if (this.fitted.includes(quote.applianceType)) {
         if (this.premium.includes(quote.applianceMake)) {
-          this.price += '80';
+          this.setPrice('80');
           return;
         }
         if (quote.fitting === 'Integrated') {
-          this.price += '65';
+          this.setPrice('65');
           return;
         }
         if (quote.fitting === 'Freestanding') {
-          this.price += '60';
+          this.setPrice('60');
           return;
         }
       }
       if (this.nonFitted.includes(quote.applianceType)) {
         if (this.premium.includes(quote.applianceMake)) {
           if (quote.applianceType === 'Fridge Freezer (American)') {
-            this.price += '85';
+            this.setPrice('85');
             return;
           } else {
-            this.price += '80';
+            this.setPrice('80');
             return;
           }
         }
         if (quote.applianceType === 'Condenser Dryer') {
-          this.price += '65';
+          this.setPrice('65');
           return;
         }
         if (quote.applianceType === 'Range Cooker') {
-          this.price += '80';
+          this.setPrice('80');
           return;
         }
         if (quote.applianceType === 'Fridge Freezer') {
-          this.price += '80';
+          this.setPrice('80');
           return;
         }
         if (quote.applianceType === 'Fridge Freezer (American)') {
-          this.price += '85';
+          this.setPrice('85');
           return;
         } else {
-          this.price += '60';
+          this.setPrice('60');
           return;
         }
       }
       if (this.commercial.includes(quote.applianceType)) {
         if (quote.applianceType === 'Commercial Microwave') {
-          this.price += '70';
+          this.setPrice('70');
           return;
         } else {
-          this.price += '80';
+          this.setPrice('80');
           return;
         }
       }
@@ -151,14 +152,19 @@ export class HomeComponent implements OnInit {
       this.isInstallation = true;
 
       if (quote.fitting === 'Integrated') {
-        this.price += '65';
+        this.setPrice('65');
         return;
       }
       if (quote.fitting === 'Freestanding') {
-        this.price += '60';
+        this.setPrice('60');
         return;
       }
     }
+  }
+
+  setPrice(price: string) {
+    this.price += price;
+    this.repairPrice = +price - 35;
   }
 
   resetPrice() {

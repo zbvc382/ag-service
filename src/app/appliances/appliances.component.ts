@@ -33,7 +33,6 @@ export class AppliancesComponent implements OnInit {
         this.isWashingMachine = true;
         this.headerText = 'Washing Machine Repairs in London';
         this.applianceName = 'washing machine';
-        this.metaService.createCanonicalURL('https://www.ag-repairs.co.uk/appliance-repairs/washing-machine-repairs');
 
         this.title.setTitle('Washing Machine Repairs in London | A&G Appliances');
         this.meta.updateTag({

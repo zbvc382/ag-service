@@ -1,0 +1,127 @@
+@import '../../styles/variables';
+
+.intro {
+    &__sub {
+        align-items: start;
+    }
+}
+
+.contacts {
+    grid-column: center-start / center-end;
+    display: grid;
+    // grid-template-columns: 50% 50%;
+    grid-template-columns: 50% 50%;
+    align-content: start;
+
+    @media only screen and (max-width: 950px) {
+        grid-template-columns: 1fr;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .heading-2 {
+            align-self: center;
+            margin-bottom: 4rem;
+        }
+    }
+
+    &__location {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // justify-content: center;
+
+        .heading-2 {
+            align-self: center;
+            margin-bottom: 4rem;
+        }
+    }
+
+    &__contact {
+        display: flex;
+        align-content: center;
+        font-size: $font-size-primary;
+        margin-bottom: 2rem;
+
+        a {
+            text-decoration: none;
+            color: $color-secondary;
+
+            &:hover {
+                color: $color-primary;
+            }
+        }
+
+        .contact-mr {
+            margin-right: 1.5rem;
+        }
+
+        p {
+            margin: 0 !important;
+        }
+    }
+}
+
+.resp-iframe {
+    width: 56rem;
+    height: 28rem;
+
+    @media only screen and (max-width: 1150px) {
+        // grid-template-columns: 1fr;
+
+        width: 50rem;
+        height: 28rem;
+    }
+
+    @media only screen and (max-width: 1000px) {
+        // grid-template-columns: 1fr;
+
+        width: 45rem;
+        height: 28rem;
+    }
+
+    @media only screen and (max-width: 950px) {
+        // grid-template-columns: 1fr;
+
+        width: 75rem;
+        height: 38rem;
+    }
+
+    @media only screen and (max-width: 820px) {
+        // grid-template-columns: 1fr;
+
+        width: 65rem;
+        height: 38rem;
+    }
+
+    @media only screen and (max-width: 720px) {
+        // grid-template-columns: 1fr;
+
+        width: 55rem;
+        height: 38rem;
+    }
+
+    @media only screen and (max-width: 620px) {
+        // grid-template-columns: 1fr;
+
+        width: 45rem;
+        height: 38rem;
+    }
+
+    @media only screen and (max-width: 520px) {
+        // grid-template-columns: 1fr;
+
+        width: 35rem;
+        height: 38rem;
+    }
+
+    @media only screen and (max-width: 420px) {
+        // grid-template-columns: 1fr;
+
+        width: 25rem;
+        height: 38rem;
+    }
+}

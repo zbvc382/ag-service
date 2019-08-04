@@ -24,8 +24,6 @@ export class ErrorCodesComponent implements OnInit {
         this.reset();
         this.isWashingMachineIndesit = true;
         this.headerText = 'Indesit Washing Machine Fault Codes';
-        this.metaService.createCanonicalURL('https://www.ag-repairs.co.uk/error-codes/indesit-washing-machine-fault-codes');
-
         this.title.setTitle('Indesit Washing Machine Fault Codes | A&G Appliances');
         this.meta.updateTag({
           name: 'description',
@@ -95,7 +93,7 @@ export class ErrorCodesComponent implements OnInit {
         this.title.setTitle('Error Codes | A&G Appliances');
         this.meta.updateTag({
           name: 'description',
-          content: 'We offer affordable appliance repair service in the London area. Call A&G Appliances at 0207 476 8725 for same or next day service.'
+          content: 'A&G Appliances is a well establish company employing experienced appliance technicians. Call our appliance repair engineer today.'
         });
         this.meta.updateTag({
           property: 'og:title',
@@ -103,7 +101,7 @@ export class ErrorCodesComponent implements OnInit {
         });
         this.meta.updateTag({
           property: 'og:description',
-          content: 'We offer affordable appliance repair service in the London area. Call A&G Appliances at 0207 476 8725 for same or next day service.'
+          content: 'A&G Appliances is a well establish company employing experienced appliance technicians. Call our appliance repair engineer today.'
         });
         this.meta.updateTag({
           property: 'og:url',
@@ -115,7 +113,7 @@ export class ErrorCodesComponent implements OnInit {
         });
         this.meta.updateTag({
           name: 'twitter:description',
-          content: 'We offer affordable appliance repair service in the London area. Call A&G Appliances at 0207 476 8725 for same or next day service.'
+          content: 'A&G Appliances is a well establish company employing experienced appliance technicians. Call our appliance repair engineer today.'
         });
         break;
       }

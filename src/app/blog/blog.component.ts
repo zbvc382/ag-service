@@ -125,12 +125,10 @@ export class BlogComponent implements OnInit {
         this.reset();
         this.isMain = true;
         this.headerText = 'Blog';
-        this.metaService.createCanonicalURL('https://www.ag-repairs.co.uk/blog');
-
         this.title.setTitle('Blog | A&G Appliances');
         this.meta.updateTag({
           name: 'description',
-          content: 'We offer affordable appliance repair service in the London area. Call A&G Appliances at 0207 476 8725 for same or next day service.'
+          content: 'A&G Appliances is a well establish company employing experienced appliance technicians. Call our appliance repair engineer today.'
         });
         this.meta.updateTag({
           property: 'og:title',
@@ -138,7 +136,7 @@ export class BlogComponent implements OnInit {
         });
         this.meta.updateTag({
           property: 'og:description',
-          content: 'We offer affordable appliance repair service in the London area. Call A&G Appliances at 0207 476 8725 for same or next day service.'
+          content: 'A&G Appliances is a well establish company employing experienced appliance technicians. Call our appliance repair engineer today.'
         });
         this.meta.updateTag({
           property: 'og:url',
@@ -150,7 +148,7 @@ export class BlogComponent implements OnInit {
         });
         this.meta.updateTag({
           name: 'twitter:description',
-          content: 'We offer affordable appliance repair service in the London area. Call A&G Appliances at 0207 476 8725 for same or next day service.'
+          content: 'A&G Appliances is a well establish company employing experienced appliance technicians. Call our appliance repair engineer today.'
         });
       }
     }

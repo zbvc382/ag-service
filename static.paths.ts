@@ -1,9 +1,5 @@
 export const ROUTES = [
   '/',
-  '/about-us',
-  '/estate-agents-landlords',
-  '/areas-covered',
-  '/appliance-repair-prices',
   '/appliance-repairs',
   '/appliance-repairs/washing-machine-repairs',
   '/appliance-repairs/dishwasher-repairs',
@@ -13,6 +9,9 @@ export const ROUTES = [
   '/appliance-repairs/extractor-hood-repairs',
   '/appliance-repairs/fridge-freezer-repairs',
   '/appliance-repairs/commercial-appliance-repairs',
+  '/appliance-repair-prices',
+  '/areas-covered',
+  '/about-us',
   '/error-codes',
   '/error-codes/indesit-washing-machine-fault-codes',
   '/error-codes/whirlpool-washing-machine-error-codes',
@@ -20,5 +19,7 @@ export const ROUTES = [
   '/blog/common-electric-oven-problems',
   '/blog/oven-does-not-work-timer-set-manual-or-automatic',
   '/blog/fridge-freezer-not-cooling-any-more-fault-finding',
+  '/contact-us-appliance-services',
+  '/estate-agents-landlords',
   '/terms'
 ];

@@ -42,4 +42,10 @@
         </svg>
         <span class="nav-caption">Blog</span>
     </a>
+    <a mat-list-item [routerLink]="['/contact-us-appliance-services']" (click)="onSidenavClose()" routerLinkActive="link-active">
+        <svg class="icon icon--md icon--white">
+            <use href="../../../assets/images/sprite.svg#contact_card"></use>
+        </svg>
+        <span class="nav-caption">Contact Us</span>
+    </a>
 </mat-nav-list>

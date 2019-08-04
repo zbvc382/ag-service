@@ -12,12 +12,10 @@ export class AreasCoveredComponent implements OnInit {
   constructor(private title: Title, private meta: Meta, private metaService: MetaService) { }
 
   ngOnInit() {
-    this.metaService.createCanonicalURL('https://www.ag-repairs.co.uk/areas-covered');
-
     this.title.setTitle('Areas Covered | A&G Appliances');
     this.meta.updateTag({
       name: 'description',
-      content: 'We offer affordable appliance repair service in the London area. Call A&G Appliances at 0207 476 8725 for same or next day service.'
+      content: 'A&G Appliances is a well establish company employing experienced appliance technicians. Call our appliance repair engineer today.'
     });
     this.meta.updateTag({
       property: 'og:title',
@@ -25,7 +23,7 @@ export class AreasCoveredComponent implements OnInit {
     });
     this.meta.updateTag({
       property: 'og:description',
-      content: 'We offer affordable appliance repair service in the London area. Call A&G Appliances at 0207 476 8725 for same or next day service.'
+      content: 'A&G Appliances is a well establish company employing experienced appliance technicians. Call our appliance repair engineer today.'
     });
     this.meta.updateTag({
       property: 'og:url',
@@ -37,7 +35,7 @@ export class AreasCoveredComponent implements OnInit {
     });
     this.meta.updateTag({
       name: 'twitter:description',
-      content: 'We offer affordable appliance repair service in the London area. Call A&G Appliances at 0207 476 8725 for same or next day service.'
+      content: 'A&G Appliances is a well establish company employing experienced appliance technicians. Call our appliance repair engineer today.'
     });
   }
 }
