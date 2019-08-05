@@ -51,10 +51,10 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.metaService.createCanonicalURL('https://www.ag-repairs.co.uk/');
 
-    this.title.setTitle('Domestic & Commercial Appliance Repairs in London | A&G Appliances');
+    this.title.setTitle('Domestic & Commercial Appliance Repairs in London');
     this.meta.updateTag({
       name: 'description',
-      content: 'We offer affordable appliance repair service in the London area. Call A&G Appliances at 0207 476 8725 for same or next day service.'
+      content: 'A&G Appliances offers affordable domestic and commercial appliance repair service in South, East, West, Central, and North London.'
     });
     this.meta.updateTag({
       property: 'og:title',
@@ -62,7 +62,7 @@ export class HomeComponent implements OnInit {
     });
     this.meta.updateTag({
       property: 'og:description',
-      content: 'We offer affordable appliance repair service in the London area. Call A&G Appliances at 0207 476 8725 for same or next day service.'
+      content: 'A&G Appliances offers affordable domestic and commercial appliance repair service in South, East, West, Central, and North London.'
     });
     this.meta.updateTag({
       property: 'og:url',
@@ -74,7 +74,7 @@ export class HomeComponent implements OnInit {
     });
     this.meta.updateTag({
       name: 'twitter:description',
-      content: 'We offer affordable appliance repair service in the London area. Call A&G Appliances at 0207 476 8725 for same or next day service.'
+      content: 'A&G Appliances offers affordable domestic and commercial appliance repair service in South, East, West, Central, and North London.'
     });
   }
 

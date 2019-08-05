@@ -240,6 +240,10 @@
         transform: translateY(-50%);
         text-decoration: none;
 
+        @media only screen and (min-width: 1920px) {
+            top: 51%;
+        }
+
         a {
             color: $color-secondary;
         }
