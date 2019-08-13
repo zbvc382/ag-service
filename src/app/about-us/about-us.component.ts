@@ -13,6 +13,7 @@ export class AboutUsComponent implements OnInit {
 
   ngOnInit() {
     this.title.setTitle('About Us | A&G Appliances');
+    this.metaService.createCanonicalURL('https://www.ag-repairs.co.uk/about-us/');
     this.meta.updateTag({
       name: 'description',
       content: 'A&G Appliances is a well establish company employing experienced appliance technicians. Call our appliance repair engineer today.'
@@ -27,7 +28,7 @@ export class AboutUsComponent implements OnInit {
     });
     this.meta.updateTag({
       property: 'og:url',
-      content: 'https://www.ag-repairs.co.uk/about-us'
+      content: 'https://www.ag-repairs.co.uk/about-us/'
     });
     this.meta.updateTag({
       name: 'twitter:title',

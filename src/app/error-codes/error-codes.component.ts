@@ -20,11 +20,13 @@ export class ErrorCodesComponent implements OnInit {
   ngOnInit() {
 
     switch (this.router.url) {
-      case '/error-codes/indesit-washing-machine-fault-codes': {
+      case '/error-codes/indesit-washing-machine-fault-codes/.': {
         this.reset();
         this.isWashingMachineIndesit = true;
         this.headerText = 'Indesit Washing Machine Fault Codes';
         this.title.setTitle('Indesit Washing Machine Fault Codes | A&G Appliances');
+        this.metaService.createCanonicalURL('https://www.ag-repairs.co.uk/error-codes/indesit-washing-machine-fault-codes/');
+
         this.meta.updateTag({
           name: 'description',
           content: 'Indesit Washing Machine Fault Codes. Call A&G Appliances at 0207 476 8725 for same or next day service.'
@@ -39,7 +41,7 @@ export class ErrorCodesComponent implements OnInit {
         });
         this.meta.updateTag({
           property: 'og:url',
-          content: 'https://www.ag-repairs.co.uk/error-codes/indesit-washing-machine-fault-codes'
+          content: 'https://www.ag-repairs.co.uk/error-codes/indesit-washing-machine-fault-codes/'
         });
         this.meta.updateTag({
           name: 'twitter:title',
@@ -51,11 +53,11 @@ export class ErrorCodesComponent implements OnInit {
         });
         break;
       }
-      case '/error-codes/whirlpool-washing-machine-error-codes': {
+      case '/error-codes/whirlpool-washing-machine-error-codes/.': {
         this.reset();
         this.isWashingMachineWhirpool = true;
         this.headerText = 'Whirpool Washing Machine Error Codes';
-        this.metaService.createCanonicalURL('https://www.ag-repairs.co.uk/error-codes/whirlpool-washing-machine-error-codes');
+        this.metaService.createCanonicalURL('https://www.ag-repairs.co.uk/error-codes/whirlpool-washing-machine-error-codes/');
 
         this.title.setTitle('Whirpool Washing Machine Error Codes | A&G Appliances');
         this.meta.updateTag({
@@ -72,7 +74,7 @@ export class ErrorCodesComponent implements OnInit {
         });
         this.meta.updateTag({
           property: 'og:url',
-          content: 'https://www.ag-repairs.co.uk/error-codes/whirlpool-washing-machine-error-codes'
+          content: 'https://www.ag-repairs.co.uk/error-codes/whirlpool-washing-machine-error-codes/'
         });
         this.meta.updateTag({
           name: 'twitter:title',
@@ -88,7 +90,7 @@ export class ErrorCodesComponent implements OnInit {
         this.reset();
         this.isErrorCodes = true;
         this.headerText = 'Error Codes';
-        this.metaService.createCanonicalURL('https://www.ag-repairs.co.uk/error-codes');
+        this.metaService.createCanonicalURL('https://www.ag-repairs.co.uk/error-codes/');
 
         this.title.setTitle('Error Codes | A&G Appliances');
         this.meta.updateTag({
@@ -105,7 +107,7 @@ export class ErrorCodesComponent implements OnInit {
         });
         this.meta.updateTag({
           property: 'og:url',
-          content: 'https://www.ag-repairs.co.uk/error-codes'
+          content: 'https://www.ag-repairs.co.uk/error-codes/'
         });
         this.meta.updateTag({
           name: 'twitter:title',

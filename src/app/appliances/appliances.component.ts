@@ -26,15 +26,15 @@ export class AppliancesComponent implements OnInit {
   constructor(private router: Router, private title: Title, private meta: Meta, private metaService: MetaService) { }
 
   ngOnInit() {
-
     switch (this.router.url) {
-      case '/appliance-repairs/washing-machine-repairs': {
+      case '/appliance-repairs/washing-machine-repairs/.': {
         this.reset();
         this.isWashingMachine = true;
         this.headerText = 'Washing Machine Repairs in London';
         this.applianceName = 'washing machine';
-
+        this.metaService.createCanonicalURL('https://www.ag-repairs.co.uk/appliance-repairs/washing-machine-repairs/');
         this.title.setTitle('Washing Machine Repairs in London | A&G Appliances');
+
         this.meta.updateTag({
           name: 'description',
           content: 'Washing Machine Repair Service in London. Call A&G Appliances at 0207 476 8725 for same or next day service.'
@@ -49,7 +49,7 @@ export class AppliancesComponent implements OnInit {
         });
         this.meta.updateTag({
           property: 'og:url',
-          content: 'https://www.ag-repairs.co.uk/appliance-repairs/washing-machine-repairs'
+          content: 'https://www.ag-repairs.co.uk/appliance-repairs/washing-machine-repairs/'
         });
         this.meta.updateTag({
           name: 'twitter:title',
@@ -61,12 +61,12 @@ export class AppliancesComponent implements OnInit {
         });
         break;
       }
-      case '/appliance-repairs/dishwasher-repairs': {
+      case '/appliance-repairs/dishwasher-repairs/.': {
         this.reset();
         this.isDishwasher = true;
         this.headerText = 'Dishwasher Repairs in London';
         this.applianceName = 'dishwasher';
-        this.metaService.createCanonicalURL('https://www.ag-repairs.co.uk/appliance-repairs/dishwasher-repairs');
+        this.metaService.createCanonicalURL('https://www.ag-repairs.co.uk/appliance-repairs/dishwasher-repairs/');
 
         this.title.setTitle('Dishwasher Repairs in London | A&G Appliances');
         this.meta.updateTag({
@@ -83,7 +83,7 @@ export class AppliancesComponent implements OnInit {
         });
         this.meta.updateTag({
           property: 'og:url',
-          content: 'https://www.ag-repairs.co.uk/appliance-repairs/dishwasher-repairs'
+          content: 'https://www.ag-repairs.co.uk/appliance-repairs/dishwasher-repairs/'
         });
         this.meta.updateTag({
           name: 'twitter:title',
@@ -95,12 +95,12 @@ export class AppliancesComponent implements OnInit {
         });
         break;
       }
-      case '/appliance-repairs/tumble-dryer-repairs': {
+      case '/appliance-repairs/tumble-dryer-repairs/.': {
         this.reset();
         this.isTumbleDryer = true;
         this.headerText = 'Tumble and Condenser Dryer Repairs in London';
         this.applianceName = 'tumble dryer';
-        this.metaService.createCanonicalURL('https://www.ag-repairs.co.uk/appliance-repairs/tumble-dryer-repairs');
+        this.metaService.createCanonicalURL('https://www.ag-repairs.co.uk/appliance-repairs/tumble-dryer-repairs/');
 
         this.title.setTitle('Tumble and Condenser Dryer Repairs in London | A&G Appliances');
         this.meta.updateTag({
@@ -117,7 +117,7 @@ export class AppliancesComponent implements OnInit {
         });
         this.meta.updateTag({
           property: 'og:url',
-          content: 'https://www.ag-repairs.co.uk/appliance-repairs/tumble-dryer-repairs'
+          content: 'https://www.ag-repairs.co.uk/appliance-repairs/tumble-dryer-repairs/'
         });
         this.meta.updateTag({
           name: 'twitter:title',
@@ -129,12 +129,12 @@ export class AppliancesComponent implements OnInit {
         });
         break;
       }
-      case '/appliance-repairs/electric-oven-repairs': {
+      case '/appliance-repairs/electric-oven-repairs/.': {
         this.reset();
         this.isElectricCooker = true;
         this.headerText = 'Electric Oven, Cooker, and Hob Repairs in London';
         this.applianceName = 'electric oven/cooker/hob';
-        this.metaService.createCanonicalURL('https://www.ag-repairs.co.uk/appliance-repairs/electric-oven-repairs');
+        this.metaService.createCanonicalURL('https://www.ag-repairs.co.uk/appliance-repairs/electric-oven-repairs/');
 
         this.title.setTitle('Electric Oven, Cooker, and Hob Repairs in London | A&G Appliances');
         this.meta.updateTag({
@@ -151,7 +151,7 @@ export class AppliancesComponent implements OnInit {
         });
         this.meta.updateTag({
           property: 'og:url',
-          content: 'https://www.ag-repairs.co.uk/appliance-repairs/electric-oven-repairs'
+          content: 'https://www.ag-repairs.co.uk/appliance-repairs/electric-oven-repairs/'
         });
         this.meta.updateTag({
           name: 'twitter:title',
@@ -163,12 +163,12 @@ export class AppliancesComponent implements OnInit {
         });
         break;
       }
-      case '/appliance-repairs/microwave-repairs': {
+      case '/appliance-repairs/microwave-repairs/.': {
         this.reset();
         this.isMicrowave = true;
         this.headerText = 'Microwave Repairs in London';
         this.applianceName = 'microwave';
-        this.metaService.createCanonicalURL('https://www.ag-repairs.co.uk/appliance-repairs/microwave-repairs');
+        this.metaService.createCanonicalURL('https://www.ag-repairs.co.uk/appliance-repairs/microwave-repairs/');
 
         this.title.setTitle('Microwave Repairs in London | A&G Appliances');
         this.meta.updateTag({
@@ -185,7 +185,7 @@ export class AppliancesComponent implements OnInit {
         });
         this.meta.updateTag({
           property: 'og:url',
-          content: 'https://www.ag-repairs.co.uk/appliance-repairs/microwave-repairs'
+          content: 'https://www.ag-repairs.co.uk/appliance-repairs/microwave-repairs/'
         });
         this.meta.updateTag({
           name: 'twitter:title',
@@ -197,12 +197,12 @@ export class AppliancesComponent implements OnInit {
         });
         break;
       }
-      case '/appliance-repairs/extractor-hood-repairs': {
+      case '/appliance-repairs/extractor-hood-repairs/.': {
         this.reset();
         this.isExtractorHood = true;
         this.headerText = 'Extractor Hood Repairs in London';
         this.applianceName = 'extractor hood';
-        this.metaService.createCanonicalURL('https://www.ag-repairs.co.uk/appliance-repairs/extractor-hood-repairs');
+        this.metaService.createCanonicalURL('https://www.ag-repairs.co.uk/appliance-repairs/extractor-hood-repairs/');
 
         this.title.setTitle('Extractor Hood Repairs in London | A&G Appliances');
         this.meta.updateTag({
@@ -219,7 +219,7 @@ export class AppliancesComponent implements OnInit {
         });
         this.meta.updateTag({
           property: 'og:url',
-          content: 'https://www.ag-repairs.co.uk/appliance-repairs/extractor-hood-repairs'
+          content: 'https://www.ag-repairs.co.uk/appliance-repairs/extractor-hood-repairs/'
         });
         this.meta.updateTag({
           name: 'twitter:title',
@@ -231,12 +231,12 @@ export class AppliancesComponent implements OnInit {
         });
         break;
       }
-      case '/appliance-repairs/fridge-freezer-repairs': {
+      case '/appliance-repairs/fridge-freezer-repairs/.': {
         this.reset();
         this.isFridgeFreezer = true;
         this.headerText = 'Fridge Freezer Repairs in London';
         this.applianceName = 'fridge freezer';
-        this.metaService.createCanonicalURL('https://www.ag-repairs.co.uk/appliance-repairs/fridge-freezer-repairs');
+        this.metaService.createCanonicalURL('https://www.ag-repairs.co.uk/appliance-repairs/fridge-freezer-repairs/');
 
         this.title.setTitle('Fridge Freezer Repairs in London | A&G Appliances');
         this.meta.updateTag({
@@ -253,7 +253,7 @@ export class AppliancesComponent implements OnInit {
         });
         this.meta.updateTag({
           property: 'og:url',
-          content: 'https://www.ag-repairs.co.uk/appliance-repairs/fridge-freezer-repairs'
+          content: 'https://www.ag-repairs.co.uk/appliance-repairs/fridge-freezer-repairs/'
         });
         this.meta.updateTag({
           name: 'twitter:title',
@@ -265,12 +265,12 @@ export class AppliancesComponent implements OnInit {
         });
         break;
       }
-      case '/appliance-repairs/commercial-appliance-repairs': {
+      case '/appliance-repairs/commercial-appliance-repairs/.': {
         this.reset();
         this.isCommercialAppliances = true;
         this.headerText = 'Commercial Appliance Repairs in London';
         this.applianceName = 'commercial appliance';
-        this.metaService.createCanonicalURL('https://www.ag-repairs.co.uk/appliance-repairs/commercial-appliance-repairs');
+        this.metaService.createCanonicalURL('https://www.ag-repairs.co.uk/appliance-repairs/commercial-appliance-repairs/');
 
         this.title.setTitle('Commercial Appliance Repairs in London | A&G Appliances');
         this.meta.updateTag({
@@ -287,7 +287,7 @@ export class AppliancesComponent implements OnInit {
         });
         this.meta.updateTag({
           property: 'og:url',
-          content: 'https://www.ag-repairs.co.uk/appliance-repairs/commercial-appliance-repairs'
+          content: 'https://www.ag-repairs.co.uk/appliance-repairs/commercial-appliance-repairs/'
         });
         this.meta.updateTag({
           name: 'twitter:title',
@@ -303,7 +303,7 @@ export class AppliancesComponent implements OnInit {
         this.reset();
         this.isAppliances = true;
         this.headerText = 'Local Professional Appliance Repair Service in London';
-        this.metaService.createCanonicalURL('https://www.ag-repairs.co.uk/appliance-repairs');
+        this.metaService.createCanonicalURL('https://www.ag-repairs.co.uk/appliance-repairs/');
 
         this.title.setTitle('Local Professional Appliance Repair Service in London | A&G Appliances');
         this.meta.updateTag({
@@ -320,7 +320,7 @@ export class AppliancesComponent implements OnInit {
         });
         this.meta.updateTag({
           property: 'og:url',
-          content: 'https://www.ag-repairs.co.uk/appliance-repairs'
+          content: 'https://www.ag-repairs.co.uk/appliance-repairs/'
         });
         this.meta.updateTag({
           name: 'twitter:title',

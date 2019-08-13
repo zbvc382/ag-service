@@ -22,11 +22,11 @@ export class BlogComponent implements OnInit {
   ngOnInit() {
 
     switch (this.router.url) {
-      case '/blog/common-electric-oven-problems': {
+      case '/blog/common-electric-oven-problems/.': {
         this.reset();
         this.isSubOne = true;
         this.headerText = 'Common Electric Oven Problems';
-        this.metaService.createCanonicalURL('https://www.ag-repairs.co.uk/blog/common-electric-oven-problems');
+        this.metaService.createCanonicalURL('https://www.ag-repairs.co.uk/blog/common-electric-oven-problems/');
 
         this.title.setTitle('Common Electric Oven Problems | A&G Appliances');
         this.meta.updateTag({
@@ -43,7 +43,7 @@ export class BlogComponent implements OnInit {
         });
         this.meta.updateTag({
           property: 'og:url',
-          content: 'https://www.ag-repairs.co.uk/blog/common-electric-oven-problems'
+          content: 'https://www.ag-repairs.co.uk/blog/common-electric-oven-problems/'
         });
         this.meta.updateTag({
           name: 'twitter:title',
@@ -55,11 +55,11 @@ export class BlogComponent implements OnInit {
         });
         break;
       }
-      case '/blog/oven-does-not-work-timer-set-manual-or-automatic': {
+      case '/blog/oven-does-not-work-timer-set-manual-or-automatic/.': {
         this.reset();
         this.isSubTwo = true;
         this.headerText = 'Oven Does Not Work. Timer Set – Manual or Automatic?';
-        this.metaService.createCanonicalURL('https://www.ag-repairs.co.uk/blog/oven-does-not-work-timer-set-manual-or-automatic');
+        this.metaService.createCanonicalURL('https://www.ag-repairs.co.uk/blog/oven-does-not-work-timer-set-manual-or-automatic/');
 
         this.title.setTitle('Oven Does Not Work. Timer Set – Manual or Automatic? | A&G Appliances');
         this.meta.updateTag({
@@ -76,7 +76,7 @@ export class BlogComponent implements OnInit {
         });
         this.meta.updateTag({
           property: 'og:url',
-          content: 'https://www.ag-repairs.co.uk/appliance-repairs/blog/oven-does-not-work-timer-set-manual-or-automatic'
+          content: 'https://www.ag-repairs.co.uk/appliance-repairs/blog/oven-does-not-work-timer-set-manual-or-automatic/'
         });
         this.meta.updateTag({
           name: 'twitter:title',
@@ -88,11 +88,11 @@ export class BlogComponent implements OnInit {
         });
         break;
       }
-      case '/blog/fridge-freezer-not-cooling-any-more-fault-finding': {
+      case '/blog/fridge-freezer-not-cooling-any-more-fault-finding/.': {
         this.reset();
         this.isSubThree = true;
         this.headerText = 'Fridge Freezer Not Cooling Any More, Fault Finding';
-        this.metaService.createCanonicalURL('https://www.ag-repairs.co.uk/blog/fridge-freezer-not-cooling-any-more-fault-finding');
+        this.metaService.createCanonicalURL('https://www.ag-repairs.co.uk/blog/fridge-freezer-not-cooling-any-more-fault-finding/');
 
         this.title.setTitle('Fridge Freezer Not Cooling Any More, Fault Finding | A&G Appliances');
         this.meta.updateTag({
@@ -109,7 +109,7 @@ export class BlogComponent implements OnInit {
         });
         this.meta.updateTag({
           property: 'og:url',
-          content: 'https://www.ag-repairs.co.uk/blog/fridge-freezer-not-cooling-any-more-fault-finding'
+          content: 'https://www.ag-repairs.co.uk/blog/fridge-freezer-not-cooling-any-more-fault-finding/'
         });
         this.meta.updateTag({
           name: 'twitter:title',
@@ -126,6 +126,7 @@ export class BlogComponent implements OnInit {
         this.isMain = true;
         this.headerText = 'Blog';
         this.title.setTitle('Blog | A&G Appliances');
+        this.metaService.createCanonicalURL('https://www.ag-repairs.co.uk/blog/');
         this.meta.updateTag({
           name: 'description',
           content: 'A&G Appliances is a well establish company employing experienced appliance technicians. Call our appliance repair engineer today.'
@@ -140,7 +141,7 @@ export class BlogComponent implements OnInit {
         });
         this.meta.updateTag({
           property: 'og:url',
-          content: 'https://www.ag-repairs.co.uk/blog'
+          content: 'https://www.ag-repairs.co.uk/blog/'
         });
         this.meta.updateTag({
           name: 'twitter:title',

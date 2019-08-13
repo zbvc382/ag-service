@@ -13,6 +13,8 @@ export class EstateAgentsComponent implements OnInit {
 
   ngOnInit() {
     this.title.setTitle('Estate Agents & Landlors | A&G Appliances');
+    this.metaService.createCanonicalURL('https://www.ag-repairs.co.uk/estate-agents-landlords/');
+
     this.meta.updateTag({
       name: 'description',
       content: 'A&G Appliances is a well establish company employing experienced appliance technicians. Call our appliance repair engineer today.'
@@ -27,7 +29,7 @@ export class EstateAgentsComponent implements OnInit {
     });
     this.meta.updateTag({
       property: 'og:url',
-      content: 'https://www.ag-repairs.co.uk/estate-agents-landlords'
+      content: 'https://www.ag-repairs.co.uk/estate-agents-landlords/'
     });
     this.meta.updateTag({
       name: 'twitter:title',
