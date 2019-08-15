@@ -4,7 +4,9 @@ import { ErrorCodesComponent } from './error-codes.component';
 
 const routes: Routes = [
     { path: 'indesit-washing-machine-fault-codes/.', component: ErrorCodesComponent },
+
     { path: 'whirlpool-washing-machine-error-codes/.', component: ErrorCodesComponent },
+
     { path: '', component: ErrorCodesComponent }
 ];
 
