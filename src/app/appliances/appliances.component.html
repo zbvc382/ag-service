@@ -799,6 +799,51 @@
         </div>
     </section>
 
+    <section class="repair-prices" *ngIf="isCommercialAppliances">
+        <header class="section-heading">
+            <h2>repair prices</h2>
+        </header>
+        <div class="repair-prices__freestanding">
+            <div class="repair-prices__freestanding--title">
+                <h3 class="heading-2">Commercial Microwave</h3>
+            </div>
+            <div class="repair-prices__freestanding--price">
+                <p>£70 <span>+VAT</span></p>
+            </div>
+
+            <div class="repair-prices__freestanding--points">
+                <p class="repair-prices__freestanding--points-1">&#9679; no call out charge</p>
+                <p class="repair-prices__freestanding--points-2">&#9679; one off labour/Diagnostic charge</p>
+                <p class="repair-prices__freestanding--points-3">&#9679; six months guarantee</p>
+                <p class="repair-prices__freestanding--points-4">&#9679; no parking fees</p>
+                <p class="repair-prices__freestanding--points-5">&#9679; parts charged separately if required</p>
+            </div>
+        </div>
+        <div class="repair-prices__integrated">
+            <div class="repair-prices__integrated--title">
+                <h3 class="heading-2">Commercial Dishwasher</h3>
+            </div>
+            <div class="repair-prices__integrated--price">
+                <p>£80 <span>+VAT</span></p>
+            </div>
+
+            <div class="repair-prices__integrated--points">
+                <p class="repair-prices__integrated--points-1">&#9679; no call out charge</p>
+                <p class="repair-prices__integrated--points-2">&#9679; one off labour/Diagnostic charge</p>
+                <p class="repair-prices__integrated--points-3">&#9679; six months guarantee</p>
+                <p class="repair-prices__integrated--points-4">&#9679; no parking fees</p>
+                <p class="repair-prices__integrated--points-5">&#9679; parts charged separately if required</p>
+            </div>
+        </div>
+
+        <div class="repair-prices__terms">
+            <p class="repair-prices__terms--2">6 months guarantee on the repair and parts (we do not guarantee
+                blockages, heating elements or printed circuit boards).</p>
+            <p class="repair-prices__terms--3">A congestion charge, ULEZ charge and parking fees apply if you live in
+                central London.</p>
+        </div>
+    </section>
+
     <!-- Common Faults-->
 
     <section class="common-faults" *ngIf="!isCommercialAppliances">
