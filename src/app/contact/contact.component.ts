@@ -16,7 +16,7 @@ export class ContactComponent implements OnInit {
     this.metaService.createCanonicalURL('https://www.ag-repairs.co.uk/contact-us-appliance-services/');
     this.meta.updateTag({
       name: 'description',
-      content: 'A&G Appliances is a well establish company employing experienced appliance technicians. Call our appliance repair engineer today.'
+      content: 'For more information or to book a service contact A&G Appliances at 0207 476 8725.'
     });
     this.meta.updateTag({
       property: 'og:title',
@@ -24,7 +24,7 @@ export class ContactComponent implements OnInit {
     });
     this.meta.updateTag({
       property: 'og:description',
-      content: 'A&G Appliances is a well establish company employing experienced appliance technicians. Call our appliance repair engineer today.'
+      content: 'For more information or to book a service contact A&G Appliances at 0207 476 8725.'
     });
     this.meta.updateTag({
       property: 'og:url',
@@ -36,7 +36,7 @@ export class ContactComponent implements OnInit {
     });
     this.meta.updateTag({
       name: 'twitter:description',
-      content: 'A&G Appliances is a well establish company employing experienced appliance technicians. Call our appliance repair engineer today.'
+      content: 'For more information or to book a service contact A&G Appliances at 0207 476 8725.'
     });
   }
 }

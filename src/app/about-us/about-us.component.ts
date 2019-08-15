@@ -16,7 +16,7 @@ export class AboutUsComponent implements OnInit {
     this.metaService.createCanonicalURL('https://www.ag-repairs.co.uk/about-us/');
     this.meta.updateTag({
       name: 'description',
-      content: 'A&G Appliances is a well establish company employing experienced appliance technicians. Call our appliance repair engineer today.'
+      content: ''
     });
     this.meta.updateTag({
       property: 'og:title',

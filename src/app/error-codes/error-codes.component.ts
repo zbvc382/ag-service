@@ -95,7 +95,7 @@ export class ErrorCodesComponent implements OnInit {
         this.title.setTitle('Error Codes | A&G Appliances');
         this.meta.updateTag({
           name: 'description',
-          content: 'A&G Appliances is a well establish company employing experienced appliance technicians. Call our appliance repair engineer today.'
+          content: 'Find out what that strange error or fault code means for your kitchen appliance.'
         });
         this.meta.updateTag({
           property: 'og:title',
@@ -103,7 +103,7 @@ export class ErrorCodesComponent implements OnInit {
         });
         this.meta.updateTag({
           property: 'og:description',
-          content: 'A&G Appliances is a well establish company employing experienced appliance technicians. Call our appliance repair engineer today.'
+          content: 'Find out what that strange error or fault code means for your kitchen appliance.'
         });
         this.meta.updateTag({
           property: 'og:url',
@@ -115,7 +115,7 @@ export class ErrorCodesComponent implements OnInit {
         });
         this.meta.updateTag({
           name: 'twitter:description',
-          content: 'A&G Appliances is a well establish company employing experienced appliance technicians. Call our appliance repair engineer today.'
+          content: 'Find out what that strange error or fault code means for your kitchen appliance.'
         });
         break;
       }

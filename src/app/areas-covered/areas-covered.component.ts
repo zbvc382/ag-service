@@ -16,7 +16,7 @@ export class AreasCoveredComponent implements OnInit {
     this.title.setTitle('Areas Covered | A&G Appliances');
     this.meta.updateTag({
       name: 'description',
-      content: 'A&G Appliances is a well establish company employing experienced appliance technicians. Call our appliance repair engineer today.'
+      content: 'Our domestic and commercial appliance repair service covers majority of London postcodes.'
     });
     this.meta.updateTag({
       property: 'og:title',
@@ -24,7 +24,7 @@ export class AreasCoveredComponent implements OnInit {
     });
     this.meta.updateTag({
       property: 'og:description',
-      content: 'A&G Appliances is a well establish company employing experienced appliance technicians. Call our appliance repair engineer today.'
+      content: 'Our domestic and commercial appliance repair service covers majority of London postcodes.'
     });
     this.meta.updateTag({
       property: 'og:url',
@@ -36,7 +36,7 @@ export class AreasCoveredComponent implements OnInit {
     });
     this.meta.updateTag({
       name: 'twitter:description',
-      content: 'A&G Appliances is a well establish company employing experienced appliance technicians. Call our appliance repair engineer today.'
+      content: 'Our domestic and commercial appliance repair service covers majority of London postcodes.'
     });
   }
 }

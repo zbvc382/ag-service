@@ -17,7 +17,7 @@ export class TermsComponent implements OnInit {
 
     this.meta.updateTag({
       name: 'description',
-      content: 'A&G Appliances is a well establish company employing experienced appliance technicians. Call our appliance repair engineer today.'
+      content: 'Read our Terms for services listed on our website.'
     });
     this.meta.updateTag({
       property: 'og:title',
@@ -25,7 +25,7 @@ export class TermsComponent implements OnInit {
     });
     this.meta.updateTag({
       property: 'og:description',
-      content: 'A&G Appliances is a well establish company employing experienced appliance technicians. Call our appliance repair engineer today.'
+      content: 'Read our Terms for services listed on our website.'
     });
     this.meta.updateTag({
       property: 'og:url',
@@ -37,7 +37,7 @@ export class TermsComponent implements OnInit {
     });
     this.meta.updateTag({
       name: 'twitter:description',
-      content: 'A&G Appliances is a well establish company employing experienced appliance technicians. Call our appliance repair engineer today.'
+      content: 'Read our Terms for services listed on our website.'
     });
   }
 

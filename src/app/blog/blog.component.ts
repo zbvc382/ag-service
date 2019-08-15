@@ -31,7 +31,7 @@ export class BlogComponent implements OnInit {
         this.title.setTitle('Common Electric Oven Problems | A&G Appliances');
         this.meta.updateTag({
           name: 'description',
-          content: 'Common Electric Oven Problems. Call A&G Appliances at 0207 476 8725 for same or next day service.'
+          content: 'A blog post about common electric oven problems.'
         });
         this.meta.updateTag({
           property: 'og:title',
@@ -39,7 +39,7 @@ export class BlogComponent implements OnInit {
         });
         this.meta.updateTag({
           property: 'og:description',
-          content: 'Common Electric Oven Problems. Call A&G Appliances at 0207 476 8725 for same or next day service.'
+          content: 'A blog post about common electric oven problems.'
         });
         this.meta.updateTag({
           property: 'og:url',
@@ -51,7 +51,7 @@ export class BlogComponent implements OnInit {
         });
         this.meta.updateTag({
           name: 'twitter:description',
-          content: 'Common Electric Oven Problems. Call A&G Appliances at 0207 476 8725 for same or next day service.'
+          content: 'A blog post about common electric oven problems.'
         });
         break;
       }
@@ -64,7 +64,7 @@ export class BlogComponent implements OnInit {
         this.title.setTitle('Oven Does Not Work. Timer Set – Manual or Automatic? | A&G Appliances');
         this.meta.updateTag({
           name: 'description',
-          content: 'Oven Does Not Work. Timer Set – Manual or Automatic?. Call A&G Appliances at 0207 476 8725 for same or next day service.'
+          content: 'A blog post about why you oven might not work.'
         });
         this.meta.updateTag({
           property: 'og:title',
@@ -72,7 +72,7 @@ export class BlogComponent implements OnInit {
         });
         this.meta.updateTag({
           property: 'og:description',
-          content: 'Oven Does Not Work. Timer Set – Manual or Automatic?. Call A&G Appliances at 0207 476 8725 for same or next day service.'
+          content: 'A blog post about why you oven might not work.'
         });
         this.meta.updateTag({
           property: 'og:url',
@@ -84,7 +84,7 @@ export class BlogComponent implements OnInit {
         });
         this.meta.updateTag({
           name: 'twitter:description',
-          content: 'Oven Does Not Work. Timer Set – Manual or Automatic?. Call A&G Appliances at 0207 476 8725 for same or next day service.'
+          content: 'A blog post about why you oven might not work.'
         });
         break;
       }
@@ -97,7 +97,7 @@ export class BlogComponent implements OnInit {
         this.title.setTitle('Fridge Freezer Not Cooling Any More, Fault Finding | A&G Appliances');
         this.meta.updateTag({
           name: 'description',
-          content: 'Fridge Freezer Not Cooling Any More, Fault Finding. Call A&G Appliances at 0207 476 8725 for same or next day service.'
+          content: 'A blog post detailing various reasons why you fridge freezer is not cooling anymore.'
         });
         this.meta.updateTag({
           property: 'og:title',
@@ -105,7 +105,7 @@ export class BlogComponent implements OnInit {
         });
         this.meta.updateTag({
           property: 'og:description',
-          content: 'Fridge Freezer Not Cooling Any More, Fault Finding. Call A&G Appliances at 0207 476 8725 for same or next day service.'
+          content: 'A blog post detailing various reasons why you fridge freezer is not cooling anymore.'
         });
         this.meta.updateTag({
           property: 'og:url',
@@ -117,7 +117,7 @@ export class BlogComponent implements OnInit {
         });
         this.meta.updateTag({
           name: 'twitter:description',
-          content: 'Fridge Freezer Not Cooling Any More, Fault Finding. Call A&G Appliances at 0207 476 8725 for same or next day service.'
+          content: 'A blog post detailing various reasons why you fridge freezer is not cooling anymore.'
         });
         break;
       }
@@ -129,7 +129,7 @@ export class BlogComponent implements OnInit {
         this.metaService.createCanonicalURL('https://www.ag-repairs.co.uk/blog/');
         this.meta.updateTag({
           name: 'description',
-          content: 'A&G Appliances is a well establish company employing experienced appliance technicians. Call our appliance repair engineer today.'
+          content: 'Our blog provides an insight into various problems we come across our daily work and tips on how you can fixed them yourself.'
         });
         this.meta.updateTag({
           property: 'og:title',
@@ -137,7 +137,7 @@ export class BlogComponent implements OnInit {
         });
         this.meta.updateTag({
           property: 'og:description',
-          content: 'A&G Appliances is a well establish company employing experienced appliance technicians. Call our appliance repair engineer today.'
+          content: 'Our blog provides an insight into various problems we come across our daily work and tips on how you can fixed them yourself.'
         });
         this.meta.updateTag({
           property: 'og:url',
@@ -149,7 +149,7 @@ export class BlogComponent implements OnInit {
         });
         this.meta.updateTag({
           name: 'twitter:description',
-          content: 'A&G Appliances is a well establish company employing experienced appliance technicians. Call our appliance repair engineer today.'
+          content: 'Our blog provides an insight into various problems we come across our daily work and tips on how you can fixed them yourself.'
         });
       }
     }

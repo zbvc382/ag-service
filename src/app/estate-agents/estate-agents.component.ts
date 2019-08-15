@@ -17,7 +17,7 @@ export class EstateAgentsComponent implements OnInit {
 
     this.meta.updateTag({
       name: 'description',
-      content: 'A&G Appliances is a well establish company employing experienced appliance technicians. Call our appliance repair engineer today.'
+      content: 'A&G Appliances provides domestic appliance repairs and installation services to estate agents and landlords in London.'
     });
     this.meta.updateTag({
       property: 'og:title',
@@ -25,7 +25,7 @@ export class EstateAgentsComponent implements OnInit {
     });
     this.meta.updateTag({
       property: 'og:description',
-      content: 'A&G Appliances is a well establish company employing experienced appliance technicians. Call our appliance repair engineer today.'
+      content: 'A&G Appliances provides domestic appliance repairs and installation services to estate agents and landlords in London.'
     });
     this.meta.updateTag({
       property: 'og:url',
@@ -37,7 +37,7 @@ export class EstateAgentsComponent implements OnInit {
     });
     this.meta.updateTag({
       name: 'twitter:description',
-      content: 'A&G Appliances is a well establish company employing experienced appliance technicians. Call our appliance repair engineer today.'
+      content: 'A&G Appliances provides domestic appliance repairs and installation services to estate agents and landlords in London.'
     });
   }
 }
