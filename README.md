@@ -1,4 +1,4 @@
-![grab-landing-page](/img/ag-service.gif)
+![grab-landing-page](/img/service.gif)
 
 ## Technologies
 
